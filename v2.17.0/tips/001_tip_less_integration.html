@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Dubois">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>LESS Integration with Grunt</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.17.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/v2.17.0/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.17.0/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.17.0/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.17.0/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.17.0/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.17.0/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.17.0/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/v2.17.0/"><i class="icon-home"></i> Home</a></li>
+                    <li ><a href="/v2.17.0/releases.html"><i class="icon-file-text-alt"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="icon-road"></i> Introduction<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/presentation" target="_blank"><i class="icon-desktop"></i> Presentation</a></li>
+                            <li ><a href="/v2.17.0/tech_stack.html"><i class="icon-stackexchange"></i> Technology stack</a></li>
+                            <li ><a href="/v2.17.0/screenshots.html"><i class="icon-picture"></i> Screenshots</a></li>
+                            <li ><a href="/v2.17.0/video_tutorial.html"><i class="icon-film"></i> Video tutorial</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-wrench"></i> Setup<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/installation.html"><i class="icon-cloud-download"></i> Installation</a></li>
+                            <li ><a href="/v2.17.0/creating_an_app.html"><i class="icon-rocket"></i> Creating an application</a></li>
+                            <li ><a href="/v2.17.0/creating_an_entity.html"><i class="icon-bolt"></i> Creating an entity</a></li>
+                            <li ><a href="/v2.17.0/managing_relationships.html"><i class="icon-sitemap"></i> Managing relationships</a></li>
+                            <li ><a href="/v2.17.0/creating_a_service.html"><i class="icon-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.17.0/installing_new_languages.html"><i class="icon-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.17.0/configuring_ide.html"><i class="icon-keyboard"></i> Configuring your IDE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-puzzle-piece"></i> Options<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/security.html"><i class="icon-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.17.0/using_dtos.html"><i class="icon-briefcase"></i> Using DTOs</a></li>
+                            <li ><a href="/v2.17.0/using_elasticsearch.html"><i class="icon-search"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/v2.17.0/using_oracle.html"><i class="icon-archive"></i> Using Oracle</a></li>
+                            <li ><a href="/v2.17.0/using_mongodb.html"><i class="icon-leaf"></i> Using MongoDB</a></li>
+                            <li ><a href="/v2.17.0/using_cassandra.html"><i class="icon-eye-open"></i> Using Cassandra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-code"></i> Development<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/development.html"><i class="icon-code"></i> Using in development</a></li>
+                            <li ><a href="/v2.17.0/profiles.html"><i class="icon-group"></i> Managing profiles</a></li>
+                            <li ><a href="/v2.17.0/using_angularjs.html"><i class="icon-html5"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.17.0/customizing_bootstrap.html"><i class="icon-css3"></i> Customizing Bootstrap</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-umbrella"></i> Test<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/running_tests.html"><i class="icon-shield"></i> Running tests</a></li>
+                            <li ><a href="/v2.17.0/setting_up_ci.html"><i class="icon-check"></i> Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-cloud"></i> Production<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/production.html"><i class="icon-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.17.0/cloudfoundry.html"><i class="icon-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.17.0/heroku.html"><i class="icon-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.17.0/openshift.html"><i class="icon-cloud-upload"></i> Deploying to Openshift</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="/v2.17.0/tips.html"><i class="icon-cogs"></i> Tips'n tricks</a></li>
+                    <li >
+                        <a href="/v2.17.0/jhipster_uml.html"><i class="icon-magic"></i>
+                            JHipster-UML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-question"></i> Help and bugs<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.17.0/help.html"><i class="icon-group"></i> Community help</a></li>
+                            <li ><a href="/v2.17.0/consulting.html"><i class="icon-user-md"></i> Professional help</a></li>
+                            <li ><a href="/v2.17.0/training.html"><i class="icon-magic"></i> Training</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="icon-bug"></i> Bug tracker</a></li>
+                            <li ><a href="/v2.17.0/thanks.html"><i class="icon-gift"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+                    <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank"><i class="icon-comments-alt"></i> Chat</a></li>
+                    <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+                    <li>
+<script>
+  (function() {
+    var cx = '004687894124070278856:-ryvp1pk0xi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="less-integration-with-grunt">LESS Integration with Grunt</h1>
+
+<p><strong>Tip submitted by <a href="https://github.com/deepu105">@deepu105</a></strong></p>
+
+<p>To have LESS compilation with Grunt first install the <code class="highlighter-rouge">"grunt-contrib-less"</code> <a href="https://github.com/gruntjs/grunt-contrib-less">plugin</a> by running <code class="highlighter-rouge">npm install grunt-contrib-less --save-dev</code> and then add the below in the files generated by JHipster.</p>
+
+<h2 id="gruntfilejs">Gruntfile.js</h2>
+
+<p>Add the less config at the end under the <code class="highlighter-rouge">watch</code> task in <code class="highlighter-rouge">grunt.initConfig</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>grunt.initConfig({
+  watch: {
+    less:{
+        // if any .less file changes in directory "src/main/less/" run the "less"-task.
+        // change folders to watch accordingly
+        files: ["src/main/less/*.less", "src/main/webapp/bower_components/bootstrap/less/*.less"],
+        tasks: ["less"]
+        }
+      }
+</code></pre>
+</div>
+
+<p>Add the <code class="highlighter-rouge">less</code> task to <code class="highlighter-rouge">grunt.initConfig</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// "less"-task configuration
+//this task will compile all less files to create both *.css and *.min.css
+less: {
+    //Development non minified version
+    dev: {
+        options: {
+            //Wether to compress or not
+            compress: false
+        },
+        files: {
+            // compilation.css  :  source.less
+            "src/main/webapp/assets/styles/main.css": "src/main/less/main.less",
+            "src/main/webapp/assets/styles/skins/_all-skins.css": "src/main/less/skins/_all-skins.less",
+            "src/main/webapp/bower_components/bootstrap/dist/css/bootstrap.css": "src/main/webapp/bower_components/bootstrap/less/bootstrap.less"
+        }
+    }
+}
+</code></pre>
+</div>
+
+<p>Add the <code class="highlighter-rouge">less</code> task to the <code class="highlighter-rouge">cuncurrent</code> task if you need less to be executed concurrently</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>concurrent: {
+    server: [
+        'less',
+        'imagemin',
+        'svgmin'
+    ],
+    test: [
+    ],
+    dist: [
+        'less',
+        'imagemin',
+        'svgmin'
+    ]
+}
+</code></pre>
+</div>
+
+<h2 id="indexhtml">index.html</h2>
+
+<p>Add the css paths to the index.html file inside the CSS build task so that these are minified and compacted by build task</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- build:css assets/styles/main.css --&gt;
+&lt;link rel="stylesheet" href="assets/styles/main.css"&gt;
+&lt;link rel="stylesheet" href="assets/styles/skins/skin-def.css"&gt;
+&lt;link rel="stylesheet" href="assets/styles/cms-custom.css"&gt;
+&lt;!-- endbuild --&gt;
+</code></pre>
+</div>
+
+<h2 id="complete-sample-gruntfilejs">Complete sample Gruntfile.js</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>// Generated on 2015-05-20 using generator-jhipster 2.11.0
+'use strict';
+var fs = require('fs');
+
+// Returns the first occurence of the version number
+var parseVersionFromBuildGradle = function() {
+    var versionRegex = /^version\s*=\s*[',"]([^',"]*)[',"]/gm; // Match and group the version number
+    var buildGradle = fs.readFileSync('build.gradle', "utf8");
+    return versionRegex.exec(buildGradle)[1];
+};
+
+// usemin custom step
+var useminAutoprefixer = {
+    name: 'autoprefixer',
+    createConfig: function(context, block) {
+        if(block.src.length === 0) {
+            return {};
+        } else {
+            return require('grunt-usemin/lib/config/cssmin').createConfig(context, block) // Reuse cssmins createConfig
+        }
+    }
+};
+
+module.exports = function (grunt) {
+    require('load-grunt-tasks')(grunt);
+    require('time-grunt')(grunt);
+
+grunt.initConfig({
+    yeoman: {
+        // configurable paths
+        app: require('./bower.json').appPath || 'app',
+        dist: 'src/main/webapp/dist'
+    },
+    watch: {
+        bower: {
+            files: ['bower.json'],
+            tasks: ['wiredep']
+        },
+        ngconstant: {
+            files: ['Gruntfile.js', 'build.gradle'],
+            tasks: ['ngconstant:dev']
+        },
+        styles: {
+            files: ['src/main/webapp/assets/styles/**/*.css']
+        },
+    less:{
+            // if any .less file changes in directory "build/less/" run the "less"-task.
+            files: ["src/main/less/*.less", "src/main/webapp/bower_components/bootstrap/less/*.less"],
+            tasks: ["less"]
+        }
+    },
+    autoprefixer: {
+    // not used since Uglify task does autoprefixer,
+    //    options: ['last 1 version'],
+    //    dist: {
+    //        files: [{
+    //            expand: true,
+    //            cwd: '.tmp/styles/',
+    //            src: '**/*.css',
+    //            dest: '.tmp/styles/'
+    //        }]
+    //    }
+    },
+    wiredep: {
+        app: {
+            src: ['src/main/webapp/index.html'],
+            exclude: [
+                /angular-i18n/,  // localizations are loaded dynamically
+                /swagger-ui/
+            ]
+        },
+        test: {
+            src: 'src/test/javascript/karma.conf.js',
+            exclude: [/angular-i18n/, /swagger-ui/, /angular-scenario/],
+            ignorePath: /\.\.\/\.\.\//, // remove ../../ from paths of injected javascripts
+            devDependencies: true,
+            fileTypes: {
+                js: {
+                    block: /(([\s\t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi,
+                    detect: {
+                        js: /'(.*\.js)'/gi
+                    },
+                    replace: {
+                        js: '\'\','
+                    }
+                }
+            }
+        }
+    },
+    browserSync: {
+        dev: {
+            bsFiles: {
+                src : [
+                    'src/main/webapp/**/*.html',
+                    'src/main/webapp/**/*.json',
+                    'src/main/webapp/assets/styles/**/*.css',
+                    'src/main/webapp/scripts/**/*.js',
+                    'src/main/webapp/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+                    'tmp/**/*.{css,js}'
+                ]
+            }
+        },
+        options: {
+            watchTask: true,
+            proxy: "localhost:8080"
+        }
+    },
+    clean: {
+        dist: {
+            files: [{
+                dot: true,
+                src: [
+                    '.tmp',
+                    '&lt;%= yeoman.dist %&gt;/*',
+                    '!&lt;%= yeoman.dist %&gt;/.git*'
+                ]
+            }]
+        },
+        server: '.tmp'
+    },
+    jshint: {
+        options: {
+            jshintrc: '.jshintrc'
+        },
+        all: [
+            'Gruntfile.js',
+            'src/main/webapp/scripts/app.js',
+            'src/main/webapp/scripts/app/**/*.js',
+            'src/main/webapp/scripts/components/**/*.js'
+        ]
+    },
+    coffee: {
+        options: {
+            sourceMap: true,
+            sourceRoot: ''
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: 'src/main/webapp/scripts',
+                src: ['scripts/app/**/*.coffee', 'scripts/components/**/*.coffee'],
+                dest: '.tmp/scripts',
+                ext: '.js'
+            }]
+        },
+        test: {
+            files: [{
+                expand: true,
+                cwd: 'test/spec',
+                src: '**/*.coffee',
+                dest: '.tmp/spec',
+                ext: '.js'
+            }]
+        }
+    },
+    // "less"-task configuration
+      //this task will compile all less files to create both *.css and *.min.css
+      less: {
+          //Development non minified version
+          dev: {
+              options: {
+                  //Wether to compress or not
+                  compress: false
+              },
+              files: {
+                  // compilation.css  :  source.less
+                  "src/main/webapp/assets/styles/main.css": "src/main/less/main.less",
+                  "src/main/webapp/assets/styles/skins/_all-skins.css": "src/main/less/skins/_all-skins.less",
+                  "src/main/webapp/bower_components/bootstrap/dist/css/bootstrap.css": "src/main/webapp/bower_components/bootstrap/less/bootstrap.less"
+              }
+          }
+    },
+    concat: {
+    // not used since Uglify task does concat,
+    // but still available if needed
+    //    dist: {}
+    },
+    rev: {
+        dist: {
+            files: {
+                src: [
+                    '&lt;%= yeoman.dist %&gt;/scripts/**/*.js',
+                    '&lt;%= yeoman.dist %&gt;/assets/styles/**/*.css',
+                    '&lt;%= yeoman.dist %&gt;/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+                    '&lt;%= yeoman.dist %&gt;/assets/fonts/*'
+                ]
+            }
+        }
+    },
+    useminPrepare: {
+        html: 'src/main/webapp/**/*.html',
+        options: {
+            dest: '&lt;%= yeoman.dist %&gt;',
+            flow: {
+                html: {
+                    steps: {
+                        js: ['concat', 'uglifyjs'],
+                        css: ['cssmin', useminAutoprefixer] // Let cssmin concat files so it corrects relative paths to fonts and images
+                    },
+                        post: {}
+                    }
+                }
+        }
+    },
+    usemin: {
+        html: ['&lt;%= yeoman.dist %&gt;/**/*.html'],
+        css: ['&lt;%= yeoman.dist %&gt;/assets/styles/**/*.css'],
+        js: ['&lt;%= yeoman.dist %&gt;/scripts/**/*.js'],
+        options: {
+            assetsDirs: ['&lt;%= yeoman.dist %&gt;', '&lt;%= yeoman.dist %&gt;/assets/styles', '&lt;%= yeoman.dist %&gt;/assets/images', '&lt;%= yeoman.dist %&gt;/assets/fonts'],
+            patterns: {
+                js: [
+                    [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+                ]
+            },
+            dirs: ['&lt;%= yeoman.dist %&gt;']
+        }
+    },
+    imagemin: {
+        dist: {
+            files: [{
+                expand: true,
+                cwd: 'src/main/webapp/assets/images',
+            src: '**/*.{jpg,jpeg}', // we don't optimize PNG files as it doesn't work on Linux. If you are not on Linux, feel free to use '**/*.{png,jpg,jpeg}'
+                dest: '&lt;%= yeoman.dist %&gt;/assets/images'
+            }]
+        }
+    },
+    svgmin: {
+        dist: {
+            files: [{
+                expand: true,
+                cwd: 'src/main/webapp/assets/images',
+                src: '**/*.svg',
+                dest: '&lt;%= yeoman.dist %&gt;/assets/images'
+            }]
+        }
+    },
+    cssmin: {
+        // By default, your `index.html` &lt;!-- Usemin Block --&gt; will take care of
+        // minification. This option is pre-configured if you do not wish to use
+        // Usemin blocks.
+        // dist: {
+        //     files: {
+        //         '&lt;%= yeoman.dist %&gt;/styles/main.css': [
+        //             '.tmp/styles/**/*.css',
+        //             'styles/**/*.css'
+        //         ]
+        //     }
+        // }
+        options: {
+            root: 'src/main/webapp' // Replace relative paths for static resources with absolute path
+        }
+    },
+    ngtemplates:    {
+        dist: {
+            cwd: 'src/main/webapp',
+            src: ['scripts/app/**/*.html', 'scripts/components/**/*.html',],
+            dest: '.tmp/templates/templates.js',
+            options: {
+                module: 'jhipsterApp',
+                usemin: 'scripts/app.js',
+                htmlmin:  {
+                    removeCommentsFromCDATA: true,
+                    // https://github.com/yeoman/grunt-usemin/issues/44
+                    collapseWhitespace: true,
+                    collapseBooleanAttributes: true,
+                    conservativeCollapse: true,
+                    removeAttributeQuotes: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                    removeEmptyAttributes: true
+                }
+            }
+        }
+    },
+    htmlmin: {
+        dist: {
+            options: {
+                removeCommentsFromCDATA: true,
+                // https://github.com/yeoman/grunt-usemin/issues/44
+                collapseWhitespace: true,
+                collapseBooleanAttributes: true,
+                conservativeCollapse: true,
+                removeAttributeQuotes: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                keepClosingSlash: true
+            },
+            files: [{
+                expand: true,
+                cwd: '&lt;%= yeoman.dist %&gt;',
+                src: ['*.html'],
+                dest: '&lt;%= yeoman.dist %&gt;'
+            }]
+        }
+    },
+    // Put files not handled in other tasks here
+    copy: {
+        dist: {
+            files: [{
+                expand: true,
+                dot: true,
+                cwd: 'src/main/webapp',
+                dest: '&lt;%= yeoman.dist %&gt;',
+                src: [
+                    '*.html',
+                    'scripts/**/*.html',
+                    'assets/images/**/*.{png,gif,webp,jpg,jpeg,svg}',
+                    'assets/fonts/*'
+                ]
+            }, {
+                expand: true,
+                cwd: '.tmp/assets/images',
+                dest: '&lt;%= yeoman.dist %&gt;/assets/images',
+                src: [
+                    'generated/*'
+                ]
+            }]
+        },
+        generateOpenshiftDirectory: {
+                expand: true,
+                dest: 'deploy/openshift',
+                src: [
+                    'pom.xml',
+                    'src/main/**'
+            ]
+        }
+    },
+    concurrent: {
+        server: [
+            'less',
+            'imagemin',
+            'svgmin'
+        ],
+        test: [
+        ],
+        dist: [
+            'less',
+            'imagemin',
+            'svgmin'
+        ]
+    },
+    karma: {
+        unit: {
+            configFile: 'src/test/javascript/karma.conf.js',
+            singleRun: true
+        }
+    },
+    cdnify: {
+        dist: {
+            html: ['&lt;%= yeoman.dist %&gt;/*.html']
+        }
+    },
+    ngAnnotate: {
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '.tmp/concat/scripts',
+                src: '*.js',
+                dest: '.tmp/concat/scripts'
+            }]
+        }
+    },
+    buildcontrol: {
+        options: {
+            commit: true,
+            push: false,
+            connectCommits: false,
+            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        },
+        openshift: {
+            options: {
+                dir: 'deploy/openshift',
+                remote: 'openshift',
+                branch: 'master'
+            }
+        }
+    },
+    ngconstant: {
+        options: {
+            name: 'jhipsterApp',
+            deps: false,
+            wrap: '"use strict";\n// DO NOT EDIT THIS FILE, EDIT THE GRUNT TASK NGCONSTANT SETTINGS INSTEAD WHICH GENERATES THIS FILE\n'
+        },
+        dev: {
+            options: {
+                dest: 'src/main/webapp/scripts/app/app.constants.js'
+            },
+            constants: {
+                ENV: 'dev',
+                VERSION: parseVersionFromBuildGradle()
+            }
+        },
+        prod: {
+            options: {
+                dest: '.tmp/scripts/app/app.constants.js'
+            },
+            constants: {
+                ENV: 'prod',
+                VERSION: parseVersionFromBuildGradle()
+            }
+        }
+    }});
+
+    grunt.registerTask('serve', [
+        'clean:server',
+        'wiredep',
+        'ngconstant:dev',
+        'concurrent:server',
+        'browserSync',
+        'watch'
+    ]);
+
+    grunt.registerTask('server', function (target) {
+        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+        grunt.task.run([target ? ('serve:' + target) : 'serve']);
+    });
+
+    grunt.registerTask('test', [
+        'clean:server',
+        'wiredep:test',
+        'ngconstant:dev',
+        'concurrent:test',
+        'karma'
+    ]);
+
+    grunt.registerTask('build', [
+        'clean:dist',
+        'wiredep:app',
+        'ngconstant:prod',
+        'useminPrepare',
+        'ngtemplates',
+        'concurrent:dist',
+        'concat',
+        'copy:dist',
+        'ngAnnotate',
+        'cssmin',
+        'autoprefixer',
+        'uglify',
+        'rev',
+        'usemin',
+        'htmlmin'
+    ]);
+
+    grunt.registerTask('appendSkipBower', 'Force skip of bower for Gradle', function () {
+
+        if (!grunt.file.exists(filepath)) {
+            // Assume this is a maven project
+            return true;
+        }
+
+        var fileContent = grunt.file.read(filepath);
+        var skipBowerIndex = fileContent.indexOf("skipBower=true");
+
+        if (skipBowerIndex != -1) {
+            return true;
+        }
+
+        grunt.file.write(filepath, fileContent + "\nskipBower=true\n");
+    });
+
+    grunt.registerTask('buildOpenshift', [
+        'test',
+        'build',
+        'copy:generateOpenshiftDirectory',
+    ]);
+
+    grunt.registerTask('deployOpenshift', [
+        'test',
+        'build',
+        'copy:generateOpenshiftDirectory',
+        'buildcontrol:openshift'
+    ]);
+
+    grunt.registerTask('default', [
+        'test',
+        'build'
+    ]);
+};
+</code></pre>
+</div>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.17.0/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.17.0/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.17.0/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.17.0/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

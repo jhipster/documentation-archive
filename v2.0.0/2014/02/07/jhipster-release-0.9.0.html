@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Release 0.9.0</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.0.0/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.0.0/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.0.0/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.0.0/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.0.0/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.0.0/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+					<li ><a href="/v2.0.0/"><i class="fa fa-home"></i> Home</a></li>
+            		<li ><a href="/v2.0.0/releases.html"><i class="fa fa-file-text-o"></i> Release notes</a></li>
+            		<li>
+                		<a href="#"><i class="fa fa-road fa-fw"></i> Introduction<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+            				<li ><a href="/v2.0.0/presentation" target="_blank"><i class="fa fa-desktop"></i> Presentation</a></li>
+            				<li ><a href="/v2.0.0/tech_stack.html"><i class="fa fa-stack-overflow"></i> Technology stack</a></li>
+                            <li ><a href="/v2.0.0/screenshots.html"><i class="fa fa-picture-o"></i> Screenshots</a></li>
+                            <li ><a href="/v2.0.0/video_tutorial.html"><i class="fa fa-video-camera"></i> Video tutorial</a></li>
+						</ul>
+					</li>
+            		<li>
+                		<a href="#"><i class="fa fa-university fa-fw"></i> Documentation<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+            				<li ><a href="/v2.0.0/installation.html"><i class="fa fa-cloud-download"></i> Installation</a></li>
+            				<li ><a href="/v2.0.0/creating_an_app.html"><i class="fa fa-rocket"></i> Creating an application</a></li>
+            				<li ><a href="/v2.0.0/creating_an_entity.html"><i class="fa fa-bolt"></i> Creating an entity</a></li>
+            				<li ><a href="/v2.0.0/creating_a_service.html"><i class="fa fa-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.0.0/installing_new_languages.html"><i class="fa fa-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.0.0/profiles.html"><i class="fa fa-users"></i> Profiles</a></li>
+            				<li ><a href="/v2.0.0/development.html"><i class="fa fa-code"></i> Usage in development</a></li>
+            				<li ><a href="/v2.0.0/production.html"><i class="fa fa-play-circle"></i> Usage in production</a></li>
+                            <li ><a href="/v2.0.0/cloudfoundry.html"><i class="fa fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.0.0/heroku.html"><i class="fa fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.0.0/openshift.html"><i class="fa fa-cloud-upload"></i> Deploying to Openshift</a></li>
+						</ul>
+					</li>
+            		<li>
+                		<a href="#"><i class="fa fa-users fa-fw"></i> Help and bugs<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+							<li ><a href="/v2.0.0/help.html"><i class="fa fa-question"></i> Community help</a></li>
+							<li ><a href="/v2.0.0/consulting.html"><i class="fa fa-user"></i> Professional help</a></li>
+							<li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="fa fa-bug"></i> Bug tracker</a></li>
+							<li ><a href="/v2.0.0/thanks.html"><i class="fa fa-gift"></i> Thanks</a></li>
+						</ul>
+					</li>
+					<li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+					<li><a href="https://twitter.com/java_hipster" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+				</ul>
+        	</div>
+		</div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="jhipster-release-090">JHipster release 0.9.0</h1>
+
+<p><em>JHipster gives you Yeoman + Maven + Spring + AngularJS all working together in one handy generator.</em></p>
+
+<h2 id="whats-new">What’s new</h2>
+
+<ul>
+  <li>Full “hot reload” of Java classes is working a lot better, thanks to <a href="https://twitter.com/andy_clement">@andy_clement</a> who corrected our issues. However, we still have an annoying <a href="https://github.com/spring-projects/spring-loaded/issues/39">bug</a></li>
+  <li><a href="https://twitter.com/JeromeMirc">@JeromeMirc</a> added a default second user, and greatly improved the way we manage user authorizations</li>
+  <li>We greatly improved the generated WAR files, especially for using them in production</li>
+  <li>We updated to the latest Spring 4.0.1 version, which corrects a number of issues. If you had issues with wrong stacktraces with <em>org.springframework.scheduling.annotation.SchedulingConfiguration.setBeanFactory</em>, that should now be solved</li>
+  <li>The whole documentation has been updated to reflect those changes</li>
+</ul>
+
+<h2 id="how-to-upgrade">How to upgrade</h2>
+
+<p>Update your version of JHipster with:</p>
+
+<p><code class="highlighter-rouge">
+npm update -g generator-jhipster
+</code></p>
+
+<p>And then you can update your project when you run again</p>
+
+<p><code class="highlighter-rouge">
+yo jhipster
+</code></p>
+
+<h2 id="help-and-bugs">Help and bugs</h2>
+
+<p>If you find any issue with this release, don’t hesitate to:</p>
+
+<ul>
+  <li>Contact <a href="https://twitter.com/java_hipster">@java_hipster</a> on Twitter</li>
+  <li>Add a bug on our <a href="https://github.com/jhipster/generator-jhipster/issues?state=open">bug tracker</a></li>
+  <li>Post a question on <a href="http://stackoverflow.com/tags/jhipster/info">Stack Overflow</a></li>
+</ul>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.0.0/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.0.0/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.0.0/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

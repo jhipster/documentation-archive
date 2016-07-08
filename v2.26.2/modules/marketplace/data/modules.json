@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Fortune",
+        "npmPackageName": "generator-jhipster-fortune",
+        "url": "https://github.com/jdubois/generator-jhipster-fortune",
+        "author": "Julien Dubois",
+        "authorUrl": "https://github.com/jdubois",
+        "description": "Sample JHipster module, generating a fortune cookie page",
+        "keywords": ["sample", "fortune"],
+        "verified": true
+    },
+    {
+        "name": "Docker",
+        "npmPackageName": "generator-jhipster-docker",
+        "url": "https://github.com/pascalgrimaud/generator-jhipster-docker",
+        "author": "Pascal Grimaud",
+        "authorUrl": "https://twitter.com/pascalgrimaud",
+        "description": "Docker support in your JHipster application",
+        "keywords": ["deployment", "docker"],
+        "verified": false
+    },
+    {
+        "name": "Continuous Integration",
+        "npmPackageName": "generator-jhipster-ci",
+        "url": "https://github.com/pascalgrimaud/generator-jhipster-ci",
+        "author": "Pascal Grimaud",
+        "authorUrl": "https://twitter.com/pascalgrimaud",
+        "description": "Continuous Integration support in your JHipster application",
+        "keywords": ["continuous", "integration"],
+        "verified": false
+    },
+    {
+        "name": "Module Generator",
+        "npmPackageName": "generator-jhipster-module",
+        "url": "https://github.com/pascalgrimaud/generator-jhipster-module",
+        "author": "Pascal Grimaud",
+        "authorUrl": "https://twitter.com/pascalgrimaud",
+        "description": "JHipster module, used to create a sample JHipster module",
+        "keywords": ["generator", "module"],
+        "verified": false
+    },
+    {
+        "name": "Swagger2Markup",
+        "npmPackageName": "generator-jhipster-swagger2markup",
+        "url": "https://github.com/atomfrede/generator-jhipster-swagger2markup",
+        "author": "Frederik Hahne",
+        "authorUrl": "https://twitter.com/atomfrede",
+        "description": "Swagger2Markup support in your JHipster application",
+        "keywords": ["documentation", "asciidoc"],
+        "verified": false
+    },
+    {
+        "name": "AngularUI",
+        "npmPackageName": "generator-jhipster-angular-ui",
+        "url": "https://github.com/moifort/generator-jhipster-angular-ui",
+        "author": "Thibaut Mottet",
+        "authorUrl": "https://twitter.com/moifort_",
+        "description": "Install AngularUI module on your JHipster app",
+        "keywords": ["AngularUI", "Angular", "AngularJS", "Font Awesome", "Bootstrap", "UI", "Button", "Slider",
+            "Checkbox", "Switch", "Icon"],
+        "verified": false
+    },
+    {
+        "name": "Google analytics",
+        "npmPackageName": "generator-jhipster-google-analytics",
+        "url": "https://github.com/moifort/generator-jhipster-google-analytics",
+        "author": "Thibaut Mottet",
+        "authorUrl": "https://twitter.com/moifort_",
+        "description": "Install Google analytics on your JHipster app",
+        "keywords": ["Angular", "AngularJS", "Google analytics", "Google", "Analytics"],
+        "verified": false
+    },
+    {
+        "name": "Google maps",
+        "npmPackageName": "generator-jhipster-google-maps",
+        "url": "https://github.com/moifort/generator-jhipster-google-maps",
+        "author": "Thibaut Mottet",
+        "authorUrl": "https://twitter.com/moifort_",
+        "description": "Install Google map sample on your JHipster app",
+        "keywords": ["Angular", "AngularJS", "Google maps", "Google", "Maps"],
+        "verified": false
+    },
+    {
+        "name": "Bootstrap Material design",
+        "npmPackageName": "generator-jhipster-bootstrap-material-design",
+        "url": "https://github.com/moifort/generator-jhipster-bootstrap-material-design",
+        "author": "Thibaut Mottet",
+        "authorUrl": "https://twitter.com/moifort_",
+        "description": "Add Material design to your application",
+        "keywords": ["Bootstrap", "Material", "Material design"],
+        "verified": false
+    }
+]

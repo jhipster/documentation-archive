@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Using JHipster in development</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.1.1/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.1.1/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.1.1/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.1.1/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.1.1/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.1.1/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+					<li ><a href="/v2.1.1/"><i class="fa fa-home"></i> Home</a></li>
+            		<li ><a href="/v2.1.1/releases.html"><i class="fa fa-file-text-o"></i> Release notes</a></li>
+            		<li>
+                		<a href="#"><i class="fa fa-road fa-fw"></i> Introduction<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+            				<li ><a href="/v2.1.1/presentation" target="_blank"><i class="fa fa-desktop"></i> Presentation</a></li>
+            				<li ><a href="/v2.1.1/tech_stack.html"><i class="fa fa-stack-overflow"></i> Technology stack</a></li>
+                            <li ><a href="/v2.1.1/screenshots.html"><i class="fa fa-picture-o"></i> Screenshots</a></li>
+                            <li ><a href="/v2.1.1/video_tutorial.html"><i class="fa fa-video-camera"></i> Video tutorial</a></li>
+						</ul>
+					</li>
+            		<li>
+                		<a href="#"><i class="fa fa-university fa-fw"></i> Documentation<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+            				<li ><a href="/v2.1.1/installation.html"><i class="fa fa-cloud-download"></i> Installation</a></li>
+            				<li ><a href="/v2.1.1/creating_an_app.html"><i class="fa fa-rocket"></i> Creating an application</a></li>
+            				<li ><a href="/v2.1.1/creating_an_entity.html"><i class="fa fa-bolt"></i> Creating an entity</a></li>
+            				<li ><a href="/v2.1.1/creating_a_service.html"><i class="fa fa-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.1.1/installing_new_languages.html"><i class="fa fa-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.1.1/using_angularjs.html"><i class="fa fa-university"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.1.1/security.html"><i class="fa fa-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.1.1/profiles.html"><i class="fa fa-users"></i> Managing profiles</a></li>
+            				<li class="active"><a href="/v2.1.1/development.html"><i class="fa fa-code"></i> Using in development</a></li>
+            				<li ><a href="/v2.1.1/production.html"><i class="fa fa-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.1.1/cloudfoundry.html"><i class="fa fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.1.1/heroku.html"><i class="fa fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.1.1/openshift.html"><i class="fa fa-cloud-upload"></i> Deploying to Openshift</a></li>
+                    <li ><a href="/v2.1.1/setting_up_ci.html"><i class="fa fa-check-square-o"></i> Continuous Integration</a></li>
+                    </ul>
+					</li>
+            		<li>
+                		<a href="#"><i class="fa fa-users fa-fw"></i> Help and bugs<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+							<li ><a href="/v2.1.1/help.html"><i class="fa fa-question"></i> Community help</a></li>
+							<li ><a href="/v2.1.1/consulting.html"><i class="fa fa-user"></i> Professional help</a></li>
+							<li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="fa fa-bug"></i> Bug tracker</a></li>
+							<li ><a href="/v2.1.1/thanks.html"><i class="fa fa-gift"></i> Thanks</a></li>
+						</ul>
+					</li>
+					<li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+					<li><a href="https://twitter.com/java_hipster" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+				</ul>
+        	</div>
+		</div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1><i class="fa fa-code"></i> Using JHipster in development</h1>
+<i><b>Please check our <a href="/v2.1.1/video_tutorial.html">video tutorial</a> on creating a new JHipster application!</b></i>
+
+<h2>Configuration</h2>
+<p>
+    By default, JHipster uses the "development" profile, so you don't have to configure anything.
+</p>
+<p>
+    If you want more information on the available profiles, please go the section titled "<a href="/v2.1.1/profiles.html">Profiles</a>".
+</p>
+
+<h2>Running the application</h2>
+
+<h3>As a "main" Java class</h3>
+
+<p>
+    From your IDE, right-click on the "Application" class at the root of your Java package hierarchy, and run it directly. You should also be able to debug it as easily.
+</p>
+
+<p>
+    The application will be available on <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
+</p>
+
+<h3>As a Maven project</h3>
+
+<p>
+    You can launch the Java server with Maven:
+</p>
+<p>
+    <code>
+        mvn spring-boot:run
+    </code>
+</p>
+
+<p>
+    The application will be available on <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
+</p>
+
+<p>
+    If you want more information on using Maven, please go to <a href="http://maven.apache.org" target="_blank">http://maven.apache.org</a>
+</p>
+
+<h3>(Optional) As a Gradle project</h3>
+
+<p>
+    If you selected the Gradle option when creating the project, you can launch the Java server with Gradle:
+</p>
+<p>
+    <code>
+        gradle bootRun
+    </code>
+</p>
+
+<p>
+    The application will be available on <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.
+</p>
+
+<h2>Using the Java server and Grunt together</h2>
+<p>
+    <i>We highly recommend you use this feature, as it allows to have live reloading of your client-side code.</i>
+</p>
+<p>
+    You can run Grunt to work on the client-side JavaScript application:
+</p>
+<p>
+    <code>
+        grunt serve
+    </code>
+</p>
+<p>
+    This should open up your Web browser, with live reload enabled, on <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>. As soon as you modify one of your HTML/CSS/JavaScript file, your browser should refresh itself automatically.
+</p>
+<p>
+    If you have generated your application with the Sass/Compass option, your templates should also be automatically compiled into CSS.
+</p>
+<p>
+    This Grunt task has a proxy to the REST endpoints on the Java server which we just launched (on <a href="http://localhost:8080/rest" target="_blank">http://localhost:8080/rest</a>), so it should be able to do live REST requests to the Java back-end.
+</p>
+<p>
+    If you want more information on using Grunt, please go to <a href="http://gruntjs.com" target="_blank">http://gruntjs.com</a>.
+</p>
+
+<h2>Using Bower to install and update JavaScript, CSS and Sass dependencies</h2>
+<p>
+    You can use bower to update your JavaScript, CSS and Sass dependencies:
+</p>
+<p>
+    <code>
+        bower update
+    </code>
+</p>
+<p>
+    Or if you want to install a new JavaScript, CSS or Sass dependency:
+</p>
+<p>
+    <code>
+        bower install &lt;package&gt; --save
+    </code>
+</p>
+<p>
+    Your JavaScript, CSS or Sass dependencies will be stored in your <code>src/main/webapp/bower_components</code> folder, and we believe it is a good idea to store them in your Git repository (but JHispter does not force you to do so).
+</p>
+<p>
+    If the installed dependency contains JavaScript files they will automatically be injected into your <code>index.html</code> and <code>karma.conf.js</code> files. Likewise the CSS files will be injected into the <code>index.html</code> file, and the SCSS files into the <code>main.scss</code>.
+</p>
+<p>
+    However this will only work if the grunt server is running. If it is not running they will be injected next time you run <code>grunt serve</code>.
+</p>
+<p>
+    Or, if you want to trigger the injection manually, just run:
+</p>
+<p>
+    <code>
+        grunt wiredep
+    </code>
+</p>
+<p>
+    If you want more information on using Bower, please go to <a href="http://bower.io" target="_blank">http://bower.io</a>. For more information on using Grunt Wiredep, please go to <a href="http://stephenplusplus.github.io/grunt-wiredep/" target="_blank">http://stephenplusplus.github.io/grunt-wiredep</a>.
+</p>
+
+<h2>Using the database</h2>
+<h3>Using the H2 database in development</h3>
+<p>
+    If you choose the H2 database, you will have an in-memory database running inside your application, and you can access its console at <a href="http://localhost:8080/console" target="_blank">http://localhost:8080/console</a> by default.
+</p>
+<p>
+    To connect to the database, select the pre-configured options:
+    <ul>
+        <li>Driver Class: org.h2.Driver</li>
+        <li>JDBC URL: jdbc:h2:mem:jhipster</li>
+        <li>User name: &lt;blank&gt;</li>
+        <li>Password: &lt;blank&gt;</li>
+    </ul>
+</p>
+<p>
+    <img src="images/h2.png"/>
+</p>
+
+<h3>Using MySQL or Postgresql in development</h3>
+<p>
+    This option is bit more complex than using H2, but you have a some important benefits:
+    <ul>
+        <li>Your data is kept across application restarts</li>
+        <li>Your application starts a little bit faster</li>
+        <li>You can use the great <code>mvn liquibase:diff</code> goal (see below)</li>
+    </ul>
+</p>
+
+<h2>Database updates</h2>
+
+<p>
+    If you add or modify a JPA entity, you will need to update your database schema.
+</p>
+<p>
+    JHipster uses <a href="http://www.liquibase.org" target="_blank">Liquibase</a> to manage the database updates, and stores its configuration in the <code>/src/main/resources/config/liquibase/</code> directory. There are 3 ways to work with Liquibase: use the entity sub-generator, use the liquibase:diff Maven goal, or update the configuration files manually.
+</p>
+
+<h3>Database updates with the entity sub-generator</h3>
+
+<p>
+    If you use the <a href="/v2.1.1/creating_an_entity.html">entity sub-generator</a>, here is the development workflow:
+    <ul>
+        <li>Run the <a href="/v2.1.1/creating_an_entity.html">entity sub-generator</a></li>
+        <li>A new "change log" is created in your <code>src/main/resources/config/liquibase/changelog</code> directory, and has been automatically added to your <code>src/main/resources/config/liquibase/master.xml</code> file</li>
+        <li>Review this change log, it will be applied the next time you run your application</li>
+    </ul>
+</p>
+
+<h3>Database updates with the Maven liquibase:diff goal</h3>
+<p>
+    If you have choosen to use MySQL or Postgresql in development, you can use the <code>mvn liquibase:diff</code> goal to automatically generate a changelog.
+</p>
+<p>
+    <a href="http://www.liquibase.org/documentation/maven/index.html" target="_blank">Liquibase Hibernate</a> is a Maven plugin that is configured in your pom.xml, and is independant from your Spring application.yml file, so if you have changed the default settings (for example, changed the database password), you need to modify both files.
+</p>
+<p>
+    Here is the development workflow:
+    <ul>
+        <li>Modify your JPA entity (add a field, a relationship, etc.)</li>
+        <li>Compile your application (this works on the compiled Java code, so don't forget to compile!)</li>
+        <li>Run <code>mvn liquibase:diff</code> (or <code>mvn compile liquibase:diff</code> to compile before)</li>
+        <li>A new "change log" is created in your <code>src/main/resources/config/liquibase/changelog</code> directory</li>
+        <li>Review this change log and add it to your <code>src/main/resources/config/liquibase/master.xml</code> file, so it is applied the next time you run your application</li>
+    </ul>
+</p>
+
+<p>
+    If you use Gradle instead of Maven, you can use the same workflow by running <code>./gradlew liquibaseDiffChangelog</code>, and change the database configuration in <code>liquibase.gradle</code> if required.
+</p>
+
+<h3>Database updates by manually editing the change log</h3>
+<p>
+    If you prefer (or need) to do a database update manually, here is the development workflow:
+    <ul>
+        <li>Modify your JPA entity (add a field, a relationship, etc.)</li>
+        <li>Create a new "change log" in your <code>src/main/resources/config/liquibase/changelog</code> directory. The files in that directory are prefixed by their creation date (in yyyyMMddHHmmss format), and then have a title describing what they do. For example, <code>20141006152300_added_price_to_product.xml</code> is a good name.</li>
+        <li>Add this "change log" file in your <code>src/main/resources/config/liquibase/master.xml</code> file, so it is applied the next time you run your application</li>
+    </ul>
+</p>
+<p>
+    If you want more information on using Liquibase, please go to <a href="http://www.liquibase.org" target="_blank">http://www.liquibase.org</a>.
+</p>
+<h2>Internationalization</h2>
+
+<p>Internationalization (or i18n) is a first-class citizen in JHipster, as we believe it should be set up at the beginning of your project (and not as an afterthought).</p>
+<p>
+    Usage is really easy thanks to <a href="https://github.com/PascalPrecht/angular-translate" target="_blank">Angular Translate</a>, which provides a simple AngularJS directive for i18n.
+</p>
+<p>
+    For example, to add a translation to the "first name" field, just add a "translate" attribute with a key:
+    <code>&lt;label translate="settings.form.firstname"&gt;First Name&lt;/label&gt;</code>
+</p>
+<p>
+    This key references a JSON document, which will return the translated String. AngularJS will then replace the "First Name" String with the translated version.
+</p>
+<p>
+    If you want more information on using languages, read our <a href="/v2.1.1/installing_new_languages.html">Installing new languages documentation</a>.
+</p>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.1.1/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.1.1/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.1.1/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.1.1/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

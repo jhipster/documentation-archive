@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Dubois">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Security</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.14.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/v2.14.2/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.14.2/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.14.2/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.14.2/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.14.2/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.14.2/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.14.2/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/v2.14.2/"><i class="icon-home"></i> Home</a></li>
+                    <li ><a href="/v2.14.2/releases.html"><i class="icon-file-text-alt"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="icon-road"></i> Introduction<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/presentation" target="_blank"><i class="icon-desktop"></i> Presentation</a></li>
+                            <li ><a href="/v2.14.2/tech_stack.html"><i class="icon-stackexchange"></i> Technology stack</a></li>
+                            <li ><a href="/v2.14.2/screenshots.html"><i class="icon-picture"></i> Screenshots</a></li>
+                            <li ><a href="/v2.14.2/video_tutorial.html"><i class="icon-film"></i> Video tutorial</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-wrench"></i> Setup<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/installation.html"><i class="icon-cloud-download"></i> Installation</a></li>
+                            <li ><a href="/v2.14.2/creating_an_app.html"><i class="icon-rocket"></i> Creating an application</a></li>
+                            <li ><a href="/v2.14.2/creating_an_entity.html"><i class="icon-bolt"></i> Creating an entity</a></li>
+                            <li ><a href="/v2.14.2/creating_a_service.html"><i class="icon-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.14.2/installing_new_languages.html"><i class="icon-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.14.2/configuring_ide.html"><i class="icon-keyboard"></i> Configuring your IDE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-puzzle-piece"></i> Options<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="active"><a href="/v2.14.2/security.html"><i class="icon-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.14.2/using_dtos.html"><i class="icon-briefcase"></i> Using DTOs</a></li>
+                            <li ><a href="/v2.14.2/using_elasticsearch.html"><i class="icon-search"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/v2.14.2/using_mongodb.html"><i class="icon-leaf"></i> Using MongoDB</a></li>
+                            <li ><a href="/v2.14.2/using_cassandra.html"><i class="icon-eye-open"></i> Using Cassandra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-code"></i> Development<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/development.html"><i class="icon-code"></i> Using in development</a></li>
+                            <li ><a href="/v2.14.2/profiles.html"><i class="icon-group"></i> Managing profiles</a></li>
+                            <li ><a href="/v2.14.2/using_angularjs.html"><i class="icon-html5"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.14.2/customizing_bootstrap.html"><i class="icon-css3"></i> Customizing Bootstrap</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-umbrella"></i> Test<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/running_tests.html"><i class="icon-shield"></i> Running tests</a></li>
+                            <li ><a href="/v2.14.2/setting_up_ci.html"><i class="icon-check"></i> Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-cloud"></i> Production<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/production.html"><i class="icon-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.14.2/cloudfoundry.html"><i class="icon-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.14.2/heroku.html"><i class="icon-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.14.2/openshift.html"><i class="icon-cloud-upload"></i> Deploying to Openshift</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="/v2.14.2/tips.html"><i class="icon-cogs"></i> Tips'n tricks</a></li>
+                    <li>
+                        <a href="#"><i class="icon-question"></i> Help and bugs<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/help.html"><i class="icon-group"></i> Community help</a></li>
+                            <li ><a href="/v2.14.2/consulting.html"><i class="icon-user-md"></i> Professional help</a></li>
+                            <li ><a href="/v2.14.2/training.html"><i class="icon-magic"></i> Training</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="icon-bug"></i> Bug tracker</a></li>
+                            <li ><a href="/v2.14.2/thanks.html"><i class="icon-gift"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+                    <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank"><i class="icon-comments-alt"></i> Chat</a></li>
+                    <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+                    <li>
+<script>
+  (function() {
+    var cx = '004687894124070278856:-ryvp1pk0xi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1><i class="icon-lock"></i> Securing your application</h1>
+
+<p>
+    To use Spring Security with a Single Web Page Application, like the ones generated by JHipster, you need Ajax login/logout/error views. We have configured Spring Security in order to use those views correctly, and of course we generate all the JavaScript and HTML code for you.
+</p>
+
+<p>
+    By default, JHipster comes with 4 different users:
+
+<ul>
+    <li>"system", who is mainly used by our audit logs, when something is done automatically</li>
+    <li>"anonymousUser", who is given to anonymous users when they do an action</li>
+    <li>"user", who is a normal user with "ROLE_USER" authorization. His default password is "user"</li>
+    <li>"admin", who is an admin user with "ROLE_USER" and "ROLE_ADMIN" authorizations. His default password is "admin"</li>
+</ul>
+    For security reasons, you should change those default passwords.
+</p>
+
+<h2>HTTP Session Authentication</h2>
+<p>
+    This is the "classical" Spring Security authentication mechanism, but we have improved it quite significantly. It uses the HTTP Session, so it is a stateful mechanism: if you plan to scale your application on multiple servers, you need to have a load balancer with sticky sessions so that each user stays on the same server.
+</p>
+
+<h3>Improved remember-me mechanism</h3>
+<p>
+    We have modified the Spring Security remember-me mechanism so that you have a unique token, that is stored in your database (SQL or NoSQL database, depending on your choice during generation!). We also store more information than the standard implementation, so you have a better understanding of where those tokens come from: IP address, browser, date... And we generate a complete administration screen, so that you can invalidate sessions, for example if you forgot to log out on another computer.
+</p>
+
+<h3>Cookie theft protection</h3>
+<p>
+    We have added a very complete cookie theft protection mechanism: we store your security information in a cookie, as well as in the database, and each time a user logs in we modify those values and check if they have been altered. That way, if a user ever steals your cookie, he will be able to use only once, at most.
+</p>
+
+<h3>CSRF protection</h3>
+<p>
+    Spring Security and AngularJS both have CSRF protection out-of-the-box, but unfortunately they don't use the same cookies or HTTP headers! In practice, you have in fact no protection at all for CSRF attacks. Of course, we re-configure both tools so that they correctly work together.
+</p>
+
+<h2>OAuth2 Authentication</h2>
+<p>
+    OAuth2 is a stateless security mechanism, so you might prefer it if you want to scale your application across several machines. Spring Security provides an OAuth2 implementation, which we have configured for you.
+</p>
+<p>
+    The biggest issue with OAuth2 is that requires to have several database tables in order to store its security tokens. If you are using an SQL database, we provide the necessary Liquibase changlog so that those tables are automatically created for you.
+</p>
+<p>
+    As Spring Security only supports OAuth2 with SQL databases, we have also implemented our own MongoDB version. We generate for you all the OAuth2 implementation for MongoDB, as well as the necessary MongoDB configuration.
+</p>
+<p>
+    This solution uses a secret key, which should be configured in your application.yml file, as the "authentication.oauth.secret" property.
+
+<h2>Token-based authentication</h2>
+<p>
+    Token-based authentication, like OAuth2, is a stateless security mechanism, so it's another good option if you want to scale on several different servers.
+</p>
+<p>
+    This authentication mechanism doesn't exist by default with Spring Security, so it's specific to JHipster. It is easier to use and implement than OAuth2, as it does not require a persistence mechanism, so it works on all SQL and NoSQL options.
+</p>
+<p>
+    This solution uses a custom token, which is a MD5 hash of your user name, the expiration date of the token, your password, and a secret key. This ensures that if someone steals your token, he should not be able to extract your username and password.
+<p>
+    The secret key should be configured in your application.yml file, as the "authentication.xauth.secret" property.
+</p>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.14.2/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.14.2/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.14.2/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.14.2/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

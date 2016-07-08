@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Dubois">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Creating an entity</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.18.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/v2.18.0/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.18.0/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.18.0/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.18.0/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.18.0/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.18.0/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.18.0/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/v2.18.0/"><i class="icon-home"></i> Home</a></li>
+                    <li ><a href="/v2.18.0/releases.html"><i class="icon-file-text-alt"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="icon-road"></i> Introduction<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/presentation" target="_blank"><i class="icon-desktop"></i> Presentation</a></li>
+                            <li ><a href="/v2.18.0/tech_stack.html"><i class="icon-stackexchange"></i> Technology stack</a></li>
+                            <li ><a href="/v2.18.0/screenshots.html"><i class="icon-picture"></i> Screenshots</a></li>
+                            <li ><a href="/v2.18.0/video_tutorial.html"><i class="icon-film"></i> Video tutorial</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-wrench"></i> Setup<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/installation.html"><i class="icon-cloud-download"></i> Installation</a></li>
+                            <li ><a href="/v2.18.0/creating_an_app.html"><i class="icon-rocket"></i> Creating an application</a></li>
+                            <li class="active"><a href="/v2.18.0/creating_an_entity.html"><i class="icon-bolt"></i> Creating an entity</a></li>
+                            <li ><a href="/v2.18.0/managing_relationships.html"><i class="icon-sitemap"></i> Managing relationships</a></li>
+                            <li ><a href="/v2.18.0/creating_a_service.html"><i class="icon-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.18.0/installing_new_languages.html"><i class="icon-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.18.0/configuring_ide.html"><i class="icon-keyboard"></i> Configuring your IDE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-puzzle-piece"></i> Options<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/security.html"><i class="icon-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.18.0/using_dtos.html"><i class="icon-briefcase"></i> Using DTOs</a></li>
+                            <li ><a href="/v2.18.0/using_elasticsearch.html"><i class="icon-search"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/v2.18.0/using_oracle.html"><i class="icon-archive"></i> Using Oracle</a></li>
+                            <li ><a href="/v2.18.0/using_mongodb.html"><i class="icon-leaf"></i> Using MongoDB</a></li>
+                            <li ><a href="/v2.18.0/using_cassandra.html"><i class="icon-eye-open"></i> Using Cassandra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-code"></i> Development<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/development.html"><i class="icon-code"></i> Using in development</a></li>
+                            <li ><a href="/v2.18.0/profiles.html"><i class="icon-group"></i> Managing profiles</a></li>
+                            <li ><a href="/v2.18.0/using_angularjs.html"><i class="icon-html5"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.18.0/customizing_bootstrap.html"><i class="icon-css3"></i> Customizing Bootstrap</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-umbrella"></i> Test<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/running_tests.html"><i class="icon-shield"></i> Running tests</a></li>
+                            <li ><a href="/v2.18.0/setting_up_ci.html"><i class="icon-check"></i> Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-cloud"></i> Production<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/production.html"><i class="icon-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.18.0/cloudfoundry.html"><i class="icon-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.18.0/heroku.html"><i class="icon-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.18.0/openshift.html"><i class="icon-cloud-upload"></i> Deploying to Openshift</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="/v2.18.0/tips.html"><i class="icon-cogs"></i> Tips'n tricks</a></li>
+                    <li >
+                        <a href="/v2.18.0/jhipster_uml.html"><i class="icon-magic"></i>
+                            JHipster-UML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-question"></i> Help and bugs<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/help.html"><i class="icon-group"></i> Community help</a></li>
+                            <li ><a href="/v2.18.0/consulting.html"><i class="icon-user-md"></i> Professional help</a></li>
+                            <li ><a href="/v2.18.0/training.html"><i class="icon-magic"></i> Training</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="icon-bug"></i> Bug tracker</a></li>
+                            <li ><a href="/v2.18.0/thanks.html"><i class="icon-gift"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+                    <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank"><i class="icon-comments-alt"></i> Chat</a></li>
+                    <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+                    <li>
+<script>
+  (function() {
+    var cx = '004687894124070278856:-ryvp1pk0xi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1><i class="icon-bolt"></i> Creating an entity</h1>
+<i><b>Please check our <a href="/v2.18.0/video_tutorial.html">video tutorial</a> on creating a new JHipster application!</b></i>
+
+<h2>Introduction</h2>
+<p>
+    Once you have created your application, you will want to create <i>entities</i>. For example, you might want to create an <i>Author</i> and a <i>Book</i> entity. For each entity, you will need:
+</p>
+<ul>
+    <li>A database table</li>
+    <li>A Liquibase change set</li>
+    <li>A JPA Entity</li>
+    <li>A Spring Data JPA Repository</li>
+    <li>A Spring MVC REST Controller, which has the basic CRUD operations</li>
+    <li>An AngularJS router, a controller and a service</li>
+    <li>An HTML view</li>
+    <li>Integration tests, to validate everything works as expected</li>
+    <li>Performance tests, to see if everything works smoothly</li>
+</ul>
+<p>
+    If you have several entities, you will likely want to have relationships between them. For this, you will need:
+</p>
+<ul>
+    <li>A database foreign key</li>
+    <li>Specific JavaScript and HTML code for managing this relationship</li>
+</ul>
+<p>
+    The "entity" sub-generator will create all the necessary files, and provide a CRUD front-end for each entity (see <a href="/v2.18.0/using_angularjs.html">project structure</a>).
+</p>
+
+<h2>Entity fields</h2>
+<p>
+    For each entity, you can add as many fields as you want. You will need to input the field names and their types, and JHipster will generate for you all the required code and configuration, from the AngularJS HTML view to the Liquibase changelog.
+</p>
+<p>
+    Those fields cannot contain reserved keywords in the technologies you are using. For example, if you use PostgreSQL:
+</p>
+
+<p>
+    <ul>
+        <li>You cannot use Java reserved keywords (as your code will not compile)</li>
+        <li>You cannot use PostgreSQL reserved keywords (as your database schema update will fail)</li>
+    </ul>
+</p>
+
+<h2>Validation</h2>
+<p>
+    Validation can be set up for each field. Depending on the field type, different validation options will be available.
+</p>
+<p>
+    Validation will be automatically generated on:
+    <ul>
+        <li>the HTML views, using <a href="https://docs.angularjs.org/guide/forms" target="_blank">the AngularJS validation mechanism</a></li>
+        <li>the Java domain objects, using <a href="http://beanvalidation.org/" target="_blank">Bean Validation</a></li>
+    </ul>
+</p>
+<p>
+    Bean validation will then be used to automatically validate domain objects when they are used in:
+    <ul>
+        <li>Spring MVC REST controllers (using the <code>@Valid</code> annotation)</li>
+        <li>Hibernate/JPA (entities are automatically validated before being saved)</li>
+    </ul>
+</p>
+<p>
+    Validation information will also be used to generate more precise database column metadata:
+    <ul>
+        <li>Required fields will be marked non-nullable</li>
+        <li>Fields which have a maximum length will have the same column length</li>
+    </ul>
+</p>
+<p>
+    Validation has a few limitations:
+    <ul>
+        <li>We don't support all validation options from AngularJS and Bean Validation, as we only support those which are common to both APIs</li>
+        <li>Regular Expression patterns don't work the same in JavaScript and in Java, so if you configure one, you might need to tweak one of the generated patterns</li>
+        <li>JHipster generates unit tests that work for generic entities, without knowing your validation rules: it is possible that the generated tests do not pass the validation rules. In that case, you will need to update the sample values used in your unit tests, so that they pass the validation rules.</li>
+    </ul>
+</p>
+
+<h2>Entity relationships</h2>
+
+<p>
+    Entity relationships are only available for SQL databases. It is a fairly complex subject, which has its own documentation page: <a href="/v2.18.0/managing_relationships.html">Managing relationships</a>.
+</p>
+
+<h2>Data Transfer Objects (DTOs)</h2>
+
+<p>
+    By default JHipster entities do not use DTOs, but they are available as an option. Here is the documentation: <a href="/v2.18.0/using_dtos.html">Using DTOs</a>.
+</p>
+
+<h2>Pagination</h2>
+<p>
+    Please note that pagination is not available if you created your application with <a href="/v2.18.0/using_cassandra.html">Cassandra</a>. Of course this will be added in a future release.
+</p>
+
+<p>
+    Pagination uses <a href="http://tools.ietf.org/html/rfc5988" target="_blank">the Link header</a>, as in the <a href="https://developer.github.com/v3/#pagination" target="_blank">GitHub API</a>. JHipster provides a custom implementation of this specification on both the server (Spring MVC REST) and client (AngularJS) sides.
+</p>
+
+<p>
+    When the entity is generated, JHipster provides 4 pagination options:
+    <ul>
+        <li>No pagination (in that case, the back-end won't be paginated)</li>
+        <li>A simple pager, based on <a href="http://getbootstrap.com/components/#pagination-pager" target="_blank">the Bootstrap pager</a></li>
+        <li>A complete pagination system, based on <a href="http://getbootstrap.com/components/#pagination" target="_blank">the Bootstrap pagination component</a></li>
+        <li>An infinite scroll system, based on <a href="http://sroze.github.io/ngInfiniteScroll/" target="_blank">the infinite scroll directive</a></li>
+    </ul>
+</p>
+
+<h2>Generating an entity a second time</h2>
+
+<p>
+    The entity configuration is saved in a specific .json file, in the <code>.jhipster</code> directory. So if you run again the sub-generator, using an existing entity name, your entity will be re-generated.
+</p>
+<p>
+    You might want to do this for the following reasons:
+    <ul>
+        <li>You want to reset your code to its original state</li>
+        <li>You have updated JHipster, and would like to have your entity generated with the new templates</li>
+        <li>You have modified the .json configuration file (the format is quite close to the questions asked by the generator, so it's not very complicated), so you can have a new version of your entity</li>
+        <li>You have copy/pasted the .json file, and want a new entity that is very close to the copied entity</li>
+    </ul>
+</p>
+
+<h2>Tutorial</h2>
+
+<p>This is a short tutorial on creating two entities (a Author and a Book) which have a one-to-many relationship.<p>
+
+<h3>Generate the "Author" entity</h3>
+
+<p>As we want to have a one-to-many relationship between Authors and Books (one author can write many books), we need to create the Author first. At the database level, JHipster will then be able to add a foreign key on the Book table, linking to the Author table.</p>
+
+<p>
+    <code>
+        yo jhipster:entity author
+    </code>
+</p>
+
+<p>
+    Answer the next questions concerning the fields of this entity, the author has:
+    <ul>
+        <li>a "name" of type "String"</li>
+        <li>a "birthDate" of type "LocalDate"</li>
+    </ul>
+</p>
+<p>
+    Then answer the questions concerning the relationships, the author has:
+    <ul>
+        <li>A one-to-many relationship with the "book" entity (which doesn't exist yet)</li>
+    </ul>
+</p>
+
+<h3>Generate the "Book" entity</h3>
+
+<p>
+    <code>
+        yo jhipster:entity book
+    </code>
+</p>
+
+<p>
+    Answer the next questions concerning the fields of this entity, the book has:
+    <ul>
+        <li>a "title", of type "String"</li>
+        <li>a "description", of type "String"</li>
+        <li>a "publicationDate", of type "LocalDate"</li>
+        <li>a "price", of type "BigDecimal"</li>
+    </ul>
+</p>
+<p>
+    Then answer the questions concerning the relationships, the book:
+    <ul>
+        <li>Has many-to-one relationship with the "author" entity</li>
+        <li>And this relationship uses the "name" field (from the Author entity) to be displayed</li>
+    </ul>
+</p>
+
+
+<h3>Check the generated code</h3>
+
+<p>
+    Run the generated test suite, with <code>mvn test</code>, which will test the Author entity and the Book entity.
+</p>
+<p>
+    Launch the application (for example with <code>mvn spring-boot:run</code>), log in and select the "Author" and "Book"
+    entities in the "entities" menu.
+</p>
+<p>
+    Check the database tables, to see if your data is correctly inserted.
+</p>
+
+<h3>Improve the generated code</h3>
+<p>
+    The generated files contain all the basic CRUD operations, and don't need to be modified if your needs are simple.
+</p>
+<p>
+    If you want to modify the generated code or the database schema, you should follow our <a href="/v2.18.0/development.html">development guide</a>
+</p>
+<p>
+    If you want some more complex business behaviors, you might need to add a Spring <code>@Service</code> class, using the <a href="/v2.18.0/creating_a_service.html">service sub-generator</a>.
+</p>
+
+<h3>You're done!</h3>
+
+<p>
+    Your generated CRUD page should look like this:
+</p>
+<img src="images/screenshot_5.png"/>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.18.0/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.18.0/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.18.0/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.18.0/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

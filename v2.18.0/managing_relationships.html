@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Dubois">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Managing relationships</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.18.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/v2.18.0/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.18.0/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.18.0/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.18.0/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.18.0/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.18.0/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.18.0/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/v2.18.0/"><i class="icon-home"></i> Home</a></li>
+                    <li ><a href="/v2.18.0/releases.html"><i class="icon-file-text-alt"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="icon-road"></i> Introduction<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/presentation" target="_blank"><i class="icon-desktop"></i> Presentation</a></li>
+                            <li ><a href="/v2.18.0/tech_stack.html"><i class="icon-stackexchange"></i> Technology stack</a></li>
+                            <li ><a href="/v2.18.0/screenshots.html"><i class="icon-picture"></i> Screenshots</a></li>
+                            <li ><a href="/v2.18.0/video_tutorial.html"><i class="icon-film"></i> Video tutorial</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-wrench"></i> Setup<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/installation.html"><i class="icon-cloud-download"></i> Installation</a></li>
+                            <li ><a href="/v2.18.0/creating_an_app.html"><i class="icon-rocket"></i> Creating an application</a></li>
+                            <li ><a href="/v2.18.0/creating_an_entity.html"><i class="icon-bolt"></i> Creating an entity</a></li>
+                            <li class="active"><a href="/v2.18.0/managing_relationships.html"><i class="icon-sitemap"></i> Managing relationships</a></li>
+                            <li ><a href="/v2.18.0/creating_a_service.html"><i class="icon-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.18.0/installing_new_languages.html"><i class="icon-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.18.0/configuring_ide.html"><i class="icon-keyboard"></i> Configuring your IDE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-puzzle-piece"></i> Options<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/security.html"><i class="icon-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.18.0/using_dtos.html"><i class="icon-briefcase"></i> Using DTOs</a></li>
+                            <li ><a href="/v2.18.0/using_elasticsearch.html"><i class="icon-search"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/v2.18.0/using_oracle.html"><i class="icon-archive"></i> Using Oracle</a></li>
+                            <li ><a href="/v2.18.0/using_mongodb.html"><i class="icon-leaf"></i> Using MongoDB</a></li>
+                            <li ><a href="/v2.18.0/using_cassandra.html"><i class="icon-eye-open"></i> Using Cassandra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-code"></i> Development<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/development.html"><i class="icon-code"></i> Using in development</a></li>
+                            <li ><a href="/v2.18.0/profiles.html"><i class="icon-group"></i> Managing profiles</a></li>
+                            <li ><a href="/v2.18.0/using_angularjs.html"><i class="icon-html5"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.18.0/customizing_bootstrap.html"><i class="icon-css3"></i> Customizing Bootstrap</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-umbrella"></i> Test<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/running_tests.html"><i class="icon-shield"></i> Running tests</a></li>
+                            <li ><a href="/v2.18.0/setting_up_ci.html"><i class="icon-check"></i> Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-cloud"></i> Production<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/production.html"><i class="icon-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.18.0/cloudfoundry.html"><i class="icon-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.18.0/heroku.html"><i class="icon-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.18.0/openshift.html"><i class="icon-cloud-upload"></i> Deploying to Openshift</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="/v2.18.0/tips.html"><i class="icon-cogs"></i> Tips'n tricks</a></li>
+                    <li >
+                        <a href="/v2.18.0/jhipster_uml.html"><i class="icon-magic"></i>
+                            JHipster-UML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-question"></i> Help and bugs<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.18.0/help.html"><i class="icon-group"></i> Community help</a></li>
+                            <li ><a href="/v2.18.0/consulting.html"><i class="icon-user-md"></i> Professional help</a></li>
+                            <li ><a href="/v2.18.0/training.html"><i class="icon-magic"></i> Training</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="icon-bug"></i> Bug tracker</a></li>
+                            <li ><a href="/v2.18.0/thanks.html"><i class="icon-gift"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+                    <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank"><i class="icon-comments-alt"></i> Chat</a></li>
+                    <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+                    <li>
+<script>
+  (function() {
+    var cx = '004687894124070278856:-ryvp1pk0xi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="i-classicon-sitemapi-managing-relationships"><i class="icon-sitemap"></i> Managing relationships</h1>
+
+<p>When JPA is used, the <a href="/v2.18.0/creating_an_entity.html">entity sub-generator</a> can create relationships between entities.</p>
+
+<h2 id="presentation">Presentation</h2>
+
+<p>Relationships only work when JPA is used. If you choose to use <a href="/v2.18.0/using_cassandra.html">Cassandra</a> or <a href="/v2.18.0/using_mongodb.html">MongoDB</a>, they won’t be available.</p>
+
+<p>A relationship works between two entities, and JHipster will generate the code for:</p>
+
+<ul>
+  <li>Managing this relationship with JPA in the generated entities</li>
+  <li>Creating the correct Liquibase changelog, in order for the relationship to exist in the database</li>
+  <li>Generating the AngularJS front-end so you can manage this relationship graphically in the user interface</li>
+</ul>
+
+<p>As we use JPA, the usual one-to-many, many-to-one, many-to-many and one-to-one relationships are available:</p>
+
+<ol>
+  <li><a href="#1">A bi-directionnal one-to-many relationship</a></li>
+  <li><a href="#2">A uni-directional many-to-one relationship</a></li>
+  <li><a href="#3">A uni-directional one-to-many relationship</a></li>
+  <li><a href="#4">Two one-to-many relationships on the same two entities</a></li>
+  <li><a href="#5">A many-to-many relationship</a></li>
+  <li><a href="#6">A one-to-one relationship</a></li>
+</ol>
+
+<p><em>Tip: the <code class="highlighter-rouge">User</code> entity</em></p>
+
+<p>Please note that the <code class="highlighter-rouge">User</code> entity, which is handled by JHipster, is specific. You can do <code class="highlighter-rouge">many-to-one</code> relationships to this entity (a <code class="highlighter-rouge">Car</code> can have a many-to-one relationship to a <code class="highlighter-rouge">User</code>). This will generate a specific query in your new entity repository, so you can filter your entity on the current security user, which is a common requirement.</p>
+
+<h2 id="a-name1a-a-bi-directionnal-one-to-many-relationship"><a name="1"></a> A bi-directionnal one-to-many relationship</h2>
+
+<p>Let’s start with two entities, a <code class="highlighter-rouge">Owner</code> and a <code class="highlighter-rouge">Car</code>. A owner can have many cars, and a car can have only one owner.</p>
+
+<p>So this is a simple one-to-many relationship (one owner has many cars) on one side, and a many-to-one relationship (many cars have one owner) on the other side:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Owner (1) &lt;-----&gt; (*) Car
+</code></pre>
+</div>
+
+<p>As the <code class="highlighter-rouge">Car</code> table will need to have a foreign key on the <code class="highlighter-rouge">Owner</code> table, we need to create the <code class="highlighter-rouge">Owner</code> first. Here are the relevant JHipster questions for the <code class="highlighter-rouge">Owner</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? owner
+</code></pre>
+</div>
+
+<p>Please note that we selected the default options concerning the names of the relationships.</p>
+
+<p>Now we can generate the <code class="highlighter-rouge">Car</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Owner
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from 'Owner' do you want to use? id
+</code></pre>
+</div>
+
+<p>That’s it, you now have a one-to-many relationship between those two entities!</p>
+
+<h2 id="a-name2a-a-uni-directional-many-to-one-relationship"><a name="2"></a> A uni-directional many-to-one relationship</h2>
+
+<p>In the previous example we had a bi-directionnal relationship: from a <code class="highlighter-rouge">Car</code> instance you could find its owner, and from a <code class="highlighter-rouge">Owner</code> instance you could get all of its cars.</p>
+
+<p>A many-to-one uni-directional relationship means that the cars know their owner, but not the opposite.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Owner (1) &lt;----- (*) Car
+</code></pre>
+</div>
+
+<p>You would do that relationship for two reasons:</p>
+
+<ul>
+  <li>From a business point of view, you only use your entities in this way. So you don’t want to have an API that allows developers to do something which doesn’t make sense.</li>
+  <li>You have a small performance gain when using the <code class="highlighter-rouge">Owner</code> entity (as it won’t have to manage the collection of cars).</li>
+</ul>
+
+<p>In that case, you would still create the <code class="highlighter-rouge">Owner</code> first, this time with no relationship:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? No
+</code></pre>
+</div>
+
+<p>And then the <code class="highlighter-rouge">Car</code> entity, as in the previous example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Owner
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from 'Owner' do you want to use? id
+</code></pre>
+</div>
+
+<p>This will work as in the previous example, but you won’t be able to add or remove cars from the <code class="highlighter-rouge">Owner</code> entity.</p>
+
+<h2 id="a-name3a-a-uni-directional-one-to-many-relationship"><a name="3"></a> A uni-directional one-to-many relationship</h2>
+
+<p>A many-to-one uni-directional relationship means that the <code class="highlighter-rouge">Owner</code> instance can get its collection of cars, but not the opposite. It is the opposite from the previous example.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Owner (1) -----&gt; (*) Car
+</code></pre>
+</div>
+
+<p>This type of relationship is not provided by default in JHipster at the moment, see <a href="https://github.com/jhipster/generator-jhipster/issues/1569">#1569</a> for more information.</p>
+
+<p>You have two solutions for this:</p>
+
+<ul>
+  <li>Do a bi-directionnal mapping, and use it without modification: this is our recommended approach, as it is much simpler</li>
+  <li>Do a bi-directional mapping, and then modify it to transform it into a uni-directional mapping:
+    <ul>
+      <li>Remove the “mappedBy” attribute on your <code class="highlighter-rouge">@OneToMany</code> annotation</li>
+      <li>Generate the required join table: you can do a <code class="highlighter-rouge">mvn liquibase:diff</code> to generate that table, see the <a href="/v2.18.0/development.html">documentation about using Liquibase diff</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="a-name4a-two-one-to-many-relationships-on-the-same-two-entities"><a name="4"></a> Two one-to-many relationships on the same two entities</h2>
+
+<p>For this example, a <code class="highlighter-rouge">Person</code> can be the owner of many cars, and he can also be the driver of many cars:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Person (1) &lt;---owns-----&gt; (*) Car
+Person (1) &lt;---drives---&gt; (*) Car
+</code></pre>
+</div>
+
+<p>For this we need to use the relationship names, which we have left with their default values in the previous examples.</p>
+
+<p>Generate the <code class="highlighter-rouge">Person</code> entity, which has tow one-to-many relationships to the <code class="highlighter-rouge">Car</code> entity:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Person
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? ownedCar
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? drivedCar
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? driver
+</code></pre>
+</div>
+
+<p>Generate the <code class="highlighter-rouge">Car</code> entity, which use the same relationship name has was configured in the <code class="highlighter-rouge">Person</code> entity:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Person
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from 'Person' do you want to use? id
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Person
+? What is the name of the relationship? driver
+? What is the type of the relationship? many-to-one
+? When you display this relationship with AngularJS, which field from 'Person' do you want to use? id
+</code></pre>
+</div>
+
+<p>A <code class="highlighter-rouge">Car</code> can now have a driver and a owner, which are both <code class="highlighter-rouge">Person</code> entities.</p>
+
+<h2 id="a-name5a-a-many-to-many-relationship"><a name="5"></a> A many-to-many relationship</h2>
+
+<p>A <code class="highlighter-rouge">Driver</code> can drive many cars, but a <code class="highlighter-rouge">Car</code> can also have many drivers.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Driver (*) &lt;-----&gt; (*) Car
+</code></pre>
+</div>
+
+<p>At the database level, this means we will have a join table between the <code class="highlighter-rouge">Driver</code> and the <code class="highlighter-rouge">Car</code> tables.</p>
+
+<p>For JPA, one of those two entities will need to manage the relationship: in our case, that would be the <code class="highlighter-rouge">Car</code> entity, which will be responsible to add or remove drivers.</p>
+
+<p>First generate the non-owning side of the relationship, the <code class="highlighter-rouge">Driver</code>, with a many-to-many relationship:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Driver
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? No
+? What is the name of this relationship in the other entity? driver
+</code></pre>
+</div>
+
+<p>Then generate the <code class="highlighter-rouge">Car</code>, with the owning side of the many-to-many relationship:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Driver
+? What is the name of the relationship? driver
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? Yes
+? When you display this relationship with AngularJS, which field from 'Driver' do you want to use? id
+</code></pre>
+</div>
+
+<p>In the user interface, you will be able to add/remove drivers from the <code class="highlighter-rouge">Car</code> management page.</p>
+
+<h2 id="a-name6a-a-one-to-one-relationship"><a name="6"></a> A one-to-one relationship</h2>
+
+<p>Following our example, a one-to-one relationship would mean that a <code class="highlighter-rouge">Driver</code> can drive only one <code class="highlighter-rouge">Car</code>, and a <code class="highlighter-rouge">Car</code> can only have one <code class="highlighter-rouge">Driver</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Driver (1) &lt;-----&gt; (1) Car
+</code></pre>
+</div>
+
+<p>This is the only relationship for which JHipster doesn’t provide an AngularJS front-end, as we don’t think it really makes sense: if there is a one-to-one relationship, you probably want to display both entities on the same page anyway.</p>
+
+<p>First create the non-owning side of the relationship, in our case the <code class="highlighter-rouge">Driver</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Driver
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? No
+? What is the name of this relationship in the other entity? driver
+</code></pre>
+</div>
+
+<p>Then generate the <code class="highlighter-rouge">Car</code>, which owns the relationship:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Driver
+? What is the name of the relationship? driver
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? Yes
+</code></pre>
+</div>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.18.0/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.18.0/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.18.0/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.18.0/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

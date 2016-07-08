@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Dubois">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Build status</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.23.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/v2.23.0/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.23.0/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.23.0/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.23.0/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.23.0/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.23.0/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.23.0/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/v2.23.0/"><i class="fa fa-home"></i> Home</a></li>
+                    <li ><a href="/v2.23.0/releases.html"><i class="fa fa-file-text-o"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-road"></i> JHipster in a few minutes<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/tech_stack.html"><i class="fa fa-stack-overflow"></i> Technology stack</a></li>
+                            <li ><a href="/v2.23.0/presentation" target="_blank"><i class="fa fa-desktop"></i> Official JHipster slides</a></li>
+                            <li ><a href="/v2.23.0/screenshots.html"><i class="fa fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                            <li ><a href="/v2.23.0/video_tutorial.html"><i class="fa fa-film"></i> Video tutorial (20 minutes)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-wrench"></i> Setting up your environment<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/installation.html"><i class="fa fa-cloud-download"></i> Install JHipster</a></li>
+                            <li ><a href="/v2.23.0/configuring_ide.html"><i class="fa fa-keyboard-o"></i> Configuring Eclipse/IntelliJ</a></li>
+                            <li ><a href="/v2.23.0/docker_compose.html"><i class="fa fa-music"></i> Docker Compose</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-list-ol"></i> Core JHipster tasks<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/creating_an_app.html"><i class="fa fa-rocket"></i> Creating an application</a></li>
+                            <li ><a href="/v2.23.0/creating_an_entity.html"><i class="fa fa-bolt"></i> Creating an entity</a></li>
+                            <li ><a href="/v2.23.0/creating_a_service.html"><i class="fa fa-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.23.0/using_dtos.html"><i class="fa fa-briefcase"></i> Creating DTOs</a></li>
+                            <li ><a href="/v2.23.0/managing_relationships.html"><i class="fa fa-sitemap"></i> Managing relationships</a></li>
+                            <li ><a href="/v2.23.0/installing_new_languages.html"><i class="fa fa-flag"></i> Internationalization</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-puzzle-piece"></i> Options<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/security.html"><i class="fa fa-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.23.0/using_elasticsearch.html"><i class="fa fa-search"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/v2.23.0/using_websockets.html"><i class="fa fa-envelope"></i> Using Websockets</a></li>
+                            <li ><a href="/v2.23.0/using_oracle.html"><i class="fa fa-archive"></i> Using Oracle</a></li>
+                            <li ><a href="/v2.23.0/using_mongodb.html"><i class="fa fa-leaf"></i> Using MongoDB</a></li>
+                            <li ><a href="/v2.23.0/using_cassandra.html"><i class="fa fa-eye"></i> Using Cassandra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-code"></i> Development<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/development.html"><i class="fa fa-code"></i> Using in development</a></li>
+                            <li ><a href="/v2.23.0/profiles.html"><i class="fa fa-group"></i> Managing profiles</a></li>
+                            <li ><a href="/v2.23.0/using_angularjs.html"><i class="fa fa-html5"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.23.0/customizing_bootstrap.html"><i class="fa fa-css3"></i> Customizing Bootstrap</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-umbrella"></i> Test<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/running_tests.html"><i class="fa fa-shield"></i> Running tests</a></li>
+                            <li ><a href="/v2.23.0/setting_up_ci.html"><i class="fa fa-check"></i> Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cloud"></i> Production<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/production.html"><i class="fa fa-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.23.0/cloudfoundry.html"><i class="fa fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.23.0/heroku.html"><i class="fa fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.23.0/openshift.html"><i class="fa fa-cloud-upload"></i> Deploying to Openshift</a></li>
+                            <li ><a href="/v2.23.0/aws.html"><i class="fa fa-cloud-upload"></i> Deploying to AWS</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="/v2.23.0/tips.html"><i class="fa fa-cogs"></i> Tips'n tricks</a></li>
+                    <li >
+                        <a href="/v2.23.0/jhipster_uml.html"><i class="fa fa-magic"></i>
+                            JHipster-UML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-question"></i> Help and bugs<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/help.html"><i class="fa fa-group"></i> Community help</a></li>
+                            <li ><a href="/v2.23.0/consulting.html"><i class="fa fa-user-md"></i> Professional help</a></li>
+                            <li ><a href="/v2.23.0/training.html"><i class="fa fa-graduation-cap "></i> Training</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="fa fa-bug"></i> Bug tracker</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-star"></i> About<span class="fa fa-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.23.0/team.html"><i class="fa fa-coffee"></i> Team</a></li>
+                            <li ><a href="/v2.23.0/policies.html"><i class="fa fa-gavel"></i> Policies</a></li>
+                            <li class="active"><a href="/v2.23.0/build_status.html"><i class="fa fa-industry"></i> Build status</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="fa fa-github"></i> GitHub</a></li>
+                            <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank"><i class="fa fa-comments"></i> Chat</a></li>
+                            <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            <li>
+                            <li ><a href="/v2.23.0/artwork.html"><i class="fa fa-pencil"></i> Artwork</a></li>
+                            <li ><a href="/v2.23.0/thanks.html"><i class="fa fa-gift"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+<script>
+  (function() {
+    var cx = '004687894124070278856:-ryvp1pk0xi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="i-classfa-fa-industryi-build-status"><i class="fa fa-industry"></i> Build status</h1>
+
+<p>This page is the result of our <a href="https://github.com/jhipster/jhipster-automated-samples">automated samples project</a>, and gives a matrix of the build status of all our sample projects.</p>
+
+<h2 id="continuous-integration">Continuous Integration</h2>
+
+<p>Each sample project is tested by two Continuous Integration systems:</p>
+
+<ul>
+  <li><a href="https://drone.io/">drone.io</a> for our Java code (using Maven or Gradle)</li>
+  <li><a href="https://travis-ci.org/">Travis CI</a> for our JavaScript code (using Grunt or Gulp.js)</li>
+</ul>
+
+<h2 id="generated-entities">Generated entities</h2>
+
+<p>Most projects have 3 entities generated, with some one-to-many, many-to-many and many-to-one relationships, so that the entity sub-generator is also correctly tested.</p>
+
+<h2 id="build-matrix">Build matrix</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th>Java build</th>
+      <th>JavaScript build</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app">jhipster/jhipster-sample-app</a></td>
+      <td>JHipster sample project, with all default options</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app"><img src="https://travis-ci.org/jhipster/jhipster-sample-app.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-gradle">jhipster/jhipster-sample-app-gradle</a></td>
+      <td>Sample project, with the Gradle build option</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-gradle/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-gradle/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-gradle"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-gradle.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-gulp">jhipster/jhipster-sample-app-gulp</a></td>
+      <td>Sample project, with the Gulp.js build option</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-gulp/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-gulp/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-gulp"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-gulp.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-mongodb">jhipster/jhipster-sample-app-mongodb</a></td>
+      <td>Sample project, with the MongoDB build option</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-mongodb/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-mongodb/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-mongodb"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-mongodb.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-cassandra">jhipster/jhipster-sample-app-cassandra</a></td>
+      <td>Sample project, with the Cassandra build option</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-cassandra/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-cassandra/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-cassandra"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-cassandra.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-dto">jhipster/jhipster-sample-app-dto</a></td>
+      <td>Sample project, using DTOs with MapStruct</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-dto/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-dto/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-dto"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-dto.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-elasticsearch">jhipster/jhipster-sample-app-elasticsearch</a></td>
+      <td>Sample project, using Elasticsearch</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-elasticsearch/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-elasticsearch/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-elasticsearch"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-elasticsearch.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-hazelcast">jhipster/jhipster-sample-app-hazelcast</a></td>
+      <td>Sample project, using the Hazelcast cache</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-hazelcast/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-hazelcast/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-hazelcast"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-hazelcast.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-nocache">jhipster/jhipster-sample-app-nocache</a></td>
+      <td>Sample project, without a 2nd level cache</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-nocache/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-nocache/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-nocache"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-nocache.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-noi18n">jhipster/jhipster-sample-app-noi18n</a></td>
+      <td>Sample project, without i18n</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-noi18n/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-noi18n/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-noi18n"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-noi18n.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-websocket">jhipster/jhipster-sample-app-websocket</a></td>
+      <td>Sample project, using Websockets</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-websocket/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-websocket/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-websocket"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-websocket.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-oauth2">jhipster/jhipster-sample-app-oauth2</a></td>
+      <td>Sample project, using OAuth2 authentication</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-oauth2/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-oauth2/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-oauth2"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-oauth2.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/jhipster/jhipster-sample-app-token">jhipster/jhipster-sample-app-token</a></td>
+      <td>Sample project, using token authentication</td>
+      <td><a href="https://drone.io/github.com/jhipster/jhipster-sample-app-token/latest"><img src="https://drone.io/github.com/jhipster/jhipster-sample-app-token/status.png" alt="Java Build Status" /></a></td>
+      <td><a href="https://travis-ci.org/jhipster/jhipster-sample-app-token"><img src="https://travis-ci.org/jhipster/jhipster-sample-app-token.svg?branch=master" alt="JavaScript Build Status" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.23.0/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.23.0/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.23.0/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.23.0/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

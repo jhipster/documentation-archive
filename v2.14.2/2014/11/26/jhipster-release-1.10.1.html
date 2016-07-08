@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julien Dubois">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Release 1.10.1</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/v2.14.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/v2.14.2/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/v2.14.2/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/v2.14.2/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/v2.14.2/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/v2.14.2/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/v2.14.2/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/v2.14.2/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/v2.14.2/"><i class="icon-home"></i> Home</a></li>
+                    <li ><a href="/v2.14.2/releases.html"><i class="icon-file-text-alt"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="icon-road"></i> Introduction<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/presentation" target="_blank"><i class="icon-desktop"></i> Presentation</a></li>
+                            <li ><a href="/v2.14.2/tech_stack.html"><i class="icon-stackexchange"></i> Technology stack</a></li>
+                            <li ><a href="/v2.14.2/screenshots.html"><i class="icon-picture"></i> Screenshots</a></li>
+                            <li ><a href="/v2.14.2/video_tutorial.html"><i class="icon-film"></i> Video tutorial</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-wrench"></i> Setup<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/installation.html"><i class="icon-cloud-download"></i> Installation</a></li>
+                            <li ><a href="/v2.14.2/creating_an_app.html"><i class="icon-rocket"></i> Creating an application</a></li>
+                            <li ><a href="/v2.14.2/creating_an_entity.html"><i class="icon-bolt"></i> Creating an entity</a></li>
+                            <li ><a href="/v2.14.2/creating_a_service.html"><i class="icon-bolt"></i> Creating a service</a></li>
+                            <li ><a href="/v2.14.2/installing_new_languages.html"><i class="icon-flag"></i> Installing new languages</a></li>
+                            <li ><a href="/v2.14.2/configuring_ide.html"><i class="icon-keyboard"></i> Configuring your IDE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-puzzle-piece"></i> Options<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/security.html"><i class="icon-lock"></i> Securing your app</a></li>
+                            <li ><a href="/v2.14.2/using_dtos.html"><i class="icon-briefcase"></i> Using DTOs</a></li>
+                            <li ><a href="/v2.14.2/using_elasticsearch.html"><i class="icon-search"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/v2.14.2/using_mongodb.html"><i class="icon-leaf"></i> Using MongoDB</a></li>
+                            <li ><a href="/v2.14.2/using_cassandra.html"><i class="icon-eye-open"></i> Using Cassandra</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-code"></i> Development<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/development.html"><i class="icon-code"></i> Using in development</a></li>
+                            <li ><a href="/v2.14.2/profiles.html"><i class="icon-group"></i> Managing profiles</a></li>
+                            <li ><a href="/v2.14.2/using_angularjs.html"><i class="icon-html5"></i> Using AngularJS</a></li>
+                            <li ><a href="/v2.14.2/customizing_bootstrap.html"><i class="icon-css3"></i> Customizing Bootstrap</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-umbrella"></i> Test<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/running_tests.html"><i class="icon-shield"></i> Running tests</a></li>
+                            <li ><a href="/v2.14.2/setting_up_ci.html"><i class="icon-check"></i> Continuous Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-cloud"></i> Production<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/production.html"><i class="icon-play-circle"></i> Using in production</a></li>
+                            <li ><a href="/v2.14.2/cloudfoundry.html"><i class="icon-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/v2.14.2/heroku.html"><i class="icon-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/v2.14.2/openshift.html"><i class="icon-cloud-upload"></i> Deploying to Openshift</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="/v2.14.2/tips.html"><i class="icon-cogs"></i> Tips'n tricks</a></li>
+                    <li>
+                        <a href="#"><i class="icon-question"></i> Help and bugs<span class="icon-angle-right pull-right"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/v2.14.2/help.html"><i class="icon-group"></i> Community help</a></li>
+                            <li ><a href="/v2.14.2/consulting.html"><i class="icon-user-md"></i> Professional help</a></li>
+                            <li ><a href="/v2.14.2/training.html"><i class="icon-magic"></i> Training</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="icon-bug"></i> Bug tracker</a></li>
+                            <li ><a href="/v2.14.2/thanks.html"><i class="icon-gift"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+                    <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank"><i class="icon-comments-alt"></i> Chat</a></li>
+                    <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+                    <li>
+<script>
+  (function() {
+    var cx = '004687894124070278856:-ryvp1pk0xi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="jhipster-release-1101">JHipster release 1.10.1</h1>
+
+<p><em>JHipster gives you Spring Boot + AngularJS working together in one handy Yeoman generator.</em></p>
+
+<h2 id="whats-new">What’s new</h2>
+
+<p>This is a maintenance release for our latest v1.10.0 version. For your information, maintenance is done on the “v1.x_maintenance” branch, and contains only important bug fixes that been merged on the “master” branch (which contains the new v2.0.0 code).</p>
+
+<p>The v2.0.0 version is taking some time to finish, as we have changed many parts of the generator. You can follow our changes on <a href="https://github.com/jhipster/generator-jhipster/issues?q=milestone%3A2.0.0">our Github issue tracker, using the milestone “2.0.0”</a>. When this is all finished, we will release a document listing what’s new and what’s cool in the v2.0.0 release.</p>
+
+<p>This is why, as we have a couple of important fixes on the v1.x version, we have decided to release this maintenance version.</p>
+
+<p>More specifically, we included the following fixes:</p>
+
+<ul>
+  <li>Corrected the Gradle wrapper (which was corrupted), and added a .gitattribute configuration so that it doesn’t happen ever again!</li>
+  <li>Corrected the Maven build to enabled milestones, so you could grab the new Spring Boot 1.2.0.RC2 easily (lesson learned: a “release candidate” is not released yet!)</li>
+</ul>
+
+<p>Many thanks to everybody sending us Pull Requests, we are very happy to have so many people contributing.</p>
+
+<h2 id="how-to-upgrade">How to upgrade</h2>
+
+<p>Update your version of JHipster with:</p>
+
+<p><code class="highlighter-rouge">
+npm update -g generator-jhipster
+</code></p>
+
+<p>And then you can update your project when you run again</p>
+
+<p><code class="highlighter-rouge">
+yo jhipster
+</code></p>
+
+<h2 id="help-and-bugs">Help and bugs</h2>
+
+<p>If you find any issue with this release, don’t hesitate to:</p>
+
+<ul>
+  <li>Contact <a href="https://twitter.com/java_hipster">@java_hipster</a> on Twitter</li>
+  <li>Add a bug on our <a href="https://github.com/jhipster/generator-jhipster/issues?state=open">bug tracker</a></li>
+  <li>Post a question on <a href="http://stackoverflow.com/tags/jhipster/info">Stack Overflow</a></li>
+</ul>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/v2.14.2/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/v2.14.2/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/v2.14.2/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/v2.14.2/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
