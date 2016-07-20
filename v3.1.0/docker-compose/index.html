@@ -351,7 +351,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
 
 <h3 id="mongodb-cluster-mode">MongoDB Cluster Mode</h3>
 
-<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually Mongo images.<br />
+<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually Mongo images.
 Follow these steps to do so:</p>
 
 <ul>
@@ -368,10 +368,10 @@ Follow these steps to do so:</p>
 <h3 id="cassandra">Cassandra</h3>
 
 <h4 id="in-development">In development</h4>
-<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development <code class="highlighter-rouge">cassandra.yml</code>:<br />
+<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development <code class="highlighter-rouge">cassandra.yml</code>:
 <code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up -d</code></p>
 
-<p>Docker-compose will start 3 services:<br />
+<p>Docker-compose will start 3 services:
 - **<name_of_your_app>-cassandra**, a container with the Cassandra node contact point
 - **<name_of_your_app>-cassandra-node-1**, a container with a second Cassandra node joining the cluster
 - **<name_of_your_app>-cassandra-migration** a container to automatically apply all migrations scripts (create the Keyspace, create the tables, all data migrations, ...)</name_of_your_app></name_of_your_app></name_of_your_app></p>
@@ -385,7 +385,7 @@ Follow these steps to do so:</p>
 </ol>
 
 <h5 id="note-for-non-linux-users">Note for non linux users:</h5>
-<p>On Mac OSx and Windows, Docker containers are not hosted directly but on a VirtualBox VM.<br />
+<p>On Mac OSx and Windows, Docker containers are not hosted directly but on a VirtualBox VM.
 Those, you can not access them in localhost but have to hit the VirtualBox IP.</p>
 
 <p>You can override the Cassandra contact point (localhost by default) with this environment variable:</p>
@@ -394,8 +394,8 @@ Those, you can not access them in localhost but have to hit the VirtualBox IP.</
 </code></pre>
 </div>
 
-<p><strong>Cassandra nodes</strong> :<br />
-Because Cassandra nodes are also hosted in the Virtual machine, the Cassandra Java driver will receive an error when trying to contact them after receiving their address from the contact point.<br />
+<p><strong>Cassandra nodes</strong> :
+Because Cassandra nodes are also hosted in the Virtual machine, the Cassandra Java driver will receive an error when trying to contact them after receiving their address from the contact point.
 To workaround this, you can add a routing rule to your routing table, <a href="http://krasserm.github.io/2015/07/13/chaos-testing-with-docker-and-cassandra/#port-mapping">(source)</a>.</p>
 
 <p>Assuming the containers running the Cassandra nodes have IP address 172.18.0.x:</p>
@@ -406,11 +406,11 @@ To workaround this, you can add a routing rule to your routing table, <a href="h
 
 <p>#### In production:</p>
 
-<p>The docker_compose files for Cassandra in production has 2 possible configurations:<br />
-- <code class="highlighter-rouge">cassandra-cluster.yml</code> =&gt; is the default linked in <code class="highlighter-rouge">app.yml</code>.<br />
+<p>The docker_compose files for Cassandra in production has 2 possible configurations:
+- <code class="highlighter-rouge">cassandra-cluster.yml</code> =&gt; is the default linked in <code class="highlighter-rouge">app.yml</code>.
 - <code class="highlighter-rouge">cassandra-opscenter.yml</code> =&gt; is an alternative with an additional container running OpsCenter to monitor the cluster. OpsCenter will be available at <a href="http://localhost:8888">http://localhost:8888</a>.</p>
 
-<p>Unlike the <a href="#4">other databases</a> docker-compose configuration, the application will not automatically create the Keyspace and apply the changelogs.<br />
+<p>Unlike the <a href="#4">other databases</a> docker-compose configuration, the application will not automatically create the Keyspace and apply the changelogs.
 You have to first start the Cassandra cluster and manually apply the scripts before starting the rest of the services:</p>
 
 <ul>
