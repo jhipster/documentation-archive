@@ -264,7 +264,7 @@
 
 <p>JHipster modules are listed on the <a href="/documentation-archive/v3.4.0/modules/marketplace/">JHipster marketplace</a>.</p>
 
-<p>This allows to create third-party generators that have access to the JHipster variables and functions, and act like standard JHipster sub-generators.<br />
+<p>This allows to create third-party generators that have access to the JHipster variables and functions, and act like standard JHipster sub-generators.
 The hook mechanism invokes third-party generators before and after app generation and entity generation.</p>
 
 <h2 id="example">Example</h2>
@@ -313,10 +313,10 @@ The hook mechanism invokes third-party generators before and after app generatio
   <li>Pre App creation hook [planned]</li>
 </ul>
 
-<p><a href="https://github.com/jhipster/generator-jhipster-module">JHipster module generator</a> now has option to generate this.<br />
+<p><a href="https://github.com/jhipster/generator-jhipster-module">JHipster module generator</a> now has option to generate this.
 A JHipster module can register to act as a hook when its main generator is run by the end user. You need to call the <code class="highlighter-rouge">registerModule</code> method available in <code class="highlighter-rouge">jhipsterFunc</code> from your main (app) generator to register as hook, you need to pass the below parameters in the method as below</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">jhipsterFunc</span><span class="p">.</span><span class="nx">registerModule</span><span class="p">(</span><span class="nx">npmPackageName</span><span class="p">,</span> <span class="nx">hookFor</span><span class="p">,</span> <span class="nx">hookType</span><span class="p">[,</span> <span class="nx">callbackSubGenerator</span><span class="p">[,</span> <span class="nx">description</span><span class="p">]])</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">jhipsterFunc</span><span class="p">.</span><span class="nx">registerModule</span><span class="p">(</span><span class="nx">npmPackageName</span><span class="p">,</span> <span class="nx">hookFor</span><span class="p">,</span> <span class="nx">hookType</span><span class="p">[,</span> <span class="nx">callbackSubGenerator</span><span class="p">[,</span> <span class="nx">description</span><span class="p">]])</span>
 </code></pre>
 </div>
 
@@ -416,7 +416,7 @@ A JHipster module can register to act as a hook when its main generator is run b
 
 <h2 id="registering-a-module-to-the-jhipster-marketplace">Registering a module to the JHipster marketplace</h2>
 
-<p>To have your module available in <a href="/documentation-archive/v3.4.0/modules/marketplace/">the JHipster marketplace</a>, you need to make sure you have the 2 keyword <code class="highlighter-rouge">yeoman-generator</code> and <code class="highlighter-rouge">jhipster-module</code> in your published npm <code class="highlighter-rouge">package.json</code>.<br />
+<p>To have your module available in <a href="/documentation-archive/v3.4.0/modules/marketplace/">the JHipster marketplace</a>, you need to make sure you have the 2 keyword <code class="highlighter-rouge">yeoman-generator</code> and <code class="highlighter-rouge">jhipster-module</code> in your published npm <code class="highlighter-rouge">package.json</code>.
 If you find any entry in the marketplace which is not a JHipster module, you can help to blacklist it by adding it to the <code class="highlighter-rouge">blacklistedModules</code> section of the <a href="https://github.com/jhipster/jhipster.github.io/blob/master/modules/marketplace/data/modules-config.json">modules-config.json file</a> by doing a Pull Request to the <a href="https://github.com/jhipster/jhipster.github.io">jhipster/jhipster.github.io project</a>.</p>
 
 <p>Your module will become “verified” if the JHipster team verifies it.</p>

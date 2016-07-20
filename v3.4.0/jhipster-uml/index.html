@@ -270,20 +270,20 @@
   <li><a href="#introduction">Introduction</a></li>
   <li><a href="#issues">Issues and bugs</a></li>
   <li><a href="#install">Installation</a></li>
-  <li><a href="#howtouse">How to use JHipster-UML</a>  <br />
- 4.1. <a href="#umlfile">The UML file</a>  <br />
- 4.2. <a href="#usejuml">Use JHipster-UML</a>  <br />
- 4.3. <a href="#whatsgenerated">What’s generated</a>  <br />
+  <li><a href="#howtouse">How to use JHipster-UML</a><br />
+ 4.1. <a href="#umlfile">The UML file</a><br />
+ 4.2. <a href="#usejuml">Use JHipster-UML</a><br />
+ 4.3. <a href="#whatsgenerated">What’s generated</a><br />
  4.4. <a href="#jhipsternotes">JHipster notes</a></li>
-  <li><a href="#examples">Examples</a>  <br />
- 5.1. <a href="#modelioexample">Modelio</a>  <br />
- 5.2. <a href="#umldesignerexample">UML Designer</a>  <br />
- 5.3. <a href="#genmymodelexample">GenMyModel</a>  <br />
- 5.4. <a href="#visualparadigmexample">Visual Paradigm</a>  <br />
- 5.5. <a href="#enumerationexamples">Enumerations</a>  <br />
+  <li><a href="#examples">Examples</a><br />
+ 5.1. <a href="#modelioexample">Modelio</a><br />
+ 5.2. <a href="#umldesignerexample">UML Designer</a><br />
+ 5.3. <a href="#genmymodelexample">GenMyModel</a><br />
+ 5.4. <a href="#visualparadigmexample">Visual Paradigm</a><br />
+ 5.5. <a href="#enumerationexamples">Enumerations</a><br />
  5.6. <a href="#tablenames">Table names</a></li>
   <li><a href="#testing-juml">Testing</a></li>
-  <li><a href="#contributing">Contributing: issues and enhancements</a>  <br />
+  <li><a href="#contributing">Contributing: issues and enhancements</a><br />
  7.1. <a href="#parsermodifications">Parser modifications</a></li>
   <li><a href="#annexes">Annexes</a></li>
 </ol>
@@ -316,8 +316,8 @@
   <li><a href="https://github.com/jhipster/jhipster-uml/pulls">JHipster-UML Pull Requests</a></li>
 </ul>
 
-<p>When submitting anything, you must be as precise as possible:<br />
-  - <strong>One posted issue must only have one problem</strong> (or one demand/question);<br />
+<p>When submitting anything, you must be as precise as possible:
+  - <strong>One posted issue must only have one problem</strong> (or one demand/question);
   - Pull requests are welcome, but the commits must be ‘atomic’ to really be understandable.</p>
 
 <p>Please note that using JHipster-UML (or JHipster) might be troublesome (one has to install some tools to really be able to use the Node environment without any issue). This <a href="https://gist.github.com/nullivex/7115612">link</a> may help if you encounter an issue on Windows.</p>
@@ -349,7 +349,7 @@
 <p>The class diagram should modelize the entities of your JHipster application domain, thus you have restrictions, you have to follow the methodology.</p>
 
 <h3 id="entities">Entities</h3>
-<p>Each entity is represented by a class, its fields are the class’ attributes. An attribute must have a type supported by JHipster, otherwise it won’t work. To have JHipster supported types like “BigDecimal”, “LocalDate”…, you can create a <em>PrimitiveType</em> or a <em>DataType</em> for it.<br />
+<p>Each entity is represented by a class, its fields are the class’ attributes. An attribute must have a type supported by JHipster, otherwise it won’t work. To have JHipster supported types like “BigDecimal”, “LocalDate”…, you can create a <em>PrimitiveType</em> or a <em>DataType</em> for it.
 You can look at the tables with all the types supported by JHipster and the validations you can use for each <a href="#annexes">here</a>.</p>
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_book_datatype.png" alt="Book Entity" /></p>
@@ -359,7 +359,7 @@ You can look at the tables with all the types supported by JHipster and the vali
 <p>Note that you don’t need to capitalize type names (<strong>except for composed names like BigDecimal</strong>, JHipster-UML capitalizes simple names).</p>
 
 <h3 id="relationships">Relationships</h3>
-<p>We just use the examples from JHipster in order to show how to do it with an editor.<br />
+<p>We just use the examples from JHipster in order to show how to do it with an editor.
 Please note that we <strong>only</strong> support the relationships listed in the <a href="/documentation-archive/v3.4.0/managing-relationships/">Managing relationships</a> page.</p>
 
 <h4 id="one-to-one">One-to-One</h4>
@@ -378,7 +378,7 @@ Please note that we <strong>only</strong> support the relationships listed in th
 
 <p>In this bidirectional relationship, an Owner can have many cars, and a Car can have only one owner.</p>
 
-<p>Unidirectional relationships for One-to-Many relationships are not (yet) supported by JHipster (see <a href="/documentation-archive/v3.4.0/managing-relationships/#3">this</a> page for more information about this).<br />
+<p>Unidirectional relationships for One-to-Many relationships are not (yet) supported by JHipster (see <a href="/documentation-archive/v3.4.0/managing-relationships/#3">this</a> page for more information about this).
 This is an example of such an association:</p>
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_uni_otm.png" alt="One-to-Many2" /></p>
@@ -456,10 +456,10 @@ This is an example of such an association:</p>
 <h3 id="a-complete-example">A complete example</h3>
 <p>We use a diagram from the Oracle HR example available <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28328/diagrams.htm#G5482">here</a>.</p>
 
-<p>Here’s a screenshot of such a diagram (from Modelio):  <br />
+<p>Here’s a screenshot of such a diagram (from Modelio):<br />
 <img src="/documentation-archive/v3.4.0/images/jhipsteruml_overviewdiagram.png" alt="HR UML diagram" /></p>
 
-<p>As you can see, we changed it as to make it a bit more interesting.<br />
+<p>As you can see, we changed it as to make it a bit more interesting.
 JHipster can generate entities and associations between them (one-to-one, one-to-many, etc.), and in this example we added every type of association (even the reflexive and the inheritance). JHipster doesn’t support inheritance yet (but reflexivity is supported by JHipster, with a warning), but we decided to include it in the example so as to have a solid base to work with.</p>
 
 <h2 id="a-nameusejumlause-jhipster-uml"><a name="usejuml"></a>Use JHipster-UML</h2>
@@ -479,7 +479,7 @@ JHipster can generate entities and associations between them (one-to-one, one-to
 
 <p>Note that you don’t need to supply the database type (sql, mongodb, or cassandra), as JHipster-UML detects the type for you (from the <em>.yo-rc.json</em> file).</p>
 
-<p>If, however, you wish to execute JHipster-UML outside a JHipster app, you need to pass an extra argument: the database type name.<br />
+<p>If, however, you wish to execute JHipster-UML outside a JHipster app, you need to pass an extra argument: the database type name.
 Here is the command to execute:</p>
 
 <p><code class="highlighter-rouge">jhipster-uml &lt;your_file.xmi&gt; [-db (sql | mongodb | cassandra)]</code></p>
@@ -498,7 +498,7 @@ Here is the command to execute:</p>
 
 <p><strong>Please note that using the <code class="highlighter-rouge">paginate</code> option and not selecting any entity to generate the pagination for cancels your choice of using this option.</strong></p>
 
-<p>If you plan on using a JDL file as input, the services, DTOs and paginations are not specified via the command line but in the file itself (see the <a href="/documentation-archive/v3.4.0/jdl/">JDL</a> section of this documentation for more information).<br />
+<p>If you plan on using a JDL file as input, the services, DTOs and paginations are not specified via the command line but in the file itself (see the <a href="/documentation-archive/v3.4.0/jdl/">JDL</a> section of this documentation for more information).
 Here’s how you use JHipster-UML with a JDL file:</p>
 
 <p><code class="highlighter-rouge">jhipster-uml &lt;your_file.jh&gt; [-db (sql | mongodb | cassandra)]</code></p>
@@ -538,10 +538,10 @@ Here’s how you use JHipster-UML with a JDL file:</p>
 
 <p><strong>Note : JHipster-UML can detect faulty XMI files, it will display the first error it finds and exit right away (fail-fast behavior).</strong></p>
 
-<p>In JHipster-UML, each editor has been tested with the Oracle example. If you wish to see the examples in a “dummy project”, you just have to download these files for each editor, and test JHipster and JHipster-UML:<br />
-  - For Modelio: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/modelio.xmi">modelio.xmi</a>;<br />
-  - For UML Designer: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/umldesigner.uml">umldesigner.uml</a>;<br />
-  - For GenMyModel: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/genmymodel_evolve.xmi">genmymodel_evolve.xmi</a>;<br />
+<p>In JHipster-UML, each editor has been tested with the Oracle example. If you wish to see the examples in a “dummy project”, you just have to download these files for each editor, and test JHipster and JHipster-UML:
+  - For Modelio: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/modelio.xmi">modelio.xmi</a>;
+  - For UML Designer: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/umldesigner.uml">umldesigner.uml</a>;
+  - For GenMyModel: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/genmymodel_evolve.xmi">genmymodel_evolve.xmi</a>;
   - And for Visual Paradigm: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/visualparadigm.uml">visualparadigm.uml</a>.</p>
 
 <h2 id="a-namemodelioexampleamodelio"><a name="modelioexample"></a>Modelio</h2>
@@ -558,9 +558,9 @@ Here’s how you use JHipster-UML with a JDL file:</p>
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_modelio_1.png" alt="Empty Modelio project" /></p>
 
-<p>Notice the left panel entitled ‘Class Model’. You only need the ‘Class’, ‘Attributes’, ‘Aggregation’, ‘Composition’ and ‘Data Type’ objects.<br />
-You can already guess why you need the first 2. The ‘Aggregation’ object is used to defined aggregations:<br />
-B is aggregated to A means that A has 0, 1 or more (n) instances of B. A doesn’t create (and destroy) B instances.<br />
+<p>Notice the left panel entitled ‘Class Model’. You only need the ‘Class’, ‘Attributes’, ‘Aggregation’, ‘Composition’ and ‘Data Type’ objects.
+You can already guess why you need the first 2. The ‘Aggregation’ object is used to defined aggregations:
+B is aggregated to A means that A has 0, 1 or more (n) instances of B. A doesn’t create (and destroy) B instances.
 Composition means that if A is composed of B (0, 1, or n instances), then it creates, manages and destroys B instances.</p>
 
 <p>You can use either of them, the parser will just see the two as associations anyway.</p>
@@ -613,9 +613,9 @@ Composition means that if A is composed of B (0, 1, or n instances), then it cre
 
 <h2 id="a-nameumldesignerexampleauml-designer"><a name="umldesignerexample"></a>UML Designer</h2>
 
-<p>UML Designer can be downloaded <a href="http://www.umldesigner.org/">here</a>.<br />
-It works the same way as Eclipse.<br />
-To create an empty project, just click on File -&gt; New -&gt; Modeling Project. Enter the name, and validate.<br />
+<p>UML Designer can be downloaded <a href="http://www.umldesigner.org/">here</a>.
+It works the same way as Eclipse.
+To create an empty project, just click on File -&gt; New -&gt; Modeling Project. Enter the name, and validate.
 If no file.uml is created, right-click on your project, and New -&gt; Other -&gt; UML Designer -&gt; UML Model, and enter any name you want.</p>
 
 <p>The example XMI file is available <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/umldesigner.uml">here</a>.</p>
@@ -624,7 +624,7 @@ If no file.uml is created, right-click on your project, and New -&gt; Other -&gt
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_umldesigner_1.png" alt="UML Designer, dashboard" /></p>
 
-<p>Double-click on ‘Class diagram’ under ‘Design’ category.<br />
+<p>Double-click on ‘Class diagram’ under ‘Design’ category.
 You can now see on the right the ‘Palette’. You only need these objects: ‘Class’, ‘PrimitiveType’, ‘DataType’ (both under ‘Enumeration’), ‘Composition’ and ‘Aggregation’ (both under ‘Association’).</p>
 
 <p>As mentioned with Modelio, our parser system doesn’t care if you use an aggregation or a composition. You can use whatever you want.</p>
@@ -635,7 +635,7 @@ You can now see on the right the ‘Palette’. You only need these objects: ‘
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_umldesigner_2.png" alt="Employee and Job with UML Designer" /></p>
 
-<p>To create attributes, just double-click on the class, and add your attribute. You can import types by right-clicking somewhere on the diagram (in the white-space), then import Primitive Types, then select UML and Java.<br />
+<p>To create attributes, just double-click on the class, and add your attribute. You can import types by right-clicking somewhere on the diagram (in the white-space), then import Primitive Types, then select UML and Java.
 This will spare you the <em>chore</em> of creating types manually (with DataTypes or PrimitiveTypes).</p>
 
 <p>Unfortunately, UML Designer doesn’t support constraints yet.</p>
@@ -657,7 +657,7 @@ This will spare you the <em>chore</em> of creating types manually (with DataType
 
 <p>The XMI file example is located <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/genmymodel_evolve.xmi">here</a>.</p>
 
-<p>After signing up go in Projects -&gt;  New Projects, give a it name, in Model Type choose UML, in default diagram choose Class Diagram and then click on Create project.<br />
+<p>After signing up go in Projects -&gt;  New Projects, give a it name, in Model Type choose UML, in default diagram choose Class Diagram and then click on Create project.
 Then this screen will be displayed:</p>
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_genmymodel_empty_diagram.png" alt="GenMyModel dashbord" /></p>
@@ -715,7 +715,7 @@ Then this screen will be displayed:</p>
 
 <h2 id="a-namevisualparadigmexampleavisual-paradigm"><a name="visualparadigmexample"></a>Visual Paradigm</h2>
 
-<p>Visual Paradigm proposes a UML editor which supports everything JHipster-UML demands (constraints, associations, etc.).<br />
+<p>Visual Paradigm proposes a UML editor which supports everything JHipster-UML demands (constraints, associations, etc.).
 There is one drawback however: it’s not free, but proposes a free community edition (<strong>the tests were done with this edition</strong>).</p>
 
 <p>Another issue that will be discussed later: the XMI is really heavy (it usually has more than 6K lines).</p>
@@ -740,7 +740,7 @@ There is one drawback however: it’s not free, but proposes a free community ed
 
 <p><img src="/documentation-archive/v3.4.0/images/jhipsteruml_visualparadigm_3.png" alt="Visual Paradigm diagram" /></p>
 
-<p>After exporting your diagram, you might notice that your XMI file is quite big. Visual Paradigm exports not only the elements in the diagram, but the place the drawing and placements informations too.<br />
+<p>After exporting your diagram, you might notice that your XMI file is quite big. Visual Paradigm exports not only the elements in the diagram, but the place the drawing and placements informations too.
 The parsing will still be quick, but may take a bit more time.</p>
 
 <p>That’s all you need to know to start using Visual Paradigm, the example file is available <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/visualparadigm.uml">here</a>.</p>
@@ -755,12 +755,12 @@ The parsing will still be quick, but may take a bit more time.</p>
 
 <h2 id="a-nameenumerationexamplesaenumerations"><a name="enumerationexamples"></a>Enumerations</h2>
 
-<p>JHipster and JHipster UML support both support enumerations.<br />
-Here’s how you define them:<br />
-  - For Modelio, drag and drop the <code class="highlighter-rouge">Enumeration</code> object and place it somewhere. Finally, add the <code class="highlighter-rouge">Enumeration Literal</code> object to the enum to add it;<br />
-  - For UML Designer, there is the <code class="highlighter-rouge">Enumeration</code> object that can be placed and used. However, the literal is not called <code class="highlighter-rouge">Enumeration Literal</code> but just <code class="highlighter-rouge">Literal</code>;<br />
-  - GenMyModel possess the objects needed: <code class="highlighter-rouge">Enum</code> and <code class="highlighter-rouge">Enum Literal</code> in the main object panel (on the left hand side of the screen).<br />
-  - Visual Paradigm defines an object called <code class="highlighter-rouge">Enumeration</code> that can be used to achieve our goal. To add values, right-click the enumeration, select <code class="highlighter-rouge">Add</code> and add an <code class="highlighter-rouge">Enumeration Literal</code>;<br />
+<p>JHipster and JHipster UML support both support enumerations.
+Here’s how you define them:
+  - For Modelio, drag and drop the <code class="highlighter-rouge">Enumeration</code> object and place it somewhere. Finally, add the <code class="highlighter-rouge">Enumeration Literal</code> object to the enum to add it;
+  - For UML Designer, there is the <code class="highlighter-rouge">Enumeration</code> object that can be placed and used. However, the literal is not called <code class="highlighter-rouge">Enumeration Literal</code> but just <code class="highlighter-rouge">Literal</code>;
+  - GenMyModel possess the objects needed: <code class="highlighter-rouge">Enum</code> and <code class="highlighter-rouge">Enum Literal</code> in the main object panel (on the left hand side of the screen).
+  - Visual Paradigm defines an object called <code class="highlighter-rouge">Enumeration</code> that can be used to achieve our goal. To add values, right-click the enumeration, select <code class="highlighter-rouge">Add</code> and add an <code class="highlighter-rouge">Enumeration Literal</code>;
   - For our JDL, simply do  <code class="highlighter-rouge">enum MyEnum { A, B }</code> to declare an enum.</p>
 
 <h2 id="a-nametablenamesatable-names"><a name="tablenames"></a>Table names</h2>
@@ -781,17 +781,17 @@ Here’s how you define them:<br />
 
 <h1 id="a-nametesting-jumlatesting-jhipster-uml"><a name="testing-juml"></a>Testing JHipster-UML</h1>
 
-<p>The tests are available in the test folder and can be run via <code class="highlighter-rouge">npm test</code>.<br />
+<p>The tests are available in the test folder and can be run via <code class="highlighter-rouge">npm test</code>.
 We use Mocha for testing (along with chai and expect from chai).</p>
 
-<p>If you want, an alternative command to run the tests, or run only the tests you want, is: <code class="highlighter-rouge">mocha PATH_TO_TESTS</code>.<br />
+<p>If you want, an alternative command to run the tests, or run only the tests you want, is: <code class="highlighter-rouge">mocha PATH_TO_TESTS</code>.
 Please note that you need to be in the root directory for this command to work, and you also may need to install globally mocha with <code class="highlighter-rouge">npm install -g mocha</code> (or just use the file in the node_modules folder, which is available to you provided you do <code class="highlighter-rouge">npm install</code> in JHipster-UML’s directory).</p>
 
 <hr />
 
 <h1 id="a-namecontributingacontributing-issues-and-enhancements"><a name="contributing"></a>Contributing: issues and enhancements</h1>
 
-<p>Because our tool isn’t perfect (<em>yet</em>), you may notice some irregularities. GitHub provides a pretty nice issue tracker so that everyone can post about an issue.<br />
+<p>Because our tool isn’t perfect (<em>yet</em>), you may notice some irregularities. GitHub provides a pretty nice issue tracker so that everyone can post about an issue.
 We follow the same guidelines as JHipster, with a few additions:</p>
 
 <ul>
@@ -863,7 +863,7 @@ We follow the same guidelines as JHipster, with a few additions:</p>
 
 <h4 id="testing">Testing</h4>
 
-<p>Finally, the next thing you’ll need to do before committing your super parser is test it.<br />
+<p>Finally, the next thing you’ll need to do before committing your super parser is test it.
 Because we believe in testing, but really like good testing (with BDD), our tests are done with Mocha and chai. If you don’t know what it’s all about yet, we recommend you visit the <a href="http://chaijs.com/">ChaiJS</a> page, and see <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/editors/modelio_parser_test.js">one</a> of our test file to get acquainted with it.</p>
 
 <p>You should probably wonder what form of testing you should use. The answer is pretty simple: it’s up to you! Whether it’s <a href="http://chaijs.com/guide/styles/#should">should</a>, or <a href="http://chaijs.com/guide/styles/#expect">expect</a> (à la RSpec), we don’t enforce any special rule here. We, however, recommend using Expect because we do, and it should keep the tests fairly easy to understand.</p>
@@ -900,7 +900,7 @@ Because we believe in testing, but really like good testing (with BDD), our test
 
 <h3 id="deleting-a-parser">Deleting a parser</h3>
 
-<p>Removing a parser is quite an easy thing to do.<br />
+<p>Removing a parser is quite an easy thing to do.
 First, remove it from the editors (<code class="highlighter-rouge">editors/editors.js</code>) and then remove it from the EditorDetector (<code class="highlighter-rouge">editors/editor_detector.js</code>). Finally, just remove the parser file and the test created for it.</p>
 
 <p>Don’t forget to modify the <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editor_detector.js#L38">editor detector</a> if you delete any parser.</p>
