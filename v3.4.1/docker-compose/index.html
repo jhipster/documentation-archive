@@ -381,7 +381,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
 
 <h3 id="mongodb-cluster-mode">MongoDB Cluster Mode</h3>
 
-<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually Mongo images.<br />
+<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually Mongo images.
 Follow these steps to do so:</p>
 
 <ul>
@@ -400,7 +400,7 @@ Follow these steps to do so:</p>
 <p>Unlike the other databases, where the schema migrations are executed by the application itself, Cassandra schema migrations are executed by a dedicated Docker container.</p>
 
 <h4 id="a-namecassandra-in-developmentacassandra-in-development"><a name="cassandra-in-development"></a>Cassandra in development</h4>
-<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development use:<br />
+<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development use:
 <code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up -d</code></p>
 
 <p>Docker-compose will start 2 services:</p>
@@ -413,7 +413,7 @@ Follow these steps to do so:</p>
 <p>See the <a href="/documentation-archive/v3.4.1/using-cassandra/">Cassandra page</a> for more information on how to add new CQL scripts without restarting the local cluster.</p>
 
 <h4 id="cassandra-in-production">Cassandra in production:</h4>
-<p>The <code class="highlighter-rouge">app.yml</code> docker-compose file uses <code class="highlighter-rouge">cassandra-cluster.yml</code> to configure the cluster.<br />
+<p>The <code class="highlighter-rouge">app.yml</code> docker-compose file uses <code class="highlighter-rouge">cassandra-cluster.yml</code> to configure the cluster.
 The application starts after few seconds (see <em>JHIPSTER_SLEEP</em> variable) to gives the time to the cluster to start and the migrations to be executed.</p>
 
 <p>One big difference between Cassandra and the other databases, is that you can scale your cluster with Docker Compose. To have X+1 nodes in your cluster, run:</p>

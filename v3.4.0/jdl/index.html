@@ -277,12 +277,12 @@
 <ol>
   <li><a href="#sample">JDL Sample</a></li>
   <li><a href="#howtojdl">How to use it</a></li>
-  <li><a href="#jdllanguage">The language</a>  <br />
-  3.1 <a href="#entitydeclaration">Entity Declaration</a>  <br />
-  3.2 <a href="#relationshipdeclaration">Relationship Declaration</a>  <br />
-  3.3 <a href="#enumerationdeclaration">Enumerations</a>  <br />
-  3.4 <a href="#blobdeclaration">Blobs</a>  <br />
-  3.5 <a href="#optiondeclaration">Option declaration</a>  <br />
+  <li><a href="#jdllanguage">The language</a><br />
+  3.1 <a href="#entitydeclaration">Entity Declaration</a><br />
+  3.2 <a href="#relationshipdeclaration">Relationship Declaration</a><br />
+  3.3 <a href="#enumerationdeclaration">Enumerations</a><br />
+  3.4 <a href="#blobdeclaration">Blobs</a><br />
+  3.5 <a href="#optiondeclaration">Option declaration</a><br />
   3.6 <a href="#microserviceoptions">Microservice-related options</a></li>
   <li><a href="#commentingjdl">Commenting</a></li>
   <li><a href="#jdlrelationships">All the relationships</a></li>
@@ -308,16 +308,16 @@
 
 <p>and <em>Voilà</em>, you are done!</p>
 
-<p>If you work in a team, perhaps you would like to have multiple files instead of one. We added this option to JHipster UML so that you don’t manually<br />
+<p>If you work in a team, perhaps you would like to have multiple files instead of one. We added this option to JHipster UML so that you don’t manually
 concatenate all the files into one, you just have to run <code class="highlighter-rouge">jhipster-uml my_file1.jh my_file2.jh</code>.</p>
 
 <p>If you want to use it in your project, you can add do so by doing <code class="highlighter-rouge">npm install jhipster-domain-language --save</code> to install it locally, and save it in your <code class="highlighter-rouge">package.json</code> file.</p>
 
 <h2 id="a-namejdllanguagea-the-language"><a name="jdllanguage"></a> The language</h2>
-<p>We tried to keep the syntax as friendly as we can for developers.<br />
-You can do three things with it:<br />
-  - Declare entities with their attributes,<br />
-  - Declare the relationships between them,<br />
+<p>We tried to keep the syntax as friendly as we can for developers.
+You can do three things with it:
+  - Declare entities with their attributes,
+  - Declare the relationships between them,
   - And declare some JHipster specific options.</p>
 
 <h3 id="a-nameentitydeclarationa-entity-declaration"><a name="entitydeclaration"></a> Entity declaration</h3>
@@ -386,7 +386,7 @@ relationship OneToMany {
 </code></pre>
 </div>
 
-<p>Of course, in real cases, you’d have a lot of relationships and always writing the same three lines could be tedious.<br />
+<p>Of course, in real cases, you’d have a lot of relationships and always writing the same three lines could be tedious.
 That’s why you can declare something like:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>entity A
@@ -458,7 +458,7 @@ relationship OneToOne {
 
 <h3 id="a-nameoptiondeclarationa-option-declaration"><a name="optiondeclaration"></a> Option declaration</h3>
 
-<p>In JHipster, you can specify options for your entities such as pagination or DTO.<br />
+<p>In JHipster, you can specify options for your entities such as pagination or DTO.
 You can do the same with the JDL:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>entity A {
@@ -479,7 +479,7 @@ service C with serviceImpl
 </code></pre>
 </div>
 
-<p>The keywords <code class="highlighter-rouge">dto</code>, <code class="highlighter-rouge">paginate</code>, <code class="highlighter-rouge">service</code> and <code class="highlighter-rouge">with</code> were added to the grammar to support these changes.<br />
+<p>The keywords <code class="highlighter-rouge">dto</code>, <code class="highlighter-rouge">paginate</code>, <code class="highlighter-rouge">service</code> and <code class="highlighter-rouge">with</code> were added to the grammar to support these changes.
 If a wrong option is specified, JDL will inform you of that with a nice, red message and will just ignore it so as not to corrupt JHipster’s JSON files.</p>
 
 <p>JDL also supports mass-option setting. it is possible to do:</p>
@@ -495,7 +495,7 @@ paginate C, with pager
 </code></pre>
 </div>
 
-<p>Note that <code class="highlighter-rouge">*</code> and <code class="highlighter-rouge">all</code> are equivalent.<br />
+<p>Note that <code class="highlighter-rouge">*</code> and <code class="highlighter-rouge">all</code> are equivalent.
 Latest version introduces exclusions (which is quite a powerful option when setting options for every entity):</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>entity A
@@ -509,7 +509,7 @@ paginate C, with pager
 </code></pre>
 </div>
 
-<p>With JHipster, you can also tell whether you don’t want any client code, or server code. Even if you want to add a suffix to Angular-related files, you can do that in JHipster.<br />
+<p>With JHipster, you can also tell whether you don’t want any client code, or server code. Even if you want to add a suffix to Angular-related files, you can do that in JHipster.
 In your JDL file, simply add these lines to do the same:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>entity A
@@ -548,7 +548,7 @@ search * with ElasticSearch except C
 <p>The first option is used to tell JHipster that you want your microservice to deal with your entities, whereas the second specifies how and if you want your entities searched.</p>
 
 <h2 id="a-namecommentingjdla-commenting--javadoc"><a name="commentingjdl"></a> Commenting &amp; Javadoc</h2>
-<p>It is possible to add Javadoc &amp; comments to JDL files.  <br />
+<p>It is possible to add Javadoc &amp; comments to JDL files.<br />
 Just like in Java, this example demonstrates how to add Javadoc comments:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>/**
@@ -639,7 +639,7 @@ relationship OneToMany {
 
 <h3 id="many-to-one">Many-to-One</h3>
 
-<p>The reciprocal version of One-to-Many relationships is the same as previously.<br />
+<p>The reciprocal version of One-to-Many relationships is the same as previously.
 The unidirectional version where the Car knows its owners:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
@@ -778,8 +778,8 @@ relationship ManyToMany {
   <li><a href="https://github.com/jhipster/jhipster-domain-language/pulls">JDL Pull Requests</a></li>
 </ul>
 
-<p>When submitting anything, you must be as precise as possible:  <br />
-  - <strong>One posted issue must only have one problem</strong> (or one demand/question);  <br />
+<p>When submitting anything, you must be as precise as possible:<br />
+  - <strong>One posted issue must only have one problem</strong> (or one demand/question);<br />
   - Pull requests are welcome, but the commits must be ‘atomic’ to really be understandable.</p>
 
                         </div>

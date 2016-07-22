@@ -292,7 +292,7 @@
 
 <p>The gateway will automatically proxy all requests to the microservices, using their application name: for example, when microservices <code class="highlighter-rouge">app1</code> is registered, it is available on the gateway on the <code class="highlighter-rouge">/app1</code> URL.</p>
 
-<p>For example, if your gateway is running on <code class="highlighter-rouge">localhost:8080</code>, you could point to <a href="http://localhost:8080/app1/rest/foos">http://localhost:8080/app1/rest/foos</a> to<br />
+<p>For example, if your gateway is running on <code class="highlighter-rouge">localhost:8080</code>, you could point to <a href="http://localhost:8080/app1/rest/foos">http://localhost:8080/app1/rest/foos</a> to
 get the <code class="highlighter-rouge">foos</code> resource served by microservice <code class="highlighter-rouge">app1</code>. If you’re trying to do this with your Web browser, don’t forget REST resources are secured by default in JHipster, so you need to send the correct JWT header (see the point on security below), or remove the security on those URLs in the microservice’s <code class="highlighter-rouge">MicroserviceSecurityConfiguration</code> class.</p>
 
 <p>If there are several instances of the same service running:</p>
@@ -338,7 +338,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
   <li>A <code class="highlighter-rouge">Git</code> configuration, which is used by default in production (using the JHipster <code class="highlighter-rouge">prod</code> profile), and which stores the configuration in a Git server. This allows to tag, branch or rollback configurations using the usual Git tools, which are very powerful in this use-case.</li>
 </ul>
 
-<p>To manage your centralized configuration you just need to add <code class="highlighter-rouge">appname-profile.yml</code> files in your configuration source where <strong>appname</strong> and <strong>profile</strong> correspond to the application’s name and current profile of the service that you want to configure.<br />
+<p>To manage your centralized configuration you just need to add <code class="highlighter-rouge">appname-profile.yml</code> files in your configuration source where <strong>appname</strong> and <strong>profile</strong> correspond to the application’s name and current profile of the service that you want to configure.
 For example, adding properties in a <code class="highlighter-rouge">gateway-prod.yml</code> file will set those properties only for the application named <strong>gateway</strong> started with a <strong>prod</strong> profile. Moreover, properties defined in <code class="highlighter-rouge">application[-dev|prod].yml</code> will be set for all your applications.</p>
 
 <p>As the Gateway routes are configured using Spring Boot, they can also be managed using the Spring Config Server, for example you could map application <code class="highlighter-rouge">app1-v1</code> to the <code class="highlighter-rouge">/app1</code> URL in your <code class="highlighter-rouge">v1</code> branch, and map application <code class="highlighter-rouge">app1-v2</code> to the <code class="highlighter-rouge">/app1</code> URL in your <code class="highlighter-rouge">v2</code> branch. This is a good way of upgrading microservices without any downtime for end-users.</p>

@@ -295,12 +295,12 @@
 
 <p>When your application is already deployed, you can re-deploy it by building it normally by running:</p>
 
-<p><strong>With Maven:</strong><br />
-<code class="highlighter-rouge">./mvn -Pprod package</code><br />
+<p><strong>With Maven:</strong>
+<code class="highlighter-rouge">./mvn -Pprod package</code>
 <code class="highlighter-rouge">cf push -f ./deploy/cloudfoundry/manifest.yml -p target/*.war</code></p>
 
-<p><strong>With Gradle:</strong><br />
-<code class="highlighter-rouge">./gradlew -Pprod bootRepackage</code><br />
+<p><strong>With Gradle:</strong>
+<code class="highlighter-rouge">./gradlew -Pprod bootRepackage</code>
 <code class="highlighter-rouge">cf push -f ./deploy/cloudfoundry/manifest.yml -p build/libs/*.war</code></p>
 
 <p>You can also run the sub-generator again, by typing another time:</p>

@@ -218,7 +218,7 @@
 
 <p>JHipster modules are listed on the <a href="/documentation-archive/v2.27.0/modules/marketplace/">JHipster marketplace</a>.</p>
 
-<p>This allows to create third-party generators that have access to the JHipster variables and functions, and act like standard JHipster sub-generators.<br />
+<p>This allows to create third-party generators that have access to the JHipster variables and functions, and act like standard JHipster sub-generators.
 The hook mechanism invokes third-party generators before and after app generation and entity generation.</p>
 
 <h2 id="example">Example</h2>
@@ -269,7 +269,7 @@ The hook mechanism invokes third-party generators before and after app generatio
 
 <p>A JHipster module can register to act as a hook when its main generator is run by the end user. You need to call the <code class="highlighter-rouge">registerModule</code> method available in <code class="highlighter-rouge">jhipsterFunc</code> from your main (app) generator to register as hook, you need to pass the below parameters in the method as below</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">jhipsterFunc</span><span class="p">.</span><span class="nx">registerModule</span><span class="p">(</span><span class="nx">npmPackageName</span><span class="p">,</span> <span class="nx">hookFor</span><span class="p">,</span> <span class="nx">hookType</span><span class="p">[,</span> <span class="nx">callbackSubGenerator</span><span class="p">[,</span> <span class="nx">description</span><span class="p">]])</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">jhipsterFunc</span><span class="p">.</span><span class="nx">registerModule</span><span class="p">(</span><span class="nx">npmPackageName</span><span class="p">,</span> <span class="nx">hookFor</span><span class="p">,</span> <span class="nx">hookType</span><span class="p">[,</span> <span class="nx">callbackSubGenerator</span><span class="p">[,</span> <span class="nx">description</span><span class="p">]])</span>
 </code></pre>
 </div>
 

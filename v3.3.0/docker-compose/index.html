@@ -351,7 +351,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
 
 <h3 id="mongodb-cluster-mode">MongoDB Cluster Mode</h3>
 
-<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually Mongo images.<br />
+<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually Mongo images.
 Follow these steps to do so:</p>
 
 <ul>
@@ -368,7 +368,7 @@ Follow these steps to do so:</p>
 <h3 id="cassandra">Cassandra</h3>
 
 <h4 id="a-namecassandra-in-developmenta-cassandra-in-development"><a name="cassandra-in-development"></a> Cassandra in development</h4>
-<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development use:<br />
+<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development use:
 <code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up -d</code></p>
 
 <p>Docker-compose will start 3 services:</p>
@@ -394,7 +394,7 @@ Follow these steps to do so:</p>
   <li><code class="highlighter-rouge">cassandra-opscenter.yml</code> =&gt; is an alternative with an additional container running OpsCenter to monitor the cluster. OpsCenter will be available at <a href="http://localhost:8888">http://localhost:8888</a>.</li>
 </ul>
 
-<p>Unlike the <a href="#4">other databases</a> docker-compose configuration, the application will not automatically create the Keyspace and apply the changelogs.<br />
+<p>Unlike the <a href="#4">other databases</a> docker-compose configuration, the application will not automatically create the Keyspace and apply the changelogs.
 You have to first start the Cassandra cluster and manually apply the scripts before starting the rest of the services:</p>
 
 <ul>
