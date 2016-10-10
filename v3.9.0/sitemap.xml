@@ -744,7 +744,7 @@
   
       <url>
         <loc>https://jhipster.github.io/artwork/</loc>
-        <lastmod>2015-07-10T02:00:00+02:00</lastmod>
+        <lastmod>2015-07-09T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -752,7 +752,7 @@
   
       <url>
         <loc>https://jhipster.github.io/aws/</loc>
-        <lastmod>2016-09-04T02:00:00+02:00</lastmod>
+        <lastmod>2016-09-03T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -760,7 +760,7 @@
   
       <url>
         <loc>https://jhipster.github.io/boxfuse/</loc>
-        <lastmod>2016-08-22T02:00:00+02:00</lastmod>
+        <lastmod>2016-08-21T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -768,7 +768,7 @@
   
       <url>
         <loc>https://jhipster.github.io/cloudfoundry/</loc>
-        <lastmod>2014-11-04T01:00:00+01:00</lastmod>
+        <lastmod>2014-11-03T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -776,7 +776,7 @@
   
       <url>
         <loc>https://jhipster.github.io/code-quality/</loc>
-        <lastmod>2016-05-26T14:40:00+02:00</lastmod>
+        <lastmod>2016-05-26T08:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -784,7 +784,7 @@
   
       <url>
         <loc>https://jhipster.github.io/companies-using-jhipster/</loc>
-        <lastmod>2015-12-10T01:00:00+01:00</lastmod>
+        <lastmod>2015-12-09T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -792,7 +792,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-ide-visual-studio-code/</loc>
-        <lastmod>2016-09-15T19:13:00+02:00</lastmod>
+        <lastmod>2016-09-15T13:13:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -800,7 +800,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-a-corporate-proxy/</loc>
-        <lastmod>2016-08-18T10:00:00+02:00</lastmod>
+        <lastmod>2016-08-18T04:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -808,7 +808,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-ide/</loc>
-        <lastmod>2015-05-22T20:40:00+02:00</lastmod>
+        <lastmod>2015-05-22T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -816,7 +816,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-ide-eclipse/</loc>
-        <lastmod>2015-05-22T20:40:00+02:00</lastmod>
+        <lastmod>2015-05-22T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -824,7 +824,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-ide-eclipse-gradle/</loc>
-        <lastmod>2015-05-22T20:40:00+02:00</lastmod>
+        <lastmod>2015-05-22T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -832,7 +832,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-ide-idea/</loc>
-        <lastmod>2015-11-28T18:13:00+01:00</lastmod>
+        <lastmod>2015-11-28T12:13:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -840,7 +840,7 @@
   
       <url>
         <loc>https://jhipster.github.io/configuring-ide-netbeans/</loc>
-        <lastmod>2016-08-20T20:40:00+02:00</lastmod>
+        <lastmod>2016-08-20T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -848,7 +848,7 @@
   
       <url>
         <loc>https://jhipster.github.io/consulting/</loc>
-        <lastmod>2014-08-27T02:00:00+02:00</lastmod>
+        <lastmod>2014-08-26T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -856,7 +856,7 @@
   
       <url>
         <loc>https://jhipster.github.io/modules/creating-a-module/</loc>
-        <lastmod>2015-12-05T19:40:00+01:00</lastmod>
+        <lastmod>2015-12-05T13:40:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -864,7 +864,7 @@
   
       <url>
         <loc>https://jhipster.github.io/creating-a-service/</loc>
-        <lastmod>2014-02-17T01:00:00+01:00</lastmod>
+        <lastmod>2014-02-16T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -872,7 +872,7 @@
   
       <url>
         <loc>https://jhipster.github.io/creating-an-app/</loc>
-        <lastmod>2014-06-02T02:00:00+02:00</lastmod>
+        <lastmod>2014-06-01T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -880,7 +880,7 @@
   
       <url>
         <loc>https://jhipster.github.io/creating-an-entity/</loc>
-        <lastmod>2014-10-10T02:00:00+02:00</lastmod>
+        <lastmod>2014-10-09T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -888,7 +888,7 @@
   
       <url>
         <loc>https://jhipster.github.io/customizing-bootstrap/</loc>
-        <lastmod>2015-01-30T19:40:00+01:00</lastmod>
+        <lastmod>2015-01-30T13:40:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -896,7 +896,7 @@
   
       <url>
         <loc>https://jhipster.github.io/development/</loc>
-        <lastmod>2014-09-17T02:00:00+02:00</lastmod>
+        <lastmod>2014-09-16T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -904,7 +904,7 @@
   
       <url>
         <loc>https://jhipster.github.io/docker-compose/</loc>
-        <lastmod>2016-06-19T02:00:00+02:00</lastmod>
+        <lastmod>2016-06-18T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -912,7 +912,7 @@
   
       <url>
         <loc>https://jhipster.github.io/docker-hub/</loc>
-        <lastmod>2016-09-25T02:00:00+02:00</lastmod>
+        <lastmod>2016-09-24T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -920,7 +920,7 @@
   
       <url>
         <loc>https://jhipster.github.io/fisherman/</loc>
-        <lastmod>2016-08-14T20:40:00+02:00</lastmod>
+        <lastmod>2016-08-14T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -928,7 +928,7 @@
   
       <url>
         <loc>https://jhipster.github.io/help/</loc>
-        <lastmod>2014-08-27T02:00:00+02:00</lastmod>
+        <lastmod>2014-08-26T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -936,7 +936,7 @@
   
       <url>
         <loc>https://jhipster.github.io/heroku/</loc>
-        <lastmod>2014-09-08T02:00:00+02:00</lastmod>
+        <lastmod>2014-09-07T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -944,7 +944,7 @@
   
       <url>
         <loc>https://jhipster.github.io/</loc>
-        <lastmod>2016-05-25T02:00:00+02:00</lastmod>
+        <lastmod>2016-05-24T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
        </url>
@@ -952,7 +952,7 @@
   
       <url>
         <loc>https://jhipster.github.io/installation/</loc>
-        <lastmod>2016-03-20T01:00:00+01:00</lastmod>
+        <lastmod>2016-03-19T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -960,7 +960,7 @@
   
       <url>
         <loc>https://jhipster.github.io/installing-new-languages/</loc>
-        <lastmod>2014-12-10T01:00:00+01:00</lastmod>
+        <lastmod>2014-12-09T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -968,7 +968,7 @@
   
       <url>
         <loc>https://jhipster.github.io/jdl/</loc>
-        <lastmod>2016-04-17T14:00:00+02:00</lastmod>
+        <lastmod>2016-04-17T08:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
        </url>
@@ -976,7 +976,7 @@
   
       <url>
         <loc>https://jhipster.github.io/jhipster-app/</loc>
-        <lastmod>2016-08-29T14:40:00+02:00</lastmod>
+        <lastmod>2016-08-29T08:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -984,7 +984,7 @@
   
       <url>
         <loc>https://jhipster.github.io/jhipster-uml/</loc>
-        <lastmod>2016-08-20T14:00:00+02:00</lastmod>
+        <lastmod>2016-08-20T08:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
        </url>
@@ -992,7 +992,7 @@
   
       <url>
         <loc>https://jhipster.github.io/kubernetes/</loc>
-        <lastmod>2016-08-12T02:00:00+02:00</lastmod>
+        <lastmod>2016-08-11T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1000,7 +1000,7 @@
   
       <url>
         <loc>https://jhipster.github.io/managing-relationships/</loc>
-        <lastmod>2016-03-26T19:40:00+01:00</lastmod>
+        <lastmod>2016-03-26T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1008,7 +1008,7 @@
   
       <url>
         <loc>https://jhipster.github.io/modules/marketplace/</loc>
-        <lastmod>2015-12-10T01:00:00+01:00</lastmod>
+        <lastmod>2015-12-09T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1016,7 +1016,7 @@
   
       <url>
         <loc>https://jhipster.github.io/microservices-architecture/</loc>
-        <lastmod>2016-03-10T01:00:00+01:00</lastmod>
+        <lastmod>2016-03-09T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1024,7 +1024,7 @@
   
       <url>
         <loc>https://jhipster.github.io/monitoring/</loc>
-        <lastmod>2016-03-17T01:00:00+01:00</lastmod>
+        <lastmod>2016-03-16T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1032,7 +1032,7 @@
   
       <url>
         <loc>https://jhipster.github.io/oh-my-zsh/</loc>
-        <lastmod>2016-07-25T20:40:00+02:00</lastmod>
+        <lastmod>2016-07-25T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1040,7 +1040,7 @@
   
       <url>
         <loc>https://jhipster.github.io/openshift/</loc>
-        <lastmod>2016-02-10T01:00:00+01:00</lastmod>
+        <lastmod>2016-02-09T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.1</priority>
        </url>
@@ -1048,7 +1048,7 @@
   
       <url>
         <loc>https://jhipster.github.io/policies/</loc>
-        <lastmod>2015-07-31T20:40:00+02:00</lastmod>
+        <lastmod>2015-07-31T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1056,7 +1056,7 @@
   
       <url>
         <loc>https://jhipster.github.io/production/</loc>
-        <lastmod>2014-02-17T01:00:00+01:00</lastmod>
+        <lastmod>2014-02-16T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1064,7 +1064,7 @@
   
       <url>
         <loc>https://jhipster.github.io/profiles/</loc>
-        <lastmod>2014-11-26T01:00:00+01:00</lastmod>
+        <lastmod>2014-11-25T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1072,7 +1072,7 @@
   
       <url>
         <loc>https://jhipster.github.io/releases/</loc>
-        <lastmod>2014-02-17T01:00:00+01:00</lastmod>
+        <lastmod>2014-02-16T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.4</priority>
        </url>
@@ -1080,7 +1080,7 @@
   
       <url>
         <loc>https://jhipster.github.io/running-tests/</loc>
-        <lastmod>2015-04-20T02:00:00+02:00</lastmod>
+        <lastmod>2015-04-19T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1088,7 +1088,7 @@
   
       <url>
         <loc>https://jhipster.github.io/screenshots/</loc>
-        <lastmod>2014-02-17T01:00:00+01:00</lastmod>
+        <lastmod>2014-02-16T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
        </url>
@@ -1096,7 +1096,7 @@
   
       <url>
         <loc>https://jhipster.github.io/security/</loc>
-        <lastmod>2015-01-27T01:00:00+01:00</lastmod>
+        <lastmod>2015-01-26T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1104,7 +1104,7 @@
   
       <url>
         <loc>https://jhipster.github.io/setting-up-ci/</loc>
-        <lastmod>2015-01-09T13:40:00+01:00</lastmod>
+        <lastmod>2015-01-09T07:40:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1112,7 +1112,7 @@
   
       <url>
         <loc>https://jhipster.github.io/setting-up-ci-jenkins2/</loc>
-        <lastmod>2016-06-19T14:40:00+02:00</lastmod>
+        <lastmod>2016-06-19T08:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1120,7 +1120,7 @@
   
       <url>
         <loc>https://jhipster.github.io/setting-up-ci-linux/</loc>
-        <lastmod>2015-01-09T13:40:00+01:00</lastmod>
+        <lastmod>2015-01-09T07:40:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1128,7 +1128,7 @@
   
       <url>
         <loc>https://jhipster.github.io/setting-up-ci-windows/</loc>
-        <lastmod>2015-01-09T13:40:00+01:00</lastmod>
+        <lastmod>2015-01-09T07:40:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1136,7 +1136,7 @@
   
       <url>
         <loc>https://jhipster.github.io/shell-plugins/</loc>
-        <lastmod>2016-08-14T20:40:00+02:00</lastmod>
+        <lastmod>2016-08-14T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1146,7 +1146,7 @@
   
       <url>
         <loc>https://jhipster.github.io/team/</loc>
-        <lastmod>2015-07-30T20:40:00+02:00</lastmod>
+        <lastmod>2015-07-30T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1154,7 +1154,7 @@
   
       <url>
         <loc>https://jhipster.github.io/tech-stack/</loc>
-        <lastmod>2014-05-16T02:00:00+02:00</lastmod>
+        <lastmod>2014-05-15T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
        </url>
@@ -1162,7 +1162,7 @@
   
       <url>
         <loc>https://jhipster.github.io/thanks/</loc>
-        <lastmod>2014-02-21T01:00:00+01:00</lastmod>
+        <lastmod>2014-02-20T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.1</priority>
        </url>
@@ -1170,7 +1170,7 @@
   
       <url>
         <loc>https://jhipster.github.io/tips/</loc>
-        <lastmod>2015-05-27T20:40:00+02:00</lastmod>
+        <lastmod>2015-05-27T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1178,7 +1178,7 @@
   
       <url>
         <loc>https://jhipster.github.io/training/</loc>
-        <lastmod>2014-08-27T02:00:00+02:00</lastmod>
+        <lastmod>2014-08-26T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1186,7 +1186,7 @@
   
       <url>
         <loc>https://jhipster.github.io/upgrading-an-application/</loc>
-        <lastmod>2014-06-02T02:00:00+02:00</lastmod>
+        <lastmod>2014-06-01T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1194,7 +1194,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-uaa/</loc>
-        <lastmod>2016-08-25T02:00:00+02:00</lastmod>
+        <lastmod>2016-08-24T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1202,7 +1202,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-angularjs/</loc>
-        <lastmod>2015-01-30T00:41:00+01:00</lastmod>
+        <lastmod>2015-01-29T18:41:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1210,7 +1210,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-cassandra/</loc>
-        <lastmod>2015-02-24T01:00:00+01:00</lastmod>
+        <lastmod>2015-02-23T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1218,7 +1218,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-dtos/</loc>
-        <lastmod>2015-05-29T01:41:00+02:00</lastmod>
+        <lastmod>2015-05-28T19:41:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1226,7 +1226,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-elasticsearch/</loc>
-        <lastmod>2015-04-20T02:00:00+02:00</lastmod>
+        <lastmod>2015-04-19T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1234,7 +1234,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-kafka/</loc>
-        <lastmod>2016-09-22T02:00:00+02:00</lastmod>
+        <lastmod>2016-09-21T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1242,7 +1242,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-mongodb/</loc>
-        <lastmod>2015-02-24T01:00:00+01:00</lastmod>
+        <lastmod>2015-02-23T19:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1250,7 +1250,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-oracle/</loc>
-        <lastmod>2015-06-08T20:40:00+02:00</lastmod>
+        <lastmod>2015-06-08T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1258,7 +1258,7 @@
   
       <url>
         <loc>https://jhipster.github.io/using-websockets/</loc>
-        <lastmod>2015-08-31T20:40:00+02:00</lastmod>
+        <lastmod>2015-08-31T14:40:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
        </url>
@@ -1266,7 +1266,7 @@
   
       <url>
         <loc>https://jhipster.github.io/video-tutorial/</loc>
-        <lastmod>2014-10-18T02:00:00+02:00</lastmod>
+        <lastmod>2014-10-17T20:00:00-04:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
        </url>
