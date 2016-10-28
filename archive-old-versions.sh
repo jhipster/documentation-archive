@@ -19,4 +19,5 @@ then
 fi
     bundle install
     bundle exec jekyll build -d ../$tag --config _config.yml,_config-baseurl.yml
+    cat ../alert-snippet.html >> ../$tag/index.html
 done
