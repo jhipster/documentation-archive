@@ -19,5 +19,5 @@ then
 fi
     bundle install
     bundle exec jekyll build -d ../$tag --config _config.yml,_config-baseurl.yml
-    cat ../alert-snippet.html >> ../$tag/index.html
+    find ../$tag -name "*.html" -exec sh -c "cat ../alert-snippet.html >> {}" \;
 done
