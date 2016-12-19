@@ -1,0 +1,10 @@
+{
+  "name": "jhipster-public-wesite",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-sass": "*",
+    "gulp-imagemin": "2.4.0"
+  },
+  "private": true
+}
