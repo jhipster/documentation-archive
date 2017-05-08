@@ -202,32 +202,36 @@
 
 <p>When using the generator-jhipster, the command <code class="highlighter-rouge">npm install</code> may take several minutes, depending on your connection speed.</p>
 
-<p>This tip can be used in many cases:
-* for demo of JHipster, to improve your experience
-* for dev team, to regenerate faster a project with <code class="highlighter-rouge">.yo-rc.json</code>
-* for continuous integration</p>
+<p>This tip can be used in many cases:</p>
+<ul>
+  <li>for demo of JHipster, to improve your experience</li>
+  <li>for dev team, to regenerate faster a project with <code class="highlighter-rouge">.yo-rc.json</code></li>
+  <li>for continuous integration</li>
+</ul>
 
-<h2 id="create-a-new-project-for-nodemodules">Create a new project for node_modules</h2>
+<h2 id="create-a-new-project-for-node_modules">Create a new project for node_modules</h2>
 
-<p>There are 2 types of <code class="highlighter-rouge">node_modules</code> directory. You can’t use the same for both types of project.
-* grunt
-* gulp</p>
+<p>There are 2 types of <code class="highlighter-rouge">node_modules</code> directory. You can’t use the same for both types of project.</p>
+<ul>
+  <li>grunt</li>
+  <li>gulp</li>
+</ul>
 
-<p>Create a directory which will contain all <code class="highlighter-rouge">node_modules</code> libraries, and go into it:
-<code class="highlighter-rouge">
-mkdir jhipster-speedup
+<p>Create a directory which will contain all <code class="highlighter-rouge">node_modules</code> libraries, and go into it:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir jhipster-speedup
 cd jhipster-speedup
-</code></p>
+</code></pre>
+</div>
 
-<p>Create the directory <code class="highlighter-rouge">node_modules</code> for grunt:
-<code class="highlighter-rouge">
-mkdir -p grunt/node_modules
-</code></p>
+<p>Create the directory <code class="highlighter-rouge">node_modules</code> for grunt:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p grunt/node_modules
+</code></pre>
+</div>
 
-<p>Create the directory <code class="highlighter-rouge">node_modules</code> for gulp:
-<code class="highlighter-rouge">
-mkdir -p gulp/node_modules
-</code></p>
+<p>Create the directory <code class="highlighter-rouge">node_modules</code> for gulp:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p gulp/node_modules
+</code></pre>
+</div>
 
 <p>The project structure is :</p>
 
@@ -242,49 +246,45 @@ mkdir -p gulp/node_modules
 <p><strong>Warning!</strong> Use these 2 next commands only if your are a developer on JHipster. It will link to your fork project of generator-jhipster:</p>
 
 <ul>
-  <li>
-    <p>grunt:
-<code class="highlighter-rouge">
-cd grunt/node_modules &amp;&amp; npm link generator-jhipster
-</code></p>
+  <li>grunt:
+    <div class="highlighter-rouge"><pre class="highlight"><code>cd grunt/node_modules &amp;&amp; npm link generator-jhipster
+</code></pre>
+    </div>
   </li>
-  <li>
-    <p>gulp:
-<code class="highlighter-rouge">
-cd gulp/node_modules &amp;&amp; npm link generator-jhipster
-</code></p>
+  <li>gulp:
+    <div class="highlighter-rouge"><pre class="highlight"><code>cd gulp/node_modules &amp;&amp; npm link generator-jhipster
+</code></pre>
+    </div>
   </li>
 </ul>
 
 <h2 id="generating-projects">Generating projects</h2>
 
-<p>Create a directory which will contain your new JHipster project, and go into it:
-<code class="highlighter-rouge">
-mkdir jhipster
+<p>Create a directory which will contain your new JHipster project, and go into it:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir jhipster
 cd jhipster
-</code></p>
+</code></pre>
+</div>
 
 <p>Depending of your choice, grunt or gulp, create a link to the directory <code class="highlighter-rouge">node_modules</code>:</p>
 
 <ul>
-  <li>
-    <p>grunt:
-<code class="highlighter-rouge">
-ln -s &lt;your path&gt;/jhipster-speedup/grunt/node_modules
-</code></p>
+  <li>grunt:
+    <div class="highlighter-rouge"><pre class="highlight"><code>ln -s &lt;your path&gt;/jhipster-speedup/grunt/node_modules
+</code></pre>
+    </div>
   </li>
-  <li>
-    <p>gulp:
-<code class="highlighter-rouge">
-ln -s &lt;your path&gt;/jhipster-speedup/gulp/node_modules
-</code></p>
+  <li>gulp:
+    <div class="highlighter-rouge"><pre class="highlight"><code>ln -s &lt;your path&gt;/jhipster-speedup/gulp/node_modules
+</code></pre>
+    </div>
   </li>
 </ul>
 
-<p>Generate a new project, and answer to all questions:
-<code class="highlighter-rouge">
-yo jhipster
-</code></p>
+<p>Generate a new project, and answer to all questions:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster
+</code></pre>
+</div>
 
 <p>The first time, it will take several minutes.</p>
 

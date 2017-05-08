@@ -269,7 +269,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-sitemapi-doing-microservices-with-jhipster"><i class="fa fa-sitemap"></i> Doing microservices with JHipster</h1>
+                            <h1 id="-doing-microservices-with-jhipster"><i class="fa fa-sitemap"></i> Doing microservices with JHipster</h1>
 
 <h2 id="summary">Summary</h2>
 
@@ -317,7 +317,7 @@
   </li>
 </ol>
 
-<h2 id="a-namemicroservicesvsmonolithica-microservices-vs-monolithic-architecture"><a name="microservices_vs_monolithic"></a> Microservices vs Monolithic architecture</h2>
+<h2 id="-microservices-vs-monolithic-architecture"><a name="microservices_vs_monolithic"></a> Microservices vs Monolithic architecture</h2>
 
 <p>The first question JHipster will ask you is the kind of application you want to generate. You have in fact the choice between two architecture styles:</p>
 
@@ -330,7 +330,7 @@
 
 <p><em>The rest of this guide is only for people interested in doing a microservices architecture.</em></p>
 
-<h2 id="a-nameoverviewa-overview"><a name="overview"></a> Overview</h2>
+<h2 id="-overview"><a name="overview"></a> Overview</h2>
 
 <p>The JHipster microservices architecture works in the following way:</p>
 
@@ -345,11 +345,11 @@
 
 <p><img src="/documentation-archive/v4.0.7/images/microservices_architecture_2.png" alt="Diagram" style="width: 930px; height: 558px" /></p>
 
-<h2 id="a-namegatewaya-the-jhipster-api-gateway"><a name="gateway"></a> The JHipster API gateway</h2>
+<h2 id="-the-jhipster-api-gateway"><a name="gateway"></a> The JHipster API gateway</h2>
 
 <p>JHipster allows use to generate an API gateway. This gateway is a normal JHipster application, so you can use the usual JHipster options and development workflows on that project, but it also acts as the entrance to your microservices. More specifically, it provides HTTP routing and load balancing, quality of service, security and API documentation for all microservices.</p>
 
-<h3 id="a-namehttproutinga-http-requests-routing-using-the-gateway"><a name="http_routing"></a> HTTP requests routing using the gateway</h3>
+<h3 id="-http-requests-routing-using-the-gateway"><a name="http_routing"></a> HTTP requests routing using the gateway</h3>
 
 <p>When the gateways and the microservices are launched, they will register themselves in the registry (using the <code class="highlighter-rouge">eureka.client.serviceUrl.defaultZone</code> key in the <code class="highlighter-rouge">src/main/resources/config/application.yml</code> file).</p>
 
@@ -367,7 +367,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 
 <p>Each gateway as a specific “admin &gt; gateway” menu, where opened HTTP routes and microservices instances can be monitored.</p>
 
-<h3 id="a-namesecuritya-security"><a name="security"></a> Security</h3>
+<h3 id="-security"><a name="security"></a> Security</h3>
 
 <h4 id="jwt-json-web-token">JWT (JSON Web Token)</h4>
 
@@ -398,7 +398,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 
 <p>Then, the gateway uses Spring Security’s JWT implementation to send JWT tokens to the microservices.</p>
 
-<h3 id="a-namedocumentationa-automatic-documentation"><a name="documentation"></a> Automatic documentation</h3>
+<h3 id="-automatic-documentation"><a name="documentation"></a> Automatic documentation</h3>
 
 <p>The gateway exposes the Swagger API definitions of the services it proxifies so you can benefit from all useful tools like Swagger UI and swagger-codegen.</p>
 
@@ -408,7 +408,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 
 <p>When using a secured API, security tokens are automatically added to the Swagger UI interface, so all requests work out-of-the-box.</p>
 
-<h3 id="a-nameratelimitinga-rate-limiting"><a name="rate_limiting"></a> Rate limiting</h3>
+<h3 id="-rate-limiting"><a name="rate_limiting"></a> Rate limiting</h3>
 
 <p>This is an advanced feature that requires setting up a Cassandra cluster (which is easy to do with the provided Docker Compose configuration).</p>
 
@@ -450,7 +450,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
   <li>Removing all limits for “admin” users</li>
 </ul>
 
-<h3 id="a-nameacla-access-control-policy"><a name="acl"></a> Access control policy</h3>
+<h3 id="-access-control-policy"><a name="acl"></a> Access control policy</h3>
 
 <p>By default all registered microservices are available through the gateway. If you want to exclude a specific API from being exposed through the gateway, you can use the gateway’s specific access control policy filter. It is configurable using the <code class="highlighter-rouge">jhipster.gateway.authorized-microservices-endpoints</code> key in the <code class="highlighter-rouge">application-*.yml</code> files:</p>
 
@@ -470,13 +470,13 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 </code></pre>
 </div>
 
-<h2 id="a-namediscoverya-service-discovery-and-configuration-with-the-jhipster-registry-or-consul"><a name="discovery"></a> Service Discovery and Configuration with the JHipster Registry or Consul</h2>
+<h2 id="-service-discovery-and-configuration-with-the-jhipster-registry-or-consul"><a name="discovery"></a> Service Discovery and Configuration with the JHipster Registry or Consul</h2>
 
 <p>When generating a microservice, gateway or uaa application, you can choose between two service registry solutions: the JHipster-Registry and Consul. In addition, those two solutions also act as a configuration server that lets you to manage your applications’ configuration in a central place.</p>
 
-<h3 id="a-namejhipster-registrya-the-jhipster-registry"><a name="jhipster-registry"></a> The JHipster Registry</h3>
+<h3 id="-the-jhipster-registry"><a name="jhipster-registry"></a> The JHipster Registry</h3>
 
-<h4 id="a-namejhipster-registry-overviewa-bjhipster-registry-overviewb"><a name="jhipster-registry-overview"></a> <b>JHipster Registry Overview</b></h4>
+<h4 id="-jhipster-registry-overview"><a name="jhipster-registry-overview"></a> <b>JHipster Registry Overview</b></h4>
 
 <p>The JHipster Registry is a runtime application, provided by the JHipster team. Like the JHipster generator, it is an Open Source, Apache 2-licensed application, and its source code is available on GitHub under the JHipster organization at <a href="https://github.com/jhipster/jhipster-registry">jhipster/jhipster-registry</a>.</p>
 
@@ -495,7 +495,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 
 <p>Please read our <a href="/documentation-archive/v4.0.7/docker-compose/">Docker Compose documentation</a> for more information on using the JHipster Registry with Docker Compose.</p>
 
-<h4 id="a-namesecuringregistrya-bsecuring-the-jhipster-registryb"><a name="securing_registry"></a> <b>Securing the JHipster Registry</b></h4>
+<h4 id="-securing-the-jhipster-registry"><a name="securing_registry"></a> <b>Securing the JHipster Registry</b></h4>
 
 <p>The JHipster Registry is secured by default. You can login using the usual “admin/admin” login and password that are used in normal JHipster applications.</p>
 
@@ -508,7 +508,7 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
   <li>As your applications will connect to the registry using HTTP, it is very important to secure that connection channel. There are many ways to do it, and the easiest one is probably to use HTTPS.</li>
 </ul>
 
-<h4 id="a-nameregistryappconfigurationa-bapplication-configuration-with-the-jhipster-registryb"><a name="registry_app_configuration"></a> <b>Application configuration with the JHipster Registry</b></h4>
+<h4 id="-application-configuration-with-the-jhipster-registry"><a name="registry_app_configuration"></a> <b>Application configuration with the JHipster Registry</b></h4>
 
 <p>The JHipster Registry is a <a href="https://github.com/Netflix/eureka">Netflix Eureka server</a> and also a <a href="http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html">Spring Config Server</a>: when applications are launched they will first connect to the JHipster Registry to get their configuration. This is true for both gateways and microservices.</p>
 
@@ -528,11 +528,11 @@ For example, adding properties in a <code class="highlighter-rouge">gateway-prod
 
 <p>As the Gateway routes are configured using Spring Boot, they can also be managed using the Spring Config Server, for example you could map application <code class="highlighter-rouge">app1-v1</code> to the <code class="highlighter-rouge">/app1</code> URL in your <code class="highlighter-rouge">v1</code> branch, and map application <code class="highlighter-rouge">app1-v2</code> to the <code class="highlighter-rouge">/app1</code> URL in your <code class="highlighter-rouge">v2</code> branch. This is a good way of upgrading microservices without any downtime for end-users.</p>
 
-<h3 id="a-nameconsula-beta-consul"><a name="consul"></a> [BETA] Consul</h3>
+<h3 id="-beta-consul"><a name="consul"></a> [BETA] Consul</h3>
 
 <p>WARNING! This is a new feature, of BETA quality. Use it at your own risk! Feedback is highly welcome!</p>
 
-<h4 id="a-nameconsul-overviewa-bconsul-overviewb"><a name="consul-overview"></a> <b>Consul overview</b></h4>
+<h4 id="-consul-overview"><a name="consul-overview"></a> <b>Consul overview</b></h4>
 
 <p>As an alternative to the JHipster Registry you can choose to use <a href="https://www.consul.io/">Consul</a>, a datacenter management solution from Hashicorp.
 Compared to Eureka it has a number of advantages:</p>
@@ -555,7 +555,7 @@ Compared to Eureka it has a number of advantages:</p>
 #### <a name="securing_consul"></a> <b>Securing Consul</b>
 -->
 
-<h4 id="a-nameconsulappconfigurationa-bapplication-configuration-with-consulb"><a name="consul_app_configuration"></a> <b>Application configuration with Consul</b></h4>
+<h4 id="-application-configuration-with-consul"><a name="consul_app_configuration"></a> <b>Application configuration with Consul</b></h4>
 
 <p>If you have chosen the Consul option when generating your JHipster microservice or gateway app, they will be automatically configured to retrieve their configuration from Consul’s <strong>Key/Value store</strong>.</p>
 
@@ -569,11 +569,11 @@ It can be run in two modes:</p>
 
 <p>Note that as with the JHipster Registry, your configuration files will need to be named <code class="highlighter-rouge">appname-profile.yml</code> where appname and profile correspond to the application’s name and profile of the service that you want to configure. For example, adding properties in a <code class="highlighter-rouge">consulapp-prod.yml</code> file will set those properties only for the application named <code class="highlighter-rouge">consulapp</code> started with a <code class="highlighter-rouge">prod</code> profile. Moreover, properties defined in <code class="highlighter-rouge">application.yml</code> will be set for all your applications.</p>
 
-<h2 id="a-namemicroservicesa-creating-microservices"><a name="microservices"></a> Creating microservices</h2>
+<h2 id="-creating-microservices"><a name="microservices"></a> Creating microservices</h2>
 
 <p>Microservices are a type of JHipster applications, that have no front-end (the AngularJS front-end must be generated on a gateway), and which work with the JHipster Registry to be configured and discovered.</p>
 
-<h3 id="a-namegeneratingentitiesa-generating-entities-in-a-microservices-architecture"><a name="generating_entities"></a> Generating entities in a microservices architecture</h3>
+<h3 id="-generating-entities-in-a-microservices-architecture"><a name="generating_entities"></a> Generating entities in a microservices architecture</h3>
 
 <p>Using the <a href="/documentation-archive/v4.0.7/creating-an-entity/">entity sub-generator</a> works a little bit differently in a microservices architecture, as the front-end and the back-end codes are not located in the same application.</p>
 
@@ -586,7 +586,7 @@ It can be run in two modes:</p>
   <li>If you choose to generate the entity from a microservice, you will need to enter the path to this microservice on your local computer, and then JHipster will generate the front-end code on the gateway.</li>
 </ul>
 
-<h3 id="a-namehazelcasta-distributed-caching-with-hazelcast"><a name="hazelcast"></a> Distributed caching with Hazelcast</h3>
+<h3 id="-distributed-caching-with-hazelcast"><a name="hazelcast"></a> Distributed caching with Hazelcast</h3>
 
 <p>If your application uses an SQL database, JHipster proposes a different 2nd-level caching solution with microservices:</p>
 
@@ -610,31 +610,31 @@ It can be run in two modes:</p>
   <li>With the <code class="highlighter-rouge">prod</code> profile, JHipster will create a cluster with all the other nodes it finds, using the default Hazelcast port (<code class="highlighter-rouge">5701</code>)</li>
 </ul>
 
-<h3 id="a-namenodatabasea-microservices-with-no-database"><a name="no_database"></a> Microservices with no database</h3>
+<h3 id="-microservices-with-no-database"><a name="no_database"></a> Microservices with no database</h3>
 
 <p>Only microservices applications can be created without a database. This is because microservices are small and do not have user-management code.</p>
 
 <p>A microservice without a database is very small, and could be used to connect to a specific back-end like a legacy system.</p>
 
-<h2 id="a-namedockercomposea-using-docker-compose-to-develop-and-deploy"><a name="docker_compose"></a> Using Docker Compose to develop and deploy</h2>
+<h2 id="-using-docker-compose-to-develop-and-deploy"><a name="docker_compose"></a> Using Docker Compose to develop and deploy</h2>
 
 <p>Working on a microservices architecture means you will need several different services and databases working together, and in that context Docker Compose is a great tool to manage your development, testing and production environments.</p>
 
 <p>A specific section on microservices is included in our <a href="/documentation-archive/v4.0.7/docker-compose#microservices">Docker Compose documentation</a>, and we highly recommend that you get familiar with it when working on a microservices architecture.</p>
 
-<h2 id="a-namemonitoringa-monitoring-with-jhipster-console-and-the-elk-stack"><a name="monitoring"></a> Monitoring with JHipster Console and the ELK stack</h2>
+<h2 id="-monitoring-with-jhipster-console-and-the-elk-stack"><a name="monitoring"></a> Monitoring with JHipster Console and the ELK stack</h2>
 
 <p>When using the Docker-Compose sub-generator, you will be asked if you want to add monitoring to your infrastructure. This option, will add the JHipster-Console to your <code class="highlighter-rouge">docker-compose.yml</code> file. Once started, it will be available on <a href="http://localhost:5601">http://localhost:5601</a> and start to gather your applications’ logs and metrics. For instructions on how to set up monitoring for your applications please refer to the <a href="/documentation-archive/v4.0.7/monitoring">monitoring documentation</a>.</p>
 
 <p>Compared with monolithic applications, gateways and microservices monitoring configuration provide additional features to help you effectively monitor a microservices cluster. For example logs are enriched with each application’s name, host, port and Eureka ServiceId so that you can trace from which service they are originating from. Moreover the JHipster Console comes with default dashboards that give you a view of all your services at the same time.</p>
 
-<h2 id="a-nameproductiona-production"><a name="production"></a> Production</h2>
+<h2 id="-production"><a name="production"></a> Production</h2>
 
-<h3 id="a-namedockerswarma-going-to-production-with-docker-swarm"><a name="docker_swarm"></a> Going to production with Docker Swarm</h3>
+<h3 id="-going-to-production-with-docker-swarm"><a name="docker_swarm"></a> Going to production with Docker Swarm</h3>
 
 <p>As Docker Swarm uses the same API as Docker Machine, deploying your microservices architecture in the cloud is exactly the same as deploying it on your local machine. Follow our <a href="/documentation-archive/v4.0.7/docker-compose/">Docker Compose documentation</a> to learn more about using Docker Compose with JHipster.</p>
 
-<h3 id="a-namecloudfoundrya-going-to-production-with-cloud-foundry"><a name="cloudfoundry"></a> Going to production with Cloud Foundry</h3>
+<h3 id="-going-to-production-with-cloud-foundry"><a name="cloudfoundry"></a> Going to production with Cloud Foundry</h3>
 
 <p>The <a href="/documentation-archive/v4.0.7/cloudfoundry/">Cloud Foundry sub-generator</a> works the same with a microservices architecture, the main difference is that you have more applications to deploy:</p>
 
@@ -659,7 +659,7 @@ It can be run in two modes:</p>
   <li>Keep everything public, but use HTTPS everywhere, and secure your JHipster Registry using Spring Security’s basic authentication support</li>
 </ul>
 
-<h3 id="a-nameherokua-going-to-production-with-heroku"><a name="heroku"></a> Going to production with Heroku</h3>
+<h3 id="-going-to-production-with-heroku"><a name="heroku"></a> Going to production with Heroku</h3>
 
 <p>The <a href="/documentation-archive/v4.0.7/heroku/">Heroku sub-generator</a> works nearly the same with a microservices architecture, the main difference is that you have more applications to deploy:</p>
 

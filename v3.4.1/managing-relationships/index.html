@@ -258,7 +258,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-sitemapi-managing-relationships"><i class="fa fa-sitemap"></i> Managing relationships</h1>
+                            <h1 id="-managing-relationships"><i class="fa fa-sitemap"></i> Managing relationships</h1>
 
 <p>When JPA is used, the <a href="/documentation-archive/v3.4.1/creating-an-entity/">entity sub-generator</a> can create relationships between entities.</p>
 
@@ -303,7 +303,7 @@
 
 <p>Please note that the <code class="highlighter-rouge">User</code> entity, which is handled by JHipster, is specific. You can do <code class="highlighter-rouge">many-to-one</code> relationships to this entity (a <code class="highlighter-rouge">Car</code> can have a many-to-one relationship to a <code class="highlighter-rouge">User</code>). This will generate a specific query in your new entity repository, so you can filter your entity on the current security user, which is a common requirement. On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">User</code>.</p>
 
-<h2 id="a-name1a-a-bidirectional-one-to-many-relationship"><a name="1"></a> A bidirectional one-to-many relationship</h2>
+<h2 id="-a-bidirectional-one-to-many-relationship"><a name="1"></a> A bidirectional one-to-many relationship</h2>
 
 <p>Let’s start with two entities, a <code class="highlighter-rouge">Owner</code> and a <code class="highlighter-rouge">Car</code>. A owner can have many cars, and a car can have only one owner.</p>
 
@@ -354,7 +354,7 @@ relationship OneToMany {
 
 <p>That’s it, you now have a one-to-many relationship between those two entities! On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Owner</code>.</p>
 
-<h2 id="a-name2a-a-unidirectional-many-to-one-relationship"><a name="2"></a> A unidirectional many-to-one relationship</h2>
+<h2 id="-a-unidirectional-many-to-one-relationship"><a name="2"></a> A unidirectional many-to-one relationship</h2>
 
 <p>In the previous example we had a bidirectional relationship: from a <code class="highlighter-rouge">Car</code> instance you could find its owner, and from a <code class="highlighter-rouge">Owner</code> instance you could get all of its cars.</p>
 
@@ -405,7 +405,7 @@ relationship ManyToOne {
 </code></pre>
 </div>
 
-<h2 id="a-name3a-a-unidirectional-one-to-many-relationship"><a name="3"></a> A unidirectional one-to-many relationship</h2>
+<h2 id="-a-unidirectional-one-to-many-relationship"><a name="3"></a> A unidirectional one-to-many relationship</h2>
 
 <p>A one-to-many unidirectional relationship means that the <code class="highlighter-rouge">Owner</code> instance can get its collection of cars, but not the opposite. It is the opposite from the previous example.</p>
 
@@ -429,7 +429,7 @@ relationship ManyToOne {
 
 <p>This is not supported with JDL as it isn’t in JHipster.</p>
 
-<h2 id="a-name4a-two-one-to-many-relationships-on-the-same-two-entities"><a name="4"></a> Two one-to-many relationships on the same two entities</h2>
+<h2 id="-two-one-to-many-relationships-on-the-same-two-entities"><a name="4"></a> Two one-to-many relationships on the same two entities</h2>
 
 <p>For this example, a <code class="highlighter-rouge">Person</code> can be the owner of many cars, and he can also be the driver of many cars:</p>
 
@@ -497,7 +497,7 @@ relationship OneToMany {
 
 <p>A <code class="highlighter-rouge">Car</code> can now have a driver and a owner, which are both <code class="highlighter-rouge">Person</code> entities. On the generated AngularJS client UI you will dropdowns in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Person</code> for <code class="highlighter-rouge">owner</code> field and <code class="highlighter-rouge">driver</code> field.</p>
 
-<h2 id="a-name5a-a-many-to-many-relationship"><a name="5"></a> A many-to-many relationship</h2>
+<h2 id="-a-many-to-many-relationship"><a name="5"></a> A many-to-many relationship</h2>
 
 <p>A <code class="highlighter-rouge">Driver</code> can drive many cars, but a <code class="highlighter-rouge">Car</code> can also have many drivers.</p>
 
@@ -550,7 +550,7 @@ relationship ManyToMany {
 
 <p>That’s it, you now have a many-to-many relationship between those two entities! On the generated AngularJS client UI you will have a multi-select dropdown in <code class="highlighter-rouge">Car</code> to select multiple <code class="highlighter-rouge">Driver</code> since <code class="highlighter-rouge">Car</code> is the owning side.</p>
 
-<h2 id="a-name6a-a-one-to-one-relationship"><a name="6"></a> A one-to-one relationship</h2>
+<h2 id="-a-one-to-one-relationship"><a name="6"></a> A one-to-one relationship</h2>
 
 <p>Following our example, a one-to-one relationship would mean that a <code class="highlighter-rouge">Driver</code> can drive only one <code class="highlighter-rouge">Car</code>, and a <code class="highlighter-rouge">Car</code> can only have one <code class="highlighter-rouge">Driver</code>.</p>
 
@@ -600,7 +600,7 @@ relationship OneToOne {
 
 <p>That’s it, you now have a one-to-one relationship between those two entities! On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Driver</code> since <code class="highlighter-rouge">Car</code> is the owning side.</p>
 
-<h2 id="a-name7a-a-unidirectional-one-to-one-relationship"><a name="7"></a> A unidirectional one-to-one relationship</h2>
+<h2 id="-a-unidirectional-one-to-one-relationship"><a name="7"></a> A unidirectional one-to-one relationship</h2>
 
 <p>A unidirectional one-to-one relationship means that the <code class="highlighter-rouge">citizen</code> instance can get its passport, but the <code class="highlighter-rouge">passport</code> instance can’t get to its owner.</p>
 

@@ -232,7 +232,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-stethoscopei-setting-up-continuous-integration-on-linux-server"><i class="fa fa-stethoscope"></i> Setting up Continuous Integration on Linux server</h1>
+                            <h1 id="-setting-up-continuous-integration-on-linux-server"><i class="fa fa-stethoscope"></i> Setting up Continuous Integration on Linux server</h1>
 
 <p>The instructions below are for a RedHat/CentOS server but can be easily adapted for other Linux distributions.</p>
 
@@ -264,9 +264,11 @@ sudo service jenkins start
 
 <p>Install Jenkins NodeJS plugin.</p>
 
-<p>Through Jenkins administration, add a NodeJS instllation:
-- automatic installer from nodejs.org, latest stable 0.10.xx version
-- Global npm packages to install: bower grunt</p>
+<p>Through Jenkins administration, add a NodeJS instllation:</p>
+<ul>
+  <li>automatic installer from nodejs.org, latest stable 0.10.xx version</li>
+  <li>Global npm packages to install: bower grunt</li>
+</ul>
 
 <p>This way we can easily configure different versions of NodeJS if we need it in the future.</p>
 

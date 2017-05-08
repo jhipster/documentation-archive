@@ -262,7 +262,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-locki-beta-using-uaa-for-microservice-security"><i class="fa fa-lock"></i> [BETA] Using UAA for Microservice Security</h1>
+                            <h1 id="-beta-using-uaa-for-microservice-security"><i class="fa fa-lock"></i> [BETA] Using UAA for Microservice Security</h1>
 
 <p><strong>WARNING!</strong> This is a new feature, of <b>BETA</b> quality. Use it at your own risk! Feedback is highly welcome!</p>
 
@@ -296,35 +296,35 @@
   </li>
 </ol>
 
-<h2 id="a-nameclaimsa-1-security-claims-of-microservice-architecture"><a name="claims"></a> 1. Security claims of microservice architecture</h2>
+<h2 id="-1-security-claims-of-microservice-architecture"><a name="claims"></a> 1. Security claims of microservice architecture</h2>
 
 <p>Before digging into OAuth2 and its application on JHipster microservices, it’s important to clearify the claims to a solid security solution.</p>
 
-<h3 id="central-authentication">1. Central authentication</h3>
+<h3 id="1-central-authentication">1. Central authentication</h3>
 
 <p>Since microservices is about building mostly independent and autonomous applications, we want to have an consistent authentication experience, so the user won’t notice his requests are served by different applications with possibly individual security configuration.</p>
 
-<h3 id="statelessness">2. Statelessness</h3>
+<h3 id="2-statelessness">2. Statelessness</h3>
 
 <p>The core benefit of building microservices is scalability. So the chosen security solution shouldn’t affect this. Holding the users session state on server becomes a tricky task, so a stateless solution is highly preferred in this scenario.</p>
 
-<h3 id="usermachine-access-distinction">3. User/machine access distinction</h3>
+<h3 id="3-usermachine-access-distinction">3. User/machine access distinction</h3>
 
 <p>There is a need of having a clear distinction of different users, and also different machines. Using microservice architecture leads to building a large multi-purpose data-center of different domains and resources, so there is a need to restrict different clients, such as native apps, multiple SPAs etc. in their access.</p>
 
-<h3 id="fine-grained-access-control">4. Fine-grained access control</h3>
+<h3 id="4-fine-grained-access-control">4. Fine-grained access control</h3>
 
 <p>While maintaining a centralized roles, there is a need of configuring detailed access control policies in each microservice. A microservice should be unaware of the responsibility of recognizing users, and must just authorize incoming requests.</p>
 
-<h3 id="safe-from-attacks">5. Safe from attacks</h3>
+<h3 id="5-safe-from-attacks">5. Safe from attacks</h3>
 
 <p>No matter how much problems a security solution may solve, it should be strong against vulnerabilities as best as possible.</p>
 
-<h3 id="scalability">6. Scalability</h3>
+<h3 id="6-scalability">6. Scalability</h3>
 
 <p>Using stateless protocols is not a warranty of the security solution is scalable. In the end, there should not be any single point of failure. An counter-example is a shared auth database or single auth-server-instance, which is hit once per request.</p>
 
-<h2 id="a-nameoauth2a-2-understanding-oauth2-in-this-context"><a name="oauth2"></a> 2. Understanding OAuth2 in this context</h2>
+<h2 id="-2-understanding-oauth2-in-this-context"><a name="oauth2"></a> 2. Understanding OAuth2 in this context</h2>
 
 <p>Using the OAuth2 protocol (note: it’s a <strong>protocol</strong>, not a framework, not an application) is satisfying all 6 claims. It follows strict standards, what makes this solution compatible to other microservices as well, and remote systems, too. JHipster provides a couple of solutions, based on the following security design:</p>
 
@@ -358,7 +358,7 @@
   </li>
 </ul>
 
-<h2 id="a-namejhipster-uaaa-3-using-jhipster-uaa"><a name="jhipster-uaa"></a> 3. Using JHipster UAA</h2>
+<h2 id="-3-using-jhipster-uaa"><a name="jhipster-uaa"></a> 3. Using JHipster UAA</h2>
 
 <p>When scaffolding a JHipster microservice, you may choose the UAA options instead of JWT authentication.</p>
 
@@ -491,7 +491,7 @@ fOheJ7Om3so/wKygSrYgmmhEvdNcccPlTbPa
 
 <p>RSA is not required for JWT signing, and Spring Security does provide symmetric token signing as well. This also solves some problems, which make development harder. But this is insecure, since an attacker just need to get into one single microservice to be able to generate its own JWT tokens.</p>
 
-<h2 id="a-nameinter-service-communicationa-4-secure-inter-service-communication-using-feign-clients"><a name="inter-service-communication"></a> 4. Secure inter-service-communication using Feign clients</h2>
+<h2 id="-4-secure-inter-service-communication-using-feign-clients"><a name="inter-service-communication"></a> 4. Secure inter-service-communication using Feign clients</h2>
 
 <p>Currently only JHipster UAA is providing an scalable approach of secure inter-service-communication.</p>
 
@@ -581,7 +581,7 @@ notation for the service name, as</p>
 
 <p>This approach addresses a scenario when machine request run over a separate OAuth client not referring to an user session. This is important, in particular when entity auditing is used on a request, issued by another request in another service. As an alternative, the access token of the initial request may be forwarded to further calls. Currently, there is no “default solution” provided by JHipster.</p>
 
-<h2 id="a-nametestinga-5-testing-uaa-applications"><a name="testing"></a> 5. Testing UAA applications</h2>
+<h2 id="-5-testing-uaa-applications"><a name="testing"></a> 5. Testing UAA applications</h2>
 
 <h3 id="stubbing-feign-clients">Stubbing Feign clients</h3>
 
@@ -618,7 +618,7 @@ notation for the service name, as</p>
 
 <p>To use this feature, two thing have to be done:</p>
 
-<h4 id="enabling-security-in-the-mock-spring-mvc-context">1. Enabling security in the mock Spring MVC context.</h4>
+<h4 id="1-enabling-security-in-the-mock-spring-mvc-context">1. Enabling security in the mock Spring MVC context.</h4>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code>
     <span class="nd">@PostConstruct</span>
@@ -636,7 +636,7 @@ notation for the service name, as</p>
 <p><strong><em>In this test no single instance of the controller has to be mocked, but the
 application’s <code class="highlighter-rouge">WebApplicationContext</code></em></strong></p>
 
-<h4 id="using-the-withmockoauth2authentication-annotation">2. Using the <code class="highlighter-rouge">@WithMockOAuth2Authentication</code> annotation</h4>
+<h4 id="2-using-the-withmockoauth2authentication-annotation">2. Using the <code class="highlighter-rouge">@WithMockOAuth2Authentication</code> annotation</h4>
 
 <p>Annotating a test method with <code class="highlighter-rouge">@WithMockOAuth2Authentication</code>, emulates a security
 context. <code class="highlighter-rouge">@WithMockOAuth2Authentication</code> can be specified with</p>

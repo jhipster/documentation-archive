@@ -268,7 +268,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-musici-docker-and-docker-compose"><i class="fa fa-music"></i> Docker and Docker Compose</h1>
+                            <h1 id="-docker-and-docker-compose"><i class="fa fa-music"></i> Docker and Docker Compose</h1>
 
 <h2 id="summary">Summary</h2>
 
@@ -286,7 +286,7 @@
   <li><a href="#8">Memory Tweaking</a></li>
 </ol>
 
-<h2 id="a-name1a-description"><a name="1"></a> Description</h2>
+<h2 id="-description"><a name="1"></a> Description</h2>
 
 <p><em>Please note: this Docker configuration is used to run your generated application(s) inside a container image. It’s completely different from the <a href="/documentation-archive/v4.0.5/installation/">Docker setup</a> that JHipster also provides, which is for running the JHipster generator inside a container</em></p>
 
@@ -308,7 +308,7 @@
 
 <p>Those files are located inside folder <code class="highlighter-rouge">src/main/docker/</code>.</p>
 
-<h2 id="a-name2a-prerequisites"><a name="2"></a> Prerequisites</h2>
+<h2 id="-prerequisites"><a name="2"></a> Prerequisites</h2>
 
 <p>You have to install Docker and Docker Compose:</p>
 
@@ -343,7 +343,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
   <li>then exit and log into the container normally: <code class="highlighter-rouge">docker container exec -it jhipster bash</code></li>
 </ul>
 
-<h2 id="a-name3a-building-and-running-a-docker-image-of-your-application"><a name="3"></a> Building and running a Docker image of your application</h2>
+<h2 id="-building-and-running-a-docker-image-of-your-application"><a name="3"></a> Building and running a Docker image of your application</h2>
 
 <p>To create a Docker image of your application, and push it into your Docker registry:</p>
 
@@ -362,7 +362,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
 
 <p>This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).</p>
 
-<h2 id="a-namedocker-compose-subgena-generating-a-custom-docker-compose-configuration-for-multiple-applications"><a name="docker-compose-subgen"></a> Generating a custom Docker-Compose configuration for multiple applications</h2>
+<h2 id="-generating-a-custom-docker-compose-configuration-for-multiple-applications"><a name="docker-compose-subgen"></a> Generating a custom Docker-Compose configuration for multiple applications</h2>
 
 <p>If your architecture is composed of several JHipster applications, you can use the specific <code class="highlighter-rouge">docker-compose</code> sub-generator, which will generate a global Docker Compose configuration for all selected applications. This will allow you to deploy and scale your complete architecture with one command.
 To use the <code class="highlighter-rouge">docker-compose</code> subgenerator:</p>
@@ -385,7 +385,7 @@ To use the <code class="highlighter-rouge">docker-compose</code> subgenerator:</
   <li>Scaling each service is done using Docker Compose, for example type <code class="highlighter-rouge">docker-compose scale test-app=4</code> to have 4 instances of application “test” running. Those instances will be automatically load-balanced by the gateway(s), and will automatically join the same Hazelcast cluster (if Hazelcast is your Hibernate 2nd-level cache).</li>
 </ul>
 
-<h2 id="a-name4a-working-with-databases"><a name="4"></a> Working with databases</h2>
+<h2 id="-working-with-databases"><a name="4"></a> Working with databases</h2>
 
 <h3 id="mysql-mariadb-postgresql-mongodb-or-cassandra">MySQL, MariaDB, PostgreSQL, MongoDB or Cassandra</h3>
 
@@ -421,7 +421,7 @@ Follow these steps to do so:</p>
 
 <p>Unlike the other databases, where the schema migrations are executed by the application itself, Cassandra schema migrations are executed by a dedicated Docker container.</p>
 
-<h4 id="a-namecassandra-in-developmentacassandra-in-development"><a name="cassandra-in-development"></a>Cassandra in development</h4>
+<h4 id="cassandra-in-development"><a name="cassandra-in-development"></a>Cassandra in development</h4>
 <p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development use:
 <code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up -d</code></p>
 
@@ -455,7 +455,7 @@ The application starts after few seconds (see <em>JHIPSTER_SLEEP</em> variable) 
   <li>Start your application: <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up -d &lt;name_of_your_app&gt;-app</code></li>
 </ul>
 
-<h2 id="a-name5a-elasticsearch"><a name="5"></a> Elasticsearch</h2>
+<h2 id="-elasticsearch"><a name="5"></a> Elasticsearch</h2>
 
 <p>Running <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up</code> already starts up your search engine automatically.</p>
 
@@ -465,7 +465,7 @@ The application starts after few seconds (see <em>JHIPSTER_SLEEP</em> variable) 
   <li><code class="highlighter-rouge">docker-compose -f src/main/docker/elasticsearch.yml up</code></li>
 </ul>
 
-<h2 id="a-name6a-sonar"><a name="6"></a> Sonar</h2>
+<h2 id="-sonar"><a name="6"></a> Sonar</h2>
 
 <p>A Docker Compose configuration is generated for running Sonar:</p>
 
@@ -482,7 +482,7 @@ The application starts after few seconds (see <em>JHIPSTER_SLEEP</em> variable) 
 
 <p>The Sonar reports will be available at: <a href="http://localhost:9000">http://localhost:9000</a></p>
 
-<h2 id="a-name7a-common-commands"><a name="7"></a> Common commands</h2>
+<h2 id="-common-commands"><a name="7"></a> Common commands</h2>
 
 <h3 id="list-the-containers">List the containers</h3>
 
@@ -530,7 +530,7 @@ gateway-mysql             0.03%               202.7 MB / 7.966 GB   2.54%       
 
 <p><code class="highlighter-rouge">docker container rm &lt;container_id&gt;</code></p>
 
-<h2 id="a-name8a-memory-tweaking"><a name="8"></a> Memory Tweaking</h2>
+<h2 id="-memory-tweaking"><a name="8"></a> Memory Tweaking</h2>
 
 <p>In order to optimize memory usage for applications running in the container, you can setup Java memory parameters on <code class="highlighter-rouge">Dockerfile</code> or <code class="highlighter-rouge">docker-compose.yml</code></p>
 

@@ -187,7 +187,7 @@
         
           <div class="row">
               <div class="col-lg-12">
-                  <h1 id="i-classfa-fa-sitemapi-managing-relationships"><i class="fa fa-sitemap"></i> Managing relationships</h1>
+                  <h1 id="-managing-relationships"><i class="fa fa-sitemap"></i> Managing relationships</h1>
 
 <p>When JPA is used, the <a href="/documentation-archive/v2.24.0/creating_an_entity.html">entity sub-generator</a> can create relationships between entities.</p>
 
@@ -219,7 +219,7 @@
 
 <p>Please note that the <code class="highlighter-rouge">User</code> entity, which is handled by JHipster, is specific. You can do <code class="highlighter-rouge">many-to-one</code> relationships to this entity (a <code class="highlighter-rouge">Car</code> can have a many-to-one relationship to a <code class="highlighter-rouge">User</code>). This will generate a specific query in your new entity repository, so you can filter your entity on the current security user, which is a common requirement.</p>
 
-<h2 id="a-name1a-a-bi-directionnal-one-to-many-relationship"><a name="1"></a> A bi-directionnal one-to-many relationship</h2>
+<h2 id="-a-bi-directionnal-one-to-many-relationship"><a name="1"></a> A bi-directionnal one-to-many relationship</h2>
 
 <p>Let’s start with two entities, a <code class="highlighter-rouge">Owner</code> and a <code class="highlighter-rouge">Car</code>. A owner can have many cars, and a car can have only one owner.</p>
 
@@ -259,7 +259,7 @@ Generating relationships with other entities
 
 <p>That’s it, you now have a one-to-many relationship between those two entities!</p>
 
-<h2 id="a-name2a-a-uni-directional-many-to-one-relationship"><a name="2"></a> A uni-directional many-to-one relationship</h2>
+<h2 id="-a-uni-directional-many-to-one-relationship"><a name="2"></a> A uni-directional many-to-one relationship</h2>
 
 <p>In the previous example we had a bi-directionnal relationship: from a <code class="highlighter-rouge">Car</code> instance you could find its owner, and from a <code class="highlighter-rouge">Owner</code> instance you could get all of its cars.</p>
 
@@ -300,7 +300,7 @@ Generating relationships with other entities
 
 <p>This will work as in the previous example, but you won’t be able to add or remove cars from the <code class="highlighter-rouge">Owner</code> entity.</p>
 
-<h2 id="a-name3a-a-uni-directional-one-to-many-relationship"><a name="3"></a> A uni-directional one-to-many relationship</h2>
+<h2 id="-a-uni-directional-one-to-many-relationship"><a name="3"></a> A uni-directional one-to-many relationship</h2>
 
 <p>A many-to-one uni-directional relationship means that the <code class="highlighter-rouge">Owner</code> instance can get its collection of cars, but not the opposite. It is the opposite from the previous example.</p>
 
@@ -322,7 +322,7 @@ Generating relationships with other entities
   </li>
 </ul>
 
-<h2 id="a-name4a-a-uni-directional-one-to-one-relationship"><a name="4"></a> A uni-directional one-to-one relationship</h2>
+<h2 id="-a-uni-directional-one-to-one-relationship"><a name="4"></a> A uni-directional one-to-one relationship</h2>
 
 <p>A unidirectional one-to-one relationship means that the <code class="highlighter-rouge">citizen</code> instance can get its passport, but the <code class="highlighter-rouge">passport</code> instance can’t get to its owner.</p>
 
@@ -356,7 +356,7 @@ Generating relationships with other entities
 
 <p>After doing this, a <code class="highlighter-rouge">Citizen</code> possesses a passport, but no <code class="highlighter-rouge">Citizen</code> instance is defined in <code class="highlighter-rouge">Passport</code>.</p>
 
-<h2 id="a-name5a-two-one-to-many-relationships-on-the-same-two-entities"><a name="5"></a> Two one-to-many relationships on the same two entities</h2>
+<h2 id="-two-one-to-many-relationships-on-the-same-two-entities"><a name="5"></a> Two one-to-many relationships on the same two entities</h2>
 
 <p>For this example, a <code class="highlighter-rouge">Person</code> can be the owner of many cars, and he can also be the driver of many cars:</p>
 
@@ -409,7 +409,7 @@ Generating relationships with other entities
 
 <p>A <code class="highlighter-rouge">Car</code> can now have a driver and a owner, which are both <code class="highlighter-rouge">Person</code> entities.</p>
 
-<h2 id="a-name6a-a-many-to-many-relationship"><a name="6"></a> A many-to-many relationship</h2>
+<h2 id="-a-many-to-many-relationship"><a name="6"></a> A many-to-many relationship</h2>
 
 <p>A <code class="highlighter-rouge">Driver</code> can drive many cars, but a <code class="highlighter-rouge">Car</code> can also have many drivers.</p>
 
@@ -451,7 +451,7 @@ Generating relationships with other entities
 
 <p>In the user interface, you will be able to add/remove drivers from the <code class="highlighter-rouge">Car</code> management page.</p>
 
-<h2 id="a-name7a-a-one-to-one-relationship"><a name="7"></a> A one-to-one relationship</h2>
+<h2 id="-a-one-to-one-relationship"><a name="7"></a> A one-to-one relationship</h2>
 
 <p>Following our example, a one-to-one relationship would mean that a <code class="highlighter-rouge">Driver</code> can drive only one <code class="highlighter-rouge">Car</code>, and a <code class="highlighter-rouge">Car</code> can only have one <code class="highlighter-rouge">Driver</code>.</p>
 

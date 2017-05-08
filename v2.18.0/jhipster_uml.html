@@ -173,7 +173,7 @@
         
           <div class="row">
               <div class="col-lg-12">
-                  <h1 id="i-classicon-magici-jhipster-uml"><i class="icon-magic"></i> JHipster-UML</h1>
+                  <h1 id="-jhipster-uml"><i class="icon-magic"></i> JHipster-UML</h1>
 
 <p>JHipster-UML is a JHipster sub-project which can be used as a replacement to using the <a href="/documentation-archive/v2.18.0/creating_an_entity.html">entity sub-generator</a>. The idea is that it is much easier to <a href="/documentation-archive/v2.18.0/managing_relationships.html">manage relationships</a> using a visual tool, than with the classical Yeoman questions and answers.</p>
 
@@ -203,7 +203,7 @@
 
 <hr />
 
-<h1 id="a-nameintroductionaintroduction"><a name="introduction"></a>Introduction</h1>
+<h1 id="introduction"><a name="introduction"></a>Introduction</h1>
 
 <p>JHipster-UML is an alternative to the usual Q&amp;A as it offers you the possibility to use a UML editor to create a diagram that will be parsed by JHipster-UML.</p>
 
@@ -218,7 +218,7 @@
 
 <hr />
 
-<h1 id="a-nameissuesaissues-and-bugs"><a name="issues"></a>Issues and bugs</h1>
+<h1 id="issues-and-bugs"><a name="issues"></a>Issues and bugs</h1>
 
 <p>JHipster-UML is <a href="https://github.com/jhipster/jhipster-uml">available on Github</a>, and follows the same <a href="https://github.com/jhipster/generator-jhipster/blob/master/CONTRIBUTING.md">contributing guidelines as JHipster</a>.</p>
 
@@ -231,7 +231,7 @@
 
 <hr />
 
-<h1 id="a-nameinstallainstallation"><a name="install"></a>Installation</h1>
+<h1 id="installation"><a name="install"></a>Installation</h1>
 <p>To install JHipster-uml simply use the command:</p>
 
 <p><code class="highlighter-rouge">npm install -g jhipster-uml</code></p>
@@ -244,10 +244,10 @@
 
 <hr />
 
-<h1 id="a-namehowtouseahow-to-use-it"><a name="howtouse"></a>How to use it</h1>
+<h1 id="how-to-use-it"><a name="howtouse"></a>How to use it</h1>
 <p>JHipster-UML is quite easy to use, you need a class diagram exported in XMI and JHipster-UML will parse it to create your entities.</p>
 
-<h2 id="a-nameumlfileathe-uml-file"><a name="umlfile"></a>The UML file</h2>
+<h2 id="the-uml-file"><a name="umlfile"></a>The UML file</h2>
 
 <p>The class diagram should modelize the entities of your JHipster application domain, thus you have restrictions, you have to follow the methodology.</p>
 
@@ -302,7 +302,7 @@ You can look at the tables with all the types supported by JHipster and the vali
 <p>As you can see, we changed it as to make it a bit more interesting.
 JHipster can generate entities and associations between them (one-to-one, one-to-many, etc.), and in this example we added every type of association (even the reflexive and the inheritance). JHipster doesn’t support inheritance yet (but reflexivity is supported by JHipster, with a warning), but we decided to include it in the example so as to have a solid base to work with.</p>
 
-<h2 id="a-nameusejumlause-jhipster-uml"><a name="usejuml"></a>Use JHipster-uml</h2>
+<h2 id="use-jhipster-uml"><a name="usejuml"></a>Use JHipster-uml</h2>
 
 <p>Once you have your JHipster application setup and your class diagram in a UML editor, follow those steps:</p>
 
@@ -338,7 +338,7 @@ Here is the command to execute:</p>
 
 <p><strong>Note: If you want to use the classes and methods available, the preferred entry point of JHipster-UML is the ParserFactory (so that you don’t open the file, read it, find the root element, etc.).</strong></p>
 
-<h2 id="a-namewhatsgeneratedawhats-generated"><a name="whatsgenerated"></a>What’s generated</h2>
+<h2 id="whats-generated"><a name="whatsgenerated"></a>What’s generated</h2>
 
 <p>After executing JHipster-UML, the <em>.jhipster</em> folder will be created (if it didn’t exist before) and filled with the entities present in the XMI file in the JSON format.</p>
 
@@ -348,7 +348,7 @@ Here is the command to execute:</p>
 
 <hr />
 
-<h1 id="a-nameexamplesaexamples"><a name="examples"></a>Examples</h1>
+<h1 id="examples"><a name="examples"></a>Examples</h1>
 
 <p>Each editor will be discussed here, so that you know how to get a good XMI file.</p>
 
@@ -356,7 +356,7 @@ Here is the command to execute:</p>
 
 <p><strong>Note 2: JHipster-UML can detect faulty XMI files, it will display the first error it finds, and exists right away (fail-fast behavior).</strong></p>
 
-<h2 id="a-namemodelioexampleamodelio"><a name="modelioexample"></a>Modelio</h2>
+<h2 id="modelio"><a name="modelioexample"></a>Modelio</h2>
 
 <p><strong>Note for Mac users: Modelio is behaving weirdly on Mac (the GUI), it may be caused by the graphics and window manager on Mac, as it has not been diagnosed on Linux Ubuntu. It works, but the interaction may not be pleasant.</strong></p>
 
@@ -410,7 +410,7 @@ Composition means that if A is composed of B (0, 1, or n instances), then it cre
 
 <p>Check the Model perspective, once you locate your project, get down one level and right click the last element (you lower-cased project’s name), XMI, Export XMI. A window should pop up, select the output path, change the compatibility to OMG UML2.4.1, leave the extension to XMI and you’re ready to go.</p>
 
-<h2 id="a-nameumldesignerexampleauml-designer"><a name="umldesignerexample"></a>UML Designer</h2>
+<h2 id="uml-designer"><a name="umldesignerexample"></a>UML Designer</h2>
 
 <p>UML Designer can be downloaded <a href="http://www.umldesigner.org/">here</a>.
 It works the same way as Eclipse.
@@ -439,7 +439,7 @@ This will spare you the <em>chore</em> of creating types manually (with DataType
 
 <p>One of the nice things UML Designer provides is that you don’t need to export to XMI, just go to your workspace, and you’ll see that the saved project is already in the right format, so that’s pretty cool.</p>
 
-<h2 id="a-namegenmymodelexampleagenmymodel"><a name="genmymodelexample"></a>GenMyModel</h2>
+<h2 id="genmymodel"><a name="genmymodelexample"></a>GenMyModel</h2>
 <p>GenMyModel is an in-browser UML editor that can be found <a href="https://dashboard.genmymodel.com/">here</a>. You can use it for free but with restrictions, we hope that this editor will enable users to fiddle around with JHipster-UML without the constraint of downloading an application.</p>
 
 <p>After signing up go in Projects -&gt;  New Projects, give a it name, in Model Type choose UML, in default diagram choose Class Diagram and then click on Create project.
@@ -480,7 +480,7 @@ Then this screen will be displayed:</p>
 
 <p>Once the diagram is done, you can export it to XMI. To do it, simply click on Tool -&gt; Export as UML (XMI)</p>
 
-<h2 id="a-namevisualparadigmexampleavisual-paradigm"><a name="visualparadigmexample"></a>Visual Paradigm</h2>
+<h2 id="visual-paradigm"><a name="visualparadigmexample"></a>Visual Paradigm</h2>
 
 <p>Visual Paradigm proposes a UML editor which supports everything JHipster-UML demands (constraints, associations, etc.).
 There is one drawback however: it’s not free, but proposes a free community edition (<strong>the tests were done with this edition</strong>).</p>
@@ -514,14 +514,14 @@ The parsing will still be quick, but may take a bit more time.</p>
 
 <hr />
 
-<h1 id="a-nametesting-jumlatesting-jhipster-uml"><a name="testing-juml"></a>Testing JHipster-UML</h1>
+<h1 id="testing-jhipster-uml"><a name="testing-juml"></a>Testing JHipster-UML</h1>
 
 <p>The tests are available in the test folder and can be run via <code class="highlighter-rouge">npm test</code>.
 We use Mocha for testing (along with expect, chai and expect from chai).</p>
 
 <hr />
 
-<h1 id="a-namecontributingacontributing-issues-and-enhancements"><a name="contributing"></a>Contributing: issues and enhancements</h1>
+<h1 id="contributing-issues-and-enhancements"><a name="contributing"></a>Contributing: issues and enhancements</h1>
 
 <p>Because our tool isn’t perfect (<em>yet</em>), you may notice some irregularities. Github provides a pretty nice issue tracker so that everyone can post about an issue.
 We follow the same guidelines as JHipster, with a few additions:</p>
@@ -537,7 +537,7 @@ We follow the same guidelines as JHipster, with a few additions:</p>
 
 <p><b>Note: Post PRs and Issues on JHipster-UML’s github page, <a href="https://github.com/jhipster/jhipster-uml">here</a>. Not on the main JHipster page.</b></p>
 
-<h2 id="a-nameparsermodificationsaparser-modifications"><a name="parsermodifications"></a>Parser modifications</h2>
+<h2 id="parser-modifications"><a name="parsermodifications"></a>Parser modifications</h2>
 
 <p>The 1.0.0 release brings a new parser system making any change (parser creation, update, deletion) ultra-easy, provided the XMI is easy to parse.</p>
 
@@ -642,7 +642,7 @@ First, remove it from the editors (<code class="highlighter-rouge">editors/edito
 
 <hr />
 
-<h1 id="a-namejdla-jdl---jhipster-domain-language"><a name="jdl"></a> JDL - JHipster Domain Language</h1>
+<h1 id="-jdl---jhipster-domain-language"><a name="jdl"></a> JDL - JHipster Domain Language</h1>
 <p>We added the possibility to describe all your entities and their relationships in a single file with a more user-friendly syntax than the JSON in the .jhipster folder.</p>
 
 <h2 id="the-language">The language</h2>
@@ -751,7 +751,7 @@ relationship OneToMany{
   </li>
 </ul>
 
-<h2 id="how-to-use-it">How to use it</h2>
+<h2 id="how-to-use-it-1">How to use it</h2>
 <p>You can use it by:</p>
 
 <ul>
@@ -768,7 +768,7 @@ relationship OneToMany{
 
 <p>and <em>Voilà</em>, you are done!</p>
 
-<h1 id="a-nameannexesaannexes"><a name="annexes"></a>Annexes</h1>
+<h1 id="annexes"><a name="annexes"></a>Annexes</h1>
 
 <p>Here is the type table (from <em>types.js</em>):</p>
 

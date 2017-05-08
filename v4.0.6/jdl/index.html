@@ -268,7 +268,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-stari-jhipster-domain-language-jdl"><i class="fa fa-star"></i> JHipster Domain Language (JDL)</h1>
+                            <h1 id="-jhipster-domain-language-jdl"><i class="fa fa-star"></i> JHipster Domain Language (JDL)</h1>
 
 <p>The JDL is a JHipster specific domain language where we have added the possibility to describe all your entities and their relationships in a single file (or more than one) with a simple and user-friendly syntax.</p>
 
@@ -305,11 +305,11 @@ You can also generate entities from a JDL file using <a href="/documentation-arc
 
 <hr />
 
-<h1 id="a-namesamplea-jdl-sample"><a name="sample"></a> JDL Sample</h1>
+<h1 id="-jdl-sample"><a name="sample"></a> JDL Sample</h1>
 
 <p>The Oracle “Human Resources” sample application has been translated into JDL, and is available <a href="https://github.com/jhipster/jhipster-core/blob/master/lib/dsl/example.jh">here</a>. The same application is loaded by default in <a href="/documentation-archive/v4.0.6/jdl-studio/">JDL-Studio</a> as well.</p>
 
-<h2 id="a-namehowtojdla-how-to-use-it"><a name="howtojdl"></a> How to use it</h2>
+<h2 id="-how-to-use-it"><a name="howtojdl"></a> How to use it</h2>
 
 <p>If you want to use JHipster UML instead of the <code class="highlighter-rouge">import-jdl</code> sub-generator you need to install it by running <code class="highlighter-rouge">npm install -g jhipster-uml</code>.</p>
 
@@ -328,14 +328,16 @@ concatenate all the files into one, you just have to run <code class="highlighte
 
 <p>If you want to use it in your project, you can add do so by doing <code class="highlighter-rouge">npm install jhipster-core --save</code> to install it locally, and save it in your <code class="highlighter-rouge">package.json</code> file.</p>
 
-<h2 id="a-namejdllanguagea-the-language"><a name="jdllanguage"></a> The language</h2>
+<h2 id="-the-language"><a name="jdllanguage"></a> The language</h2>
 <p>We tried to keep the syntax as friendly as we can for developers.
-You can do three things with it:
-  - Declare entities with their attributes,
-  - Declare the relationships between them,
-  - And declare some JHipster specific options.</p>
+You can do three things with it:</p>
+<ul>
+  <li>Declare entities with their attributes,</li>
+  <li>Declare the relationships between them,</li>
+  <li>And declare some JHipster specific options.</li>
+</ul>
 
-<h3 id="a-nameentitydeclarationa-entity-declaration"><a name="entitydeclaration"></a> Entity declaration</h3>
+<h3 id="-entity-declaration"><a name="entitydeclaration"></a> Entity declaration</h3>
 
 <p>The entity declaration is done as follows:</p>
 
@@ -371,7 +373,7 @@ entity D {
 
 <p>Note that JHipster adds a default <code class="highlighter-rouge">id</code> field so that you don’t have to worry about it.</p>
 
-<h3 id="a-namerelationshipdeclarationa-relationship-declaration"><a name="relationshipdeclaration"></a> Relationship declaration</h3>
+<h3 id="-relationship-declaration"><a name="relationshipdeclaration"></a> Relationship declaration</h3>
 
 <p>The relationships declaration is done as follows:</p>
 
@@ -435,7 +437,7 @@ relationship OneToOne {
 </code></pre>
 </div>
 
-<h3 id="a-nameenumerationdeclarationa-enumerations"><a name="enumerationdeclaration"></a> Enumerations</h3>
+<h3 id="-enumerations"><a name="enumerationdeclaration"></a> Enumerations</h3>
 
 <p>To make Enums with JDL just do as follows:</p>
 
@@ -462,7 +464,7 @@ relationship OneToOne {
   </li>
 </ul>
 
-<h3 id="a-nameblobdeclarationa-blob-byte"><a name="blobdeclaration"></a> Blob (byte[])</h3>
+<h3 id="-blob-byte"><a name="blobdeclaration"></a> Blob (byte[])</h3>
 <p>JHipster gives a great choice as one can choose between an image type or any binary type. JDL lets you do the same: just create a custom type (see DataType) with the editor, name it according to these conventions:</p>
 
 <ul>
@@ -473,7 +475,7 @@ relationship OneToOne {
 
 <p>And you can create as many DataTypes as you like.</p>
 
-<h3 id="a-nameoptiondeclarationa-option-declaration"><a name="optiondeclaration"></a> Option declaration</h3>
+<h3 id="-option-declaration"><a name="optiondeclaration"></a> Option declaration</h3>
 
 <p>In JHipster, you can specify options for your entities such as pagination or DTO.
 You can do the same with the JDL:</p>
@@ -563,7 +565,7 @@ entity B (the_best_entity) // the_best_entity is the table's name
 </code></pre>
 </div>
 
-<h3 id="a-namemicroserviceoptionsa-microservice-related-options"><a name="microserviceoptions"></a> Microservice-related options</h3>
+<h3 id="-microservice-related-options"><a name="microserviceoptions"></a> Microservice-related options</h3>
 
 <p>As of JHipster v3, microservices can be created. You can specify some options to generate your entities in the JDL: the microservice’s name and the search engine.</p>
 
@@ -581,7 +583,7 @@ search * with elasticsearch except C
 
 <p>The first option is used to tell JHipster that you want your microservice to deal with your entities, whereas the second specifies how and if you want your entities searched.</p>
 
-<h2 id="a-namecommentingjdla-commenting--javadoc"><a name="commentingjdl"></a> Commenting &amp; Javadoc</h2>
+<h2 id="-commenting--javadoc"><a name="commentingjdl"></a> Commenting &amp; Javadoc</h2>
 <p>It is possible to add Javadoc &amp; comments to JDL files.<br />
 Just like in Java, this example demonstrates how to add Javadoc comments:</p>
 
@@ -625,25 +627,25 @@ relationship OneToMany {
 
 <p>Please note that the JDL Studio directives that start with <code class="highlighter-rouge">#</code> will be ignored during parsing.</p>
 
-<p>Another form of comments are the following comments:
-<code class="highlighter-rouge">
-entity A {
+<p>Another form of comments are the following comments:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>entity A {
   name String /** My super field */
   count Integer /** My other super field */
 }
-</code>
-Here A’s name will be commented with <code class="highlighter-rouge">My super field</code>, B with <code class="highlighter-rouge">My other super field</code>.
+</code></pre>
+</div>
+<p>Here A’s name will be commented with <code class="highlighter-rouge">My super field</code>, B with <code class="highlighter-rouge">My other super field</code>.
 Yes, commas are not mandatory but it’s wiser to have them so as not to make mistakes in the code.
-If you want to mix commas and following comments, beware!
-<code class="highlighter-rouge">
-entity A {
+If you want to mix commas and following comments, beware!</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>entity A {
   name String, /** My comment */
   count Integer
 }
-</code>
-A’s name won’t have the comment, because the count will.</p>
+</code></pre>
+</div>
+<p>A’s name won’t have the comment, because the count will.</p>
 
-<h2 id="a-namejdlrelationshipsaall-the-relationships"><a name="jdlrelationships"></a>All the relationships</h2>
+<h2 id="all-the-relationships"><a name="jdlrelationships"></a>All the relationships</h2>
 
 <p>Explanation on how to create relationships with JDL.</p>
 
@@ -718,7 +720,7 @@ relationship ManyToMany {
 
 <p>Please note that the owning side of the relationship has to be on the left side</p>
 
-<h1 id="a-nameconstantsaconstants"><a name="constants"></a>Constants</h1>
+<h1 id="constants"><a name="constants"></a>Constants</h1>
 
 <p>As of JHipster Core v1.2.7, the JDL supports numerical constants.
 Here is an example:</p>
@@ -738,7 +740,7 @@ entity A {
 </code></pre>
 </div>
 
-<h1 id="a-nameannexesaannexes"><a name="annexes"></a>Annexes</h1>
+<h1 id="annexes"><a name="annexes"></a>Annexes</h1>
 
 <p>Here is the types supported by JDL:</p>
 
@@ -847,7 +849,7 @@ entity A {
   </tr>
 </table>
 
-<h1 id="a-nameissuesaissues-and-bugs"><a name="issues"></a>Issues and bugs</h1>
+<h1 id="issues-and-bugs"><a name="issues"></a>Issues and bugs</h1>
 
 <p>JDL is <a href="https://github.com/jhipster/jhipster-core">available on GitHub</a>, and follows the same <a href="https://github.com/jhipster/generator-jhipster/blob/master/CONTRIBUTING.md">contributing guidelines as JHipster</a>.</p>
 
@@ -858,9 +860,11 @@ entity A {
   <li><a href="https://github.com/jhipster/jhipster-core/pulls">JDL Pull Requests</a></li>
 </ul>
 
-<p>When submitting anything, you must be as precise as possible:<br />
-  - <strong>One posted issue must only have one problem</strong> (or one demand/question);<br />
-  - Pull requests are welcome, but the commits must be ‘atomic’ to really be understandable.</p>
+<p>When submitting anything, you must be as precise as possible:</p>
+<ul>
+  <li><strong>One posted issue must only have one problem</strong> (or one demand/question);</li>
+  <li>Pull requests are welcome, but the commits must be ‘atomic’ to really be understandable.</li>
+</ul>
 
                         </div>
                     </div>

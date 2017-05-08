@@ -256,7 +256,7 @@
                     
                     <div class="row page-content-wrapper">
                         <div class="col-lg-12">
-                            <h1 id="i-classfa-fa-musici-docker-and-docker-compose"><i class="fa fa-music"></i> Docker and Docker Compose</h1>
+                            <h1 id="-docker-and-docker-compose"><i class="fa fa-music"></i> Docker and Docker Compose</h1>
 
 <h2 id="summary">Summary</h2>
 
@@ -273,7 +273,7 @@
   <li><a href="#8">Differences when using a microservices architecture</a></li>
 </ol>
 
-<h2 id="a-name1a-description"><a name="1"></a> Description</h2>
+<h2 id="-description"><a name="1"></a> Description</h2>
 
 <p><em>Please note: this Docker configuration is used to run your generated application(s) inside a container image. It’s completely different from the <a href="/documentation-archive/v3.2.0/installation/">Docker setup</a> that JHipster also provides, which is for running the JHipster generator inside a container</em></p>
 
@@ -295,7 +295,7 @@
 
 <p>Those files are located inside folder <code class="highlighter-rouge">src/main/docker/</code>.</p>
 
-<h2 id="a-name2a-prerequisites"><a name="2"></a> Prerequisites</h2>
+<h2 id="-prerequisites"><a name="2"></a> Prerequisites</h2>
 
 <p>You have to install Docker and Docker Compose:</p>
 
@@ -316,7 +316,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
 
 </div>
 
-<h2 id="a-name3a-building-and-running-a-docker-image-of-your-application"><a name="3"></a> Building and running a Docker image of your application</h2>
+<h2 id="-building-and-running-a-docker-image-of-your-application"><a name="3"></a> Building and running a Docker image of your application</h2>
 
 <p>To create a Docker image of your application, and push it into your Docker registry:</p>
 
@@ -335,7 +335,7 @@ If you are using Docker Machine on Mac or Windows, your Docker daemon has only l
 
 <p>This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).</p>
 
-<h2 id="a-name4a-working-with-databases"><a name="4"></a> Working with databases</h2>
+<h2 id="-working-with-databases"><a name="4"></a> Working with databases</h2>
 
 <h3 id="mysql-postgresql-or-mongodb">MySQL, PostgreSQL or MongoDB</h3>
 
@@ -371,10 +371,12 @@ Follow these steps to do so:</p>
 <p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development <code class="highlighter-rouge">cassandra.yml</code>:
 <code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up -d</code></p>
 
-<p>Docker-compose will start 3 services:
-- **<name_of_your_app>-cassandra**, a container with the Cassandra node contact point
-- **<name_of_your_app>-cassandra-node-1**, a container with a second Cassandra node joining the cluster
-- **<name_of_your_app>-cassandra-migration** a container to automatically apply all migrations scripts (create the Keyspace, create the tables, all data migrations, ...)</name_of_your_app></name_of_your_app></name_of_your_app></p>
+<p>Docker-compose will start 3 services:</p>
+<ul>
+  <li>**<name_of_your_app>-cassandra**, a container with the Cassandra node contact point</name_of_your_app></li>
+  <li>**<name_of_your_app>-cassandra-node-1**, a container with a second Cassandra node joining the cluster</name_of_your_app></li>
+  <li>**<name_of_your_app>-cassandra-migration** a container to automatically apply all migrations scripts (create the Keyspace, create the tables, all data migrations, ...)</name_of_your_app></li>
+</ul>
 
 <p>The migration service is responsible to apply all the migration scripts from src/main/resources/config/cql in the following order:</p>
 
@@ -405,9 +407,11 @@ To workaround this, you can add a routing rule to your routing table, <a href="h
 </div>
 
 <h4 id="cassandra-in-production">Cassandra in production:</h4>
-<p>The docker_compose files for Cassandra in production has 2 possible configurations:
-- <code class="highlighter-rouge">cassandra-cluster.yml</code> =&gt; is the default linked in <code class="highlighter-rouge">app.yml</code>.
-- <code class="highlighter-rouge">cassandra-opscenter.yml</code> =&gt; is an alternative with an additional container running OpsCenter to monitor the cluster. OpsCenter will be available at <a href="http://localhost:8888">http://localhost:8888</a>.</p>
+<p>The docker_compose files for Cassandra in production has 2 possible configurations:</p>
+<ul>
+  <li><code class="highlighter-rouge">cassandra-cluster.yml</code> =&gt; is the default linked in <code class="highlighter-rouge">app.yml</code>.</li>
+  <li><code class="highlighter-rouge">cassandra-opscenter.yml</code> =&gt; is an alternative with an additional container running OpsCenter to monitor the cluster. OpsCenter will be available at <a href="http://localhost:8888">http://localhost:8888</a>.</li>
+</ul>
 
 <p>Unlike the <a href="#4">other databases</a> docker-compose configuration, the application will not automatically create the Keyspace and apply the changelogs.
 You have to first start the Cassandra cluster and manually apply the scripts before starting the rest of the services:</p>
@@ -428,7 +432,7 @@ You have to first start the Cassandra cluster and manually apply the scripts bef
   <li><code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra-cluster.yml scale &lt;name_of_your_app&gt;-cassandra-node=X</code></li>
 </ul>
 
-<h2 id="a-name5a-elasticsearch"><a name="5"></a> Elasticsearch</h2>
+<h2 id="-elasticsearch"><a name="5"></a> Elasticsearch</h2>
 
 <p>Running <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up</code> already starts up your search engine automatically.</p>
 
@@ -438,7 +442,7 @@ You have to first start the Cassandra cluster and manually apply the scripts bef
   <li><code class="highlighter-rouge">docker-compose -f src/main/docker/elasticsearch.yml up</code></li>
 </ul>
 
-<h2 id="a-name6a-sonar"><a name="6"></a> Sonar</h2>
+<h2 id="-sonar"><a name="6"></a> Sonar</h2>
 
 <p>A Docker Compose configuration is generated for running Sonar:</p>
 
@@ -455,7 +459,7 @@ You have to first start the Cassandra cluster and manually apply the scripts bef
 
 <p>The Sonar reports will be available at: <a href="http://localhost:9000">http://localhost:9000</a></p>
 
-<h2 id="a-name7a-common-commands"><a name="7"></a> Common commands</h2>
+<h2 id="-common-commands"><a name="7"></a> Common commands</h2>
 
 <h3 id="list-the-containers">List the containers</h3>
 
@@ -487,7 +491,7 @@ fc35e1090021        mysql               "/entrypoint.sh mysql"   4 seconds ago  
 
 <p><code class="highlighter-rouge">docker rm &lt;container_id&gt;</code></p>
 
-<h2 id="a-name8a-differences-when-using-a-microservices-architecture"><a name="8"></a> Differences when using a microservices architecture</h2>
+<h2 id="-differences-when-using-a-microservices-architecture"><a name="8"></a> Differences when using a microservices architecture</h2>
 
 <p>If you have selected to generate a <a href="/documentation-archive/v3.2.0/microservices-architecture/">microservices architecture</a>, each application (gateway, microservice) has a <code class="highlighter-rouge">Dockerfile</code> and a Docker Compose configurations, like with a normal monolithic application.</p>
 
