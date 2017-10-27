@@ -1,4 +1,4 @@
-git clone https://github.com/jhipster/jhipster.github.io.git
+git clone https://github.com/jhipster/jhipster.github.io.git --depth=1
 cd jhipster.github.io
 for tag in $(git tag)
 do
