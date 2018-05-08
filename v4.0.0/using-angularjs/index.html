@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -278,7 +279,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>Here is the main project structure:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>webapp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webapp
 ├── app                               - Your application
 │   ├── account                       - User account management UI
 │   ├── admin                         - Administration UI
@@ -303,12 +304,11 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 ├── favicon.ico                       - Fav icon
 ├── index.html                        - Index page
 ├── robots.txt                        - Configuration for bots and Web crawlers
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Using the <a href="/documentation-archive/v4.0.0/creating-an-entity/">entity sub-generator</a> to create a new entity called <code class="highlighter-rouge">Foo</code> generates the following front-end files under <code class="highlighter-rouge">src/main/webapp</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>webapp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webapp
 ├── app
 │   ├── entities
 │       ├── foo                                    - CRUD front-end for the Foo entity
@@ -327,8 +327,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 │   │   ├── foo.json                               - English translation of Foo name, fields, ...
 │   ├── fr                                         - French translations
 │   │   ├── foo.json                               - French translation of Foo name, fields, ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Please note that the default language translations would be based on what you have choosen during app generation. ‘en’ and ‘fr’ are shown here only for demonstration.</p>
 
@@ -342,7 +341,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>In the example below, the ‘sessions’ state can be accessed only by authenticated users who have <code class="highlighter-rouge">ROLE_USER</code> authority:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function() {
     'use strict';
 
     angular
@@ -375,8 +374,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
         });
     }
 })();
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="notification-system">Notification System</h2>
 
@@ -388,7 +386,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>The shorthand methods <code class="highlighter-rouge">success</code>, <code class="highlighter-rouge">info</code>, <code class="highlighter-rouge">warning</code> and <code class="highlighter-rouge">error</code> will have a timeout of 5 seconds, for other configurations use the <code class="highlighter-rouge">add</code> method:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function() {
     'use strict';
 
     angular
@@ -426,8 +424,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
     }
 })();
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If you would like the notifications to look like toasts you can enable that by setting <code class="highlighter-rouge">AlertServiceProvider.showAsToast(true)</code> in <code class="highlighter-rouge">src/main/webapp/app/blocks/config/alert.config.js</code>. By default this will be set to false <code class="highlighter-rouge">AlertServiceProvider.showAsToast(false)</code>.</p>
 

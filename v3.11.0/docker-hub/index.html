@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.11.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.11.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -296,17 +297,15 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Launch <code class="highlighter-rouge">yo jhipster</code> in the current folder, with the latest release</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run --rm -it -v "$PWD":/home/jhipster/app jhipster/jhipster yo jhipster
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --rm -it -v "$PWD":/home/jhipster/app jhipster/jhipster yo jhipster
+</code></pre></div></div>
 
 <h3 id="use-jhipster-v300">Use JHipster v3.0.0</h3>
 
 <p>Launch <code class="highlighter-rouge">yo jhipster</code> in the current folder, with an older release:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run --rm -it -v "$PWD":/home/jhipster/app jhipster/jhipster:v3.0.0 yo jhipster
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run --rm -it -v "$PWD":/home/jhipster/app jhipster/jhipster:v3.0.0 yo jhipster
+</code></pre></div></div>
 
 <p>You can see all tags available <a href="https://hub.docker.com/r/jhipster/jhipster/tags/">here</a></p>
 
@@ -314,9 +313,8 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>You can use JDL-Studio offline and access to it at <a href="http://localhost:18080">http://localhost:18080</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run -d -p 18080:80 jhipster/jdl-studio
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 18080:80 jhipster/jdl-studio
+</code></pre></div></div>
 
 <h2 id="jhipsterjhipster-sample-app"><a href="https://hub.docker.com/r/jhipster/jhipster-sample-app">jhipster/jhipster-sample-app</a></h2>
 
@@ -326,9 +324,8 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Run a simple jhipster application directly with Docker, in development profile</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker run -d -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev jhipster/jhipster-sample-app
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d -p 8080:8080 -e SPRING_PROFILES_ACTIVE=dev jhipster/jhipster-sample-app
+</code></pre></div></div>
 
 <p>Then, you can access to the application at <a href="http://localhost:8080">http://localhost:8080</a></p>
 
@@ -336,25 +333,22 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Run the application in development profile</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app/dev.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app/dev.yml up
+</code></pre></div></div>
 
 <h3 id="production-profile">Production profile</h3>
 
 <p>Run the application in production profile, with MySQL database</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app/prod.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app/prod.yml up
+</code></pre></div></div>
 
 <h3 id="production-profile-and-monitoring-with-elk-stack">Production profile and monitoring with ELK stack</h3>
 
 <p>Run the application in production profile, with MySQL database and ELK stack</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app/prod-elk.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app/prod-elk.yml up
+</code></pre></div></div>
 
 <p>Access to the running application at <a href="http://localhost:8080">http://localhost:8080</a></p>
 
@@ -368,17 +362,15 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Run the application in development profile</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-elasticsearch/dev.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-elasticsearch/dev.yml up
+</code></pre></div></div>
 
 <h3 id="production-profile-1">Production profile</h3>
 
 <p>Run the application in production profile, with MySQL database and Elasticsearch</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-elasticsearch/prod.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-elasticsearch/prod.yml up
+</code></pre></div></div>
 
 <h2 id="jhipsterjhipster-sample-app-mongodb"><a href="https://hub.docker.com/r/jhipster/jhipster-sample-app-mongodb">jhipster/jhipster-sample-app-mongodb</a></h2>
 
@@ -388,9 +380,8 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Run the application in production profile, with MongoDB database</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-mongodb/prod.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-mongodb/prod.yml up
+</code></pre></div></div>
 
 <h2 id="jhipsterjhipster-sample-app-cassandra"><a href="https://hub.docker.com/r/jhipster/jhipster-sample-app-cassandra">jhipster/jhipster-sample-app-cassandra</a></h2>
 
@@ -400,15 +391,13 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Run the application in production profile, with Cassandra cluster</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-cassandra/prod.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-cassandra/prod.yml up
+</code></pre></div></div>
 
 <p>Scale a Cassandra node</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-cassandra/prod.yml scale sample-cassandra-node=2
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-app-cassandra/prod.yml scale sample-cassandra-node=2
+</code></pre></div></div>
 
 <h2 id="microservices-architecture">Microservices architecture</h2>
 
@@ -424,9 +413,8 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Run the full stack in production profile</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod/prod.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod/prod.yml up
+</code></pre></div></div>
 
 <p>It will start:</p>
 
@@ -440,23 +428,20 @@ For Mac/Windows, you will have to obtain the IP using following command: <code>d
 
 <p>Scale the microservice</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod/prod.yml scale jhipstersamplemicroservice-app=2
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod/prod.yml scale jhipstersamplemicroservice-app=2
+</code></pre></div></div>
 
 <h3 id="production-profile-and-monitoring-with-elk-stack-1">Production profile and monitoring with ELK stack</h3>
 
 <p>Run the full stack in production profile, with ELK stack</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod-elk/prod-elk.yml up
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod-elk/prod-elk.yml up
+</code></pre></div></div>
 
 <p>Scale the microservice</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod-elk/prod-elk.yml scale jhipstersamplemicroservice-app=2
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f jhipster-sample-microservices/prod-elk/prod-elk.yml scale jhipstersamplemicroservice-app=2
+</code></pre></div></div>
 
 <p>Access to the registry at: <a href="http://localhost:8761">http://localhost:8761</a></p>
 

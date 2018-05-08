@@ -48,6 +48,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -152,10 +153,9 @@
 
 <p>CHeck that the executable is included in PATH:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>phantomjs --version
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>phantomjs --version
 1.9.8
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="installing-nodejs">Installing NodeJS</h2>
 
@@ -169,15 +169,13 @@
 
 <p>Edit <code class="highlighter-rouge">C:\nodejs\node_modules\npm\npmrc</code> to replace</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>prefix=${APPDATA}\npm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prefix=${APPDATA}\npm
+</code></pre></div></div>
 
 <p>by</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>prefix=C:\nodejs\node_modules\npm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prefix=C:\nodejs\node_modules\npm
+</code></pre></div></div>
 
 <p>Add the ‘C:\nodejs\node_modules\npm’ folder to the PATH environment variable, remove the one that was added by the installer: ‘C:\Users&lt;user&gt;\AppData\Roaming\npm’</p>
 
@@ -185,11 +183,10 @@
 
 <p>Add bower and grunt:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g bower grunt-cli
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g bower grunt-cli
 bower --version
 grunt --version
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>It can be useful to have multiple versions of NodeJS on same machine but ‘nvm’ equivalents on Windows focus more on development environment than continuous integration. So if a job requires another version of NodeJS, change its PATH.</p>
 
@@ -199,10 +196,9 @@ grunt --version
 
 <p>Install version 1.9.3 under a simple folder (e.g.’c:\ruby193’) rather than default one that may require administrator rights.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ruby -v
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
 ruby 1.9.3p551 (2014-11-13) [i386-mingw32]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Install development kit so that you can install gems requiring compilation, select a simple destination folder (e.g. ‘c:\RubyDevKit’) and <a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit">follow instructions</a>.</p>
 
@@ -210,11 +206,10 @@ ruby 1.9.3p551 (2014-11-13) [i386-mingw32]
 
 <p>http://compass-style.org/install/</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gem update --system
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem update --system
 gem install compass
 compass --version
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If Ruby and Compass have been installed in a folder that is not included in jenkins user’s PATH, you can either update it in  environment variables or through Jenkins UI in global properties.</p>
 

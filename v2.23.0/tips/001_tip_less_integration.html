@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -198,7 +199,7 @@
 
 <p>Add the less config at the end under the <code class="highlighter-rouge">watch</code> task in <code class="highlighter-rouge">grunt.initConfig</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>grunt.initConfig({
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grunt.initConfig({
   watch: {
     less:{
         // if any .less file changes in directory "src/main/less/" run the "less"-task.
@@ -207,12 +208,11 @@
         tasks: ["less"]
         }
       }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add the <code class="highlighter-rouge">less</code> task to <code class="highlighter-rouge">grunt.initConfig</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// "less"-task configuration
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// "less"-task configuration
 //this task will compile all less files to create both *.css and *.min.css
 less: {
     //Development non minified version
@@ -229,12 +229,11 @@ less: {
         }
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add the <code class="highlighter-rouge">less</code> task to the <code class="highlighter-rouge">cuncurrent</code> task if you need less to be executed concurrently</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>concurrent: {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>concurrent: {
     server: [
         'less',
         'imagemin',
@@ -248,24 +247,22 @@ less: {
         'svgmin'
     ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="indexhtml">index.html</h2>
 
 <p>Add the css paths to the index.html file inside the CSS build task so that these are minified and compacted by build task</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- build:css assets/styles/main.css --&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- build:css assets/styles/main.css --&gt;
 &lt;link rel="stylesheet" href="assets/styles/main.css"&gt;
 &lt;link rel="stylesheet" href="assets/styles/skins/skin-def.css"&gt;
 &lt;link rel="stylesheet" href="assets/styles/cms-custom.css"&gt;
 &lt;!-- endbuild --&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="complete-sample-gruntfilejs">Complete sample Gruntfile.js</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Generated on 2015-05-20 using generator-jhipster 2.11.0
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Generated on 2015-05-20 using generator-jhipster 2.11.0
 'use strict';
 var fs = require('fs');
 
@@ -746,8 +743,7 @@ grunt.initConfig({
         'build'
     ]);
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
               </div>
           </div><!-- /.row -->

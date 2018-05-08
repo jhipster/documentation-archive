@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v2.27.2/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v2.27.2/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -242,21 +243,19 @@
 
 <p>Open the <code class="highlighter-rouge">app.js</code> file and add this line in <code class="highlighter-rouge">config</code> method:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$locationProvider.html5Mode({ enabled: true, requireBase: true });
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$locationProvider.html5Mode({ enabled: true, requireBase: true });
+</code></pre></div></div>
 
 <p>Then open <code class="highlighter-rouge">index.html</code> and add this line in <code class="highlighter-rouge">head</code> tag:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;base href="/"&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;base href="/"&gt;
+</code></pre></div></div>
 
 <h2 id="redirection-filter">Redirection filter</h2>
 
 <p>Now, to have relative paths links working correctly (ex. activation link sent to user e-mail) we will create a controller to forward the URI to index.html:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Controller
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Controller
 public class AngularJSForwardController {
 
     private final Logger log = LoggerFactory.getLogger(AngularJSForwardController.class);
@@ -279,26 +278,22 @@ public class AngularJSForwardController {
         }
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Also, you have to edit urls of the metric.js and health.js. First, open webapp\scripts\app\admin\health\health.js and change:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>url: '/health' -&gt; url: '/apphealth'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url: '/health' -&gt; url: '/apphealth'
+</code></pre></div></div>
 
 <p>Then do the same with webapp\scripts\app\admin\metrics\metrics.js:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>url: '/metrics' -&gt; url: '/appmetrics'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url: '/metrics' -&gt; url: '/appmetrics'
+</code></pre></div></div>
 
 <p>Finally, to make the home link in the navigation bar work, open webapp\scripts\components\navbar\navbar.html and change:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a class="navbar-brand" href="#/"&gt; -&gt; &lt;a class="navbar-brand" href="/"&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a class="navbar-brand" href="#/"&gt; -&gt; &lt;a class="navbar-brand" href="/"&gt;
+</code></pre></div></div>
 
                         </div>
                     </div>

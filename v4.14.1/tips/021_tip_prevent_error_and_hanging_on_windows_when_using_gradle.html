@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.1/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.1/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -324,12 +325,11 @@
   <li>sometimes error occurs</li>
 </ol>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>FAILURE: Build failed with an exception.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FAILURE: Build failed with an exception.
 
 * What went wrong:
 Unable to process incoming event 'ProgressComplete ' (ProgressCompleteEvent)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="when-problem-occurs">When problem occurs</h2>
 
@@ -366,7 +366,7 @@ But the problem is reproduced also with the maximum Screen Buffer Size Height (9
 
 <p>Exists hack which prevents this error/hanging in the JHipster applications. Just put the following code to your <code class="highlighter-rouge">build.gradle</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>tasks.withType(NodeTask) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.withType(NodeTask) {
     doLast {
         println()
     }
@@ -381,8 +381,7 @@ tasks.withType(com.moowork.gradle.node.yarn.YarnTask) {
         println()
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="additional-information">Additional information</h2>
 

@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.6.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.6.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -413,11 +414,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship OneToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship OneToMany {
   One{many} to Many{one(&lt;otherEntityField&gt;)}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -433,11 +433,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship ManyToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship ManyToMany {
   Owner{notOwner(&lt;otherEntityField&gt;)} to NotOwner{owner}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 

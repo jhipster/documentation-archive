@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.10.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.10.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -349,17 +350,15 @@
       <li>If you do not want to regenerate your entities, while importing a JDL, you can use the <code class="highlighter-rouge">--json-only</code> flag to skip entity creation part and create only the json files in <code class="highlighter-rouge">.jhipster</code> folder.</li>
     </ul>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --json-only
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --json-only
+</code></pre></div>    </div>
 
     <ul>
       <li>By default <code class="highlighter-rouge">import-jdl</code> regenerates only entities which have changed, if you want all your entities to be regenerated then pass in the <code class="highlighter-rouge">--force</code>  flag. Please note that this will overwrite all your local changes to the entity files</li>
     </ul>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --force
-</code></pre>
-    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --force
+</code></pre></div>    </div>
   </li>
   <li>
     <p>If you want to use JHipster UML instead of the <code class="highlighter-rouge">import-jdl</code> sub-generator, you need to install it by running <code class="highlighter-rouge">npm install -g jhipster-uml</code>, and then run <code class="highlighter-rouge">jhipster-uml yourFileName.jh</code>.</p>

@@ -20,4 +20,5 @@ fi
     bundle install
     bundle exec jekyll build -d ../$tag --config _config.yml,_config-baseurl.yml
     find ../$tag -name "*.html" -exec sh -c "cat ../alert-snippet.html >> {}" \;
+    find ../$tag -name "*.html" -exec sh -c "gsed -i '/<\/head>/i     <meta name=\"robots\" content=\"noindex\">' {}" \;
 done

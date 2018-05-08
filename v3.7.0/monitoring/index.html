@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.7.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.7.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -271,25 +272,23 @@
 
 <p>To configure a JHipster application to forward their logs to JHipster Console, enable logstash logging in their <code class="highlighter-rouge">application-dev.yml</code> or <code class="highlighter-rouge">application-prod.yml</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster:
     logging:
         logstash:
             enabled: true
             host: localhost # If using a Virtual Machine on Mac OS X or Windows with docker-machine, use the Docker's host IP here
             port: 5000
             queueSize: 512
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>To configure metrics monitoring, enable metrics log reporting in your JHipster application:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster:
     metrics:
         logs:
             enabled: true
     	    reportFrequency: 60 # seconds
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Setting those properties will enrich your logs with metrics coming from Dropwizard metrics.</p>
 
@@ -315,15 +314,13 @@
 
 <p>If you are using the monolithic version of JHipster, you can get the JHipster Console’s Docker-Compose file <a href="https://github.com/jhipster/jhipster-console/blob/master/bootstrap/docker-compose.yml">from GitHub</a> or with the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>curl -O https://raw.githubusercontent.com/jhipster/jhipster-console/master/bootstrap/docker-compose.yml
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -O https://raw.githubusercontent.com/jhipster/jhipster-console/master/bootstrap/docker-compose.yml
+</code></pre></div></div>
 
 <p>Then you will be able to start the console with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose up -d
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div></div>
 
 <p>It will start Elasticsearch, Logstash, Kibana and ElastAlert all at once. You will then be able to access the JHipster Console at <a href="http://localhost:5601">http://localhost:5601</a>. It should automatically receive logs from your applications if they have been correctly configured to forward their logs and metrics to Logstash.</p>
 
@@ -333,15 +330,13 @@ if you use docker-machine to create the Docker host, instead of http://localhost
 
 <p>To stop everything, run:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose stop
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose stop
+</code></pre></div></div>
 
 <p>Once stopped, you can remove the containers if you don’t intend to start them again:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose rm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose rm
+</code></pre></div></div>
 
 <p>You can combine the two previous commands in one by running: <code class="highlighter-rouge">docker-compose down</code>.</p>
 
@@ -385,25 +380,23 @@ You can then put this data in a JSON file in one of the <code class="highlighter
 
 <p>To enable alerting, setup the <code class="highlighter-rouge">jhipster-alerter</code> container by adding the following lines to your <code class="highlighter-rouge">docker-compose.yml</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster-alerter:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster-alerter:
     build: jhipster/jhipster-alerter
     # Uncomment this section to load your alerting configuration for a volume
     #volumes:
     #    - ./alerts/config.yaml:/opt/elastalert/config.yaml
     #    - ./alerts/rules/:/opt/elastalert/rules
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="configure-alerting">Configure alerting</h4>
 
 <p>Elastalert configuration can be modified in <code class="highlighter-rouge">alerts/config.yaml</code>. For example, you can configure the alerting frequency and the buffer period, by changing the following properties:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>run_every:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>run_every:
     minutes: 1
 buffer_time:
     minutes: 5
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then you will need to write some rules that define when alerts will be thrown.</p>
 
@@ -411,9 +404,8 @@ buffer_time:
 
 <p>To define new alerts, add new YAML rule files in <code class="highlighter-rouge">alerts/rules</code> and then test them over past data with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./test-alerting-rule.sh rule.yaml
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./test-alerting-rule.sh rule.yaml
+</code></pre></div></div>
 
 <p>Note that those YAML files should have a <code class="highlighter-rouge">.yaml</code> file extension. Read more on how to write rules at <a href="https://elastalert.readthedocs.org/en/latest/ruletypes.html">Elastalert’s official documentation</a>.</p>
 

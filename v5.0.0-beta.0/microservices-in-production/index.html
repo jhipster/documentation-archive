@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -375,12 +376,11 @@
 
 <p>Note the URL on which your JHipster Registry is deployed. Your applications must all point to that URL in their <code class="highlighter-rouge">application-prod.yml</code> file. Change that configuration to be:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>eureka:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eureka:
     instance:
         hostname: https://admin:[password]@[appname].herokuapp.com
         prefer-ip-address: false
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can now deploy and scale the gateway(s) and microservices. The Heroku sub-generator will ask you a new question, to know the URL of your JHipster Registry: this will allow your applications to fetch their configuration on the Spring Cloud Config server.</p>
 

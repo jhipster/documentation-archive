@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.7.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.7.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -288,7 +289,7 @@
 
 <p>Create <code class="highlighter-rouge">html5.mode.config.js</code> file in <code class="highlighter-rouge">webapp/app/blocks/config/</code> directory:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function() {
   'use strict';
 
   angular
@@ -301,56 +302,49 @@
     $locationProvider.html5Mode({ enabled: true, requireBase: true });
   }
 })();
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then open <code class="highlighter-rouge">index.html</code> and add this line in <code class="highlighter-rouge">head</code> tag:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;base href="/"&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;base href="/"&gt;
+</code></pre></div></div>
 
 <h2 id="redirection-filter">Redirection filter</h2>
 
 <p>Now, to have relative paths links working correctly (ex. activation link sent to user e-mail) we will create a controller to forward the URI to index.html:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Controller
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Controller
 public class AngularJsForwardController {
     @RequestMapping(value = "/**/{[path:[^\\.]*}")
     public String redirect() {
         return "forward:/";
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Please note that this can cause conflicts with <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html">Spring actuators URLs</a>.</p>
 
 <p>That’s why you have to edit urls of the <code class="highlighter-rouge">metric.js</code> and <code class="highlighter-rouge">health.js</code>. First, open <code class="highlighter-rouge">webapp\app\admin\health\health.js</code> and change:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>url: '/health' -&gt; url: '/apphealth'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url: '/health' -&gt; url: '/apphealth'
+</code></pre></div></div>
 
 <p>Then do the same with <code class="highlighter-rouge">webapp\app\admin\metrics\metrics.js</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>url: '/metrics' -&gt; url: '/appmetrics'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>url: '/metrics' -&gt; url: '/appmetrics'
+</code></pre></div></div>
 
 <p>Then if you use gulp , you must to edit the file <code class="highlighter-rouge">gulp\serve.js</code> and replace <code class="highlighter-rouge">proxyRoutes</code> variable by:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var proxyRoutes = [
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var proxyRoutes = [
     '/'
 ];
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Finally, to make the home link in the navigation bar work, open <code class="highlighter-rouge">webapp\app\layouts\navbar\navbar.html</code> and change:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a class="navbar-brand" href="#/"&gt; -&gt; &lt;a class="navbar-brand" href="/"&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a class="navbar-brand" href="#/"&gt; -&gt; &lt;a class="navbar-brand" href="/"&gt;
+</code></pre></div></div>
 
                         </div>
                     </div>

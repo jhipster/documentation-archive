@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.1/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.1/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -334,26 +335,25 @@
 
 <p>For best performance, it’s recommended to exclude some folders, in your project’s <code class="highlighter-rouge">.vscode</code> folder create a <code class="highlighter-rouge">settings.json</code> file as below:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">Configure</span><span class="w"> </span><span class="err">glob</span><span class="w"> </span><span class="err">patterns</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">excluding</span><span class="w"> </span><span class="err">files</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">folders.</span><span class="w">
-    </span><span class="nt">"files.exclude"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"**/.git"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/.idea"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/.mvn"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/.svn"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/.hg"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/.DS_Store"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">Configure</span><span class="w"> </span><span class="err">glob</span><span class="w"> </span><span class="err">patterns</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">excluding</span><span class="w"> </span><span class="err">files</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">folders</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">searches.</span><span class="w"> </span><span class="err">Inherits</span><span class="w"> </span><span class="err">all</span><span class="w"> </span><span class="err">glob</span><span class="w"> </span><span class="err">patterns</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">files.exclude</span><span class="w"> </span><span class="err">setting.</span><span class="w">
-    </span><span class="nt">"search.exclude"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"**/node"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/node_modules"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/bower_components"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"**/target"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.idea": true,
+        "**/.mvn": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true
+    },
+    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+    "search.exclude": {
+        "**/node": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/target": true
+    }
+}
+</code></pre></div></div>
 
                         </div>
                     </div>

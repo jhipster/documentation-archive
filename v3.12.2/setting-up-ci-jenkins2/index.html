@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.2/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.2/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -356,7 +357,7 @@
 
 <p>Here an example of Jenkinsfile which is generated:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>node {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node {
     // uncomment these 2 lines and edit the name 'node-4.4.5' according to what you choose in configuration
     // def nodeHome = tool name: 'node-4.4.5', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     // env.PATH = "${nodeHome}/bin:${env.PATH}"
@@ -385,15 +386,13 @@
     stage 'packaging'
     sh "./mvnw package -Pprod -DskipTests"
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>These 2 lines need to be uncommented if you use NodeJS plugin:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    // def nodeHome = tool name: 'node-4.4.5', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // def nodeHome = tool name: 'node-4.4.5', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     // env.PATH = "${nodeHome}/bin:${env.PATH}"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><img src="/documentation-archive/v3.12.2/images/jenkins2_result.png" alt="Jenkins2 result" /></p>
 

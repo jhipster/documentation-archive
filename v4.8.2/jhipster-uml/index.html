@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.2/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.2/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -441,11 +442,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship OneToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship OneToMany {
   One{many} to Many{one(&lt;otherEntityField&gt;)}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -461,11 +461,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship ManyToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship ManyToMany {
   Owner{notOwner(&lt;otherEntityField&gt;)} to NotOwner{owner}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -546,16 +545,14 @@ The options described in the help can be used in the both but the commande line 
 <h3 id="a-concrete-example">A concrete example</h3>
 
 <p>jumlfile content:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
-  <span class="s2">"db"</span><span class="err">:</span> <span class="s2">"sql"</span><span class="p">,</span>
-  <span class="s2">"force"</span><span class="err">:</span> <span class="s2">"true"</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s2">"db"</span><span class="p">:</span> <span class="s2">"sql"</span><span class="p">,</span>
+  <span class="s2">"force"</span><span class="p">:</span> <span class="s2">"true"</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Call:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster-uml --no-force
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster-uml --no-force
+</code></pre></div></div>
 <p>You Will have the following executed options:</p>
 <ul>
   <li>db : sql</li>

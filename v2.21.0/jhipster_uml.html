@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -308,11 +309,10 @@ You can look at the tables with all the types supported by JHipster and the vali
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship OneToMany{
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship OneToMany{
   One{many} to Many{one(&lt;otherEntityField&gt;)}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -328,11 +328,10 @@ You can look at the tables with all the types supported by JHipster and the vali
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship ManyToMany{
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship ManyToMany{
   Owner{notOwner(&lt;otherEntityField&gt;)} to NotOwner{owner}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -712,11 +711,10 @@ You can do two things with it: declare entities with their attributes, and decla
 
 <p>The entity declaration is done as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity &lt;entity name&gt; {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity &lt;entity name&gt; {
   &lt;field name&gt; &lt;type&gt; [&lt;validation&gt;*]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>
@@ -737,17 +735,15 @@ You can do two things with it: declare entities with their attributes, and decla
 
 <p>Here’s an example of a field declaration with validations:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>email String required maxlength(30) minlength(5) pattern("[\\w]*@[a-zA-Z]*.com"),
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>email String required maxlength(30) minlength(5) pattern("[\\w]*@[a-zA-Z]*.com"),
+</code></pre></div></div>
 
 <p>The relationships declaration is done as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>relationship (OneToMany | ManyToOne | OneToOne | ManyToMany){
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship (OneToMany | ManyToOne | OneToOne | ManyToMany){
   &lt;from entity&gt;[{&lt;relationship name&gt;}] to &lt;to entity&gt;[{&lt;relationship name&gt;}]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>
@@ -770,7 +766,7 @@ You can do two things with it: declare entities with their attributes, and decla
 
 <p>A Book has one Author, an Author has several Books.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Book{
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Book{
   title String required,
   description String required minlength(5) maxlength(50),
   publicationDate LocalDate,
@@ -783,8 +779,7 @@ entity Author{
 relationship OneToMany{
   Author{book} to Book{writer}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="enum">Enum</h3>
 <p>Since v1.1.2 Enums are supported by JHipster-UML. To make Enums with JDL must do as follows:</p>
@@ -793,22 +788,20 @@ relationship OneToMany{
   <li>
     <p>Declare an Enum where you want in the file:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  enum Language {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  enum Language {
     FRENCH, ENGLISH, SPANISH
   }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>In an entity, add field with the Enum as a type:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  entity Book{
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  entity Book{
     title String required,
     description String,
     language Language
   }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 

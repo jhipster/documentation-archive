@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.6.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.6.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -276,12 +277,11 @@ Sass or in <code class="highlighter-rouge">src/main/webapp/scss/main.scss</code>
 
 <p>vendor.scss</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/* Sass bower components will be injected here */
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Sass bower components will be injected here */
 /* bower:scss */
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 /* endinject */
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This import statement has been inserted by the inject task because it is enclosed by bower inject comments, it
 imports <code class="highlighter-rouge">src/main/webapp/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_bootstrap.scss</code>.</p>
@@ -293,7 +293,7 @@ imports <code class="highlighter-rouge">src/main/webapp/bower_components/bootstr
 
 <p>gulpfile.js</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gulp.task('inject:vendor', function () {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gulp.task('inject:vendor', function () {
     ...
     return es.merge(stream, gulp.src(config.sassVendor)
         ...
@@ -303,26 +303,23 @@ imports <code class="highlighter-rouge">src/main/webapp/bower_components/bootstr
         ...
     ...
 });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Copy <code class="highlighter-rouge">src/main/webapp/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss</code> to <code class="highlighter-rouge">src/main/webapp/scss/_custom-bootstrap.scss</code></p>
 
 <p>Edit your <code class="highlighter-rouge">_custom-bootstrap.scss</code> file to add “../bower_components/bootstrap-sass/assets/stylesheets/” to all import statements so that they point to the <code class="highlighter-rouge">bower_components/bootstrap-sass</code> directory.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Core variables and mixins
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Core variables and mixins
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Import <code class="highlighter-rouge">_custom-bootstrap.scss</code> into your <code class="highlighter-rouge">main.scss</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@import "custom-bootstrap";
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import "custom-bootstrap";
 
 ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Pay attention to the fact that the <code class="highlighter-rouge">@import</code> statements do not specify the leading underscore nor the <code class="highlighter-rouge">.scss</code> filename extension, this is what SASS calls partials.</p>
 
@@ -330,11 +327,10 @@ imports <code class="highlighter-rouge">src/main/webapp/bower_components/bootstr
 
 <p>It’s very likely that you will want to replace some values in the bootstrap variables, just copy <code class="highlighter-rouge">src/main/webapp/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss</code> to <code class="highlighter-rouge">src/main/webapp/scss/_custom-variables.scss</code> and change the variables values you want and change related import statement in <code class="highlighter-rouge">_custom-bootstrap.scss</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Core variables and mixins
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Core variables and mixins
 @import "custom-variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can follow same procedure and naming convention (‘_custom-*.css`) for any other partial you want to customize, this will make easier to integrate bootstrap-sass updates.</p>
 

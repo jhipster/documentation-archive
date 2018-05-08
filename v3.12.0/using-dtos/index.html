@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -307,7 +308,7 @@
 
 <p>Here is an example code, fetching a <code class="highlighter-rouge">User</code> entity:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Mapper
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Mapper
 public abstract class CarMapper {
 
     @Inject
@@ -327,8 +328,7 @@ public abstract class CarMapper {
         return userRepository.findOne(id);
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="future-roadmap">Future roadmap</h2>
 

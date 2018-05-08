@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.10.1/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.10.1/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -328,15 +329,14 @@
 
 <p>When a new node is added, it will register itself to the service discovery (for instance, it will be available in the JHipster Registry), and look for other nodes of the same type. If it finds one or several nodes of the same type, it will create a clustered cache with them: you should see in the logs of each node a message, like in the following example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[172.18.0.10]:5701 [dev] [3.7]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[172.18.0.10]:5701 [dev] [3.7]
 Members [4] {
 Member [172.18.0.10]:5701 - 3cbddfcd-0229-4cd5-be55-4611927a9071 this
 Member [172.18.0.5]:5701 - 204d457d-f6fe-43f2-8e8d-497e96b3f08e
 Member [172.18.0.14]:5701 - 7804d535-86fb-46be-b2a5-d7801dc6a4df
 Member [172.18.0.11]:5701 - 6114ae28-56cd-4840-a575-4d73a6003744
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="caching-with-infinispan">Caching with Infinispan</h2>
 

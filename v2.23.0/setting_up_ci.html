@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -214,30 +215,27 @@
 
 <p>Gruntfile.js</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">karma</span><span class="err">:</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">karma</span><span class="p">:</span> <span class="p">{</span>
   <span class="nl">unit</span><span class="p">:</span> <span class="p">{</span>
     <span class="nl">configFile</span><span class="p">:</span> <span class="s1">'src/test/javascript/karma.conf.js'</span><span class="p">,</span>
-    <span class="nx">singleRun</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">reporters</span> <span class="err">:</span> <span class="p">[</span><span class="s1">'dots'</span><span class="p">,</span> <span class="s1">'junit'</span><span class="p">],</span>
-    <span class="nx">junitReporter</span> <span class="err">:</span> <span class="p">{</span>
+    <span class="nx">singleRun</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">reporters</span> <span class="p">:</span> <span class="p">[</span><span class="s1">'dots'</span><span class="p">,</span> <span class="s1">'junit'</span><span class="p">],</span>
+    <span class="nx">junitReporter</span> <span class="p">:</span> <span class="p">{</span>
       <span class="nl">outputFile</span><span class="p">:</span> <span class="s1">'../target/surefire-reports/TEST-javascript-results.xml'</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">},</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>karma.conf.js</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">singleRun</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">singleRun</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</code></pre></div></div>
 
 <p>package.json</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="s2">"karma-junit-reporter"</span><span class="err">:</span> <span class="s2">"~0.2"</span><span class="p">,</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"karma-junit-reporter"</span><span class="p">:</span> <span class="s2">"~0.2"</span><span class="p">,</span>
+</code></pre></div></div>
 
               </div>
           </div><!-- /.row -->

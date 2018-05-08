@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -320,7 +321,7 @@
 When you generate an entity the route names, route URLs and REST API endpoint URLs are generated according to this convention, also entity names are automatically pluralized where required.</p>
 
 <p>Here is the main project structure:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>webapp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webapp
 ├── app                             - Your application
 │   ├── config                      - General configuration (redux store, middleware, etc.)
 │   ├── entities                    - Generated entities
@@ -344,12 +345,11 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 ├── index.html                      - Index page
 ├── manifest.webapp                 - Application manifest
 └── robots.txt                      - Configuration for bots and Web crawlers
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Using the <a href="/documentation-archive/v4.14.2/creating-an-entity/">entity sub-generator</a> to create a new entity called <code class="highlighter-rouge">Foo</code> generates the following front-end files under <code class="highlighter-rouge">src/main/webapp</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>webapp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webapp
 ├── app                                        
 │   └── entities
 │       ├── foo                           - CRUD front-end for the Foo entity
@@ -365,8 +365,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
      │   ├── foo.json                     - English translation of Foo name, fields, ...
      └── fr                               - French translations
          └── foo.json                     - French translation of Foo name, fields, ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Please note that the default language translations would be based on what you have choosen during app generation. ‘en’ and ‘fr’ are shown here only for demonstration.</p>
 
@@ -381,7 +380,7 @@ To access this store and therefore update your state components, the only way is
 define how the state is updated in response to these actions.</p>
 
 <p>Here is an example of a reducer:</p>
-<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">ACTION_TYPES</span> <span class="o">=</span> <span class="p">{</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">ACTION_TYPES</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">FETCH_FOOS</span><span class="p">:</span> <span class="s1">'foo/FETCH_FOOS'</span><span class="p">,</span>
 <span class="p">};</span>
 
@@ -394,7 +393,7 @@ define how the state is updated in response to these actions.</p>
 
 <span class="c1">// Reducer</span>
 <span class="k">export</span> <span class="k">default</span> <span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="nx">initialState</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="kd">type</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nx">REQUEST</span><span class="p">(</span><span class="nx">ACTION_TYPES</span><span class="p">.</span><span class="nx">FETCH_FOOS</span><span class="p">):</span>
       <span class="k">return</span> <span class="p">{</span>
         <span class="p">...</span><span class="nx">state</span><span class="p">,</span>
@@ -421,23 +420,21 @@ define how the state is updated in response to these actions.</p>
       <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">};</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>In order to access your store and update the current application state, you need to dispatch
 actions to the store as mentioned previously. Actions are simple JavaScript objects and must have a <strong>type</strong>, which describe what
 the action is going to perform and a usually they have also a <strong>payload</strong> which corresponds to
 data you want to pass to the store.</p>
 
 <p>Here is an action to access the store:</p>
-<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">apiUrl</span> <span class="o">=</span> <span class="nx">SERVER_API_URL</span> <span class="o">+</span> <span class="s1">'/api/foos'</span><span class="p">;</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">apiUrl</span> <span class="o">=</span> <span class="nx">SERVER_API_URL</span> <span class="o">+</span> <span class="s1">'/api/foos'</span><span class="p">;</span>
 
 <span class="c1">// Action</span>
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">getFoos</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">({</span>
   <span class="na">type</span><span class="p">:</span> <span class="nx">ACTION_TYPES</span><span class="p">.</span><span class="nx">FETCH_FOOS</span><span class="p">,</span>
-  <span class="na">payload</span><span class="p">:</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">apiUrl</span><span class="p">)</span>
+  <span class="na">payload</span><span class="p">:</span> <span class="nx">axios</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">apiUrl</span><span class="p">)</span>
 <span class="p">});</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>The action described above indicates that we want to retrieve all the Foo objects by
 sending a GET request. The action type will match
 Notice that the <strong>export</strong> keyword is used to able the connected component to use that action
@@ -450,15 +447,14 @@ when necessary (for instance, everytime the component is updated).</p>
 <p>When it comes to routes that require authentication, the <a href="https://github.com/jhipster/react-jhipster">react-jhipster</a> lib provides <a href="https://github.com/jhipster/react-jhipster/blob/master/src/component/private-route.tsx">PrivateRoute</a>. This component will simply prevent any unauthenticated user from accessing a route.</p>
 
 <p>Here is an example of PrivateRoute usage:</p>
-<div class="language-typescript highlighter-rouge"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Routes</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Routes</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span>
   <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">"view-routes"</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">exact</span> <span class="nx">path</span><span class="o">=</span><span class="s2">"/"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="s2">"/login"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Login</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>    <span class="o">&lt;</span><span class="nx">PrivateRoute</span> <span class="nx">path</span><span class="o">=</span><span class="s2">"/account"</span> <span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Account</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
 </span>  <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
 </span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>As you can see, unauthenticated user can access <code class="highlighter-rouge">/</code> and <code class="highlighter-rouge">/login</code> but accessing <code class="highlighter-rouge">/account</code> requires to be logged in.</p>
 
 <p>Please note that PrivateRoute uses the <code class="highlighter-rouge">authentication.isAuthenticated</code> store value to know if the user is authenticated.</p>

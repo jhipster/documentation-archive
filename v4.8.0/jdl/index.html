@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -339,15 +340,13 @@ concatenate all the files into one, you just have to run <code class="highlighte
 
 <p>If you do not want to regenerate your entities, while importing a JDL, you can use the <code class="highlighter-rouge">--json-only</code> flag to skip entity creation part and create only the json files in <code class="highlighter-rouge">.jhipster</code> folder.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --json-only
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --json-only
+</code></pre></div></div>
 
 <p>By default <code class="highlighter-rouge">import-jdl</code> regenerates only entities which have changed, if you want all your entities to be regenerated then pass in the <code class="highlighter-rouge">--force</code>  flag. Please note that this will overwrite all your local changes to the entity files</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --force
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster import-jdl ./my-jdl-file.jdl --force
+</code></pre></div></div>
 
 <p>If you want to use it in your project, you can add do so by doing <code class="highlighter-rouge">npm install jhipster-core --save</code> to install it locally, and save it in your <code class="highlighter-rouge">package.json</code> file.</p>
 
@@ -364,11 +363,10 @@ You can do three things with it:</p>
 
 <p>The entity declaration is done as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity &lt;entity name&gt; {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity &lt;entity name&gt; {
   &lt;field name&gt; &lt;type&gt; [&lt;validation&gt;*]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li><code class="highlighter-rouge">&lt;entity name&gt;</code> is the name of the entity,</li>
@@ -381,7 +379,7 @@ You can do three things with it:</p>
 
 <p>Here’s an example of a JDL code:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A
 entity B
 entity C {}
 entity D {
@@ -389,8 +387,7 @@ entity D {
   address String required maxlength(100),
   age Integer required min(18)
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Because the JDL was made to be simple to use and read, if your entity is empty (no field), you can just declare an entity with <code class="highlighter-rouge">entity A</code> or <code class="highlighter-rouge">entity A {}</code>.</p>
 
@@ -400,11 +397,10 @@ entity D {
 
 <p>The relationships declaration is done as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>relationship (OneToMany | ManyToOne | OneToOne | ManyToMany) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship (OneToMany | ManyToOne | OneToOne | ManyToMany) {
   &lt;from entity&gt;[{&lt;relationship name&gt;[(&lt;display field&gt;)]}] to &lt;to entity&gt;[{&lt;relationship name&gt;[(&lt;display field&gt;)]}]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li><code class="highlighter-rouge">(OneToMany | ManyToOne| OneToOne | ManyToMany)</code> is the type of your relationship,</li>
@@ -419,19 +415,18 @@ entity D {
 
 <p>A Book has one, required, Author, an Author has several Books.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Book
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Book
 entity Author
 
 relationship OneToMany {
   Author{book} to Book{writer(name) required}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Of course, in real cases, you’d have a lot of relationships and always writing the same three lines could be tedious.
 That’s why you can declare something like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A
 entity B
 entity C
 entity D
@@ -444,12 +439,11 @@ relationship ManyToMany {
   A{d} to D{a},
   C{d} to D{c}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The join is always done using the <code class="highlighter-rouge">id</code> field which is also the default field shown when editing a relation in the frontend. If another field should be shown instead, you can specify it like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A {
   name String required
 }
 entity B
@@ -458,8 +452,7 @@ entity B
 relationship OneToOne {
   A{b} to B{a(name)}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This makes JHipster generate a REST resource that returns both <code class="highlighter-rouge">id</code> and <code class="highlighter-rouge">name</code> of the linked entity to the frontend, so the name can be shown to the user instead.</p>
 
@@ -471,22 +464,20 @@ relationship OneToOne {
   <li>
     <p>Declare an Enum where you want in the file:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  enum Language {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  enum Language {
     FRENCH, ENGLISH, SPANISH
   }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>In an entity, add fields with the Enum as a type:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  entity Book {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  entity Book {
     title String required,
     description String,
     language Language
   }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -506,7 +497,7 @@ relationship OneToOne {
 <p>In JHipster, you can specify options for your entities such as pagination or DTO.
 You can do the same with the JDL:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A {
   name String required
 }
 
@@ -522,8 +513,7 @@ paginate C with pager  // pager is only available in AngularJS
 
 service A with serviceClass
 service C with serviceImpl
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The keywords <code class="highlighter-rouge">dto</code>, <code class="highlighter-rouge">paginate</code>, <code class="highlighter-rouge">service</code> and <code class="highlighter-rouge">with</code> were added to the grammar to support these changes.
 If a wrong option is specified, JDL will inform you of that with a nice, red message and will just ignore it so as not to corrupt JHipster’s JSON files.</p>
@@ -535,19 +525,18 @@ Service with serviceClass (see B) will make the resource call the service class 
 
 <p>Use no service if not sure it’s the simplest option and good for CRUD. Use service with a Class if you will have a lot of business logic which will use multiple repositories making it ideal for a service class. Jhipster’s are not a fan of unnecessary Interfaces but if you like them go for service with impl.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A {}
 entity B {}
 entity C {}
 
 // no service for A
 service B with serviceClass
 service C with serviceImpl
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>JDL also supports mass-option setting. it is possible to do:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A
 entity B
 ...
 entity Z
@@ -555,13 +544,12 @@ entity Z
 dto * with mapstruct
 service all with serviceImpl
 paginate C with pagination
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Note that <code class="highlighter-rouge">*</code> and <code class="highlighter-rouge">all</code> are equivalent.
 Latest version introduces exclusions (which is quite a powerful option when setting options for every entity):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A
 entity B
 ...
 entity Z
@@ -569,28 +557,25 @@ entity Z
 dto * with mapstruct except A
 service all with serviceImpl except A, B, C
 paginate C with pagination
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>With JHipster, you can also tell whether you don’t want any client code, or server code. Even if you want to add a suffix to Angular-related files, you can do that in JHipster.
 In your JDL file, simply add these lines to do the same:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A
 entity B
 entity C
 
 skipClient for A
 skipServer for B
 angularSuffix * with mySuperEntities
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Finally, table names can also be specified (the entity’s name will be used by default):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A // A is the table's name here
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A // A is the table's name here
 entity B (the_best_entity) // the_best_entity is the table's name
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="-microservice-related-options"><a name="microserviceoptions"></a> Microservice-related options</h3>
 
@@ -598,15 +583,14 @@ entity B (the_best_entity) // the_best_entity is the table's name
 
 <p>Here is how you can specify your microservice’s name (the JHipster app’s name):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A
 entity B
 entity C
 
 microservice * with mysuperjhipsterapp except C
 microservice C with myotherjhipsterapp
 search * with elasticsearch except C
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The first option is used to tell JHipster that you want your microservice to deal with your entities, whereas the second specifies how and if you want your entities searched.</p>
 
@@ -614,7 +598,7 @@ search * with elasticsearch except C
 <p>It is possible to add Javadoc &amp; comments to JDL files.<br />
 Just like in Java, this example demonstrates how to add Javadoc comments:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/**
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
  * Class comments.
  * @author The JHipster team.
  */
@@ -638,38 +622,34 @@ relationship OneToMany {
    */
   MySecondEntity{myEntity}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>These comments will later be added as Javadoc comments by JHipster.</p>
 
 <p>JDL possesses its own kind of comment:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// an ignored comment
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// an ignored comment
 /** not an ignored comment */
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Therefore, anything that starts with <code class="highlighter-rouge">//</code> is considered an internal comment for JDL, and will not be counted as Javadoc.</p>
 
 <p>Please note that the JDL Studio directives that start with <code class="highlighter-rouge">#</code> will be ignored during parsing.</p>
 
 <p>Another form of comments are the following comments:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A {
   name String /** My super field */
   count Integer /** My other super field */
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Here A’s name will be commented with <code class="highlighter-rouge">My super field</code>, B with <code class="highlighter-rouge">My other super field</code>.
 Yes, commas are not mandatory but it’s wiser to have them so as not to make mistakes in the code.
 If you want to mix commas and following comments, beware!</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>entity A {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity A {
   name String, /** My comment */
   count Integer
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>A’s name won’t have the comment, because the count will.</p>
 
 <h2 id="all-the-relationships"><a name="jdlrelationships"></a>All the relationships</h2>
@@ -680,70 +660,64 @@ If you want to mix commas and following comments, beware!</p>
 
 <p>A bidirectional relationship where the Car has a Driver, and the Driver has a Car.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Driver {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver {}
 entity Car {}
 relationship OneToOne {
   Car{driver} to Driver{car}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A Unidirectional example where a Citizen has a Passport, but the Passport has no access to sole its owner.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Citizen {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Citizen {}
 entity Passport {}
 relationship OneToOne {
   Citizen{passport} to Passport
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="one-to-many">One-to-Many</h3>
 
 <p>A bidirectional relationship where the Owner has none, one or more Car objects, and the Car knows its owner.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner {}
 entity Car {}
 relationship OneToMany {
   Owner{car} to Car{owner}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Unidirectional versions for this relationship are not supported by JHipster, but it would look like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner {}
 entity Car {}
 relationship OneToMany {
   Owner{car} to Car
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="many-to-one">Many-to-One</h3>
 
 <p>The reciprocal version of One-to-Many relationships is the same as previously.
 The unidirectional version where the Car knows its owners:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner {}
 entity Car {}
 relationship ManyToOne {
   Car{owner} to Owner
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="many-to-many">Many-to-Many</h3>
 
 <p>Finally, in this example we have the Car that knows of its drivers, and the Driver object can access its cars.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Driver {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver {}
 entity Car {}
 relationship ManyToMany {
   Car{driver} to Driver{car}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Please note that the owning side of the relationship has to be on the left side</p>
 
@@ -752,7 +726,7 @@ relationship ManyToMany {
 <p>As of JHipster Core v1.2.7, the JDL supports numerical constants.
 Here is an example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>DEFAULT_MIN_LENGTH = 1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DEFAULT_MIN_LENGTH = 1
 DEFAULT_MAX_LENGTH = 42
 DEFAULT_MIN_BYTES = 20
 DEFAULT_MAX_BYTES = 40
@@ -764,8 +738,7 @@ entity A {
   content TextBlob minbytes(DEFAULT_MIN_BYTES) maxbytes(DEFAULT_MAX_BYTES)
   count Integer min(DEFAULT_MIN) max(DEFAULT_MAX)
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="annexes"><a name="annexes"></a>Annexes</h1>
 

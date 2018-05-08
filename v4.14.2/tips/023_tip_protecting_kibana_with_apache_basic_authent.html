@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -315,13 +316,12 @@
 
 <h2 id="mod_proxy-activation">mod_proxy activation</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>a2enmod proxy
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a2enmod proxy
 a2enmod proxy_http
 a2enmod headers
 
 service apache2 restart
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="vitualhost-configuration">Vitualhost configuration</h2>
 <p>Find where your virtualhost 443 or 80 config is, depending on your distros.</p>
@@ -332,7 +332,7 @@ service apache2 restart
 
 <p>Edit the file and in the virtualhost 443 or 80 section paste this :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Proxying kibana listenning on the port 5601 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Proxying kibana listenning on the port 5601 
 ProxyPreserveHost On
 ProxyRequests On
 ProxyPass / http://localhost:5601/
@@ -345,20 +345,17 @@ ProxyPassReverse / http://localhost:5601/
         AuthUserFile /etc/apache2/.htpasswd
         Require valid-user
    &lt;/Location&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Reload apache config :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>service apache2 reload
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>service apache2 reload
+</code></pre></div></div>
 
 <h2 id="generation-of-username--password">Generation of username / password</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>htpasswd /etc/apache2/.htpasswd your_user
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>htpasswd /etc/apache2/.htpasswd your_user
+</code></pre></div></div>
 
 <h2 id="activating-ssl">Activating SSL</h2>
 <p>Follow the tutorial (you can select the ditros) :  <a href="https://certbot.eff.org/">Let’s encrypt - Certbot</a></p>

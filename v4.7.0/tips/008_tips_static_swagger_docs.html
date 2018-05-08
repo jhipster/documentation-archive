@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.7.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.7.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -295,18 +296,17 @@ Swagger with hand-written documentation into an up-to-date, easy-to-read, on- an
 
 <p>Add the following to your project dependencies:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;dependency&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dependency&gt;
     &lt;groupId&gt;io.springfox&lt;/groupId&gt;
     &lt;artifactId&gt;springfox-staticdocs&lt;/artifactId&gt;
     &lt;version&gt;${springfox.version}&lt;/version&gt;
     &lt;scope&gt;test&lt;/scope&gt;
 &lt;/dependency&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add the following to the plugin section:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;plugin&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
   &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
   &lt;artifactId&gt;asciidoctor-maven-plugin&lt;/artifactId&gt;
   &lt;version&gt;1.5.2&lt;/version&gt;
@@ -352,12 +352,11 @@ Swagger with hand-written documentation into an up-to-date, easy-to-read, on- an
     &lt;/attributes&gt;
   &lt;/configuration&gt;
 &lt;/plugin&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In <code class="highlighter-rouge">src/test/rest</code> create a new class called <code class="highlighter-rouge">Swagger2MarkupTest</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@RunWith(SpringJUnit4ClassRunner.class)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest
@@ -394,33 +393,29 @@ public class Swagger2MarkupTest {
         return new File(projectDir, "target/docs/" + format + "/generated").getAbsolutePath();
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="gradle">Gradle</h3>
 
 <p>Add the following dependency to your project dependencies:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>testCompile group: 'io.springfox', name:'springfox-staticdocs', version: springfox_version
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testCompile group: 'io.springfox', name:'springfox-staticdocs', version: springfox_version
+</code></pre></div></div>
 
 <p>Add the following to your build script dependencies:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2'
 classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.8'
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Apply the <code class="highlighter-rouge">asciidoctor convert</code> plugin:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>apply plugin: 'org.asciidoctor.convert'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'org.asciidoctor.convert'
+</code></pre></div></div>
 
 <p>Add the following to generate HTML and PDF:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ext {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ext {
     generatedAsciidoc = file("${buildDir}/docs/asciidoc/generated")
 }
 
@@ -441,12 +436,11 @@ asciidoctor {
         generated: generatedAsciidoc
     ]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>In <code class="highlighter-rouge">src/test/rest</code> create a new class called <code class="highlighter-rouge">Swagger2MarkupTest</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@RunWith(SpringJUnit4ClassRunner.class)
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
 @IntegrationTest
@@ -483,18 +477,16 @@ public class Swagger2MarkupTest {
         return new File(projectDir, "docs/" + format + "/generated").getAbsolutePath();
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="create-indexadoc-file">Create index.adoc file</h2>
 
 <p>Create <code class="highlighter-rouge">index.adoc</code> in <code class="highlighter-rouge">src/docs/asciidoc</code> with following content:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>include::{generated}/overview.adoc[]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>include::{generated}/overview.adoc[]
 include::{generated}/paths.adoc[]
 include::{generated}/definitions.adoc[]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="generate-static-documentation">Generate static documentation</h2>
 

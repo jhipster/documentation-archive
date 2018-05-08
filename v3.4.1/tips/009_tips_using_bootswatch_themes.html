@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.4.1/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.4.1/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -274,7 +275,7 @@
 
 <p>Add the below service as <code class="highlighter-rouge">bootswatch.service.js</code> under <code class="highlighter-rouge">webapp/app/components/bootswatch</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>'use strict';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
 
 angular.module('yourApp')
     .factory('BootSwatchService', function ($http) {
@@ -286,12 +287,11 @@ angular.module('yourApp')
             }
         };
     });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add the below directive as <code class="highlighter-rouge">bootswatch.directive.js</code> under <code class="highlighter-rouge">webapp/app/components/bootswatch</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>'use strict';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
 
 angular.module('yourApp')
     .directive('jhSwitchTheme', function() {
@@ -315,12 +315,11 @@ angular.module('yourApp')
             }
         };
     });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add the below controller as <code class="highlighter-rouge">bootswatch.controller.js</code> under <code class="highlighter-rouge">webapp/app/components/bootswatch</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>'use strict';
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
 
 angular.module('yourApp')
     .controller('BootswatchController', function ($scope, BootSwatchService) {
@@ -330,14 +329,13 @@ angular.module('yourApp')
             $scope.themes.unshift({name:'Default',css:''});
         });
     });
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="indexhtml">index.html</h2>
 
 <p>Add the below to the <code class="highlighter-rouge">index.html</code> file after the CSS vendor.css build task so that these are not minified and compacted by build task</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- build:css content/css/vendor.css --&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- build:css content/css/vendor.css --&gt;
 
 ...
 
@@ -349,12 +347,11 @@ angular.module('yourApp')
 ...
 
 &lt;!-- endbuild --&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add the below in footer</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="footer"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="footer"&gt;
     &lt;p translate="footer" class="pull-left"&gt;This is your footer&lt;/p&gt;
     &lt;div ng-controller="BootswatchController" class="dropup pull-right"&gt;
         &lt;a class="btn btn-default dropdown-toggle" data-toggle="dropdown"&gt;
@@ -371,26 +368,24 @@ angular.module('yourApp')
         &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Add script tags in your index.html file manually if ‘gulp inject’ fails and you receive angular errors</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- build:js({.tmp,src/main/webapp}) scripts/app.js --&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- build:js({.tmp,src/main/webapp}) scripts/app.js --&gt;
 
 ...
 
 &lt;script src="scripts/components/util/bootswatch.controller.js"&gt;&lt;/script&gt;
 &lt;script src="scripts/components/util/bootswatch.directive.js"&gt;&lt;/script&gt;
 &lt;script src="scripts/components/util/bootswatch.service.js"&gt;&lt;/script&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="appjs-only-for-oauthxauth">app.js (only for oAuth/xAuth)</h1>
 
 <p>Add exclusion to the bootswatch url in authInterceptor in <code class="highlighter-rouge">app/blocks/interceptor/auth.interceptor.js</code> if you are using OAuth or XAuth</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.factory('authInterceptor', function ($rootScope, $q, $location, localStorageService) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.factory('authInterceptor', function ($rootScope, $q, $location, localStorageService) {
     return {
         // Add authorization token to headers
         request: function (config) {
@@ -403,8 +398,7 @@ angular.module('yourApp')
             return config;
         }
     };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="screenshots">Screenshots</h1>
 

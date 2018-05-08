@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.8.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -293,27 +294,25 @@ This will trigger two queries, one to fetch entities and second for <code class=
   <li>Define new method in your Entity repository:</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Slice&lt;YourEntity&gt; findSliceBy(Pageable pageable);
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Slice&lt;YourEntity&gt; findSliceBy(Pageable pageable);
+</code></pre></div></div>
 
 <ul>
   <li>Define new static method in <code class="highlighter-rouge">PaginationUtil.java</code> located in <code class="highlighter-rouge">web/rest/util</code> package</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public static HttpHeaders generateSliceHttpHeaders(Slice&lt;?&gt; slice) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static HttpHeaders generateSliceHttpHeaders(Slice&lt;?&gt; slice) {
   HttpHeaders headers = new HttpHeaders();
   headers.add("X-Has-Next-Page", "" + slice.hasNext());
   return headers;
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>Modify REST controller to call Slice instead of Page and generate new HTTP headers.</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@GetMapping("/&lt;YourEntities&gt;")
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@GetMapping("/&lt;YourEntities&gt;")
 @Timed
 public ResponseEntity&lt;List&lt;Repo&gt;&gt; getAllRepos(Pageable pageable)
     throws URISyntaxException {
@@ -321,35 +320,31 @@ public ResponseEntity&lt;List&lt;Repo&gt;&gt; getAllRepos(Pageable pageable)
     HttpHeaders headers = PaginationUtil.generateSliceHttpHeaders(slice);
     return new ResponseEntity&lt;&gt;(slice.getContent(), headers, HttpStatus.OK);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>Define new view model in <code class="highlighter-rouge">entity.controller.js</code></li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>vm.hasNextPage = false;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vm.hasNextPage = false;
+</code></pre></div></div>
 
 <ul>
   <li>Extract HTTP header value from response and assign it to view model in</li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function onSuccess(data, headers) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function onSuccess(data, headers) {
     vm.hasNextPage = headers('X-Has-Next-Page') === "true";
     ...
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>Use view model with infinite-scroll plugin in <code class="highlighter-rouge">&lt;your-entities&gt;.html</code></li>
 </ul>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="!vm.hasNextPage"&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="!vm.hasNextPage"&gt;
+</code></pre></div></div>
 
                         </div>
                     </div>

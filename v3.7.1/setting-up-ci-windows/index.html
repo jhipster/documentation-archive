@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.7.1/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.7.1/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -287,10 +288,9 @@
 
 <p>Check that the executable is included in PATH:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>phantomjs --version
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>phantomjs --version
 2.1.1
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="installing-nodejs">Installing NodeJS</h2>
 
@@ -302,15 +302,13 @@
 
 <p>Edit <code class="highlighter-rouge">C:\nodejs\node_modules\npm\npmrc</code> to replace</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>prefix=${APPDATA}\npm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prefix=${APPDATA}\npm
+</code></pre></div></div>
 
 <p>by</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>prefix=C:\nodejs\node_modules\npm
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>prefix=C:\nodejs\node_modules\npm
+</code></pre></div></div>
 
 <p>Add the ‘C:\nodejs\node_modules\npm’ folder to the PATH environment variable, remove the one that was added by the installer: ‘C:\Users&lt;user&gt;\AppData\Roaming\npm’</p>
 
@@ -318,11 +316,10 @@
 
 <p>Add Bower and Gulp:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g bower gulp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g bower gulp
 bower --version
 gulp --version
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>It can be useful to have multiple versions of NodeJS on the same machine but <code class="highlighter-rouge">nvm</code> equivalents on Windows focus more on development environment than continuous integration. So if a job requires another version of NodeJS, change its PATH variable.</p>
 

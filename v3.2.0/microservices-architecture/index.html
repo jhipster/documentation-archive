@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.2.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.2.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -450,13 +451,12 @@ For example, adding properties in a <code class="highlighter-rouge">gateway-prod
 
 <p>Note the URL on which your JHipster Registry is deployed. Your applications must all point to that URL in their <code class="highlighter-rouge">application-prod.yml</code> file. Change that configuration to be:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>eureka:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eureka:
     instance:
         hostname: &lt;your_jhipster_registry_url&gt;.herokuapp.com
         non-secure-port: 80
         prefer-ip-address: false
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can now deply and scale the gateway(s) and microservices. The Heroku sub-generator will ask you a new question, to know the URL of your JHipster Registry: this will allow your applications can fetch their configuration on the Spring Cloud Config server.</p>
 

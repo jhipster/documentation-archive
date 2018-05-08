@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -325,7 +326,7 @@
 
 <p><em>application-dev.yml</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>spring:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
     profiles:
         active: dev
     mail:
@@ -340,8 +341,7 @@
             starttls.enable: true
             ssl.trust: smtp.gmail.com
         [...]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="2-email-config---outlookcom">2. Email Config - Outlook.com</h3>
 
@@ -349,7 +349,7 @@
 
 <p><em>application-dev.yml</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>spring:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
     profiles:
         active: dev
     mail:
@@ -364,8 +364,7 @@
             starttls.enable: true
             ssl.trust: smtp-mail.outlook.com
         [...] __Note__ : If you want to send Email from a Corporate Outlook account then set `host` as the Microsoft Exchange Server of your company, for e.g. `emea.mycompany.com`. Also set `username` as Standard Id of the system provided by the company (Domain/Username) and `password` as your system password.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong><em>Tip</em></strong> : To find your <code class="highlighter-rouge">Microsoft Exchange Server</code> : Open Outlook &gt; Click Tools &gt; Click Account Settings… &gt; Double Click on Microsoft Exchange (under Email tab) and copy the Microsoft Exchange Server address.</p>
 
@@ -375,7 +374,7 @@
 
 <p><em>application-dev.yml</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>spring:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
     profiles:
         active: dev
     mail:
@@ -395,8 +394,7 @@ jhipster:
     mail:
         from: yahoouserid@gmail.com  #Replace this field with your Gmail username.
         [...] __Note__ : For Yahoo Mail, `username` property in **spring.mail** must match the `from` property in **jhipster.mail**.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="4-email-config---zoho">4. Email Config - Zoho</h3>
 
@@ -404,7 +402,7 @@ jhipster:
 
 <p><em>application-dev.yml</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>spring:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
     profiles:
         active: dev
     mail:
@@ -419,8 +417,7 @@ jhipster:
             starttls.enable: true
             ssl.trust: smtp.zoho.com
         [...]
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="4-email-config---aws-ses">4. Email Config - AWS SES</h3>
 
@@ -428,7 +425,7 @@ jhipster:
 
 <p><em>application-dev.yml</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>spring:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
     profiles:
         active: dev
     mail:
@@ -444,8 +441,7 @@ jhipster:
             ssl.enable: true
         properties.mail.smtps:
             auth: true
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><em>Similarly you can configure any other email service. Just check the SMTP Mail Server and Server Port of your Email Service and change the above fields accordingly</em></p>
 

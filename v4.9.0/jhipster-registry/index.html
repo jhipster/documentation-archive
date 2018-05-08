@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.9.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.9.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -334,17 +335,15 @@
 
 <p>Download the WAR file, and run it as a usual JHipster application, using the profile you want to use (see the previous section about profiles). For example, to run it using a Spring Cloud Config configuration stored in the <code class="highlighter-rouge">central-config</code> directory:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./jhipster-registry-&lt;version&gt;.war --security.user.password=admin --jhipster.security.authentication.jwt.secret=secret-key --spring.cloud.config.server.native.search-locations=file:./central-config
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./jhipster-registry-&lt;version&gt;.war --security.user.password=admin --jhipster.security.authentication.jwt.secret=secret-key --spring.cloud.config.server.native.search-locations=file:./central-config
+</code></pre></div></div>
 
 <p>Note that it is important to provide a JWT secret key to the registry on startup, either via the <code class="highlighter-rouge">JHIPSTER_SECURITY_AUTHENTICATION_JWT_SECRET</code> environment variable or with arguments as shown above. Another possible way is to set this value in the <code class="highlighter-rouge">application.yml</code> file of your centralized configuration source (which is loaded on startup by all your applications including the registry).</p>
 
 <p>Similarly, to run the registry with the <code class="highlighter-rouge">prod</code> profile, adapt the arguments to your setup, for example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./jhipster-registry-&lt;version&gt;.war --spring.profiles.active=prod --security.user.password=admin --jhipster.security.authentication.jwt.secret=secret-key --spring.cloud.config.server.git.uri=https://github.com/jhipster/jhipster-registry-sample-config
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./jhipster-registry-&lt;version&gt;.war --spring.profiles.active=prod --security.user.password=admin --jhipster.security.authentication.jwt.secret=secret-key --spring.cloud.config.server.git.uri=https://github.com/jhipster/jhipster-registry-sample-config
+</code></pre></div></div>
 
 <h3 id="building-from-source">Building from source</h3>
 

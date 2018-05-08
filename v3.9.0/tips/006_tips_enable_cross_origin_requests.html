@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.9.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.9.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -283,10 +284,9 @@ One approach could be to use <a href="https://github.com/knockout/knockout">Knoc
 
 <p>In method <code class="highlighter-rouge">SecurityConfiguration.configure(HttpSecurity http)</code> , add new directives as needed in the <code class="highlighter-rouge">.and().authorizeRequests()</code> part, e.g. :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.antMatchers("/api/_search/meetings/**").permitAll()
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.antMatchers("/api/_search/meetings/**").permitAll()
 .antMatchers("/api/_search/meetings").permitAll()`
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Of course you can make use of <code class="highlighter-rouge">.hasAuthority()</code> and <code class="highlighter-rouge">.authenticated()</code> to make your thinst-client a bit more dynamic.</p>
 
@@ -296,12 +296,11 @@ One approach could be to use <a href="https://github.com/knockout/knockout">Knoc
 
 <p>In method <code class="highlighter-rouge">doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>response.addHeader("Access-Control-Allow-Origin", "*");
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>response.addHeader("Access-Control-Allow-Origin", "*");
 response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
 response.setHeader("Access-Control-Max-Age", "86400"); // 24 Hours
 response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-auth-token");
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

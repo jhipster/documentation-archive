@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -203,17 +204,16 @@
 
 <p>Add the <code class="highlighter-rouge">concurrent</code> task definition to <code class="highlighter-rouge">grunt.initConfig</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>concurrent: {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>concurrent: {
     server: [
         'sass:server' // this can be accompanied by a coffee task etc.
     ]
 },
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Replace the tasks configured in <code class="highlighter-rouge">concurrent</code> definition in the <code class="highlighter-rouge">serve</code>, <code class="highlighter-rouge">test</code>, and <code class="highlighter-rouge">build</code> tasks so that they are included in the workflow</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>grunt.registerTask('serve', [
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grunt.registerTask('serve', [
     'clean:server',
     'wiredep',
     'ngconstant:dev',
@@ -247,8 +247,7 @@ grunt.registerTask('build', [
     'usemin',
     'htmlmin'
 ]);
-</code></pre>
-</div>
+</code></pre></div></div>
 
               </div>
           </div><!-- /.row -->

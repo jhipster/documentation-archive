@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -386,19 +387,17 @@
 
 <p>If you would prefer to use a “real” browser rather than PhantomJS, the <a href="https://github.com/GoogleChrome/puppeteer">Puppeteer</a> library from Google allows you to setup a local Chromium browser. To setup Puppeteer for your project, run :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yarn add --dev puppeteer
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn add --dev puppeteer
+</code></pre></div></div>
 <p>or if using npm :</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev puppeteers
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save-dev puppeteers
+</code></pre></div></div>
 
 <p>Then edit your <code class="highlighter-rouge">karma.conf.js</code> with the following configuration :</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CHROME_BIN</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'puppeteer'</span><span class="p">).</span><span class="nx">executablePath</span><span class="p">()</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CHROME_BIN</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'puppeteer'</span><span class="p">).</span><span class="nx">executablePath</span><span class="p">()</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">config</span><span class="p">.</span><span class="nx">set</span><span class="p">({</span>
+  <span class="nx">config</span><span class="p">.</span><span class="kd">set</span><span class="p">({</span>
     <span class="p">...</span>
     <span class="na">customLaunchers</span><span class="p">:</span> <span class="p">{</span>
         <span class="na">ChromiumHeadlessNoSandbox</span><span class="p">:</span> <span class="p">{</span>
@@ -417,8 +416,7 @@
     <span class="p">...</span>
   <span class="p">})</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Limitations:</strong> Depending on your environment, you might encounter some issues to make Puppeteer and the locally downloaded Chromium binary work, in this case refer to the <a href="https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md">Puppeteer troubleshooting documentation</a> for instructions. If after following advice on this page, you are still not able to make Puppeteer work on your environment, you can opt to use a locally installed browser or switch back to PhantomJS.</p>
 

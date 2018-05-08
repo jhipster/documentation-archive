@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.11.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.11.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -274,13 +275,12 @@
 
 <p>Modify your server directive with the tomcat parameters as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server:
     port: 8080
     tomcat:
         remote_ip_header: x-forwarded-for
         protocol_header: x-forwarded-proto
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="modify-your-securityconfiguration-class">Modify your SecurityConfiguration class</h2>
 
@@ -288,30 +288,26 @@
 
 <p>In the class</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+</code></pre></div></div>
 
 <p>You should see the member variable:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Inject
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Inject
 private Environment env;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>To enforce HTTPS, look for the method</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Override
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override
 protected void configure(HttpSecurity http) throws Exception {
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And add the line:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Enforce HTTPS except on dev
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Enforce HTTPS except on dev
 if (env.acceptsProfiles("!dev"))http.requiresChannel().anyRequest().requiresSecure();
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then just package and deploy as normal!</p>
 

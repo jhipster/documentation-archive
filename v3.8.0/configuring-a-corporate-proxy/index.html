@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.8.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.8.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -289,53 +290,48 @@
 
 <p>Use these commands:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm config set proxy http://username:password@host:port
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm config set proxy http://username:password@host:port
 npm config set https-proxy http://username:password@host:port
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Or you can edit directly your <code class="highlighter-rouge">~/.npmrc</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>proxy=http://username:password@host:port
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proxy=http://username:password@host:port
 https-proxy=http://username:password@host:port
 https_proxy=http://username:password@host:port
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="git-configuration">Git configuration</h2>
 
 <p>Use these commands:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>git config --global http.proxy http://username:password@host:port
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global http.proxy http://username:password@host:port
 git config --global https.proxy http://username:password@host:port
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Or you can edit directly your <code class="highlighter-rouge">~/.gitconfig</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[http]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[http]
         proxy = http://username:password@host:port
 [https]
         proxy = http://username:password@host:port
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="bower-configuration">Bower configuration</h2>
 
 <p>Edit your <code class="highlighter-rouge">~/.bowerrc</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"proxy"</span><span class="p">:</span><span class="s2">"http://username:password@host:port"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"https-proxy"</span><span class="p">:</span><span class="s2">"http://username:password@host:port"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "proxy":"http://username:password@host:port",
+    "https-proxy":"http://username:password@host:port"
+}
+</code></pre></div></div>
 
 <h2 id="maven-configuration">Maven configuration</h2>
 
 <p>Edit the <code class="highlighter-rouge">proxies</code> session in your <code class="highlighter-rouge">~/.m2/settings.xml</code> file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;proxies&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;proxies&gt;
     &lt;proxy&gt;
         &lt;id&gt;id&lt;/id&gt;
         &lt;active&gt;true&lt;/active&gt;
@@ -347,8 +343,7 @@ git config --global https.proxy http://username:password@host:port
         &lt;nonProxyHosts&gt;local.net|some.host.com&lt;/nonProxyHosts&gt;
     &lt;/proxy&gt;
 &lt;/proxies&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="gradle-configuration">Gradle configuration</h2>
 
@@ -356,7 +351,7 @@ git config --global https.proxy http://username:password@host:port
 
 <p>If you want to set these properties globally then add it in <code class="highlighter-rouge">USER_HOME/.gradle/gradle.properties</code> file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>## Proxy setup
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Proxy setup
 systemProp.proxySet="true"
 systemProp.http.keepAlive="true"
 systemProp.http.proxyHost=host
@@ -372,8 +367,7 @@ systemProp.https.proxyUser=username
 systemProp.https.proxyPassword=password
 systemProp.https.nonProxyHosts=local.net|some.host.com
 ## end of proxy setup
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="docker">Docker</h2>
 
@@ -390,12 +384,11 @@ to configure the proxy.</p>
 
 <p>You can create your docker-machine with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-machine create -d virtualbox \
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-machine create -d virtualbox \
     --engine-env HTTP_PROXY=http://username:password@host:port \
     --engine-env HTTPS_PROXY=http://username:password@host:port \
     default
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Or you can edit the file <code class="highlighter-rouge">~/.docker/machine/machines/default/config.json</code>.</p>
 

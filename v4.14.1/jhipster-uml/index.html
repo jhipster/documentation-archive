@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.1/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.1/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -385,19 +386,17 @@
 <h1 id="installation"><a name="install"></a>Installation</h1>
 <p>To install JHipster UML simply use the command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>   npm install -g jhipster-uml
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   npm install -g jhipster-uml
    # or
    yarn global add jhipster-uml
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If, however, you don’t want to install the latest version globally because it doesn’t match your version of the generator (see below) or if you want it contained locally, use this command instead:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    npm install jhipster-uml --save-dev
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    npm install jhipster-uml --save-dev
     # or
     yarn add jhipster-uml --dev
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If you want the ‘bleeding edge’ (almost perfectly safe to use) version, you can clone our git repo from <a href="https://github.com/jhipster/jhipster-uml">our GitHub project</a>:</p>
 
@@ -479,11 +478,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship OneToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship OneToMany {
   One{many} to Many{one(&lt;otherEntityField&gt;)}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -499,11 +497,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship ManyToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship ManyToMany {
   Owner{notOwner(&lt;otherEntityField&gt;)} to NotOwner{owner}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -584,16 +581,14 @@ The options described in the help can be used in the both but the commande line 
 <h3 id="a-concrete-example">A concrete example</h3>
 
 <p>jumlfile content:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
-  <span class="s2">"db"</span><span class="err">:</span> <span class="s2">"sql"</span><span class="p">,</span>
-  <span class="s2">"force"</span><span class="err">:</span> <span class="s2">"true"</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s2">"db"</span><span class="p">:</span> <span class="s2">"sql"</span><span class="p">,</span>
+  <span class="s2">"force"</span><span class="p">:</span> <span class="s2">"true"</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Call:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster-uml --no-force
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster-uml --no-force
+</code></pre></div></div>
 <p>You Will have the following executed options:</p>
 <ul>
   <li>db : sql</li>

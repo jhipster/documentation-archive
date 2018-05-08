@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -273,21 +274,18 @@
 
 <p>JHipster provides a specific Docker Compose configuration for SonarQube (<a href="/documentation-archive/v4.0.0/docker-compose/">here is the JHipster Docker Compose documentation</a>) that provides an out-of-the box SonarQube instance. At the root of your project, please run:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker-compose -f src/main/docker/sonar.yml up -d
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose -f src/main/docker/sonar.yml up -d
+</code></pre></div></div>
 
 <p>If you use Maven, it has been automatically configured:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./mvnw clean test sonar:sonar
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./mvnw clean test sonar:sonar
+</code></pre></div></div>
 
 <p>If you use Gradle, it has also been automatically configured:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./gradlew clean test sonarqube
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew clean test sonarqube
+</code></pre></div></div>
 
 <p>Once the analysis completes, it will be available on the SonarQube dashboard, which by default is available on <a href="http://127.0.0.1:9000/">http://127.0.0.1:9000/</a>.</p>
 

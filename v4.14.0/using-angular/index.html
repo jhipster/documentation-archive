@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -346,7 +347,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>Here is the main project structure:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>webapp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webapp
 ├── app                               - Your application
 │   ├── account                       - User account management UI
 │   ├── admin                         - Administration UI
@@ -368,12 +369,11 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 ├── favicon.ico                       - Fav icon
 ├── index.html                        - Index page
 ├── robots.txt                        - Configuration for bots and Web crawlers
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Using the <a href="/documentation-archive/v4.14.0/creating-an-entity/">entity sub-generator</a> to create a new entity called <code class="highlighter-rouge">Foo</code> generates the following front-end files under <code class="highlighter-rouge">src/main/webapp</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>webapp
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>webapp
 ├── app
 │   ├── entities
 │       ├── foo                                    - CRUD front-end for the Foo entity
@@ -396,8 +396,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 │   │   ├── foo.json                               - English translation of Foo name, fields, ...
 │   ├── fr                                         - French translations
 │   │   ├── foo.json                               - French translation of Foo name, fields, ...
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Please note that the default language translations would be based on what you have choosen during app generation. ‘en’ and ‘fr’ are shown here only for demonstration.</p>
 
@@ -411,7 +410,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>In the example below, the ‘sessions’ state is designed to be accessed only by authenticated users who have <code class="highlighter-rouge">ROLE_USER</code> authority:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>export const sessionsRoute: Route = {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export const sessionsRoute: Route = {
     path: 'sessions',
     component: SessionsComponent,
     data: {
@@ -420,8 +419,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
     },
     canActivate: [UserRouteAccessService]
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Once those authorities are defined in the router, they can be used through <code class="highlighter-rouge">jhiHasAnyAuthority</code> directive within its 2 variants based on type of argument:</p>
 
@@ -432,15 +430,13 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>For example, the following text will only be displayed to users having the <code class="highlighter-rouge">ROLE_ADMIN</code> authority:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1 *jhiHasAnyAuthority="'ROLE_ADMIN'"&gt;Hello, admin user&lt;/h1&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1 *jhiHasAnyAuthority="'ROLE_ADMIN'"&gt;Hello, admin user&lt;/h1&gt;
+</code></pre></div></div>
 
 <p>For example, the following text will only be displayed to users having one of the <code class="highlighter-rouge">ROLE_ADMIN</code> or <code class="highlighter-rouge">ROLE_USER</code> authorities:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1 *jhiHasAnyAuthority="['ROLE_ADMIN', 'ROLE_USER']"&gt;Hello, dear user&lt;/h1&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1 *jhiHasAnyAuthority="['ROLE_ADMIN', 'ROLE_USER']"&gt;Hello, dear user&lt;/h1&gt;
+</code></pre></div></div>
 
 <p><em>Please note</em> that those directives only show or hide HTML components on the client-side, and that you also need to secure your code on the server-side!</p>
 
@@ -468,7 +464,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
 
 <p>The shorthand methods <code class="highlighter-rouge">success</code>, <code class="highlighter-rouge">info</code>, <code class="highlighter-rouge">warning</code> and <code class="highlighter-rouge">error</code> will have a default timeout of 5 seconds, which can be configured:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>this.alerts.push(
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this.alerts.push(
     this.alertService.addAlert(
         {
             type: 'danger',
@@ -480,8 +476,7 @@ When you generate an entity the route names, route URLs and REST API endpoint UR
         this.alerts
     )
 );
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="using-angular-cli">Using Angular CLI</h2>
 
@@ -499,9 +494,8 @@ Angular CLI and JHipster can be used in parallel for development, and both have 
 
 <h3 id="usage">Usage</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>ng <span class="nb">help</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng <span class="nb">help</span>
+</code></pre></div></div>
 
 <h3 id="building">Building</h3>
 
@@ -511,7 +505,7 @@ Angular CLI and JHipster can be used in parallel for development, and both have 
 
 <p>You can use the <code class="highlighter-rouge">ng generate</code> (or just <code class="highlighter-rouge">ng g</code>) command to generate Angular components:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>ng generate component my-new-component
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng generate component my-new-component
 ng g component my-new-component <span class="c"># using the alias</span>
 
 <span class="c"># Components support relative path generation</span>
@@ -521,8 +515,7 @@ ng g component new-cmp
 <span class="c"># but if you were to run</span>
 ng g component ../newer-cmp
 <span class="c"># your component will be generated in src/app/newer-cmp</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>You can find all possible blueprints in the table below:</p>
 
 <table>
@@ -576,9 +569,8 @@ ng g component ../newer-cmp
 
 <p>For consistency purpose on JHipster application, tests execution are only available through the <code class="highlighter-rouge">yarn</code> command:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn <span class="nb">test</span>
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn <span class="nb">test</span>
+</code></pre></div></div>
 
 <h3 id="i18n">i18n</h3>
 
@@ -588,17 +580,15 @@ ng g component ../newer-cmp
 
 <p>If you prefer to use Angular CLI to develop you application, you can run your server directly by using its dedicated command.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>ng serve
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng serve
+</code></pre></div></div>
 
 <p>By using it, it will compile your Angular application and allow you to access it on <code class="highlighter-rouge">http://localhost:4200</code>. However your backend will not be available from it by default.</p>
 
 <p>To use your local backend server, use:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>ng serve --proxy-conf proxy.conf.json
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ng serve <span class="nt">--proxy-conf</span> proxy.conf.json
+</code></pre></div></div>
 
 <p>You will then be able to access your API.</p>
 

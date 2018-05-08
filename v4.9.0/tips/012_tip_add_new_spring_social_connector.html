@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.9.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.9.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -345,7 +346,7 @@
 
 <p>Add your dependency in the <code class="highlighter-rouge">pom.xml</code> file. Add the version of the dependency in <code class="highlighter-rouge">&lt;properties&gt;&lt;/properties&gt;</code> section.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;!-- Add in &lt;properties&gt;&lt;/properties&gt; section --&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Add in &lt;properties&gt;&lt;/properties&gt; section --&gt;
 &lt;spring-social-something.version&gt;1.1.2.RELEASE&lt;/spring-social-something.version&gt;
 
 &lt;!-- Add in &lt;dependecies&gt;&lt;/dependecies&gt; section --&gt;
@@ -354,25 +355,23 @@
     &lt;artifactId&gt;spring-social-something&lt;/artifactId&gt;
     &lt;version&gt;${spring-social-something.version}&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="applicationyml">application.yml</h3>
 
 <p>Add in the <code class="highlighter-rouge">application.yml</code> under the <code class="highlighter-rouge">social</code> section the preference.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># In social section
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># In social section
 something:
     clientId: xxx
     clientSecret: xxx
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="socialconfigurationjava">SocialConfiguration.java</h3>
 
 <p>Add in the <code class="highlighter-rouge">SocialConfiguration.java</code> the connector configuration.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>// Something configuration
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Something configuration
 String somethingClientId = environment.getProperty("spring.social.something.clientId");
 String somethingClientSecret = environment.getProperty("spring.social.something.clientSecret");
 if (somethingClientId != null &amp;&amp; somethingClientSecret != null) {
@@ -386,8 +385,7 @@ if (somethingClientId != null &amp;&amp; somethingClientSecret != null) {
 } else {
     log.error("Cannot configure SomethingConnectionFactory id or secret null");
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="client-side">Client side</h2>
 
@@ -395,7 +393,7 @@ if (somethingClientId != null &amp;&amp; somethingClientSecret != null) {
 
 <p>Add your new provider in the service.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>socialService.getProviderSetting = function (provider) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>socialService.getProviderSetting = function (provider) {
     switch(provider) {
         case 'google': return 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email';
         case 'facebook': return 'public_profile,email';
@@ -404,28 +402,26 @@ if (somethingClientId != null &amp;&amp; somethingClientSecret != null) {
         default: return 'Provider setting not defined';
     }
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="loginhtml--registerhtml">login.html &amp; register.html</h3>
 
 <p>Add your button in the files <code class="highlighter-rouge">login.html</code> &amp; <code class="highlighter-rouge">register.html</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="col-md-4"&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="col-md-4"&gt;
     &lt;br/&gt;
     &lt;jh-social ng-provider="google"&gt;&lt;/jh-social&gt;
     &lt;jh-social ng-provider="facebook"&gt;&lt;/jh-social&gt;
     &lt;jh-social ng-provider="twitter"&gt;&lt;/jh-social&gt;
     &lt;jh-social ng-provider="something"&gt;&lt;/jh-social&gt;&lt;!-- add your button --&gt;
 &lt;/div&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="maincss">main.css</h3>
 
 <p>Add the style of your social sign in button.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.jh-btn-something {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.jh-btn-something {
     background-color: #3b5998;
     border-color: rgba(0, 0, 0, 0.2);
     color: #fff;
@@ -436,8 +432,7 @@ if (somethingClientId != null &amp;&amp; somethingClientSecret != null) {
     border-color: rgba(0, 0, 0, 0.2);
     color: #fff;
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

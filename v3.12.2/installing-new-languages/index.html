@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.2/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.2/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -333,21 +334,20 @@
   <li>
     <p>Add the languege code <code class="highlighter-rouge">new_lang</code> to the <code class="highlighter-rouge">LANGUAGES</code> constant defined in <code class="highlighter-rouge">src/main/webapp/app/components/language/language.constants.js</code></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>.constant('LANGUAGES', [
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.constant('LANGUAGES', [
     'en',
     'fr',
     'new_lang'
     // jhipster-needle-i18n-language-constant - JHipster will add/remove languages in this array
 ]
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>In the <code class="highlighter-rouge">src/main/resources/i18n</code> folder, copy the <code class="highlighter-rouge">messages_en.properties</code> file to <code class="highlighter-rouge">messages_new_lang.properties</code> (this is where the server-side translations are stored)</li>
   <li>Translate all keys in the <code class="highlighter-rouge">messages_new_lang.properties</code> file</li>
   <li>
     <p>Add the new language’s name in the function of <code class="highlighter-rouge">filter('findLanguageFromKey')</code> in the <code class="highlighter-rouge">src/main/webapp/app/components/language/language.filter.js</code> file</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>function findLanguageFromKeyFilter(lang) {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function findLanguageFromKeyFilter(lang) {
     return {
         'ca': 'Català',
         'da': 'Dansk',
@@ -379,8 +379,7 @@
         'zh-tw': '繁體中文'
     }[lang];
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ol>
 

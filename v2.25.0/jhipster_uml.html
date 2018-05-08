@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -336,11 +337,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship OneToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship OneToMany {
   One{many} to Many{one(&lt;otherEntityField&gt;)}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -356,11 +356,10 @@ This is an example of such an association:</p>
   <li>
     <p>JDL</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>relationship ManyToMany {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship ManyToMany {
   Owner{notOwner(&lt;otherEntityField&gt;)} to NotOwner{owner}
 }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -797,11 +796,10 @@ You can do two things with it: declare entities with their attributes, and decla
 
 <p>The entity declaration is done as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity &lt;entity name&gt; {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity &lt;entity name&gt; {
   &lt;field name&gt; &lt;type&gt; [&lt;validation&gt;*]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>
@@ -822,17 +820,15 @@ You can do two things with it: declare entities with their attributes, and decla
 
 <p>Here’s an example of a field declaration with validations:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>email String required maxlength(30) minlength(5) pattern("[\\w]*@[a-zA-Z]*.com"),
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>email String required maxlength(30) minlength(5) pattern("[\\w]*@[a-zA-Z]*.com"),
+</code></pre></div></div>
 
 <p>The relationships declaration is done as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>relationship (OneToMany | ManyToOne | OneToOne | ManyToMany) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship (OneToMany | ManyToOne | OneToOne | ManyToMany) {
   &lt;from entity&gt;[{&lt;relationship name&gt;}] to &lt;to entity&gt;[{&lt;relationship name&gt;}]
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li>
@@ -853,7 +849,7 @@ You can do two things with it: declare entities with their attributes, and decla
 
 <p>A Book has one Author, an Author has several Books.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Book {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Book {
   title String required,
   description String required minlength(5) maxlength(50),
   publicationDate LocalDate,
@@ -866,8 +862,7 @@ entity Author {
 relationship OneToMany {
   Author{book} to Book{writer(name)}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="relationships-1">Relationships</h3>
 <p>The relationship OneToMany A to B is equivalent to the relationship ManyToOne B to A, you only need to make one of them.</p>
@@ -881,22 +876,20 @@ relationship OneToMany {
   <li>
     <p>Declare an Enum where you want in the file:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  enum Language {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  enum Language {
     FRENCH, ENGLISH, SPANISH
   }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>In an entity, add field with the Enum as a type:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  entity Book {
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  entity Book {
     title String required,
     description String,
     language Language
   }
-</code></pre>
-    </div>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -929,7 +922,7 @@ relationship OneToMany {
 <p>As of v1.5.0 of JHipster-UML and v2.22.0 of JHipster, it is possible to add comments to JDL files.<br />
 Just like in Java, this example demonstrates how to add comments:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/**
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
  * Class comments.
  * @author The JHipster-UML team.
  */
@@ -953,8 +946,7 @@ relationship OneToMany {
    */
   MySecondEntity{myEntity}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>These comments will later be added as Javadoc comments by JHipster.</p>
 
@@ -966,70 +958,64 @@ relationship OneToMany {
 
 <p>A bidirectional relationship where the Car has a Driver, and the Driver has a Car.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Driver {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver {}
 entity Car {}
 relationship OneToOne {
   Car{driver} to Driver{car}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A Unidirectional example where a Citizen has a Passport, but the Passport has no access to sole its owner.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Citizen {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Citizen {}
 entity Passport {}
 relationship OneToOne {
   Citizen{passport} to Passport
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="one-to-many-1">One-to-Many</h3>
 
 <p>A bidirectional relationship where the Owner has none, one or more Car objects, and the Car knows its owner.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner {}
 entity Car {}
 relationship OneToMany {
   Owner{car} to Car{owner}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Unidirectional versions for this relationship are not supported by JHipster, but it would look like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner {}
 entity Car {}
 relationship OneToMany {
   Owner{car} to Car
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="many-to-one-1">Many-to-One</h3>
 
 <p>The reciprocal version of One-to-Many relationships is the same as previously.
 The unidirectional version where the Car knows its owners:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner {}
 entity Car {}
 relationship ManyToOne {
   Car{owner} to Car
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="many-to-many-1">Many-to-Many</h3>
 
 <p>Finally, in this example we have the Car that knows of its drivers, and the Driver object can access its cars.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Driver {}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver {}
 entity Car {}
 relationship ManyToMany {
   Car{driver} to Driver{car}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h1 id="annexes"><a name="annexes"></a>Annexes</h1>
 

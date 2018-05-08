@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.10.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.10.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -301,7 +302,7 @@
 <p>After this entity is created, let’s call it UserExtra, the best way to handle its id is by mapping it to the JHI_User’s one. This way, our UserExtra will have the same id as the User’s, accelerating the different requests.
 To achieve this, you will need to use the @MapsId annotation :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public class UserExtra implements Serializable {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class UserExtra implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -317,8 +318,7 @@ To achieve this, you will need to use the @MapsId annotation :</p>
     ...
 
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Note that the @GeneratedValue annotation on the id needs to be removed.</p>
 
@@ -328,9 +328,8 @@ To achieve this, you will need to use the @MapsId annotation :</p>
 
 <p>Nothing easier than that, just update webapp/app/account/register/register.html to add an input field bound to the variable already used to store the basic information (vm.registerAccount) :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;input class="form-control" id="phone" ng-model="vm.registerAccount.phone" placeholder="global.form.phone.placeholder" /&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input class="form-control" id="phone" ng-model="vm.registerAccount.phone" placeholder="global.form.phone.placeholder" /&gt;
+</code></pre></div></div>
 
 <h2 id="updating-manageduservm">Updating ManagedUserVM</h2>
 
@@ -339,7 +338,7 @@ Its only parameter is a ManagedUserVM object containing the information initiall
 
 <p>This ManagedUserVM class located in web/rest/vm has to be updated as well so that it holds the phone number sent by the client. The only thing to do here is adding the phone number attribute and its getter :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public class ManagedUserVM extends UserDTO {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class ManagedUserVM extends UserDTO {
 
     // Default attributes omitted for brevity
 
@@ -352,8 +351,7 @@ Its only parameter is a ManagedUserVM object containing the information initiall
     }
 
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="updating-the-registeraccount-function-from-accountresource">Updating the registerAccount() function from AccountResource</h2>
 
@@ -361,7 +359,7 @@ Its only parameter is a ManagedUserVM object containing the information initiall
 
 <p>To do so, we are going to add the phone parameter to the createUser() function from UserService. But first, add this parameter where this function is called in registerAccount() :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public ResponseEntity&lt;?&gt; registerAccount(@Valid @RequestBody ManagedUserVM managedUserVM) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public ResponseEntity&lt;?&gt; registerAccount(@Valid @RequestBody ManagedUserVM managedUserVM) {
 
     HttpHeaders textPlainHeaders = new HttpHeaders();
     textPlainHeaders.setContentType(MediaType.TEXT_PLAIN);
@@ -382,8 +380,7 @@ Its only parameter is a ManagedUserVM object containing the information initiall
             })
     );
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="updating-the-createuser-function-from-userservice">Updating the createUser() function from UserService</h2>
 
@@ -391,7 +388,7 @@ Its only parameter is a ManagedUserVM object containing the information initiall
 
 <p>Do not forget to inject the UserExtra repositories :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@Inject
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Inject
 private UserExtraRepository userExtraRepository;
 
 @Inject
@@ -433,8 +430,7 @@ public User createUser(String login, String password, String firstName, String l
 
     return newUser;
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And it’s done !</p>
 

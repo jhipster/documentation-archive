@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.5.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.5.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -405,12 +406,11 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 
 <p>To enable rate limiting, open up the <code class="highlighter-rouge">application-dev.yml</code> or <code class="highlighter-rouge">application-prod.yml</code> file and set <code class="highlighter-rouge">enabled</code> to <code class="highlighter-rouge">true</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster:
     gateway:
         rate-limiting:
             enabled: true
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The Cassandra cluster needs to be set up and configured. If you use JHipster’s Docker Compose configuration (available in <code class="highlighter-rouge">src/main/docker</code>), this should all work automatically, but here are the detailed steps if you want to set up your cluster manually:</p>
 
@@ -432,21 +432,19 @@ get the <code class="highlighter-rouge">foos</code> resource served by microserv
 
 <p>By default all registered microservices are available through the gateway. If you want to exclude a specific API from being exposed through the gateway, you can use the gateway’s specific access control policy filter. It is configurable using the <code class="highlighter-rouge">jhipster.gateway.authorized-microservices-endpoints</code> key in the <code class="highlighter-rouge">application-*.yml</code> files:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster:
     gateway:
         authorized-microservices-endpoints: # Access Control Policy, if left empty for a route, all endpoints will be accessible
             app1: /api,/v2/api-docs # recommended dev configuration
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>For example, if you only want the <code class="highlighter-rouge">/api/foo</code> endpoint of microservice <code class="highlighter-rouge">bar</code> to be available:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster:
     gateway:
         authorized-microservices-endpoints:
             bar: /api/foo
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="-the-jhipster-registry"><a name="registry"></a> The JHipster Registry</h2>
 
@@ -604,13 +602,12 @@ For example, adding properties in a <code class="highlighter-rouge">gateway-prod
 
 <p>Note the URL on which your JHipster Registry is deployed. Your applications must all point to that URL in their <code class="highlighter-rouge">application-prod.yml</code> file. Change that configuration to be:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>eureka:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eureka:
     instance:
         hostname: &lt;your_jhipster_registry_url&gt;.herokuapp.com
         non-secure-port: 80
         prefer-ip-address: false
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can now deploy and scale the gateway(s) and microservices. The Heroku sub-generator will ask you a new question, to know the URL of your JHipster Registry: this will allow your applications to fetch their configuration on the Spring Cloud Config server.</p>
 

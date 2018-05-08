@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.8.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.8.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -410,9 +411,9 @@
 
 <p>One workaround is rendering a static public key from the keytool like this:</p>
 
-<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>keytool -list -rfc --keystore keystore.jks | openssl x509 -inform pem -pubkey
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>keytool <span class="nt">-list</span> <span class="nt">-rfc</span> <span class="nt">--keystore</span> keystore.jks | openssl x509 <span class="nt">-inform</span> pem <span class="nt">-pubkey</span>
 Keystore-Password:  password
------BEGIN PUBLIC KEY-----
+<span class="nt">-----BEGIN</span> PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhhQiXi8xvkNnDGjOHkVv
 wo5TJdW2ITlQV+6Ke5b4EA184YsDCYmRl61KpqdJAWSYM0gfj2N1mSArTLCrG951
 S8LJUofr7+bqL8Dn5jBQ+wTA4RSGykRxZua0V1KeQBmSgBFI+KDWMqbfVpuje8mF
@@ -420,8 +421,8 @@ qyxF5tGutoLXCTQdr0+LC9rMbW8g3hck9VaEuIUGaPKDN+i0vp8Jy/QtXYz8Jccx
 0To2BRSjs97wt/3Uhz0rzMA+l0Q0yGcmUbVH/fzOPyXRwhuoDM+qmQZQCrl38drm
 5/RuoYY9zR0LEjD9BnmJTe1Py5/CInpDz4Brs87xqLHttRLqKSWai0VZjFu0bgek
 KQIDAQAB
------END PUBLIC KEY-----
------BEGIN CERTIFICATE-----
+<span class="nt">-----END</span> PUBLIC KEY-----
+<span class="nt">-----BEGIN</span> CERTIFICATE-----
 MIIDdzCCAl+gAwIBAgIEctm4NzANBgkqhkiG9w0BAQsFADBsMQkwBwYDVQQGEwAx
 CTAHBgNVBAgTADEJMAcGA1UEBxMAMRwwGgYDVQQKExNjb20ubXljb21wYW55Lm15
 YXBwMRQwEgYDVQQLEwtEZXZlbG9wbWVudDEVMBMGA1UEAxMMSmF2YSBIaXBzdGVy
@@ -441,13 +442,12 @@ DQEBCwUAA4IBAQAv8OLwsGlf1z8lqSHgPqjudU9rc6OCkcTIo4c9L2JmKd6c3AVm
 18G6TchSwJZl3mwTDmC5Ys2AGVlOOteYW/giLZlpQmKdB0zbR5CzlFrViDHUSrU9
 A6WCM2t6MbwdfGMBKfD/zjTLTZoFCb6nI3xT5sbpIDetqQZm1ZJyUB5kCEv9ztBB
 fOheJ7Om3so/wKygSrYgmmhEvdNcccPlTbPa
------END CERTIFICATE-----
-</code></pre>
-</div>
+<span class="nt">-----END</span> CERTIFICATE-----
+</code></pre></div></div>
 
 <p>This public key (including dashed lines) must be copied as “public.cert” into the resource folder of the microservice. Then, instead of configuring the <code class="highlighter-rouge">JwtAccessTokenConverter</code> with load balanced requests to the UAA server, the Beans in <code class="highlighter-rouge">MicroserviceSecurityConfiguration</code> have to be configured the following way:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
     <span class="nd">@Bean</span>
     <span class="kd">public</span> <span class="n">TokenStore</span> <span class="nf">tokenStore</span><span class="o">()</span> <span class="o">{</span>
@@ -468,8 +468,7 @@ fOheJ7Om3so/wKygSrYgmmhEvdNcccPlTbPa
         <span class="k">return</span> <span class="n">converter</span><span class="o">;</span>
 
     <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The benefit of this approach is that the microservices now have no need of ever interacting with the UAA server, to be sure that client requests are valid authorized requests. Since there is no initial communication between these applications, it’s also a bit more secure.</p>
 
@@ -523,17 +522,16 @@ fOheJ7Om3so/wKygSrYgmmhEvdNcccPlTbPa
 
 <p>So for inter-service-communication, Feign clients are very helpful. When one service needs a REST client to access an “other-service”, serving some “other-resource”, it’s possible to declare an interface like:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@FeignClient</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"other-service"</span><span class="o">)</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@FeignClient</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"other-service"</span><span class="o">)</span>
 <span class="kd">interface</span> <span class="nc">OtherServiceClient</span> <span class="o">{</span>
   <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"/api/other-resources"</span><span class="o">)</span>
   <span class="n">List</span><span class="o">&lt;</span><span class="n">OtherResource</span><span class="o">&gt;</span> <span class="nf">getResourcesFromOtherService</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And then, using it via dependency injection, like:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Service</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Service</span>
 <span class="kd">class</span> <span class="nc">SomeService</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="n">OtherServiceClient</span> <span class="n">otherServiceClient</span><span class="o">;</span>
 
@@ -542,8 +540,7 @@ fOheJ7Om3so/wKygSrYgmmhEvdNcccPlTbPa
     <span class="k">this</span><span class="o">.</span><span class="na">otherServiceClient</span> <span class="o">=</span> <span class="n">otherServiceClient</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Similar to Spring Data JPA, there is no need to implement that interface. But you may do so, if using Hystrix. Implemented classes of Feign client interfaces act as fallback implementations.</p>
 
@@ -554,28 +551,25 @@ fOheJ7Om3so/wKygSrYgmmhEvdNcccPlTbPa
 <p>Considering the above Feign client should be used to an “other-service”, which
 serves protected resources, the interface must be annotated like this:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@AuthorizedFeignClient</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"other-service"</span><span class="o">)</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@AuthorizedFeignClient</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"other-service"</span><span class="o">)</span>
 <span class="kd">interface</span> <span class="nc">OtherServiceClient</span> <span class="o">{</span>
   <span class="nd">@RequestMapping</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"/api/other-resources"</span><span class="o">)</span>
   <span class="n">List</span><span class="o">&lt;</span><span class="n">OtherResource</span><span class="o">&gt;</span> <span class="nf">getResourcesFromOtherService</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>note</strong>: Due to a bug in Spring Cloud, it’s currently not possible to use a different
 notation for the service name, as</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nd">@AuthorizedFeignClient</span><span class="o">(</span><span class="s">"other-service"</span><span class="o">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>or</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nd">@AuthorizedFeignClient</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">"other-service"</span><span class="o">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The REST client automatically gets authorized with your UAA server, when there is no valid access token stored in memory.</p>
 
@@ -591,7 +585,7 @@ notation for the service name, as</p>
 
 <p>For the Feign client used above, this is how it would look like:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nd">@Component</span>
 <span class="kd">class</span> <span class="nc">TestOtherClient</span> <span class="kd">implements</span> <span class="n">OtherClient</span> <span class="o">{</span>
   <span class="n">List</span><span class="o">&lt;</span><span class="n">OtherResource</span><span class="o">&gt;</span> <span class="nf">getResourcesFromOtherService</span><span class="o">()</span> <span class="o">{</span>
@@ -603,8 +597,7 @@ notation for the service name, as</p>
     <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Since declaring that implementation as a usual Spring component, all Beans injecting a client will inject this implementation, so you can focus on the logic of these Beans.</p>
 
@@ -620,7 +613,7 @@ notation for the service name, as</p>
 
 <h4 id="1-enabling-security-in-the-mock-spring-mvc-context">1. Enabling security in the mock Spring MVC context.</h4>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
     <span class="nd">@PostConstruct</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">MockitoAnnotations</span><span class="o">.</span><span class="na">initMocks</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
@@ -630,8 +623,7 @@ notation for the service name, as</p>
             <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 
     <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong><em>In this test no single instance of the controller has to be mocked, but the
 application’s <code class="highlighter-rouge">WebApplicationContext</code></em></strong></p>
@@ -651,14 +643,13 @@ context. <code class="highlighter-rouge">@WithMockOAuth2Authentication</code> ca
 
 <p>Here is an example:</p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nd">@Test</span>
 <span class="nd">@WithMockOAuth2Authentication</span><span class="o">(</span><span class="n">roles</span> <span class="o">=</span> <span class="o">{</span><span class="s">"USER"</span><span class="o">})</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testInsufficientRoles</span><span class="o">()</span> <span class="o">{</span>
   <span class="n">restMockMvc</span><span class="o">.</span><span class="na">peform</span><span class="o">(</span><span class="n">get</span><span class="o">(</span><span class="s">"url/requiring/ADMIN/role"</span><span class="o">)).</span><span class="na">andExpect</span><span class="o">(</span><span class="n">status</span><span class="o">().</span><span class="na">isUnauthorized</span><span class="o">());</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 
                         </div>

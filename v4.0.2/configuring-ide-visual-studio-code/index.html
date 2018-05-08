@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.2/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.2/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -321,20 +322,20 @@
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
     <span class="c1">// Configure glob patterns for excluding files and folders.</span>
-    <span class="s2">"files.exclude"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"**/.git"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/.idea"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/.mvn"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/.svn"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/.hg"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/.DS_Store"</span><span class="err">:</span> <span class="kc">true</span>
+    <span class="s2">"files.exclude"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"**/.git"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/.idea"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/.mvn"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/.svn"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/.hg"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/.DS_Store"</span><span class="p">:</span> <span class="kc">true</span>
     <span class="p">},</span>
     <span class="c1">// Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.</span>
-    <span class="s2">"search.exclude"</span><span class="err">:</span> <span class="p">{</span>
-        <span class="s2">"**/node"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/node_modules"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/bower_components"</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">"**/target"</span><span class="err">:</span> <span class="kc">true</span>
+    <span class="s2">"search.exclude"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"**/node"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/node_modules"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/bower_components"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="s2">"**/target"</span><span class="p">:</span> <span class="kc">true</span>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 

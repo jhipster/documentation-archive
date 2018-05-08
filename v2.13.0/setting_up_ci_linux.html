@@ -48,6 +48,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -160,13 +161,12 @@
 
 <p>https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+RedHat+distributions</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 sudo rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 sudo yum install jenkins
 
 sudo service jenkins start
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A <code class="highlighter-rouge">jenkins</code> user has been created, its home directory is <code class="highlighter-rouge">/var/lib/jenkins</code></p>
 
@@ -197,33 +197,32 @@ sudo service jenkins start
 <p>Jenkins NodeJS plugin	0.2.1 has an issue, it proposes 0.10.33 as latest 0.10 version available from nodejs.org while on the site there is also 0.
 10.35, so if you want to use latest version you’ll have to install manually:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># specify which version we want</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># specify which version we want</span>
 <span class="nb">export </span><span class="nv">NODE_VERSION</span><span class="o">=</span>0.10.35
 
 <span class="c"># download</span>
 <span class="nb">cd</span> /tmp
 wget http://nodejs.org/dist/v<span class="nv">$NODE_VERSION</span>/node-v0.10.35.tar.gz
-tar xvfz node-v<span class="nv">$NODE_VERSION</span>.tar.gz
+<span class="nb">tar </span>xvfz node-v<span class="nv">$NODE_VERSION</span>.tar.gz
 
 <span class="c"># build it and install it only locally</span>
 <span class="nb">cd </span>node-v<span class="nv">$NODE_VERSION</span>
-./configure --prefix<span class="o">=</span>/var/lib/jenkins/node-v<span class="nv">$NODE_VERSION</span> <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install
+./configure <span class="nt">--prefix</span><span class="o">=</span>/var/lib/jenkins/node-v<span class="nv">$NODE_VERSION</span> <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install
 
 <span class="c"># Check versions of node and  npm</span>
 <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/var/lib/jenkins/node-v<span class="nv">$NODE_VERSION</span>/bin:<span class="nv">$PATH</span>
-node --version
+node <span class="nt">--version</span>
 <span class="c"># v0.10.35</span>
-npm --version
+npm <span class="nt">--version</span>
 <span class="c"># 1.4.28</span>
 
 <span class="c"># install tools</span>
-npm install -g bower grunt-cli
-bower --version
+npm install <span class="nt">-g</span> bower grunt-cli
+bower <span class="nt">--version</span>
 <span class="c"># 1.3.12</span>
-grunt --version
+grunt <span class="nt">--version</span>
 <span class="c"># 0.1.13</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Make sure you update jenkins PATH.</p>
 
@@ -232,36 +231,34 @@ grunt --version
 <p>Ruby’s version in offical RedHat depots is rather old 1.8.x, we’d rather compile latest patch of 1.9.3.
 We will do a simple and single installation.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># install development tools</span>
-sudo yum install gcc-c++ patch readline readline-devel zlib zlib-devel
-sudo yum install libyaml-devel libffi-devel openssl-devel make
-sudo yum install bzip2 autoconf automake libtool bison iconv-devel
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># install development tools</span>
+<span class="nb">sudo </span>yum install gcc-c++ patch readline readline-devel zlib zlib-devel
+<span class="nb">sudo </span>yum install libyaml-devel libffi-devel openssl-devel make
+<span class="nb">sudo </span>yum install bzip2 autoconf automake libtool bison iconv-devel
 
 <span class="c"># download ruby source tarball</span>
 wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.gz
 <span class="c"># unpack it</span>
-tar xvzf ruby-1.9.3-p551.tar.gz
+<span class="nb">tar </span>xvzf ruby-1.9.3-p551.tar.gz
 
 <span class="c"># build ruby</span>
 <span class="nb">cd </span>ruby-1.9.3-p551
-./configure <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> sudo make install
+./configure <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>make install
 
 <span class="c"># check that ruby is in path and in expected version</span>
-ruby -v
+ruby <span class="nt">-v</span>
 ruby 1.9.3p551 <span class="o">(</span>2014-11-13 revision 48407<span class="o">)</span> <span class="o">[</span>x86_64-linux]
 
 <span class="c"># install Compass and implicitly SASS</span>
 gem install compass
-compass --version
-</code></pre>
-</div>
+compass <span class="nt">--version</span>
+</code></pre></div></div>
 
 <p>If Ruby and Compass have been installed in a directory that is not included in jenkins user’s PATH, you can either update it in bash or through Jenkins UI in global properties:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>name: PATH
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: PATH
 value: /usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-</code></pre>
-</div>
+</code></pre></div></div>
 
               </div>
           </div><!-- /.row -->

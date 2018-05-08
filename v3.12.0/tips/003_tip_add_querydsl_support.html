@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.12.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -290,7 +291,7 @@
 
 <p>Add the <code class="highlighter-rouge">Querydsl plugin</code> configuration to <code class="highlighter-rouge">build.gradle</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>buildscript {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildscript {
   repositories {
     jcenter()
   }
@@ -308,8 +309,7 @@ querydsl {
 }
 
 compile "com.mysema.querydsl:querydsl-mongodb:3.6.0"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Note</strong> we use MongoDB but Querydsl plugin supports also <a href="https://github.com/ewerk/gradle-plugins/tree/master/Querydsl-plugin">more options</a>.</p>
 
@@ -321,7 +321,7 @@ compile "com.mysema.querydsl:querydsl-mongodb:3.6.0"
 <h3 id="pomxml">pom.xml</h3>
 <p>After adding <code class="highlighter-rouge">com.mysema.maven:apt-maven-plugin</code> to your project, you need to edit <code class="highlighter-rouge">org.bsc.maven:maven-processor-plugin</code>. You have to add the directory with generated classes of <code class="highlighter-rouge">apt-maven-plugin</code> to configuration of <code class="highlighter-rouge">maven-processor-plugin</code>, for example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;plugin&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;plugin&gt;
     &lt;groupId&gt;org.bsc.maven&lt;/groupId&gt;
     &lt;artifactId&gt;maven-processor-plugin&lt;/artifactId&gt;
     &lt;version&gt;2.2.4&lt;/version&gt;
@@ -338,16 +338,14 @@ compile "com.mysema.querydsl:querydsl-mongodb:3.6.0"
     &lt;/configuration&gt;
     ...
 &lt;/plugin&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="change-repository-classes">Change Repository classes</h2>
 
 <p>If you have a domain class for example <code class="highlighter-rouge">Name</code>, then you have also a <code class="highlighter-rouge">NameRepository</code> class. You have to change every Repository class to extend from <code class="highlighter-rouge">QueryDslPredicateExecutor</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public interface NameRepository extends MongoRepository&lt;Name, String&gt;, QueryDslPredicateExecutor&lt;Name&gt; {
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public interface NameRepository extends MongoRepository&lt;Name, String&gt;, QueryDslPredicateExecutor&lt;Name&gt; {
+</code></pre></div></div>
 
 <p>This will extend your repository class with extra methods supporting Querydsl (<a href="http://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#mongodb.repositories.queries.type-safe">see</a> )</p>
 
@@ -355,7 +353,7 @@ compile "com.mysema.querydsl:querydsl-mongodb:3.6.0"
 
 <p>To extend the rest controller for support parameterized request, you have to add <code class="highlighter-rouge">com.mysema.query.types.Predicate</code> annotated with <code class="highlighter-rouge">org.springframework.data.querydsl.binding.QuerydslPredicate</code> to the method parameters:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@RestController
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@RestController
 @RequestMapping("/api")
 class NameResource {
 
@@ -375,12 +373,11 @@ class NameResource {
     }
     ...
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Also in <code class="highlighter-rouge">NameResourceIntTest</code> you have to support <code class="highlighter-rouge">QuerydslPredicateArgumentResolver</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public class NameResourceIntTest {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class NameResourceIntTest {
     ...
     @Inject
     private QuerydslPredicateArgumentResolver querydslPredicateArgumentResolver;
@@ -396,8 +393,7 @@ class NameResource {
     }
     ...
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>More details can be found in <a href="http://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#core.web.type-safe">the documentation</a>.</p>
 
@@ -405,12 +401,11 @@ class NameResource {
 
 <p>Gradle or maven plugins have generated class QName which can be used for writing queries for Name.class. Here is Java example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>QName name = QName.name;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>QName name = QName.name;
 
 // count all names whose list "categorie" contains string "TOP_EVER"
 nameRepository.count(name.categories.contains("TOP_EVER"));
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

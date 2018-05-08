@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -197,21 +198,19 @@
 
 <p>Open the <code class="highlighter-rouge">app.js</code> file and add this line in <code class="highlighter-rouge">config</code> method:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$locationProvider.html5Mode(true);
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$locationProvider.html5Mode(true);
+</code></pre></div></div>
 
 <p>Then open <code class="highlighter-rouge">index.html</code> and add this line in <code class="highlighter-rouge">head</code> tag:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;base href="/"&gt;
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;base href="/"&gt;
+</code></pre></div></div>
 
 <h2 id="redirection-filter">Redirection filter</h2>
 
 <p>Now, to have relative paths links working correctly (ex. activation link sent to user e-mail) we need create a filter to redirect the URI without “#” to a url with “#”, so AngularJS can work correctly:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public class Html5ModeFilter implements Filter {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Html5ModeFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         // Nothing to initialize
@@ -252,12 +251,11 @@
         // Nothing to destroy
     }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Finally, init the filter in <code class="highlighter-rouge">WebConfigurer</code> class:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public void onStartup(ServletContext servletContext) throws ServletException {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void onStartup(ServletContext servletContext) throws ServletException {
     ...
     initHtml5ModeFilter(servletContext, disps);
     ...
@@ -268,8 +266,7 @@ private void initHtml5ModeFilter(ServletContext servletContext, EnumSet&lt;Dispa
     FilterRegistration.Dynamic html5ModeFilter = servletContext.addFilter("html5Mode", new Html5ModeFilter());
     html5ModeFilter.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST, DispatcherType.ERROR), true, "/*");
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
               </div>
           </div><!-- /.row -->

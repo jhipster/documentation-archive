@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.2/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.2/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -295,16 +296,14 @@ also use a Maven build since it is my favourite one :p</p>
 
 <p>First of all, if you never used <code class="highlighter-rouge">gcloud</code>, you need to initialize it with the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud init
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud init
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">gcloud</code> allows you to perform most the operations you could do from the Google Cloud Web console from the comfort of
 your terminal. First of all, let’s install <code class="highlighter-rouge">kubectl</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud components install kubectl
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud components install kubectl
+</code></pre></div></div>
 
 <p><code class="highlighter-rouge">kubectl</code> is a command line interface for running commands against Kubernetes clusters. You can also install it directly
 from the <a href="http://kubernetes.io/docs/user-guide/prereqs/">Kubernetes website</a> but overall I found the gcloud installation 
@@ -333,27 +332,24 @@ Manager API</a>.</p>
 
 <p>Finally you need to tell <code class="highlighter-rouge">gcloud</code> on which project you are currently working:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud config set project jhipster-kubernetes-cloud-sql
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud config set project jhipster-kubernetes-cloud-sql
+</code></pre></div></div>
 
 <p>You can also tell it where you want your instances to be created by default. I chose <code class="highlighter-rouge">europe-west1-b</code> since I am a cheap
 European :)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud config set compute/zone europe-west1-b
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud config set compute/zone europe-west1-b
+</code></pre></div></div>
 
 <h2 id="create-a-cloud-sql-instance">Create a Cloud SQL instance</h2>
 
 <p>Then you need to create a Google Cloud SQL instance. You can do this via the web console, which is nice to get a good
 understanding on the available options or once again you can use <code class="highlighter-rouge">gcloud</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud beta sql instances create jhipster-sqlcloud-db --region=europe-west1 --tier=db-f1-micro\
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud beta sql instances create jhipster-sqlcloud-db --region=europe-west1 --tier=db-f1-micro\
  --authorized-networks=`curl -s ifconfig.co` --backup-start-time=01:00 --enable-bin-log \
  --activation-policy=ALWAYS --storage-type=HDD --storage-size=10GB
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>With this command we create a SQL Cloud instance called <code class="highlighter-rouge">jhipster-sql-cloud-db</code> in the <code class="highlighter-rouge">europe-west1</code> region. We choose
 the smallest machine type available. To see the full list of available tiers you can use <code class="highlighter-rouge">gcloud sql tiers list</code>. Then we
@@ -365,19 +361,17 @@ generation SQL instances.</p>
 
 <p>You can check that your instance started with the following command</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud sql instances list
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud sql instances list
 NAME                   REGION        TIER         ADDRESS         STATUS
 jhipster-sqlcloud-db  europe-west1  db-f1-micro  146.148.21.155  RUNNABLE
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Since we whitelisted our IP address, we should be able to access to the DB instance with <code class="highlighter-rouge">mysql</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mysql --host=146.148.21.155 --user=root --password
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql --host=146.148.21.155 --user=root --password
 ...
 mysql&gt; 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Since we’re connected to the database let us create the application database and user. Since we will be using the
 <a href="https://cloud.google.com/sql/docs/sql-proxy">Cloud SQL proxy</a> to connect the SQL instance from our application container,
@@ -385,7 +379,7 @@ the user hostname can be set to <code class="highlighter-rouge">cloudsqlproxy~%<
 name for this tutorial is <code class="highlighter-rouge">jhipsterGoogleCloudSql</code> so the database name should have the same name if we want to use the 
 configuration generated by JHipster.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mysql&gt; CREATE DATABASE jhipstergooglecloudsql;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql&gt; CREATE DATABASE jhipstergooglecloudsql;
 Query OK, 1 row affected (0,03 sec)
 
 mysql&gt; CREATE USER 'jhipster'@'cloudsqlproxy~%';
@@ -396,8 +390,7 @@ Query OK, 0 rows affected (0,01 sec)
 
 mysql&gt; FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0,02 sec)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Do not forget to change the database user to jhipster in <code class="highlighter-rouge">application-prod.yml</code></p>
 
@@ -405,20 +398,18 @@ Query OK, 0 rows affected (0,02 sec)
 
 <p>Let us create a container cluster using <a href="https://cloud.google.com/container-engine/docs/">GKE</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud container clusters create jhipster-sqlcloud-cluster --zone=europe-west1-b --machine-type=g1-small --num-nodes=1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud container clusters create jhipster-sqlcloud-cluster --zone=europe-west1-b --machine-type=g1-small --num-nodes=1
+</code></pre></div></div>
 
 <p>For this tutorial, we will use only 1 small node. In production, you will want at least 3 nodes :)</p>
 
 <p>Let us then get kubectl get proper credentials for this cluster</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud container clusters get-credentials jhipster-sqlcloud-cluster
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud container clusters get-credentials jhipster-sqlcloud-cluster
 
 Fetching cluster endpoint and auth data.
 kubeconfig entry generated for jhipster-sqlcloud-cluster.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="building-and-pushing-the-docker-image">Building and pushing the docker image</h2>
 
@@ -429,22 +420,19 @@ command let us use <code class="highlighter-rouge">gcloud docker -- push</code> 
 
 <p>Build your image</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mvn package -Pprod docker:build
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn package -Pprod docker:build
+</code></pre></div></div>
 
 <p>Tag the image (replace with your jhipster application name). We use v1 as a tag to be able to easily deploy new versions
 of the application or rollback if something goes horribly wrong.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>docker tag jhipstergooglecloudsql gcr.io/jhipster-kubernetes-cloud-sql/jhipstergooglecloudsql:v1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker tag jhipstergooglecloudsql gcr.io/jhipster-kubernetes-cloud-sql/jhipstergooglecloudsql:v1
+</code></pre></div></div>
 
 <p>You can then push the image to Google Container engine as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud docker -- push gcr.io/jhipster-kubernetes-cloud-sql/jhipstergooglecloudsql:v1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud docker -- push gcr.io/jhipster-kubernetes-cloud-sql/jhipstergooglecloudsql:v1
+</code></pre></div></div>
 
 <h2 id="get-the-credentials-and-register-them-with-kubernetes">Get the credentials and register them with Kubernetes</h2>
 
@@ -454,40 +442,35 @@ but let me summarize the commands here.</p>
 
 <p>Create a service account for your JHipster application</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud iam service-accounts create jhipster-application --display-name="JHipster application"
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud iam service-accounts create jhipster-application --display-name="JHipster application"
+</code></pre></div></div>
 
 <p>Get the full iam account name (email used to generate key)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud iam service-accounts list
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud iam service-accounts list
 NAME                                    EMAIL
 JHipster application                    jhipster-application@jhipster-kubernetes-cloud-sql.iam.gserviceaccount.com
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Give editor access to the project to the service account</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud projects add-iam-policy-binding jhipster-kubernetes-cloud-sql \
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud projects add-iam-policy-binding jhipster-kubernetes-cloud-sql \
  --member serviceAccount:jhipster-application@jhipster-kubernetes-cloud-sql.iam.gserviceaccount.com \
  --role roles/editor
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Create the key and store it in <code class="highlighter-rouge">jhipster-credentials.json</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>gcloud iam service-accounts keys create \
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gcloud iam service-accounts keys create \
 --iam-account jhipster-application@jhipster-kubernetes-cloud-sql.iam.gserviceaccount.com jhipster-credentials.json
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>We will use this key later when</p>
 
 <p>Register the key with <code class="highlighter-rouge">kubectl</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>kubectl create secret generic cloudsql-oauth-credentials --from-file=credentials.json=jhipster-credentials.json
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create secret generic cloudsql-oauth-credentials --from-file=credentials.json=jhipster-credentials.json
+</code></pre></div></div>
 
 <h2 id="modify-the-kubernetes-deployment-config">Modify the Kubernetes deployment config</h2>
 
@@ -496,19 +479,17 @@ JHipster application                    jhipster-application@jhipster-kubernetes
 <p>Then we need to change a few things in <code class="highlighter-rouge">jhipstergooglecloudsql-deployment.yml</code>. First of all the Spring data source URL
 should be changed to localhost since we will be using a Cloud SQL proxy:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jdbc:mysql://localhost:3306/jhipstergooglecloudsql?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jdbc:mysql://localhost:3306/jhipstergooglecloudsql?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false
+</code></pre></div></div>
 
 <p>Then you can add the version number to the container image:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>image: gcr.io/jhipster-kubernetes-cloud-sql/jhipstergooglecloudsql:v1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image: gcr.io/jhipster-kubernetes-cloud-sql/jhipstergooglecloudsql:v1
+</code></pre></div></div>
 
 <p>Then we need to add an entry to deploy the cloud sql proxy with the sidecar pattern:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>- image: b.gcr.io/cloudsql-docker/gce-proxy:1.05
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- image: b.gcr.io/cloudsql-docker/gce-proxy:1.05
   name: cloudsql-proxy
   command: ["/cloud_sql_proxy", "--dir=/cloudsql",
             "-instances=jhipster-kubernetes-cloud-sql:europe-west1:jhipster-sqlcloud-db=tcp:3306",
@@ -519,27 +500,25 @@ should be changed to localhost since we will be using a Cloud SQL proxy:</p>
       readOnly: true
     - name: ssl-certs
       mountPath: /etc/ssl/certs
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>As we may have noted, we also need to provide SSL certificates to communicate with Google API so we can connect to our 
 Cloud SQL instance.</p>
 
 <p>And finally add the appropriate volumes:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>volumes:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>volumes:
   - name: cloudsql-oauth-credentials
     secret:
       secretName: cloudsql-oauth-credentials
   - name: ssl-certs
     hostPath:
       path: /etc/ssl/certs
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The full deployment file should now look like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>apiVersion: extensions/v1beta1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: jhipstergooglecloudsql
@@ -578,25 +557,22 @@ spec:
         - name: ssl-certs
           hostPath:
             path: /etc/ssl/certs
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>You can then deploy the cluster with <code class="highlighter-rouge">kubectl apply</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>kubectl apply -f jhipstergooglecloudsql
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f jhipstergooglecloudsql
 
 deployment "jhipstergooglecloudsql" created
 service "jhipstergooglecloudsql" created
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then you can get the external IP through <code class="highlighter-rouge">kubectl get services</code> and test your application</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>kubectl get services jhipstergooglecloudsql
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get services jhipstergooglecloudsql
 NAME                     CLUSTER-IP     EXTERNAL-IP     PORT(S)    AGE
 jhipstergooglecloudsql   10.95.251.18   104.199.51.11   8080/TCP   1m
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.1.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.1.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -392,9 +393,8 @@ Those, you can not access them in localhost but have to hit the VirtualBox IP.</
 
 <p>You can override the Cassandra contact point (localhost by default) with this environment variable:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>export SPRING_DATA_CASSANDRA_CONTACTPOINTS=`docker-machine ip default`
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export SPRING_DATA_CASSANDRA_CONTACTPOINTS=`docker-machine ip default`
+</code></pre></div></div>
 
 <p><strong>Cassandra nodes</strong> :
 Because Cassandra nodes are also hosted in the Virtual machine, the Cassandra Java driver will receive an error when trying to contact them after receiving their address from the contact point.
@@ -402,9 +402,8 @@ To workaround this, you can add a routing rule to your routing table, <a href="h
 
 <p>Assuming the containers running the Cassandra nodes have IP address 172.18.0.x:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo route -n add 172.18.0.0/16 `docker-machine ip default`
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo route -n add 172.18.0.0/16 `docker-machine ip default`
+</code></pre></div></div>
 
 <p>#### In production:</p>
 
@@ -466,11 +465,10 @@ You have to first start the Cassandra cluster and manually apply the scripts bef
 
 <p>You can use <code class="highlighter-rouge">docker ps -a</code> to list all the containers</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker ps -a
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 fc35e1090021        mysql               "/entrypoint.sh mysql"   4 seconds ago       Up 4 seconds        0.0.0.0:3306-&gt;3306/tcp   sampleApplication-mysql
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="scale-a-container">Scale a container</h3>
 

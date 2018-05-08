@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.2/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.0.2/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -485,16 +486,15 @@ The application starts after few seconds (see <em>JHIPSTER_SLEEP</em> variable) 
 
 <p>You can use <code class="highlighter-rouge">docker ps -a</code> to list all the containers</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker ps -a
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
 fc35e1090021        mysql               "/entrypoint.sh mysql"   4 seconds ago       Up 4 seconds        0.0.0.0:3306-&gt;3306/tcp   sampleApplication-mysql
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="docker-stats-for-containers">Docker stats for containers</h3>
 <p><code class="highlighter-rouge">docker stats</code> or <code class="highlighter-rouge">docker stats $(docker ps --format={{.Names}})</code> to list all running containers with CPU, Memory, Networking I/O and Block I/O stats.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ docker stats $(docker ps --format={{.Names}})
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker stats $(docker ps --format={{.Names}})
 CONTAINER                 CPU %               MEM USAGE / LIMIT     MEM %               NET I/O               BLOCK I/O             PIDS
 jhuaa-mysql               0.04%               221 MB / 7.966 GB     2.77%               66.69 kB / 36.78 kB   8.802 MB / 302.5 MB   37
 00compose_msmongo-app_1   0.09%               965.6 MB / 7.966 GB   12.12%              121.3 kB / 54.64 kB   89.84 MB / 14.88 MB   35
@@ -504,8 +504,7 @@ gateway-elasticsearch     0.27%               249.1 MB / 7.966 GB   3.13%       
 00compose_jhuaa-app_1     0.29%               1.042 GB / 7.966 GB   13.08%              101.8 kB / 78.84 kB   70.08 MB / 13.5 MB    68
 msmongo-mongodb           0.34%               44.8 MB / 7.966 GB    0.56%               49.72 kB / 48.08 kB   33.97 MB / 811 kB     18
 gateway-mysql             0.03%               202.7 MB / 7.966 GB   2.54%               60.84 kB / 31.22 kB   27.03 MB / 297 MB     37
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="scale-a-container">Scale a container</h3>
 
@@ -535,9 +534,8 @@ gateway-mysql             0.03%               202.7 MB / 7.966 GB   2.54%       
 
 <p>Set the environment variable.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ENV JAVA_OPTS=-Xmx512m -Xms256m
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ENV JAVA_OPTS=-Xmx512m -Xms256m
+</code></pre></div></div>
 
 <h3 id="adding-memory-parameters-to-docker-composeyml">Adding memory parameters to docker-compose.yml</h3>
 
@@ -545,19 +543,17 @@ gateway-mysql             0.03%               202.7 MB / 7.966 GB   2.54%       
 
 <p>Add the <code class="highlighter-rouge">JAVA_OPTS</code> into <code class="highlighter-rouge">environment</code> section.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    environment:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    environment:
       - (...)
       - JAVA_OPTS=-Xmx512m -Xms256m
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Depending on the Docker base image, <code class="highlighter-rouge">JAVA_OPTS</code> won’t work. In this case, try to use <code class="highlighter-rouge">_JAVA_OPTIONS</code> instead:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>    environment:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    environment:
       - (...)
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

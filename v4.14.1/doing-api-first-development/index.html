@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.1/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.1/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -327,19 +328,17 @@ This option will configure your build tool to use <a href="https://github.com/sw
 <h3 id="using-the-swagger-codegen-plugins">Using the swagger-codegen plugins</h3>
 
 <p>The swagger specification file will be located at src/main/resources/swagger/api.yml and is used to generate endpoint interfaces that you can implement. Those interfaces have default methods which answer with a 200 HTTP status and an empty body. Write your specification using a tool such as <a href="http://editor.swagger.io">swagger-editor</a>, put it in <code class="highlighter-rouge">src/main/resources/swagger/api.yml</code>, then run:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./mvnw generate-sources
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./mvnw generate-sources
+</code></pre></div></div>
 <p>Or for gradle:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./gradlew swagger
-</code></pre>
-</div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gradlew swagger
+</code></pre></div></div>
 <p>Then implement the interfaces generated in <code class="highlighter-rouge">${buildDirectory}/generated-sources/swagger/src/main/java/${package}/web/api/controller</code> with <code class="highlighter-rouge">@RestController</code> classes.</p>
 
 <p>Note : the implementation class and its interface must belong to the same package.</p>
 
 <p>Example of code to write yourself for the famous <a href="http://petstore.swagger.io">petstore</a>:</p>
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@RestController</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@RestController</span>
 <span class="nd">@RequestMapping</span><span class="o">(</span><span class="s">"/api/petstore"</span><span class="o">)</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">PetStore</span> <span class="kd">implements</span> <span class="n">PetApi</span><span class="o">,</span> <span class="n">StoreApi</span><span class="o">,</span> <span class="n">UserApi</span> <span class="o">{</span>
 
@@ -354,8 +353,7 @@ This option will configure your build tool to use <a href="https://github.com/sw
             <span class="n">HttpStatus</span><span class="o">.</span><span class="na">OK</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

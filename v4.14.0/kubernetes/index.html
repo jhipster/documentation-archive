@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -443,7 +444,7 @@ For example, if you use the Google Cloud to host your Docker images, it will be:
 
 <p>Centralized configuration is also setup using either <strong>Spring Cloud Config Server</strong> (when using the JHipster Registry) or the <strong>Consul Key/Value store</strong> (when using Consul). By default, both configuration servers load their configuration from a Kubernetes <a href="http://kubernetes.io/docs/user-guide/configmap/">ConfigMap</a> which contains property files in this format:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>apiVersion: v1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
 kind: ConfigMap
 metadata:
   name: application-config
@@ -458,8 +459,7 @@ data:
   gateway-prod.yml: |- # gateway application properties for the "prod" profile
     foo:
       bar: foobar
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>By default, configuration servers run in development mode, which means that YAML property files are read directly from the filesystem and hot-reloaded on changes. For production it is advised to setup configuration from a Git repository as explained in our microservice documentation for the <a href="/documentation-archive/v4.14.0/jhipster-registry">JHipster-Registry config server</a> and <a href="/documentation-archive/v4.14.0/consul">Consul config server</a>.</p>
 

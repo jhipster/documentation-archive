@@ -49,6 +49,7 @@
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
 
     
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -225,12 +226,11 @@
 
 <p>For this, it composes with the “jhispter:modules” sub generator:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>templates: function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>templates: function() {
     this.composeWith('jhipster:modules', { options: {
         jhipsterVar: jhipsterVar, jhipsterFunc: jhipsterFunc }});
 },
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="variables-available">Variables available</h3>
 

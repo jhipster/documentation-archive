@@ -42,6 +42,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v4.14.0/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -477,23 +478,21 @@
 
 <p>To enable SSL, generate a certificate using:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>keytool -genkey -alias &lt;your-application&gt; -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>keytool -genkey -alias &lt;your-application&gt; -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+</code></pre></div></div>
 
 <p>You can also use Let’s Encrypt using <a href="https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm">this tutorial</a>.</p>
 
 <p>Then, modify the <code class="highlighter-rouge">server.ssl</code> properties so your <code class="highlighter-rouge">application-prod.yml</code> configuration looks like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server:
     port: 443
     ssl:
         key-store: keystore.p12
         key-store-password: &lt;your-password&gt;
         keyStoreType: PKCS12
         keyAlias: &lt;your-application&gt;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="https-configuration-with-a-front-end-proxy">HTTPS configuration with a front-end proxy</h4>
 

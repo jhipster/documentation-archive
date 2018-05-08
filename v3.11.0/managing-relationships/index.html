@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.11.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.11.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -322,13 +323,12 @@ of the relationship (a <code class="highlighter-rouge">Team</code> can have a ma
 
 <p>So this is a simple one-to-many relationship (one owner has many cars) on one side, and a many-to-one relationship (many cars have one owner) on the other side:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Owner (1) &lt;-----&gt; (*) Car
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Owner (1) &lt;-----&gt; (*) Car
+</code></pre></div></div>
 
 <p>We will create the <code class="highlighter-rouge">Owner</code> first. Here are the relevant JHipster questions for the <code class="highlighter-rouge">Owner</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Owner
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Owner
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -336,14 +336,13 @@ Generating relationships with other entities
 ? What is the name of the relationship? car
 ? What is the type of the relationship? one-to-many
 ? What is the name of this relationship in the other entity? owner
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Please note that we selected the default options concerning the names of the relationships.</p>
 
 <p>Now we can generate the <code class="highlighter-rouge">Car</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Car
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -351,19 +350,17 @@ Generating relationships with other entities
 ? What is the name of the relationship? owner
 ? What is the type of the relationship? many-to-one
 ? When you display this relationship with AngularJS, which field from 'Owner' do you want to use? id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The same can be achieved using the below JDL as well</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner
 entity Car
 
 relationship OneToMany {
   Owner{car} to Car{owner}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That’s it, you now have a one-to-many relationship between those two entities! On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Owner</code>.</p>
 
@@ -373,9 +370,8 @@ relationship OneToMany {
 
 <p>A many-to-one unidirectional relationship means that the cars know their owner, but not the opposite.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Owner (1) &lt;----- (*) Car
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Owner (1) &lt;----- (*) Car
+</code></pre></div></div>
 
 <p>You would do that relationship for two reasons:</p>
 
@@ -386,16 +382,15 @@ relationship OneToMany {
 
 <p>In that case, you would still create the <code class="highlighter-rouge">Owner</code> first, this time with no relationship:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Owner
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Owner
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? No
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And then the <code class="highlighter-rouge">Car</code> entity, as in the previous example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Car
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -403,28 +398,25 @@ Generating relationships with other entities
 ? What is the name of the relationship? owner
 ? What is the type of the relationship? many-to-one
 ? When you display this relationship with AngularJS, which field from 'Owner' do you want to use? id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>This will work as in the previous example, but you won’t be able to add or remove cars from the <code class="highlighter-rouge">Owner</code> entity. On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Owner</code>.
 This is the corresponding JDL:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Owner
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner
 entity Car
 
 relationship ManyToOne {
   Car{owner} to Owner
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="-a-unidirectional-one-to-many-relationship"><a name="3"></a> A unidirectional one-to-many relationship</h2>
 
 <p>A one-to-many unidirectional relationship means that the <code class="highlighter-rouge">Owner</code> instance can get its collection of cars, but not the opposite. It is the opposite from the previous example.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Owner (1) -----&gt; (*) Car
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Owner (1) -----&gt; (*) Car
+</code></pre></div></div>
 
 <p>This type of relationship is not provided by default in JHipster at the moment, see <a href="https://github.com/jhipster/generator-jhipster/issues/1569">#1569</a> for more information.</p>
 
@@ -446,16 +438,15 @@ relationship ManyToOne {
 
 <p>For this example, a <code class="highlighter-rouge">Person</code> can be the owner of many cars, and he can also be the driver of many cars:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Person (1) &lt;---owns-----&gt; (*) Car
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person (1) &lt;---owns-----&gt; (*) Car
 Person (1) &lt;---drives---&gt; (*) Car
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>For this we need to use the relationship names, which we have left with their default values in the previous examples.</p>
 
 <p>Generate the <code class="highlighter-rouge">Person</code> entity, which has tow one-to-many relationships to the <code class="highlighter-rouge">Car</code> entity:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Person
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Person
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -470,12 +461,11 @@ Generating relationships with other entities
 ? What is the name of the relationship? drivedCar
 ? What is the type of the relationship? one-to-many
 ? What is the name of this relationship in the other entity? driver
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Generate the <code class="highlighter-rouge">Car</code> entity, which use the same relationship name has was configured in the <code class="highlighter-rouge">Person</code> entity:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Car
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -490,12 +480,11 @@ Generating relationships with other entities
 ? What is the name of the relationship? driver
 ? What is the type of the relationship? many-to-one
 ? When you display this relationship with AngularJS, which field from 'Person' do you want to use? id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The same can be achieved using the below JDL as well</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Person
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Person
 entity Car
 
 relationship OneToMany {
@@ -505,8 +494,7 @@ relationship OneToMany {
 relationship OneToMany {
   Person{drivedCar} to Car{driver}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>A <code class="highlighter-rouge">Car</code> can now have a driver and a owner, which are both <code class="highlighter-rouge">Person</code> entities. On the generated AngularJS client UI you will dropdowns in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Person</code> for <code class="highlighter-rouge">owner</code> field and <code class="highlighter-rouge">driver</code> field.</p>
 
@@ -514,9 +502,8 @@ relationship OneToMany {
 
 <p>A <code class="highlighter-rouge">Driver</code> can drive many cars, but a <code class="highlighter-rouge">Car</code> can also have many drivers.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Driver (*) &lt;-----&gt; (*) Car
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Driver (*) &lt;-----&gt; (*) Car
+</code></pre></div></div>
 
 <p>At the database level, this means we will have a join table between the <code class="highlighter-rouge">Driver</code> and the <code class="highlighter-rouge">Car</code> tables.</p>
 
@@ -524,7 +511,7 @@ relationship OneToMany {
 
 <p>Let us generate the non-owning side of the relationship, the <code class="highlighter-rouge">Driver</code>, with a many-to-many relationship:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Driver
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Driver
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -533,12 +520,11 @@ Generating relationships with other entities
 ? What is the type of the relationship? many-to-many
 ? Is this entity the owner of the relationship? No
 ? What is the name of this relationship in the other entity? driver
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then generate the <code class="highlighter-rouge">Car</code>, with the owning side of the many-to-many relationship:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Car
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -547,19 +533,17 @@ Generating relationships with other entities
 ? What is the type of the relationship? many-to-many
 ? Is this entity the owner of the relationship? Yes
 ? When you display this relationship with AngularJS, which field from 'Driver' do you want to use? id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The same can be achieved using the below JDL as well</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Driver
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver
 entity Car
 
 relationship ManyToMany {
   Car{driver} to Driver{car}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That’s it, you now have a many-to-many relationship between those two entities! On the generated AngularJS client UI you will have a multi-select dropdown in <code class="highlighter-rouge">Car</code> to select multiple <code class="highlighter-rouge">Driver</code> since <code class="highlighter-rouge">Car</code> is the owning side.</p>
 
@@ -567,13 +551,12 @@ relationship ManyToMany {
 
 <p>Following our example, a one-to-one relationship would mean that a <code class="highlighter-rouge">Driver</code> can drive only one <code class="highlighter-rouge">Car</code>, and a <code class="highlighter-rouge">Car</code> can only have one <code class="highlighter-rouge">Driver</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Driver (1) &lt;-----&gt; (1) Car
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Driver (1) &lt;-----&gt; (1) Car
+</code></pre></div></div>
 
 <p>Let us create the non-owning side of the relationship, in our case the <code class="highlighter-rouge">Driver</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Driver
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Driver
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -582,12 +565,11 @@ Generating relationships with other entities
 ? What is the type of the relationship? one-to-one
 ? Is this entity the owner of the relationship? No
 ? What is the name of this relationship in the other entity? driver
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then generate the <code class="highlighter-rouge">Car</code>, which owns the relationship:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Car
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Car
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -597,19 +579,17 @@ Generating relationships with other entities
 ? Is this entity the owner of the relationship? Yes
 ? What is the name of this relationship in the other entity? car
 ? When you display this relationship with AngularJS, which field from 'Driver' do you want to use? id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The same can be achieved using the below JDL as well</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Driver
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver
 entity Car
 
 relationship OneToOne {
   Car{driver} to Driver{car}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That’s it, you now have a one-to-one relationship between those two entities! On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Driver</code> since <code class="highlighter-rouge">Car</code> is the owning side.</p>
 
@@ -617,22 +597,20 @@ relationship OneToOne {
 
 <p>A unidirectional one-to-one relationship means that the <code class="highlighter-rouge">citizen</code> instance can get its passport, but the <code class="highlighter-rouge">passport</code> instance can’t get to its owner.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Citizen (1) -----&gt; (1) Passport
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Citizen (1) -----&gt; (1) Passport
+</code></pre></div></div>
 
 <p>Generate the <code class="highlighter-rouge">Passport</code> entity first, without any relationship to its owner:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Passport
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Passport
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? No
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then, generate the <code class="highlighter-rouge">Citizen</code> entity:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster:entity Citizen
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster:entity Citizen
 ...
 Generating relationships with other entities
 ? Do you want to add a relationship to another entity? Yes
@@ -642,20 +620,18 @@ Generating relationships with other entities
 ? Is this entity the owner of the relationship? Yes
 ? What is the name of this relationship in the other entity? citizen
 ? When you display this relationship with AngularJS, which field from 'Passport' do you want to use? id
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>After doing this, a <code class="highlighter-rouge">Citizen</code> possesses a passport, but no <code class="highlighter-rouge">Citizen</code> instance is defined in <code class="highlighter-rouge">Passport</code>. On the generated AngularJS client UI you will have a dropdown in <code class="highlighter-rouge">Citizen</code> to select a <code class="highlighter-rouge">Passport</code> since <code class="highlighter-rouge">Citizen</code> is the owning side.
 This is the corresponding JDL:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>entity Citizen
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Citizen
 entity Passport
 
 relationship OneToOne {
   Citizen{passport} to Passport
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
                         </div>
                     </div>

@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.7.1/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.7.1/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -294,7 +295,7 @@ The hook mechanism invokes third-party generators before and after app generatio
 
 <p>For this, it composes with the “jhipster:modules” sub generator:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>compose: function() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>compose: function() {
     this.composeWith('jhipster:modules', {
         options: {
             jhipsterVar: jhipsterVar,
@@ -302,8 +303,7 @@ The hook mechanism invokes third-party generators before and after app generatio
         }
     });
 },
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="hooks">Hooks</h2>
 
@@ -319,9 +319,8 @@ The hook mechanism invokes third-party generators before and after app generatio
 <p><a href="https://github.com/jhipster/generator-jhipster-module">JHipster module generator</a> now has option to generate this.
 A JHipster module can register to act as a hook when its main generator is run by the end user. You need to call the <code class="highlighter-rouge">registerModule</code> method available in <code class="highlighter-rouge">jhipsterFunc</code> from your main (app) generator to register as hook, you need to pass the below parameters in the method as below</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">jhipsterFunc</span><span class="p">.</span><span class="nx">registerModule</span><span class="p">(</span><span class="nx">npmPackageName</span><span class="p">,</span> <span class="nx">hookFor</span><span class="p">,</span> <span class="nx">hookType</span><span class="p">[,</span> <span class="nx">callbackSubGenerator</span><span class="p">[,</span> <span class="nx">description</span><span class="p">]])</span>
-</code></pre>
-</div>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">jhipsterFunc</span><span class="p">.</span><span class="nx">registerModule</span><span class="p">(</span><span class="nx">npmPackageName</span><span class="p">,</span> <span class="nx">hookFor</span><span class="p">,</span> <span class="nx">hookType</span><span class="p">[,</span> <span class="nx">callbackSubGenerator</span><span class="p">[,</span> <span class="nx">description</span><span class="p">]])</span>
+</code></pre></div></div>
 
 <ul>
   <li><code class="highlighter-rouge">npmPackageName</code> npm package name of the generator. e.g: <code class="highlighter-rouge">jhipster-generator-fortune</code></li>

@@ -47,6 +47,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/images/favfa fa-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/images/favfa fa-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
   </head>
 
   <body>
@@ -201,7 +202,7 @@
 
 <p>Add the <code class="highlighter-rouge">Querydsl plugin</code> configuration <code class="highlighter-rouge">grunt.initConfig</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>buildscript {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildscript {
   repositories {
     jcenter()
   }
@@ -219,8 +220,7 @@ Querydsl {
 }
 
 compile "com.mysema.Querydsl:Querydsl-mongodb:3.6.0"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Note</strong> we use MongoDB but Querydsl plugin supports also <a href="https://github.com/ewerk/gradle-plugins/tree/master/Querydsl-plugin">more options</a>.</p>
 
@@ -232,9 +232,8 @@ compile "com.mysema.Querydsl:Querydsl-mongodb:3.6.0"
 <h3 id="change-repository-classes">Change Repository classes</h3>
 <p>If you have a domain class for example <code class="highlighter-rouge">Name</code>, then you have also a <code class="highlighter-rouge">NameRepository</code> class. You have to change every Repository class to extend from <code class="highlighter-rouge">QuerydslPredicateExecutor</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public interface NameRepository extends MongoRepository&lt;Name, String&gt;, QuerydslPredicateExecutor&lt;Name&gt; {
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public interface NameRepository extends MongoRepository&lt;Name, String&gt;, QuerydslPredicateExecutor&lt;Name&gt; {
+</code></pre></div></div>
 
 <p>This will extend your repository class with extra methods supporting Querydsl (<a href="http://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#mongodb.repositories.queries.type-safe">see</a> )</p>
 
@@ -242,12 +241,11 @@ compile "com.mysema.Querydsl:Querydsl-mongodb:3.6.0"
 
 <p>Gradle plugin has generated class QName which can be used for writing queries for Name.class. Here is Java example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>QName name = new QName("name");
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>QName name = new QName("name");
 
 // count all names whose list "categorie" contains string "TOP_EVER"
 nameRepository.count(name.categories.contains("TOP_EVER"));
-</code></pre>
-</div>
+</code></pre></div></div>
 
               </div>
           </div><!-- /.row -->

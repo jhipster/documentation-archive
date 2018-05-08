@@ -49,6 +49,7 @@
     <!-- Favicon with QHD -->
     <link rel="icon" type="image/png" href="/documentation-archive/v3.5.0/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/documentation-archive/v3.5.0/img/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
 </head>
 
 <body class="flat-blue">
@@ -276,50 +277,43 @@
 
 <p>Create a directory which will contain all <code class="highlighter-rouge">node_modules</code> libraries, and go into it:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mkdir jhipster-speedup
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir jhipster-speedup
 cd jhipster-speedup
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Create the directory <code class="highlighter-rouge">node_modules</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mkdir -p node_modules
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p node_modules
+</code></pre></div></div>
 
 <p>The project structure is :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>jhipster-speedup
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster-speedup
 ├── node_modules
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Warning!</strong> Use this next command only if your are a developer on JHipster. It will link to your fork project of generator-jhipster:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm link generator-jhipster
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm link generator-jhipster
+</code></pre></div></div>
 
 <h2 id="generating-projects">Generating projects</h2>
 
 <p>Create a directory which will contain your new JHipster project, and go into it:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mkdir jhipster
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir jhipster
 cd jhipster
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Create a link to the directory <code class="highlighter-rouge">node_modules</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ln -s &lt;your path&gt;/jhipster-speedup/node_modules
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s &lt;your path&gt;/jhipster-speedup/node_modules
+</code></pre></div></div>
 
 <p>Generate a new project, and answer to all questions:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>yo jhipster
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yo jhipster
+</code></pre></div></div>
 
 <p>The first time, it will take several minutes.</p>
 
