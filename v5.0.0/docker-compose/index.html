@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>Docker and Docker Compose</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v5.0.0/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li class="">
+                            <a href="https://www.google.com/search?q=site:www.jhipster.tech" target="_blank">Search</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" class="dropdown-toggle navlink" target="_blank" role="button"><i class="fa fa-github fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v5.0.0/images/logo/logo-jhipster.svg" height="50px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v5.0.0/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (12 minutes)</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li class="active" ><a href="/documentation-archive/v5.0.0/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/traefik/"><i class="fa fa-fw fa-exchange"></i> Traefik</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-uaa/"><i class="fa fa-fw fa-lock"></i> JHipster UAA</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/docker-hub/"><i class="fa fa-fw fa-cloud-upload"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/rancher/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Rancher</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/boxfuse/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with Boxfuse</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Modules</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/jdl/"><i class="fa fa-fw fa-star"></i> JDL</a></li>
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.0.0/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.0.0/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.0.0/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/consulting/"><i class="fa fa-fw fa-user-md"></i> Professional help</a></li>
+                                            <li ><a href="/documentation-archive/v5.0.0/training/"><i class="fa fa-fw fa-graduation-cap"></i> Training</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v5.0.0/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <h1 id="-docker-and-docker-compose"><i class="fa fa-music"></i> Docker and Docker Compose</h1>
+
+<h2 id="summary">Summary</h2>
+
+<p>Using Docker and Docker Compose is highly recommended in development, and is also a good solution in production.</p>
+
+<ol>
+  <li><a href="#1">Description</a></li>
+  <li><a href="#2">Prerequisites</a></li>
+  <li><a href="#3">Building a Docker image of your application</a></li>
+  <li><a href="#docker-compose-subgen">Generating a custom Docker-Compose configuration for multiple applications</a></li>
+  <li><a href="#4">Working with databases</a></li>
+  <li><a href="#5">Elasticsearch</a></li>
+  <li><a href="#6">Sonar</a></li>
+  <li><a href="#7">Keycloak</a></li>
+  <li><a href="#8">Common commands</a></li>
+  <li><a href="#9">Memory Tweaking</a></li>
+</ol>
+
+<h2 id="-description"><a name="1"></a> Description</h2>
+
+<p><em>Please note: this Docker configuration is used to run your generated application(s) inside a container image. It’s completely different from the <a href="/documentation-archive/v5.0.0/installation/">Docker setup</a> that JHipster also provides, which is for running the JHipster generator inside a container</em></p>
+
+<p>JHipster provides a complete Docker support, in order to:</p>
+
+<ul>
+  <li>Facilitate development, as you can start a full infrastructure very easily, even when using a complex microservices architecture</li>
+  <li>For people using Docker Swarm, deploying to production directly, as it uses the same Docker Compose configuration</li>
+</ul>
+
+<p>One great feature of using Docker Compose is that you can easily scale your containers, using the <code class="highlighter-rouge">docker-compose scale</code> command. This is very interesting if you use JHipster with a <a href="#3">a microservices architecture</a>.</p>
+
+<p>When generating your application, JHipster generates for you:</p>
+
+<ul>
+  <li>A <code class="highlighter-rouge">Dockerfile</code> for building a Docker image and running your application inside a container</li>
+  <li>Several Docker Compose configurations to help you run your application with third-party services, for example a database</li>
+</ul>
+
+<p>Those files are located inside folder <code class="highlighter-rouge">src/main/docker/</code>.</p>
+
+<h2 id="-prerequisites"><a name="2"></a> Prerequisites</h2>
+
+<p>You have to install Docker and Docker Compose:</p>
+
+<ul>
+  <li><a href="https://docs.docker.com/installation/#installation">Docker</a></li>
+  <li><a href="https://docs.docker.com/compose/install">Docker Compose</a></li>
+</ul>
+
+<div class="alert alert-info"><i>Tip: </i>
+
+On Windows and Mac OS X, Kitematic is an easy-to-use graphical interface provided with the Docker Toolbox, which will makes using Docker a lot easier.
+
+</div>
+
+<div class="alert alert-warning"><i>Warning: </i>
+
+If you are using Docker Machine on Mac or Windows, your Docker daemon has only limited access to your OS X or Windows file system. Docker Machine tries to auto-share your /Users (OS X) or C:\Users\&lt;username&gt; (Windows) directory. So you have to create the project folder under this directory to avoid any issues especially if you are using the <a href="/documentation-archive/v5.0.0/monitoring/">JHipster Console</a> for monitoring.
+
+</div>
+
+<p>If you encounter the error <code class="highlighter-rouge">npm ERR! Error: EACCES: permission denied</code> when installing JHipster UML (or any unbundled package), your container may not have <code class="highlighter-rouge">sudo</code> installed (for instance, sudo isn’t bundled with Ubuntu Xenial).</p>
+
+<p><strong>Solution 1</strong></p>
+
+<p>The NPM documentation recommends not installing any NPM package as root. Follow the <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">official documentation</a> to fix this.</p>
+
+<p><strong>Solution 2</strong></p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker container exec -u root -it jhipster bash</code>,</li>
+  <li><code class="highlighter-rouge">npm install -g YOUR_PACKAGE</code>,</li>
+  <li>then exit and log into the container normally: <code class="highlighter-rouge">docker container exec -it jhipster bash</code></li>
+</ul>
+
+<h2 id="-building-and-running-a-docker-image-of-your-application"><a name="3"></a> Building and running a Docker image of your application</h2>
+
+<p>To create a Docker image of your application, and push it into your Docker registry:</p>
+
+<ul>
+  <li>With Maven, type: <code class="highlighter-rouge">./mvnw package -Pprod dockerfile:build</code></li>
+  <li>With Gradle, type: <code class="highlighter-rouge">./gradlew bootWar -Pprod buildDocker</code></li>
+</ul>
+
+<p>This will package your application with the <code class="highlighter-rouge">prod</code> profile, and install the image.</p>
+
+<p>On Windows, due to <a href="https://github.com/spotify/docker-client/issues/875">lack of named pipes</a>, you may have to tune settings for Docker and turn on “Expose daemon on tcp://localhost:2375 without TLS”.</p>
+
+<p>To run this image, use the Docker Compose configuration located in the <code class="highlighter-rouge">src/main/docker</code> folder of your application:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up</code></li>
+</ul>
+
+<p>This command will start up your application and the services it relies on (database, search engine, JHipster Registry…).</p>
+
+<p>If you chose OAuth 2.0 for authentication, be sure to read our <a href="#7">Keycloak section on this documentation</a>.</p>
+
+<h2 id="-generating-a-custom-docker-compose-configuration-for-multiple-applications"><a name="docker-compose-subgen"></a> Generating a custom Docker-Compose configuration for multiple applications</h2>
+
+<p>If your architecture is composed of several JHipster applications, you can use the specific <code class="highlighter-rouge">docker-compose</code> sub-generator, which will generate a global Docker Compose configuration for all selected applications. This will allow you to deploy and scale your complete architecture with one command.
+To use the <code class="highlighter-rouge">docker-compose</code> subgenerator:</p>
+
+<ul>
+  <li>You need to have all your monolith(s), gateway(s) and microservices in the same directory.</li>
+  <li>Create another directory, for example <code class="highlighter-rouge">mkdir docker-compose</code>.</li>
+  <li>Go into that directory: <code class="highlighter-rouge">cd docker-compose</code>.</li>
+  <li>Run the sub-generator: <code class="highlighter-rouge">jhipster docker-compose</code>.</li>
+  <li>The sub-generator will ask you which application you want to have in your architecture, and if you want to setup monitoring with ELK or Prometheus.</li>
+</ul>
+
+<p>This will generate a global Docker Compose configuration, type <code class="highlighter-rouge">docker-compose up</code> to run it, and have all your services running at once.</p>
+
+<p>In the case of a microservice architecture, this configuration will also pre-configure a JHipster Registry or Consul, that will configure your services automatically:</p>
+
+<ul>
+  <li>Those services will wait until the JHipster Registry (or Consul) is running to start. This can be configured in your <code class="highlighter-rouge">bootstrap-prod.yml</code> file using the <code class="highlighter-rouge">spring.cloud[.consul].config.fail-fast</code> and <code class="highlighter-rouge">spring.cloud[.consul].config.retry</code> keys.</li>
+  <li>The registry will configure your applications, for example it will share the JWT secret token between all services.</li>
+  <li>Scaling each service is done using Docker Compose, for example type <code class="highlighter-rouge">docker-compose scale test-app=4</code> to have 4 instances of application “test” running. Those instances will be automatically load-balanced by the gateway(s), and will automatically join the same Hazelcast cluster (if Hazelcast is your Hibernate 2nd-level cache).</li>
+</ul>
+
+<h2 id="-working-with-databases"><a name="4"></a> Working with databases</h2>
+
+<h3 id="mysql-mariadb-postgresql-oracle-mongodb-or-cassandra">MySQL, MariaDB, PostgreSQL, Oracle, MongoDB or Cassandra</h3>
+
+<p>Running <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up</code> already starts up your database automatically.</p>
+
+<p>If you just want to start your database, and not the other services, use the Docker Compose configuration of your database:</p>
+
+<ul>
+  <li>With MySQL: <code class="highlighter-rouge">docker-compose -f src/main/docker/mysql.yml up</code></li>
+  <li>With MariaDB: <code class="highlighter-rouge">docker-compose -f src/main/docker/mariadb.yml up</code></li>
+  <li>With PostgreSQL: <code class="highlighter-rouge">docker-compose -f src/main/docker/postgresql.yml up</code></li>
+  <li>With Oracle: <code class="highlighter-rouge">docker-compose -f src/main/docker/oracle.yml up</code></li>
+  <li>With MongoDB: <code class="highlighter-rouge">docker-compose -f src/main/docker/mongodb.yml up</code></li>
+  <li>With Cassandra: <code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up</code></li>
+  <li>With Couchbase: <code class="highlighter-rouge">docker-compose -f src/main/docker/couchbase.yml up</code></li>
+</ul>
+
+<h3 id="mongodb-cluster-mode">MongoDB Cluster Mode</h3>
+
+<p>If you want to use MongoDB with a replica set or shards and a shared configuration between them, you need to build and set up manually MongoDB images.
+Follow these steps to do so:</p>
+
+<ul>
+  <li>Build the image: <code class="highlighter-rouge">docker-compose -f src/main/docker/mongodb-cluster.yml build</code></li>
+  <li>Run the database: <code class="highlighter-rouge">docker-compose -f src/main/docker/mongodb-cluster.yml up -d</code></li>
+  <li>Scale the MongoDB node service (you have to choose an odd number of nodes): <code class="highlighter-rouge">docker-compose -f src/main/docker/mongodb-cluster.yml scale &lt;name_of_your_app&gt;-mongodb-node=&lt;X&gt;</code></li>
+  <li>Init the replica set (parameter X is the number of nodes you input in the previous step, folder is the folder where the YML file is located, it’s <code class="highlighter-rouge">docker</code> by default): <code class="highlighter-rouge">docker container exec -it &lt;yml_folder_name&gt;_&lt;name_of_your_app&gt;-mongodb-node_1 mongo --eval 'var param=&lt;X&gt;, folder="&lt;yml_folder_name&gt;"' init_replicaset.js</code></li>
+  <li>Init the shard: <code class="highlighter-rouge">docker container exec -it &lt;yml_folder_name&gt;_&lt;name_of_your_app&gt;-mongodb_1 mongo --eval 'sh.addShard("rs1/&lt;yml_folder_name&gt;_&lt;name_of_your_app&gt;-mongodb-node_1:27017")'</code></li>
+  <li>Build a Docker image of your application: <code class="highlighter-rouge">./mvnw package -Pprod dockerfile:build</code></li>
+  <li>Start your application: <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up -d &lt;name_of_your_app&gt;-app</code></li>
+</ul>
+
+<p>If you want to add or remove some MongoDB nodes, just repeat step 3 and 4.</p>
+
+<h3 id="couchbase-cluster-mode">Couchbase Cluster Mode</h3>
+
+<p>If you want to use Couchbase with multiple nodes, you need to build and set up manually Couchbase images.
+Follow these steps to do so:</p>
+
+<ul>
+  <li>Build the image: <code class="highlighter-rouge">docker-compose -f src/main/docker/couchbase-cluster.yml build</code></li>
+  <li>Run the database: <code class="highlighter-rouge">docker-compose -f src/main/docker/couchbase-cluster.yml up -d</code></li>
+  <li>Scale the Couchbase node service (you have to choose an odd number of nodes): <code class="highlighter-rouge">docker-compose -f src/main/docker/couchbase-cluster.yml scale &lt;name_of_your_app&gt;-couchbase-node=&lt;X&gt;</code></li>
+  <li>Build a Docker image of your application: <code class="highlighter-rouge">./mvnw package -Pprod dockerfile:build</code></li>
+  <li>Start your application: <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up -d &lt;name_of_your_app&gt;-app</code></li>
+</ul>
+
+<h3 id="cassandra">Cassandra</h3>
+
+<p>Unlike the other databases, where the schema migrations are executed by the application itself, Cassandra schema migrations are executed by a dedicated Docker container.</p>
+
+<h4 id="cassandra-in-development"><a name="cassandra-in-development"></a>Cassandra in development</h4>
+<p>To start a Cassandra cluster to run your application locally, you can use the docker_compose file for development use:
+<code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra.yml up -d</code></p>
+
+<p>Docker-compose will start 2 services:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;name_of_your_app&gt;-cassandra</code>:  a container with the Cassandra node contact point</li>
+  <li><code class="highlighter-rouge">&lt;name_of_your_app&gt;-cassandra-migration</code>: a container to automatically apply all CQL migrations scripts (create the Keyspace, create the tables, all data migrations, …)</li>
+</ul>
+
+<p>See the <a href="/documentation-archive/v5.0.0/using-cassandra/">Cassandra page</a> for more information on how to add new CQL scripts without restarting the local cluster.</p>
+
+<h4 id="cassandra-in-production">Cassandra in production:</h4>
+<p>The <code class="highlighter-rouge">app.yml</code> docker-compose file uses <code class="highlighter-rouge">cassandra-cluster.yml</code> to configure the cluster.
+The application starts after few seconds (see <em>JHIPSTER_SLEEP</em> variable) to gives the time to the cluster to start and the migrations to be executed.</p>
+
+<p>One big difference between Cassandra and the other databases, is that you can scale your cluster with Docker Compose. To have X+1 nodes in your cluster, run:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker-compose -f src/main/docker/cassandra-cluster.yml scale &lt;name_of_your_app&gt;-cassandra-node=X</code></li>
+</ul>
+
+<h3 id="microsoft-sql-server">Microsoft SQL Server</h3>
+
+<p>If you want to use the MSSQL Docker image with JHipster, there are a few steps to follow:</p>
+
+<ul>
+  <li>Increase the RAM available to Docker to at least 3.25GB</li>
+  <li>Run the database: <code class="highlighter-rouge">docker-compose -f src/main/docker/mssql.yml up -d</code></li>
+  <li>Create the database with a MSSQL client of your choice</li>
+  <li>Start your application: <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up -d &lt;name_of_your_app&gt;-app</code></li>
+</ul>
+
+<h2 id="-elasticsearch"><a name="5"></a> Elasticsearch</h2>
+
+<p>Running <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up</code> already starts up your search engine automatically.</p>
+
+<p>If you just want to start your Elasticsearch node, and not the other services, use its specific Docker Compose configuration:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker-compose -f src/main/docker/elasticsearch.yml up</code></li>
+</ul>
+
+<h2 id="-sonar"><a name="6"></a> Sonar</h2>
+
+<p>A Docker Compose configuration is generated for running Sonar:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker-compose -f src/main/docker/sonar.yml up</code></li>
+</ul>
+
+<p>To analyze your code, run Sonar on your project:</p>
+
+<ul>
+  <li>With Maven: <code class="highlighter-rouge">./mvnw sonar:sonar</code></li>
+  <li>With Gradle: <code class="highlighter-rouge">./gradlew sonar</code></li>
+</ul>
+
+<p>The Sonar reports will be available at: <a href="http://localhost:9000">http://localhost:9000</a></p>
+
+<h2 id="-keycloak"><a name="7"></a> Keycloak</h2>
+
+<p>If you chose OAuth 2.0 as your authentication, Keycloak is used as the default identity provider. Running <code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml up</code> starts up Keycloak automatically.</p>
+
+<p>To make things work, you’ll need to make sure to add the following to your hosts file (<code class="highlighter-rouge">/etc/hosts</code> on Mac/Linux, <code class="highlighter-rouge">c:\Windows\System32\Drivers\etc\hosts</code> on Windows).</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1	keycloak
+</code></pre></div></div>
+
+<p>This is because you will access your application with a browser on your machine (which name is localhost, or <code class="highlighter-rouge">127.0.0.1</code>), but inside Docker it will run in its own container, which name is <code class="highlighter-rouge">keycloak</code>.</p>
+
+<p>If you just want to start Keycloak, and not the other services, use its specific Docker Compose configuration:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">docker-compose -f src/main/docker/keycloak.yml up</code></li>
+</ul>
+
+<h2 id="-common-commands"><a name="8"></a> Common commands</h2>
+
+<h3 id="list-the-containers">List the containers</h3>
+
+<p>You can use <code class="highlighter-rouge">docker container ps -a</code> to list all the containers</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker container ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+fc35e1090021        mysql               "/entrypoint.sh mysql"   4 seconds ago       Up 4 seconds        0.0.0.0:3306-&gt;3306/tcp   sampleApplication-mysql
+</code></pre></div></div>
+
+<h3 id="docker-stats-for-containers">Docker stats for containers</h3>
+<p><code class="highlighter-rouge">docker container stats</code> or <code class="highlighter-rouge">docker container stats $(docker container ps --format={{.Names}})</code> to list all running containers with CPU, Memory, Networking I/O and Block I/O stats.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker container stats $(docker container ps --format={{.Names}})
+CONTAINER                 CPU %               MEM USAGE / LIMIT     MEM %               NET I/O               BLOCK I/O             PIDS
+jhuaa-mysql               0.04%               221 MB / 7.966 GB     2.77%               66.69 kB / 36.78 kB   8.802 MB / 302.5 MB   37
+00compose_msmongo-app_1   0.09%               965.6 MB / 7.966 GB   12.12%              121.3 kB / 54.64 kB   89.84 MB / 14.88 MB   35
+00compose_gateway-app_1   0.39%               1.106 GB / 7.966 GB   13.89%              227.5 kB / 484 kB     117 MB / 28.84 MB     92
+jhipster-registry         0.74%               1.018 GB / 7.966 GB   12.78%              120.2 kB / 126.4 kB   91.12 MB / 139.3 kB   63
+gateway-elasticsearch     0.27%               249.1 MB / 7.966 GB   3.13%               42.57 kB / 21.33 kB   48.16 MB / 4.096 kB   58
+00compose_jhuaa-app_1     0.29%               1.042 GB / 7.966 GB   13.08%              101.8 kB / 78.84 kB   70.08 MB / 13.5 MB    68
+msmongo-mongodb           0.34%               44.8 MB / 7.966 GB    0.56%               49.72 kB / 48.08 kB   33.97 MB / 811 kB     18
+gateway-mysql             0.03%               202.7 MB / 7.966 GB   2.54%               60.84 kB / 31.22 kB   27.03 MB / 297 MB     37
+</code></pre></div></div>
+
+<h3 id="scale-a-container">Scale a container</h3>
+
+<p>Run <code class="highlighter-rouge">docker-compose scale test-app=4</code> to have 4 instances of application “test” running.</p>
+
+<h3 id="stop-containers">Stop containers</h3>
+
+<p><code class="highlighter-rouge">docker-compose -f src/main/docker/app.yml stop</code></p>
+
+<p>You can also use directly Docker:</p>
+
+<p><code class="highlighter-rouge">docker container stop &lt;container_id&gt;</code></p>
+
+<p>When you stop a container, the data is not deleted, unless you delete the container.</p>
+
+<h3 id="delete-a-container">Delete a container</h3>
+
+<p>Be careful! All data will be deleted:</p>
+
+<p><code class="highlighter-rouge">docker container rm &lt;container_id&gt;</code></p>
+
+<h2 id="-memory-tweaking"><a name="9"></a> Memory Tweaking</h2>
+
+<p>In order to optimize memory usage for applications running in the container, you can setup Java memory parameters on <code class="highlighter-rouge">Dockerfile</code> or <code class="highlighter-rouge">docker-compose.yml</code></p>
+
+<h3 id="adding-memory-parameters-to-dockerfile">Adding memory parameters to Dockerfile</h3>
+
+<p>Set the environment variable.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ENV JAVA_OPTS=-Xmx512m -Xms256m
+</code></pre></div></div>
+
+<h3 id="adding-memory-parameters-to-docker-composeyml">Adding memory parameters to docker-compose.yml</h3>
+
+<p>This solution is desired over Dockerfile. In this way, you have a single control point for your memory configuration on all containers that compose you application.</p>
+
+<p>Add the <code class="highlighter-rouge">JAVA_OPTS</code> into <code class="highlighter-rouge">environment</code> section.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    environment:
+      - (...)
+      - JAVA_OPTS=-Xmx512m -Xms256m
+</code></pre></div></div>
+
+<p>Depending on the Docker base image, <code class="highlighter-rouge">JAVA_OPTS</code> won’t work. In this case, try to use <code class="highlighter-rouge">_JAVA_OPTIONS</code> instead:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    environment:
+      - (...)
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+</code></pre></div></div>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                    <!-- change to below commented line when adding more logos -->
+                                    <!-- <div class="col-xs-12 col-sm-6 col-md-4"> -->
+                                    <div class="col-md-offset-4 col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.0.0/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.0.0/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.0.0/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v5.0.0/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v5.0.0/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v5.0.0/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v5.0.0/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v5.0.0/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/java_hipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2018 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Freelancer</a> and <a href="https://github.com/tui2tone/flat-admin-bootstrap-templates" target="_blank">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v5.0.0/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
