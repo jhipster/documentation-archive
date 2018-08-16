@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>JHipster Registry</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v5.2.1/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li class="">
+                            <a href="https://www.google.com/search?q=site:www.jhipster.tech" target="_blank">Search</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" class="dropdown-toggle navlink" target="_blank" role="button"><i class="fa fa-github fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v5.2.1/images/logo/logo-jhipster.svg" height="50px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v5.2.1/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (16 minutes)</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/traefik/"><i class="fa fa-fw fa-exchange"></i> Traefik</a></li>
+                                            <li class="active" ><a href="/documentation-archive/v5.2.1/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-uaa/"><i class="fa fa-fw fa-lock"></i> JHipster UAA</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/docker-hub/"><i class="fa fa-fw fa-cloud-upload"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/rancher/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Rancher</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/boxfuse/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with Boxfuse</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Modules &amp; Blueprints</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/jdl/"><i class="fa fa-fw fa-star"></i> JDL</a></li>
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.2.1/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.2.1/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.2.1/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/consulting/"><i class="fa fa-fw fa-user-md"></i> Professional help</a></li>
+                                            <li ><a href="/documentation-archive/v5.2.1/training/"><i class="fa fa-fw fa-graduation-cap"></i> Training</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v5.2.1/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <h1 id="-the-jhipster-registry"><i class="fa fa-dashboard"></i> The JHipster Registry</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The JHipster Registry is a runtime application, provided by the JHipster team. Like the JHipster generator, it is an Open Source, Apache 2-licensed application, and its source code is available on GitHub under the JHipster organization at <a href="https://github.com/jhipster/jhipster-registry">jhipster/jhipster-registry</a>.</p>
+
+<p>The JHipster Registry has three main purposes:</p>
+
+<ul>
+  <li>It is a an <a href="https://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html">Eureka server</a>, that serves as a discovery server for applications. This is how JHipster handles routing, load balancing and scalability for all applications.</li>
+  <li>It is a <a href="https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html">Spring Cloud Config server</a>, that provide runtime configuration to all applications.</li>
+  <li>It is an administration server, with dashboards to monitor and manage applications.</li>
+</ul>
+
+<p>All those features are packaged into one convenient application with a modern Angular-based user interface.</p>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-animation.gif" alt="" /></p>
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#eureka">Service discovery with Eureka</a></li>
+  <li><a href="#spring-cloud-config">Application configuration with Spring Cloud Config</a></li>
+  <li><a href="#dashboards">Administration dashboards</a></li>
+  <li><a href="#security">Securing the JHipster Registry</a></li>
+</ol>
+
+<h2 id="-installation"><a name="installation"></a> Installation</h2>
+
+<h3 id="spring-profiles">Spring profiles</h3>
+
+<p>The JHipster Registry uses the usual JHipster <code class="highlighter-rouge">dev</code> and <code class="highlighter-rouge">prod</code> Spring profiles, as well as the standard <code class="highlighter-rouge">composite</code> from Spring Cloud Config (See <a href="https://cloud.spring.io/spring-cloud-config/multi/multi__spring_cloud_config_server.html#composite-environment-repositories">official documentation</a>).</p>
+
+<p>As a result:</p>
+
+<ul>
+  <li>Using the <code class="highlighter-rouge">dev</code> profile will run the JHipster Registry with the <code class="highlighter-rouge">dev</code> and the <code class="highlighter-rouge">composite</code> profiles. The <code class="highlighter-rouge">dev</code> profile will load the Spring Cloud configuration from the filesystem, looking for the <code class="highlighter-rouge">central-config</code> directory, which is relative to the running directory, defined in <code class="highlighter-rouge">src/main/resources/config/bootstrap.yml</code> file.</li>
+  <li>Using the <code class="highlighter-rouge">prod</code> profile will run the JHipster Registry with the <code class="highlighter-rouge">prod</code> and the <code class="highlighter-rouge">composite</code> profiles. The <code class="highlighter-rouge">prod</code> profile will load the Spring Cloud configuration from a Git repository, which is by default <a href="https://github.com/jhipster/jhipster-registry-sample-config">https://github.com/jhipster/jhipster-registry-sample-config</a>. In a real-world usage, this repository should be changed, either by reconfiguring it in the <code class="highlighter-rouge">src/main/resources/config/bootstrap-prod.yml</code> file, or by reconfiguring the <code class="highlighter-rouge">spring.cloud.config.server.composite</code> Spring property.</li>
+</ul>
+
+<p>Once the JHipster Registry is running, you can check its configuration in the <code class="highlighter-rouge">Configuration &gt; Cloud Config</code> menu. Please note that if you can’t log in, it might be because the JWT signature key is not correctly set up, which is a sign that your configuration isn’t good.</p>
+
+<h3 id="using-the-pre-packaged-war-file">Using the pre-packaged WAR file</h3>
+
+<p>The JHipster Registry is available as an executable WAR file on our <a href="https://github.com/jhipster/jhipster-registry/releases">Releases page</a>.</p>
+
+<p>Download the WAR file, and run it as a usual JHipster application, using the profile you want to use (see the previous section about profiles). For example, to run it using a Spring Cloud Config configuration stored in the <code class="highlighter-rouge">central-config</code> directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./jhipster-registry-&lt;version&gt;.war --spring.security.user.password=admin --jhipster.security.authentication.jwt.secret=secret-key --spring.cloud.config.server.composite[0].type=native --spring.cloud.config.server.composite[0].search-locations=file:./central-config
+</code></pre></div></div>
+
+<p>Note that it is important to provide a JWT secret key to the registry on startup, either via the <code class="highlighter-rouge">JHIPSTER_SECURITY_AUTHENTICATION_JWT_SECRET</code> environment variable or with arguments as shown above. Another possible way is to set this value in the <code class="highlighter-rouge">application.yml</code> file of your centralized configuration source (which is loaded on startup by all your applications including the registry).</p>
+
+<p>Similarly, to run the registry with the <code class="highlighter-rouge">prod</code> profile, adapt the arguments to your setup, for example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./jhipster-registry-&lt;version&gt;.war --spring.profiles.active=prod --spring.security.user.password=admin --jhipster.security.authentication.jwt.secret=secret-key --spring.cloud.config.server.composite=https://github.com/jhipster/jhipster-registry-sample-config --spring.cloud.config.server.composite[0].type=git --spring.cloud.config.server.composite[0].uri=https://github.com/jhipster/jhipster-registry-sample-config
+</code></pre></div></div>
+
+<h3 id="building-from-source">Building from source</h3>
+
+<p>The JHipster Registry can be cloned/forked/downloaded directly from <a href="https://github.com/jhipster/jhipster-registry">jhipster/jhipster-registry</a>. As the JHipster Registry is also a JHipster-generated application, you can run it like any other JHipster application:</p>
+
+<ul>
+  <li>run it in development with <code class="highlighter-rouge">./mvnw</code> (for the Java server) and <code class="highlighter-rouge">yarn start</code> (for managing the front-end), it will use by default the <code class="highlighter-rouge">dev</code> profile and it will be available at <a href="http://127.0.0.1:8761/">http://127.0.0.1:8761/</a>.</li>
+  <li>use <code class="highlighter-rouge">./mvnw -Pprod package</code> to package it in production, and generate the usual JHipster executable WAR file. You can then run the WAR file using the <code class="highlighter-rouge">dev</code> or <code class="highlighter-rouge">prod</code> Spring profile, for example: <code class="highlighter-rouge">./jhipster-registry-&lt;version&gt;.war --spring.profiles.active=prod</code></li>
+</ul>
+
+<p>Please note that to use the <code class="highlighter-rouge">dev</code> and <code class="highlighter-rouge">composite</code> profile, you need to have a <code class="highlighter-rouge">central-config</code> directory with your configuration, so if you run <code class="highlighter-rouge">./jhipster-registry-&lt;version&gt;.war --spring.profiles.active=dev</code>, you need to have that directory set up.</p>
+
+<h3 id="using-docker">Using Docker</h3>
+
+<p>If you’d rather run the JHipster Registry from a Docker image, it is available on Docker Hub at <a href="https://hub.docker.com/r/jhipster/jhipster-registry/">jhipster/jhipster-registry</a>. A docker-compose file to easily run this image is already present within each microservice <code class="highlighter-rouge">src/main/docker</code> directory:</p>
+
+<ul>
+  <li>run <code class="highlighter-rouge">docker-compose -f src/main/docker/jhipster-registry.yml up</code> to start the JHipster Registry. It will be available on port <code class="highlighter-rouge">8761</code> of your Docker host, so if it runs on your machine it should be at <a href="http://127.0.0.1:8761/">http://127.0.0.1:8761/</a>.</li>
+</ul>
+
+<p>Please read our <a href="/documentation-archive/v5.2.1/docker-compose/">Docker Compose documentation</a> for more information on using the JHipster Registry with Docker Compose.</p>
+
+<h3 id="running-in-the-cloud">Running in the cloud</h3>
+
+<p>It’s very easy to host a JHipster Registry instance in the cloud. This is mandatory in production, but this can also be useful in development (there is no need to run it on your laptop).</p>
+
+<p>Please read <a href="/documentation-archive/v5.2.1/microservices-in-production/">the “microservices in production” documentation</a> to learn how to deploy the JHipster Registry to Cloud Foundry or to Heroku.</p>
+
+<h2 id="-service-discovery-with-eureka"><a name="eureka"></a> Service discovery with Eureka</h2>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-eureka.png" alt="" /></p>
+
+<p>The JHipster Registry is a <a href="https://github.com/Netflix/eureka">Netflix Eureka server</a>, that provides service discovery for all applications.</p>
+
+<ul>
+  <li>This is very useful for microservices architectures: this is how the gateways know which microservices are available, and which instances are up</li>
+  <li>For all applications, including monoliths, this is how the Hazelcast distributed cache can automatically scale, see <a href="/documentation-archive/v5.2.1/using-cache/">the Hazelcast cache documentation</a></li>
+</ul>
+
+<h2 id="-application-configuration-with-spring-cloud-config"><a name="spring-cloud-config"></a> Application configuration with Spring Cloud Config</h2>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-spring-cloud-config.png" alt="" /></p>
+
+<p>The JHipster Registry is a <a href="http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html">Spring Config Server</a>: when applications are launched they will first connect to the JHipster Registry to get their configuration. This is true for both gateways and microservices.</p>
+
+<p>This configuration is a Spring Boot configuration, like the one found in the JHipster <code class="highlighter-rouge">application-*.yml</code> files, but it is stored in a central server, so it is easier to manage.</p>
+
+<p>On startup, your gateways and microservices app will query the Registry’s config server and overwrite their local properties with the ones defined there.</p>
+
+<p>Two kinds of configurations sources are available (defined by the <code class="highlighter-rouge">spring.cloud.config.server.composite</code> property):</p>
+
+<ul>
+  <li>A <code class="highlighter-rouge">native</code> configuration, which is used by default in development (using the JHipster <code class="highlighter-rouge">dev</code> profile), and which uses the local filesystem.</li>
+  <li>A <code class="highlighter-rouge">Git</code> configuration, which is used by default in production (using the JHipster <code class="highlighter-rouge">prod</code> profile), and which stores the configuration in a Git server. This allows to tag, branch or rollback configurations using the usual Git tools, which are very powerful in this use-case.</li>
+</ul>
+
+<p>To manage your centralized configuration you just need to add <code class="highlighter-rouge">appname-profile.yml</code> files in your configuration source where <strong>appname</strong> and <strong>profile</strong> correspond to the application’s name and current profile of the service that you want to configure.
+For example, adding properties in a <code class="highlighter-rouge">gateway-prod.yml</code> file will set those properties only for the application named <strong>gateway</strong> started with a <strong>prod</strong> profile. Moreover, properties defined in <code class="highlighter-rouge">application[-dev|prod].yml</code> will be set for all your applications.</p>
+
+<p>As the Gateway routes are configured using Spring Boot, they can also be managed using the Spring Config Server, for example you could map application <code class="highlighter-rouge">app1-v1</code> to the <code class="highlighter-rouge">/app1</code> URL in your <code class="highlighter-rouge">v1</code> branch, and map application <code class="highlighter-rouge">app1-v2</code> to the <code class="highlighter-rouge">/app1</code> URL in your <code class="highlighter-rouge">v2</code> branch. This is a good way of upgrading microservices without any downtime for end-users.</p>
+
+<h3 id="-using-encrypted-configuration-values"><a name="encryption"></a> Using encrypted configuration values</h3>
+
+<p>The JHipster Registry has a specific <code class="highlighter-rouge">configuration &gt; encryption</code> page to allow easy encryption and decryption of configuration values.</p>
+
+<p>To encrypt configuration values (for example, database passwords) you need to:</p>
+
+<ul>
+  <li>download the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html">JCE</a> and install it by following the instructions in the downloaded files (this is only required if you are using the Oracle JDK).</li>
+  <li>set the <code class="highlighter-rouge">encrypt.key</code> property in <code class="highlighter-rouge">bootstrap.yml</code> (not <code class="highlighter-rouge">application.yml</code>) or use the <code class="highlighter-rouge">ENCRYPT_KEY</code> environment variable with your symmetric key passphrase.</li>
+</ul>
+
+<p>If everything is setup correctly, you should be able to use the specific <code class="highlighter-rouge">Configuration &gt; Encryption</code> page, and also send POST requests to <code class="highlighter-rouge">/config/encrypt</code> and <code class="highlighter-rouge">/config/decrypt</code> endpoints with the text you want to manipulate in the <code class="highlighter-rouge">body</code> of the requests.</p>
+
+<p>For example: <code class="highlighter-rouge">curl localhost:8761/config/encrypt -d mypassword</code></p>
+
+<p>The cipher text must be placed in any <code class="highlighter-rouge">*.yml</code> configuration file, in the form <code class="highlighter-rouge">password= '{cipher}myciphertextafterencryotion'</code> and it will be decrypted by the config server before sending it to its clients. This way your configuration files (stored in Git or stored “natively” on your filesystem) do not have plain text values.</p>
+
+<p>For more information, please refer to Spring Cloud Config’s <a href="http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html#_encryption_and_decryption">Encryption and Decryption documentation</a>.</p>
+
+<h2 id="-administration-dashboards"><a name="dashboards"></a> Administration dashboards</h2>
+
+<p>The JHipster Registry provides administration dashboards, which are used for all application types. As soon as an application registers on the Eureka server, it will become available in the dashboards.</p>
+
+<p>In order to access sensitive information from the applications, the JHipster Registry will use a JWT token (this is why the JHipster Registry only works for applications using JWT). The JWT key used to sign the request should be the same for the applications and the JHipster Registry: as by default the JHipster Registry configures applications through Spring Cloud Config, this should work out-of-the-box, as it will send the same key to all applications.</p>
+
+<h3 id="the-metrics-dashboard">The metrics dashboard</h3>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-metrics.png" alt="" /></p>
+
+<p>The metrics dashboard uses Dropwizard metrics to give a detailed view of the application performance.</p>
+
+<p>It gives metrics on:</p>
+
+<ul>
+  <li>the JVM</li>
+  <li>HTTP requests</li>
+  <li>methods used in Spring Beans (using the <code class="highlighter-rouge">@Timed</code> annotation)</li>
+  <li>database connection pool</li>
+</ul>
+
+<p>By clicking on the eye next to the JVM thread metrics, you will get a stacktrace of the running application, which is very useful to find out blocked threads.</p>
+
+<h3 id="the-health-dashboard">The health dashboard</h3>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-health.png" alt="" /></p>
+
+<p>The health dashboard uses Spring Boot Actuator’s health endpoint to give health information on various parts of the application. Many health checks are provided out-of-the-box by Spring Boot Actuator, and it’s also very easy to add application-specific health checks.</p>
+
+<h3 id="the-configuration-dashboard">The configuration dashboard</h3>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-configuration.png" alt="" /></p>
+
+<p>The configuration dashboard uses Spring Boot Actuator’s configuration endpoint to give a full view of the Spring configuration of the current application.</p>
+
+<h3 id="the-logs-dashboard">The logs dashboard</h3>
+
+<p><img src="/documentation-archive/v5.2.1/images/jhipster-registry-logs.png" alt="" /></p>
+
+<p>The logs dashboard allows to manage at runtime the Logback configuration of the running application. Changing the log level of a Java package is as simple as clicking on a button, which is very convenient both in development and in production.</p>
+
+<h2 id="-securing-the-jhipster-registry"><a name="security"></a> Securing the JHipster Registry</h2>
+
+<p>The JHipster Registry is secured by default. You can login using the usual “admin/admin” login and password that are used in normal JHipster applications.</p>
+
+<p>Applications also connect to the JHipster Registry using that same “admin” user, but use HTTP Basic authentication. So if your microservices cannot access the registry, and you see some “401 authentication error” messages, it is because you have misconfigured those applications.</p>
+
+<p>In order to secure your JHipster Registry:</p>
+
+<ul>
+  <li>You must change the default “admin” password. This password is set using the standard Spring Boot property <code class="highlighter-rouge">security.user.password</code>, so you can use the usual Spring Boot mechanisms to modify it: you could modify the project’s <code class="highlighter-rouge">application-*.yml</code> files, or add a <code class="highlighter-rouge">SPRING_SECURITY_USER_PASSWORD</code> environment variable. The <a href="/documentation-archive/v5.2.1/docker-compose/">Docker Compose sub-generator</a> uses the environment variable method.</li>
+  <li>As your applications will connect to the registry using HTTP, it is very important to secure that connection channel. There are many ways to do it, and the easiest one is probably to use HTTPS.</li>
+</ul>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                    <!-- change to below commented line when adding more logos -->
+                                    <!-- <div class="col-xs-12 col-sm-6 col-md-4"> -->
+                                    <div class="col-md-offset-4 col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.2.1/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.2.1/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.2.1/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v5.2.1/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v5.2.1/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v5.2.1/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v5.2.1/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v5.2.1/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/java_hipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2018 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Freelancer</a> and <a href="https://github.com/tui2tone/flat-admin-bootstrap-templates" target="_blank">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v5.2.1/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
