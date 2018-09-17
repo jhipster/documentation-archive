@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>JHipster-UML</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.png" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v5.3.4/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li class="">
+                            <a href="https://www.google.com/search?q=site:www.jhipster.tech" target="_blank">Search</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" class="dropdown-toggle navlink" target="_blank" role="button"><i class="fa fa-github fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v5.3.4/images/logo/logo-jhipster.svg" height="50px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v5.3.4/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (16 minutes)</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/traefik/"><i class="fa fa-fw fa-exchange"></i> Traefik</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-uaa/"><i class="fa fa-fw fa-lock"></i> JHipster UAA</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/docker-hub/"><i class="fa fa-fw fa-cloud-upload"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/azure/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Azure</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/rancher/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Rancher</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/boxfuse/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with Boxfuse</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Modules &amp; Blueprints</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/jdl/"><i class="fa fa-fw fa-star"></i> JDL</a></li>
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.3.4/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li class="active" >
+                                                <a href="/documentation-archive/v5.3.4/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.3.4/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/consulting/"><i class="fa fa-fw fa-user-md"></i> Professional help</a></li>
+                                            <li ><a href="/documentation-archive/v5.3.4/training/"><i class="fa fa-fw fa-graduation-cap"></i> Training</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v5.3.4/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <h1 id="-jhipster-uml"><i class="fa fa-magic"></i> JHipster-UML</h1>
+
+<p>JHipster-UML is a JHipster sub-project that can be used as a replacement to using the <a href="/documentation-archive/v5.3.4/creating-an-entity/">entity sub-generator</a>. The idea is that it is much easier to <a href="/documentation-archive/v5.3.4/managing-relationships/">manage relationships</a> using a visual tool than with the classical Yeoman questions and answers.</p>
+
+<p>The JHipster-UML project is <a href="https://github.com/jhipster/jhipster-uml/">available on GitHub</a>, it is an Open Source project like JHipster (Apache 2.0 licence). If you like this project, don’t forget to give us a star on GitHub!</p>
+
+<p>Here’s what’s covered on this page:</p>
+
+<ol>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#issues">Issues and bugs</a></li>
+  <li><a href="#install">Installation</a></li>
+  <li><a href="#howtouse">How to use JHipster-UML</a><br />
+ 4.1. <a href="#umlfile">The UML file</a><br />
+ 4.2. <a href="#usejuml">Use JHipster-UML</a><br />
+ 4.3. <a href="#whatsgenerated">What’s generated</a><br />
+ 4.4. <a href="#jhipsternotes">JHipster notes</a><br />
+ 4.5. <a href="#reservedwords">Reserved words</a></li>
+  <li><a href="#examples">Examples</a><br />
+ 5.1. <a href="#modelioexample">Modelio</a><br />
+ 5.2. <a href="#umldesignerexample">UML Designer</a><br />
+ 5.3. <a href="#genmymodelexample">GenMyModel</a><br />
+ 5.4. <a href="#othereditors">Other editors</a><br />
+ 5.5. <a href="#enumerationexamples">Enumerations</a><br />
+ 5.6. <a href="#tablenames">Table names</a><br />
+ 5.7. <a href="#requiredrels">Required relationships</a></li>
+  <li><a href="#testing-juml">Testing</a></li>
+  <li><a href="#contributing">Contributing: issues and enhancements</a><br />
+ 7.1. <a href="#parsermodifications">Parser modifications</a></li>
+  <li><a href="#annexes">Annexes</a></li>
+</ol>
+
+<hr />
+
+<h1 id="introduction"><a name="introduction"></a>Introduction</h1>
+
+<p>JHipster-UML is an alternative to the usual Q&amp;A as it offers you the possibility to use a UML editor to create a diagram that will be parsed by JHipster-UML.</p>
+
+<p>Here is a list of the editors we support:</p>
+
+<ul>
+  <li><a href="https://www.modeliosoft.com/">Modelio</a>;</li>
+  <li><a href="http://www.umldesigner.org/">UML Designer</a>;</li>
+  <li><a href="https://www.genmymodel.com/">GenMyModel</a> (not free, but online).</li>
+</ul>
+
+<hr />
+
+<h1 id="issues-and-bugs"><a name="issues"></a>Issues and bugs</h1>
+
+<p>JHipster-UML is <a href="https://github.com/jhipster/jhipster-uml">available on GitHub</a>, and follows the same <a href="https://github.com/jhipster/generator-jhipster/blob/master/CONTRIBUTING.md">contributing guidelines as JHipster</a>.</p>
+
+<p>Please use our project for submitting issues and Pull Requests:</p>
+
+<ul>
+  <li><a href="https://github.com/jhipster/jhipster-uml/issues">JHipster-UML issue tracker</a></li>
+  <li><a href="https://github.com/jhipster/jhipster-uml/pulls">JHipster-UML Pull Requests</a></li>
+</ul>
+
+<p>When submitting anything, you must be as precise as possible:</p>
+<ul>
+  <li><strong>One posted issue must only have one problem</strong> (or one demand/question);</li>
+  <li>Pull requests are welcome, but the commits must be ‘atomic’ to really be understandable.</li>
+</ul>
+
+<p>Please note that using JHipster-UML (or JHipster) might be troublesome (one has to install some tools to really be able to use the Node environment without any issue). This <a href="https://gist.github.com/nullivex/7115612">link</a> may help if you encounter an issue on Windows.</p>
+
+<p>Another issue that can be encountered on Windows is <a href="https://stackoverflow.com/questions/30344858/node-script-executable-not-working-on-mac-env-node-r-no-such-file-or-directo#answer-30349952">this one</a>. The link provides a solution to fix that if such a thing happens.</p>
+
+<p>Finally, an issue has been reported from a Windows user using Git Bash. The JHipster generator’s questions (from InquirerJS) could not work (the user is stuck when answering the questions). You might want to use Powershell or another shell when using JHipster UML (or JHipster).</p>
+
+<hr />
+
+<h1 id="installation"><a name="install"></a>Installation</h1>
+<p>To install JHipster UML simply use the command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   npm install -g jhipster-uml
+   # or
+   yarn global add jhipster-uml
+</code></pre></div></div>
+
+<p>If, however, you don’t want to install the latest version globally because it doesn’t match your version of the generator (see below) or if you want it contained locally, use this command instead:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    npm install jhipster-uml --save-dev
+    # or
+    yarn add jhipster-uml --dev
+</code></pre></div></div>
+
+<p>If you want the ‘bleeding edge’ (almost perfectly safe to use) version, you can clone our git repo from <a href="https://github.com/jhipster/jhipster-uml">our GitHub project</a>:</p>
+
+<p><code class="highlighter-rouge">git clone https://github.com/jhipster/jhipster-uml.git</code> for HTTPS</p>
+
+<p><code class="highlighter-rouge">git clone git@github.com:jhipster/jhipster-uml.git</code> for SSH</p>
+
+<p>JHipster UML is a tool that <em>can</em> be used with the JHipster’s generator. If you’re using the generator before v3.0.0, then you must use JHipster UML v1.6.5 (latest patch release). Otherwise, using v2.0.0+ is the choice for v3.0.0+ of the generator.</p>
+
+<hr />
+
+<h1 id="how-to-use-it"><a name="howtouse"></a>How to use it</h1>
+<p>JHipster-UML is quite easy to use, you only need a class diagram exported in XMI and JHipster-UML will parse it to create your entities.</p>
+
+<h2 id="the-uml-file"><a name="umlfile"></a>The UML file</h2>
+
+<p>The class diagram should modelize the entities of your JHipster application domain, thus you have restrictions, you have to follow the methodology.</p>
+
+<h3 id="entities">Entities</h3>
+<p>Each entity is represented by a class, its fields are the class’ attributes. An attribute must have a type supported by JHipster, otherwise it won’t work. To have JHipster supported types like “BigDecimal”, “LocalDate”…, you can create a <em>PrimitiveType</em> or a <em>DataType</em> for it.
+You can look at the tables with all the types supported by JHipster and the validations you can use for each <a href="#annexes">here</a>.</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_book_datatype.png" alt="Book Entity" /></p>
+
+<p>Here is an example of a properly created class for JHipster. We have the attributes <em>publicationDate</em> and price set with the types <em>BigDecimal</em> and <em>LocalDate</em> we created as <em>DataType.</em></p>
+
+<p>Note that you don’t need to capitalize type names (<strong>except for composed names like BigDecimal</strong>, JHipster-UML capitalizes simple names).</p>
+
+<h3 id="relationships">Relationships</h3>
+<p>We just use the examples from JHipster in order to show how to do it with an editor.
+Please note that we <strong>only</strong> support the relationships listed in the <a href="/documentation-archive/v5.3.4/managing-relationships/">Managing relationships</a> page.</p>
+
+<h4 id="one-to-one">One-to-One</h4>
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_bi_oto.png" alt="One-to-One" /></p>
+
+<p>Here, we have a bidirectional one-to-one relationship between Driver and Car, with Driver as the owner of the relationship.</p>
+
+<p>If you’re looking for a unidirectional relationship:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_uni_oto.png" alt="One-to-One2" /></p>
+
+<p>Notice that in order to achieve a unidirectional relationship we just removed the <code class="highlighter-rouge">citizen</code> label so that <code class="highlighter-rouge">Passport</code> doesn’t have it.</p>
+
+<h4 id="one-to-many">One-to-Many</h4>
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_bi_otm.png" alt="One-to-Many" /></p>
+
+<p>In this bidirectional relationship, an Owner can have many cars, and a Car can have only one owner.</p>
+
+<p>Unidirectional relationships for One-to-Many relationships are not (yet) supported by JHipster (see <a href="/documentation-archive/v5.3.4/managing-relationships/#3">this</a> page for more information about this).
+This is an example of such an association:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_uni_otm.png" alt="One-to-Many2" /></p>
+
+<h4 id="many-to-one">Many-to-One</h4>
+
+<p>As showed previously, the equivalent of a One-to-Many relationship is a Many-to-One:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_uni_mto.png" alt="One-to-Many2" /></p>
+
+<p>Now the cars know their owner, but not the opposite.</p>
+
+<h4 id="many-to-many">Many-to-Many</h4>
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_bi_mtm.png" alt="Many-to-Many" /></p>
+
+<p>Here, we have a many-to-many relationship between Car (the owner) and Driver.</p>
+
+<h4 id="declare-the-field-you-want-to-use-to-display-a-relationship-in-angular">Declare the field you want to use to display a relationship in Angular</h4>
+<p>To do that you must add the field name between <code class="highlighter-rouge">(</code><code class="highlighter-rouge">)</code> after the injected field name.</p>
+
+<p>In a One-to-Many relationship you can add it in the ‘Many’ side of the relationship:</p>
+
+<ul>
+  <li>UML</li>
+</ul>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_otherEntityFieldOM.jpeg" alt="otherEntityField One-to-Many" /></p>
+
+<ul>
+  <li>
+    <p>JDL</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship OneToMany {
+  One{many} to Many{one(&lt;otherEntityField&gt;)}
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>In a Many-to-Many relationship you can add it in the owner side of the entity:</p>
+
+<ul>
+  <li>UML</li>
+</ul>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_otherEntityFieldMM.jpeg" alt="otherEntityField Many-to-Many" /></p>
+
+<ul>
+  <li>
+    <p>JDL</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>relationship ManyToMany {
+  Owner{notOwner(&lt;otherEntityField&gt;)} to NotOwner{owner}
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="reflexivity-cases">Reflexivity cases</h4>
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_reflexivity.png" alt="Reflexivity" /></p>
+
+<p>As you can see, there are 3 types of reflexivity. JHipster-UML only supports the first two (one-to-one and one-to-many). The many-to-many case is <strong>not</strong> supported because:</p>
+
+<ul>
+  <li>
+    <p>It can lead to over-complexified and wrong models (the same effect can be achieved more easily);</p>
+  </li>
+  <li>
+    <p>JHipster doesn’t support it (this is a good thing);</p>
+  </li>
+</ul>
+
+<h3 id="a-complete-example">A complete example</h3>
+<p>We use a diagram from the Oracle HR example available <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28328/diagrams.htm#G5482">here</a>.</p>
+
+<p>Here’s a screenshot of such a diagram (from Modelio):<br />
+<img src="/documentation-archive/v5.3.4/images/jhipsteruml_overviewdiagram.png" alt="HR UML diagram" /></p>
+
+<p>As you can see, we changed it as to make it a bit more interesting.
+JHipster can generate entities and associations between them (one-to-one, one-to-many, etc.), and in this example we added every type of association (even the reflexive and the inheritance). JHipster doesn’t support inheritance yet (but reflexivity is supported by JHipster, with a warning), but we decided to include it in the example so as to have a solid base to work with.</p>
+
+<h2 id="use-jhipster-uml"><a name="usejuml"></a>Use JHipster-UML</h2>
+
+<p>Once you have your JHipster application set up and your class diagram in a UML editor, follow these steps:</p>
+
+<ul>
+  <li>
+    <p>step 1 - export your class diagram to the XMI file format</p>
+  </li>
+  <li>
+    <p>step 2 - in your JHipster application root folder, execute the command</p>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge">jhipster-uml &lt;your_file.xmi&gt;</code></p>
+
+<p>Note that you don’t need to supply the database type (sql, mongodb, or cassandra), as JHipster-UML detects the type for you (from the <em>.yo-rc.json</em> file).</p>
+
+<p>If, however, you wish to execute JHipster-UML outside a JHipster app, you need to pass an extra argument: the database type name.
+Here is the command to execute:</p>
+
+<p><code class="highlighter-rouge">jhipster-uml &lt;your_file.xmi&gt; [--db (sql | mongodb | cassandra)]</code></p>
+
+<p>The JHipster DTOs can be generated too, simply pass the <code class="highlighter-rouge">--dto</code> arg to enable this feature.</p>
+
+<p><code class="highlighter-rouge">jhipster-uml &lt;your_file.xmi&gt; [--db (sql | mongodb | cassandra)] [--dto]</code></p>
+
+<p>You can choose the pagination for your entities using <code class="highlighter-rouge">--paginate</code>.</p>
+
+<p><code class="highlighter-rouge">jhipster-uml &lt;your_file.xmi&gt; [--db (sql | mongodb | cassandra)] [--paginate]</code></p>
+
+<p>Finally, you can choose the service for your entities using <code class="highlighter-rouge">--service</code>.</p>
+
+<p><code class="highlighter-rouge">jhipster-uml &lt;your_file.xmi&gt; [--db (sql | mongodb | cassandra)] [--service]</code></p>
+
+<p><strong>Please note that using the <code class="highlighter-rouge">paginate</code> option and not selecting any entity to generate the pagination for cancels your choice of using this option.</strong></p>
+
+<p>Finally, if you need help, there’s a command for that too:</p>
+
+<p><code class="highlighter-rouge">jhipster-uml --help</code></p>
+
+<ul>
+  <li>step 3 - that’s it!</li>
+</ul>
+
+<p><strong>Note: If you want to use the classes and methods available, the preferred entry point of JHipster-UML is the ParserFactory (so that you don’t open the file, read it, find the root element, etc.).</strong></p>
+
+<h2 id="jhipster-uml-file"><a name="jumlfile"></a>JHipster-UML file</h2>
+
+<p>JHipster-UML can be configured by the command line and / or by a JSON based configuration file, the <code class="highlighter-rouge">jumlfile</code>.
+The options described in the help can be used in the both but the commande line take precedence over the <code class="highlighter-rouge">jumlfile</code>.</p>
+
+<h3 id="a-concrete-example">A concrete example</h3>
+
+<p>jumlfile content:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s2">"db"</span><span class="p">:</span> <span class="s2">"sql"</span><span class="p">,</span>
+  <span class="s2">"force"</span><span class="p">:</span> <span class="s2">"true"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Call:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster-uml --no-force
+</code></pre></div></div>
+<p>You Will have the following executed options:</p>
+<ul>
+  <li>db : sql</li>
+  <li>force : false (without force)</li>
+</ul>
+
+<h2 id="whats-generated"><a name="whatsgenerated"></a>What’s generated</h2>
+
+<p>After executing JHipster-UML, the <em>.jhipster</em> folder will be created (if it didn’t exist before) and filled with the entities present in the XMI file in the JSON format.</p>
+
+<p>Please note that one entity may, at least, not be generated: the User entity. It is actually scaffolded by JHipster when creating a new app (and a warning message is displayed by JHipster-UML).</p>
+
+<p>Next, it’s pretty straightforward: just run your app!</p>
+
+<h2 id="jhipster-notes"><a name="jhipsternotes"></a>JHipster notes</h2>
+
+<p>JHipster is a great scaffolding tool with many conventions, some of them are worth mentioning when generating entities with JHipster-UML:</p>
+
+<ul>
+  <li>You don’t have to use an <code class="highlighter-rouge">id</code> field in your entities because JHipster generates one by default, and JHipster-UML removes any field if it is detected as an ID;</li>
+  <li>You don’t have to use the plural form in your relationships, JHipster adds an <code class="highlighter-rouge">s</code> when needed. For instance, if there’s a many-to-many relationship between entity A and entity B, you don’t have to name the relationship’s end <code class="highlighter-rouge">as</code> or <code class="highlighter-rouge">bs</code> because JHipster will do that for you;</li>
+</ul>
+
+<h2 id="reserved-words"><a name="reservedwords"></a>Reserved words</h2>
+
+<p>JHipster maintains a list of forbidden (<em>under some conditions</em>) words.
+For instance, if you want to generate entities for your app, and if this app uses Cassandra, you can’t use the words <code class="highlighter-rouge">BATCH</code> in either a field name or a table name.</p>
+
+<p>As of v2.0.0, JHipster UML detects such words and immediately throws an exception if it encounters such a case. However, JHipster UML can’t assert with 100% accuracy when a reserved word can or can’t be used. That’s why it warns the user with a yellow message when there could be a risk of using such a keyword.</p>
+
+<hr />
+
+<h1 id="examples"><a name="examples"></a>Examples</h1>
+
+<p>Each editor will be discussed here, so that you know how to get a good XMI file.</p>
+
+<p><strong>Note : JHipster-UML can detect faulty XMI files, it will display the first error it finds and exit right away (fail-fast behavior).</strong></p>
+
+<p>In JHipster-UML, each editor has been tested with the Oracle example. If you wish to see the examples in a “dummy project”, you just have to download these files for each editor, and test JHipster and JHipster-UML:</p>
+<ul>
+  <li>For Modelio: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/modelio.xmi">modelio.xmi</a>;</li>
+  <li>For UML Designer: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/umldesigner.uml">umldesigner.uml</a>;</li>
+  <li>For GenMyModel: <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/genmymodel_evolve.xmi">genmymodel_evolve.xmi</a>.</li>
+</ul>
+
+<h2 id="modelio"><a name="modelioexample"></a>Modelio</h2>
+
+<p><strong>Note for Mac users: Modelio is behaving weirdly on Mac (the GUI), it may be caused by the graphics and window manager on Mac, as it has not been diagnosed on Linux Ubuntu. It works, but the interaction may not be pleasant.</strong></p>
+
+<p><strong>Important version notes:</strong></p>
+<ul>
+  <li>Modelio v3.3 is tested and working, however a bug exists in v3.4 preventing the user from exporting the diagram. This bug is fixed as of v3.4.1.</li>
+  <li>Modelio v3.5.X introduces a bug when dealing with bidirectional Many-to-Many relationships (the error when JHipster UML parses the XMI is <code class="highlighter-rouge">Cannot read property '0' of undefined</code>). This problem seems to have been fixed in later version (v3.6.X).</li>
+</ul>
+
+<p>Modelio can be downloaded for free <a href="https://www.modelio.org/">here</a>. Make sure you have Java 8 if you’re downloading any of the 3.3+ versions (it won’t work otherwise).</p>
+
+<p>The example file is <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/modelio.xmi">here</a>.</p>
+
+<p>Once launched, create a project and you’ll be seeing this view:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_modelio_1.png" alt="Empty Modelio project" /></p>
+
+<p>Notice the left panel entitled ‘Class Model’. You only need the ‘Class’, ‘Attributes’, ‘Aggregation’, ‘Composition’ and ‘Data Type’ objects.
+You can already guess why you need the first 2. The ‘Aggregation’ object is used to defined aggregations:
+B is aggregated to A means that A has 0, 1 or more (n) instances of B. A doesn’t create (and destroy) B instances.
+Composition means that if A is composed of B (0, 1, or n instances), then it creates, manages and destroys B instances.</p>
+
+<p>You can use either of them, the parser will just see the two as associations anyway.</p>
+
+<p>In both situations, cardinalities and association names are important.</p>
+
+<p>Finally, ‘Data Types’ objects enables you to create custom types (types that are not proposed by Modelio), like <code class="highlighter-rouge">BigDecimal</code>, or <code class="highlighter-rouge">LocalDate</code>.</p>
+
+<p>In this example, we’ll explain how to connect two classes:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_modelio_2.png" alt="Modelio composition example" /></p>
+
+<p>As you can see, employee has a job (but also can have no job at all). The parser will notice a few things:</p>
+
+<ul>
+  <li>
+    <p>Two classes (Employee and Job);</p>
+  </li>
+  <li>
+    <p>Two fields (email and title), their type, which class they belong (each class contains its fields). Their visibility is not taken into account;</p>
+  </li>
+  <li>
+    <p>The association linking them and the <strong>direction</strong> of the association (it matters!);</p>
+  </li>
+  <li>
+    <p>The cardinalities (1 and 0..1) mean that an employee can have a job (0 or 1), and a job isn’t shared by two employees (only one, for this example’s sake);</p>
+  </li>
+  <li>
+    <p>There is one <strong>injected field</strong>: job, in employee.</p>
+  </li>
+</ul>
+
+<p>This association is called a one-to-one. Go back a few sections to see the other types of associations.</p>
+
+<p>Modelio supports constraints. Double-click on a field, go to the ‘Notes and constraints’ tab, the first icon should then be ‘Add a constraint’, then select ‘Constraint’, double-click on the constraint, and give it a name (it should be one of the JHipster constraints). For the constraint value, enter it the ‘Body’ field.</p>
+
+<p>Finally, once your diagram is finished, you just have to export it.</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_modelio_3.png" alt="Export to XMI Modelio" /></p>
+
+<p>Check the Model perspective, once you locate your project, get down one level and right click the last element (you lower-cased project’s name), XMI, Export XMI. A window should pop up, select the output path, change the compatibility to OMG UML2.4.1, leave the extension to XMI and you’re ready to go.</p>
+
+<h3 id="commenting">Commenting</h3>
+
+<p>To comment a class (or an attribute), just double-click on the element, select the <code class="highlighter-rouge">Notes and constraints</code> tab, and add a <code class="highlighter-rouge">note</code>.</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_modelio_commenting.png" alt="Modelio, commenting" /></p>
+
+<p>Please note that commenting relationships is not possible with this editor.</p>
+
+<h2 id="uml-designer"><a name="umldesignerexample"></a>UML Designer</h2>
+
+<p>UML Designer can be downloaded <a href="http://www.umldesigner.org/">here</a>.
+It works the same way as Eclipse.
+To create an empty project, just click on File -&gt; New -&gt; Modeling Project. Enter the name, and validate.
+If no file.uml is created, right-click on your project, and New -&gt; Other -&gt; UML Designer -&gt; UML Model, and enter any name you want.</p>
+
+<p>The example XMI file is available <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/umldesigner.uml">here</a>.</p>
+
+<p>You’ll then be presented by a view like this one:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_umldesigner_1.png" alt="UML Designer, dashboard" /></p>
+
+<p>Double-click on ‘Class diagram’ under ‘Design’ category.
+You can now see on the right the ‘Palette’. You only need these objects: ‘Class’, ‘PrimitiveType’, ‘DataType’ (both under ‘Enumeration’), ‘Composition’ and ‘Aggregation’ (both under ‘Association’).</p>
+
+<p>With UML Designer, you can create custom types by either using a DataType or a PrimitiveType (the parser recognizes both).</p>
+
+<p>Here is an example using this editor:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_umldesigner_2.png" alt="Employee and Job with UML Designer" /></p>
+
+<p>To create attributes, just double-click on the class, and add your attribute. You can import types by right-clicking somewhere on the diagram (in the white-space), then import Primitive Types, then select UML and Java.
+This will spare you the <em>chore</em> of creating types manually (with DataTypes or PrimitiveTypes).</p>
+
+<p>Unfortunately, UML Designer doesn’t support constraints yet.</p>
+
+<p>One of the nice things UML Designer provides is that you don’t need to export to XMI, just go to your workspace, and you’ll see that the saved project is already in the right format, so that’s pretty cool.</p>
+
+<h2 id="unidirectional-relationships">Unidirectional relationships</h2>
+
+<p>This editor supports unidirectional relationships. To do that, create the relationship you want between your two classes, double-click on the relationship and tweak it.</p>
+
+<h3 id="commenting-1">Commenting</h3>
+
+<p>Commenting is possible for classes and attributes (not relationships), and achieving this is pretty easy: click on an element, and select <code class="highlighter-rouge">comment</code> to add your own.</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_umldesigner_commenting.png" alt="Uml Designer, commenting" /></p>
+
+<h2 id="genmymodel"><a name="genmymodelexample"></a>GenMyModel</h2>
+
+<p>GenMyModel is an in-browser UML editor that can be found <a href="https://dashboard.genmymodel.com/">here</a>. You can use it for free but with restrictions, we hope that this editor will enable users to fiddle around with JHipster-UML without the constraint of downloading an application.</p>
+
+<p>The XMI file example is located <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/xmi/genmymodel_evolve.xmi">here</a>.</p>
+
+<p>After signing up go in Projects -&gt;  New Projects, give a it name, in Model Type choose UML, in default diagram choose Class Diagram and then click on Create project.
+Then this screen will be displayed:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_genmymodel_empty_diagram.png" alt="GenMyModel dashbord" /></p>
+
+<p>On the panel on the left of the grid, is all the elements possible to make a diagram. We will need only the elements ‘Class’, ‘DataType’, ‘Attribute’, ‘Aggregation’ and ‘Composition’. You can use either ‘Aggregation’ or ‘Composition’, the parser will only see the association between two classes and its cardinality.</p>
+
+<p>Here is an example on how to create two entities with a one-to-many relationship between them and the declaration of the JHipster types through ‘DataType’:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_genmymodel_relation.png" alt="GenMyModel diagram" /></p>
+
+<p>The parser will notice a few things:</p>
+
+<ul>
+  <li>
+    <p>Two classes, ‘Author’ and ‘Book’.</p>
+  </li>
+  <li>
+    <p>Two DataTypes, ‘LocalDate’ and ‘BigDecimal’</p>
+  </li>
+  <li>
+    <p>Attributes, you can set the type with the default ones, or with the declared DataTypes.</p>
+  </li>
+  <li>
+    <p>An Aggregation between ‘Author’ and ‘Book’ (the direction matters!).</p>
+  </li>
+  <li>
+    <p>Two injected field ‘author’ in Book and ‘book’ in Author.</p>
+  </li>
+  <li>
+    <p>The cardinalities (1 and 0..*) mean that a Book can have one author and an Author can have several books, which correspond to a one-to-many relationship between Author and Book.</p>
+  </li>
+</ul>
+
+<p>Unfortunately, you can not create custom constraints for attributes to fit the JHipster ones.</p>
+
+<p>Once the diagram is done, you can export it to XMI. To do it, simply click on Tool -&gt; Export as UML (XMI)</p>
+
+<h3 id="unidirectional-relationships-1">Unidirectional relationships</h3>
+
+<p>In GenMyModel, creating unidirectional relationships is pretty easy: just remove the name from the field you don’t want and you’re good to go.</p>
+
+<p>For instance, take this simple case:</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_genmymodel_unidirectional.png" alt="GenMyModel, unidirectional" /></p>
+
+<p>Here, <code class="highlighter-rouge">MyClass</code> will have a <code class="highlighter-rouge">myClass2</code> attribute, but <code class="highlighter-rouge">MyClass2</code> won’t have a <code class="highlighter-rouge">myClass</code> field.</p>
+
+<h3 id="commenting-2">Commenting</h3>
+
+<p>Commenting is available for classes, attributes and relationship fields.</p>
+
+<p>Just click on an element and write a comment in the description field.</p>
+
+<p><img src="/documentation-archive/v5.3.4/images/jhipsteruml_genmymodel_commenting.png" alt="GenMyModel, commenting" /></p>
+
+<h2 id="-other-editors"><a name="#othereditors"></a> Other editors</h2>
+
+<h3 id="sparx-ea">Sparx EA</h3>
+
+<p>Support for dealing with this editor has been added by Guillaume Finance.
+Here is the <a href="https://github.com/guillaumefinance/MDG-Sparx-EA-UML-JHipster">repo</a>, and you can read the presentation <a href="http://www.umlchannel.com/en/enterprise-architect/item/204-mdg-viseo-ea-uml-to-jhipster-generator-jdl-uml-model-sparx-enterprise-architect">here</a>.</p>
+
+<h2 id="enumerations"><a name="enumerationexamples"></a>Enumerations</h2>
+
+<p>JHipster and JHipster UML support both support enumerations.
+Here’s how you define them:</p>
+<ul>
+  <li>For Modelio, drag and drop the <code class="highlighter-rouge">Enumeration</code> object and place it somewhere. Finally, add the <code class="highlighter-rouge">Enumeration Literal</code> object to the enum to add it;</li>
+  <li>For UML Designer, there is the <code class="highlighter-rouge">Enumeration</code> object that can be placed and used. However, the literal is not called <code class="highlighter-rouge">Enumeration Literal</code> but just <code class="highlighter-rouge">Literal</code>;</li>
+  <li>GenMyModel possess the objects needed: <code class="highlighter-rouge">Enum</code> and <code class="highlighter-rouge">Enum Literal</code> in the main object panel (on the left hand side of the screen).</li>
+</ul>
+
+<h2 id="table-names"><a name="tablenames"></a>Table names</h2>
+
+<p>Since v1.6.2, it is now possible to specify table names for entities.</p>
+
+<p>To do that, one just has to specify the table name along with the class name like that:</p>
+
+<p><img src="http://i.imgur.com/ECdb1bx.png" alt="tablenameimage" /></p>
+
+<p>The convention <code class="highlighter-rouge">&lt;ENTITY_NAME&gt;\s*(&lt;TABLE_NAME&gt;)</code> is universal no matter the editor.</p>
+
+<p>However, if you don’t want to pick a special table name, you can just write the class name. JHipster UML will take care of converting it to an appropriate table name. For instance, if you class name is <code class="highlighter-rouge">MyClass</code>, then your table name would be <code class="highlighter-rouge">my_class</code>.</p>
+
+<p>Note that this feature is available for UML editors since v1.6.2.</p>
+
+<h2 id="required-relationships"><a name="requiredrels"></a>Required relationships</h2>
+
+<p>As of v2.0.0, required relationships are possible to make.
+To specify one, just make sure the end of the relationship to make required isn’t “0” (“1”, or “*” will do the trick).
+To see an example of that, just remember the complete HR example from Oracle, and notice that the JobHistory class has 3 required relationships.</p>
+
+<hr />
+
+<h1 id="testing-jhipster-uml"><a name="testing-juml"></a>Testing JHipster-UML</h1>
+
+<p>The tests are available in the test folder and can be run via <code class="highlighter-rouge">npm test</code>.
+We use Mocha for testing (along with chai and expect from chai).</p>
+
+<p>If you want, an alternative command to run the tests, or run only the tests you want, is: <code class="highlighter-rouge">mocha</code>.
+Please note that you need to be in the root directory for this command to work, and you also may need to install globally mocha with <code class="highlighter-rouge">npm install -g mocha</code> (or just use the file in the node_modules folder, which is available to you provided you do <code class="highlighter-rouge">npm install</code> in JHipster-UML’s directory).
+If, however, you don’t want to install everything globally, just do:</p>
+<ul>
+  <li><code class="highlighter-rouge">npm install</code> to install the mocha dependency,</li>
+  <li><code class="highlighter-rouge">./node_modules/mocha/bin/mocha</code> to run the tests, please note that you may need to use the <code class="highlighter-rouge">\</code> on some “exotic” operating system/s.</li>
+</ul>
+
+<hr />
+
+<h1 id="contributing-issues-and-enhancements"><a name="contributing"></a>Contributing: issues and enhancements</h1>
+
+<p>Because our tool isn’t perfect (<em>yet</em>), you may notice some irregularities. GitHub provides a pretty nice issue tracker so that everyone can post about an issue.
+We follow the same guidelines as JHipster, with a few additions:</p>
+
+<ul>
+  <li>
+    <p>Bugs found internally (by the JHipster-UML team) may be posted in the issue tracker, except for bugs regarding the supported UML editors.</p>
+  </li>
+  <li>
+    <p>The same goes for enhancements.</p>
+  </li>
+</ul>
+
+<p><b>Note: Post PRs and Issues on JHipster-UML’s github page, <a href="https://github.com/jhipster/jhipster-uml">here</a>. Not on the main JHipster page.</b></p>
+
+<h2 id="parser-modifications"><a name="parsermodifications"></a>Parser modifications</h2>
+
+<p>The 1.0.0 release brings a new parser system making any change (parser creation, update, deletion) ultra-easy, provided the XMI is easy to parse.</p>
+
+<h3 id="adding-a-parser">Adding a parser</h3>
+
+<h4 id="parser-implementation">Parser implementation</h4>
+
+<p>Adding a parser is quite easy. If you’re a Java dev, you’re probably quite familiar with OOP principles (we hope so anyway). When developing JHipster-UML, we thought of its architecture as we’d <em>normally</em> do in Java.</p>
+
+<p>You just have to “extend” our abstract parser (<a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/abstract_parser.js">AbstractParser</a>), or implement our interface (<a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/parser.js">Parser</a>) to add your concrete implementation of a parser.</p>
+
+<p>You should notice that some methods of the Parser interface throw an <em>UnimplementedOperationException</em>. This idea is obviously taken from Java, and you can implement this methods in your concrete parser.</p>
+
+<p>Some methods don’t throw any exception, but only call other methods. If you’re familiar with Java 8, we just copied its awesome default methods, and did the same (so that you don’t manually implement them).</p>
+
+<p>Just like in Java, you can override any method you want, and create your own. You’re not limited (except if you want to overload).</p>
+
+<p>The AbstractParser class provides some fields, a default constructor and some methods so that you don’t have to create or implement them later.</p>
+
+<p>Obviously, you <em>should</em> implement each of these methods (or override the <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/parser.js#L13">#parse</a> or <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/parser.js#L25">#findElements</a> methods).</p>
+
+<p>The getters are not mandatory, but serve as a way of getting some important fields and provide a way to modify them before sending those fields.</p>
+
+<h4 id="editor-detection">Editor detection</h4>
+
+<p>When you’re done creating your shiny new parser, you should add it to the “list” of available editors:</p>
+
+<ul>
+  <li>
+    <p>Require it first just like <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editors.js#L3">here</a>;</p>
+  </li>
+  <li>
+    <p>Make it available just like <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editors.js#L9">here</a>;</p>
+  </li>
+  <li>
+    <p>Add it to the list just like <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editors.js#L16">here</a>.</p>
+  </li>
+</ul>
+
+<p>However, a few guidelines must be respected:</p>
+
+<ul>
+  <li>
+    <p>Your parser’s name must be &lt;editor_parser&gt;;</p>
+  </li>
+  <li>
+    <p>The editor’s JS file must not be upper-cased, and must not contain any whitespace, (Modelio -&gt; <code class="highlighter-rouge">modelio_parser.js</code>, UML Designer -&gt; <code class="highlighter-rouge">umldesigner_parser.js</code>);</p>
+  </li>
+  <li>
+    <p>The editor’s class name must be capitalized (Modelio -&gt; <code class="highlighter-rouge">ModelioParser</code>, UML Designer -&gt; <code class="highlighter-rouge">UMLDesignerParser</code>).</p>
+  </li>
+</ul>
+
+<p>Concerning the EditorDetector, it can detect the editor that created your XMI file. For that to happen, you must first locate where the editor is mentionned in the XMI file, and then add the code that returns your editor just like <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editor_detector.js#L23">here</a>. If your editor can’t be detected, add it <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editors.js#L23">here</a>, and indicate its name just like it has been done for UML Designer <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editor_detector.js#L56">here</a>.</p>
+
+<h4 id="testing">Testing</h4>
+
+<p>Finally, the next thing you’ll need to do before committing your super parser is test it.
+Because we believe in testing, but really like good testing (with BDD), our tests are done with Mocha and chai. If you don’t know what it’s all about yet, we recommend you visit the <a href="http://chaijs.com/">ChaiJS</a> page, and see <a href="https://github.com/jhipster/jhipster-uml/blob/master/test/editors/modelio_parser_test.js">one</a> of our test file to get acquainted with it.</p>
+
+<p>You should probably wonder what form of testing you should use. The answer is pretty simple: it’s up to you! Whether it’s <a href="http://chaijs.com/guide/styles/#should">should</a>, or <a href="http://chaijs.com/guide/styles/#expect">expect</a> (à la RSpec), we don’t enforce any special rule here. We, however, recommend using Expect because we do, and it should keep the tests fairly easy to understand.</p>
+
+<p>We just want you to test everything that is ‘test-worthy’:</p>
+
+<ul>
+  <li>
+    <p>The interface’s methods (the <em>public</em> methods not an interface class!);</p>
+  </li>
+  <li>
+    <p>You’re not obliged to test the other methods (<em>private</em> ones, because they are supposed to be safe and ever-changing in the short/long term), but as visibility is not implemented in JS (to our knowledge), you may want to test them (it’s up to you).</p>
+  </li>
+</ul>
+
+<p>The general guidelines for names and files:</p>
+
+<ul>
+  <li>
+    <p>Your test file’s name should respect the same rules as previously mentioned. For instance, if your parser’s name is “Modelio”, then your test file should be <code class="highlighter-rouge">modelio_parser_test.js</code>.</p>
+  </li>
+  <li>
+    <p>The same goes for XMI files used for testing. If your parser’s name is UMLDesigner, then one of your test XMI file’s name can be <code class="highlighter-rouge">umldesigner_parser_problem_test.[...]</code> (the file extension is not static).</p>
+  </li>
+</ul>
+
+<h3 id="modifying-a-parser">Modifying a parser</h3>
+
+<p>Changing a parser (and then committing the change) is pretty straightforward: just do the change and test it (create tests if need be).</p>
+
+<p>You can make an XMI file if you need a test to pass (exception throwing, or not, etc.).</p>
+
+<p>Don’t forget to modify the <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editor_detector.js">editor detector</a> if you change any name.</p>
+
+<h3 id="deleting-a-parser">Deleting a parser</h3>
+
+<p>Removing a parser is quite an easy thing to do.
+First, remove it from the editors (<code class="highlighter-rouge">editors/editors.js</code>) and then remove it from the EditorDetector (<code class="highlighter-rouge">editors/editor_detector.js</code>). Finally, just remove the parser file and the test created for it.</p>
+
+<p>Don’t forget to modify the <a href="https://github.com/jhipster/jhipster-uml/blob/master/lib/editors/editor_detector.js#L38">editor detector</a> if you delete any parser.</p>
+
+<hr />
+
+<h1 id="annexes"><a name="annexes"></a>Annexes</h1>
+
+<p>Here is the types supported by this project:</p>
+
+<table class="table table-striped table-responsive">
+  <tr>
+    <th>SQL</th>
+    <th>MongoDB</th>
+    <th>Cassandra</th>
+    <th>Validations</th>
+  </tr>
+  <tr>
+    <td>String</td>
+    <td>String</td>
+    <td>String</td>
+    <td><dfn>required, minlength, maxlength, pattern</dfn></td>
+  </tr>
+  <tr>
+    <td>Integer</td>
+    <td>Integer</td>
+    <td>Integer</td>
+    <td><dfn>required, min, max</dfn></td>
+  </tr>
+  <tr>
+    <td>Long</td>
+    <td>Long</td>
+    <td>Long</td>
+    <td><dfn>required, min, max</dfn></td>
+  </tr>
+  <tr>
+    <td>BigDecimal</td>
+    <td>BigDecimal</td>
+    <td>BigDecimal</td>
+    <td><dfn>required, min, max</dfn></td>
+  </tr>
+  <tr>
+    <td>Float</td>
+    <td>Float</td>
+    <td>Float</td>
+    <td><dfn>required, min, max</dfn></td>
+  </tr>
+  <tr>
+    <td>Double</td>
+    <td>Double</td>
+    <td>Double</td>
+    <td><dfn>required, min, max</dfn></td>
+  </tr>
+  <tr>
+    <td>Enum</td>
+    <td>Enum</td>
+    <td></td>
+    <td><dfn>required</dfn></td>
+  </tr>
+  <tr>
+    <td>Boolean</td>
+    <td>Boolean</td>
+    <td>Boolean</td>
+    <td>required</td>
+  </tr>
+  <tr>
+    <td>LocalDate</td>
+    <td>LocalDate</td>
+    <td></td>
+    <td><dfn>required</dfn></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Date</td>
+    <td><dfn>required</dfn></td>
+  </tr>
+  <tr>
+    <td>ZonedDateTime</td>
+    <td>ZonedDateTime</td>
+    <td></td>
+    <td><dfn>required</dfn></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>UUID</td>
+    <td><dfn>required</dfn></td>
+  </tr>
+  <tr>
+    <td>Blob</td>
+    <td>Blob</td>
+    <td></td>
+    <td><dfn>required, minbytes, maxbytes</dfn></td>
+  </tr>
+  <tr>
+    <td>AnyBlob</td>
+    <td>AnyBlob</td>
+    <td></td>
+    <td><dfn>required, minbytes, maxbytes</dfn></td>
+  </tr>
+  <tr>
+    <td>ImageBlob</td>
+    <td>ImageBlob</td>
+    <td></td>
+    <td><dfn>required, minbytes, maxbytes</dfn></td>
+  </tr>
+  <tr>
+    <td>TextBlob</td>
+    <td>TextBlob</td>
+    <td></td>
+    <td><dfn>required, minbytes, maxbytes</dfn></td>
+  </tr>
+</table>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                    <!-- change to below commented line when adding more logos -->
+                                    <!-- <div class="col-xs-12 col-sm-6 col-md-4"> -->
+                                    <div class="col-md-offset-4 col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.3.4/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.3.4/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.3.4/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v5.3.4/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v5.3.4/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v5.3.4/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v5.3.4/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v5.3.4/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/java_hipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2018 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Freelancer</a> and <a href="https://github.com/tui2tone/flat-admin-bootstrap-templates" target="_blank">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v5.3.4/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
