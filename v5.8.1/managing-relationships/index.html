@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>Managing relationships</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-64x64.ico" sizes="64x64" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-48x48.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.ico" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v5.8.1/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li class="">
+                            <a href="https://www.google.com/search?q=site:www.jhipster.tech" target="_blank">Search</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" class="dropdown-toggle navlink" target="_blank" role="button"><i class="fa fa-github fa-2x"></i></a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v5.8.1/images/logo/logo-jhipster.svg" height="19px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v5.8.1/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (16 minutes)</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li class="active" ><a href="/documentation-archive/v5.8.1/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/traefik/"><i class="fa fa-fw fa-exchange"></i> Traefik</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-uaa/"><i class="fa fa-fw fa-lock"></i> JHipster UAA</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/common-ports/"><i class="fa fa-fw fa-plug"></i> Common ports</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/tls/"><i class="fa fa-fw fa-lock"></i> Using TLS and HTTP/2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/dependency-vulnerabities-check/"><i class="fa fa-fw fa-check-circle-o"></i> Dependency Vulnerabilities Check</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/docker-hub/"><i class="fa fa-fw fa-cloud-upload"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/azure/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Azure</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/gcp/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Google Cloud Platform</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/rancher/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Rancher</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/boxfuse/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with Boxfuse</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Modules &amp; Blueprints</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/jdl/"><i class="fa fa-fw fa-star"></i> JDL</a></li>
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.8.1/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v5.8.1/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v5.8.1/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/consulting/"><i class="fa fa-fw fa-user-md"></i> Professional help</a></li>
+                                            <li ><a href="/documentation-archive/v5.8.1/training/"><i class="fa fa-fw fa-graduation-cap"></i> Training</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v5.8.1/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <h1 id="-managing-relationships"><i class="fa fa-sitemap"></i> Managing relationships</h1>
+
+<p>When JPA is used, the <a href="/documentation-archive/v5.8.1/creating-an-entity/">entity sub-generator</a> can create relationships between entities.</p>
+
+<h2 id="presentation">Presentation</h2>
+
+<p>Relationships only work when JPA is used. If you choose to use <a href="/documentation-archive/v5.8.1/using-cassandra/">Cassandra</a>, <a href="/documentation-archive/v5.8.1/using-mongodb/">MongoDB</a> of <a href="/documentation-archive/v5.8.1/using-couchbase/">Couchbase</a>, they won’t be available.</p>
+
+<p>A relationship works between two entities, and JHipster will generate the code for:</p>
+
+<ul>
+  <li>Managing this relationship with JPA in the generated entities</li>
+  <li>Creating the correct Liquibase changelog, in order for the relationship to exist in the database</li>
+  <li>Generating the Angular/React front-end so you can manage this relationship graphically in the user interface</li>
+</ul>
+
+<h2 id="jhipster-uml-and-jdl-studio">JHipster UML and JDL Studio</h2>
+
+<p>This page describes how to create relationships with JHipster using the standard command-line interface.  If you want to create many entities and relationships, you might prefer to use a graphical tool.</p>
+
+<p>In that case, two options are available:</p>
+
+<ul>
+  <li><a href="/documentation-archive/v5.8.1/jhipster-uml/">JHipster UML</a>, which allows you to use an UML editor.</li>
+  <li><a href="https://start.jhipster.tech/jdl-studio/">JDL Studio</a>, our online tool to create entities and relationships using our domain-specific language.</li>
+</ul>
+
+<p>You can generate entities with relationships from a JDL file using the <code class="highlighter-rouge">import-jdl</code> sub-generator, by running <code class="highlighter-rouge">jhipster import-jdl your-jdl-file.jh</code>.</p>
+
+<h2 id="available-relationships">Available relationships</h2>
+
+<p>As we use JPA, the usual one-to-many, many-to-one, many-to-many and one-to-one relationships are available:</p>
+
+<ol>
+  <li><a href="#1">A bidirectional one-to-many relationship</a></li>
+  <li><a href="#2">A unidirectional many-to-one relationship</a></li>
+  <li><a href="#3">A unidirectional one-to-many relationship</a></li>
+  <li><a href="#4">Two one-to-many relationships on the same two entities</a></li>
+  <li><a href="#5">A many-to-many relationship</a></li>
+  <li><a href="#6">A one-to-one relationship</a></li>
+  <li><a href="#7">A unidirectional one-to-one relationship</a></li>
+</ol>
+
+<p><em>Tip: the <code class="highlighter-rouge">User</code> entity</em></p>
+
+<p>Please note that the <code class="highlighter-rouge">User</code> entity, which is handled by JHipster, is specific. You can do:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">many-to-one</code> relationships to this entity (a <code class="highlighter-rouge">Car</code> can have a many-to-one relationship to a <code class="highlighter-rouge">User</code>). This will generate a specific query in your new entity repository, so you can filter your entity on the current security user, which is a common requirement. On the generated Angular/React client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">User</code>.</li>
+  <li><code class="highlighter-rouge">many-to-many</code> and <code class="highlighter-rouge">one-to-one</code> relationships to the <code class="highlighter-rouge">User</code> entity, but the other entity <strong>must</strong> be the owner
+of the relationship (a <code class="highlighter-rouge">Team</code> can have a many-to-many relationship to <code class="highlighter-rouge">User</code>, but only the team can add/remove users, and a user cannot add/remove a team). On the Angular/React client UI, you will also be able to select a <code class="highlighter-rouge">User</code> in a multi-select box.</li>
+</ul>
+
+<h2 id="-a-bidirectional-one-to-many-relationship"><a name="1"></a> A bidirectional one-to-many relationship</h2>
+
+<p>Let’s start with two entities, a <code class="highlighter-rouge">Owner</code> and a <code class="highlighter-rouge">Car</code>. A owner can have many cars, and a car can have only one owner.</p>
+
+<p>So this is a simple one-to-many relationship (one owner has many cars) on one side, and a many-to-one relationship (many cars have one owner) on the other side:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Owner (1) &lt;-----&gt; (*) Car
+</code></pre></div></div>
+
+<p>We will create the <code class="highlighter-rouge">Owner</code> first. Here are the relevant JHipster questions for the <code class="highlighter-rouge">Owner</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? owner
+</code></pre></div></div>
+
+<p>Please note that we selected the default options concerning the names of the relationships.</p>
+
+<p>Now we can generate the <code class="highlighter-rouge">Car</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Owner
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with Angular, which field from 'Owner' do you want to use? id
+</code></pre></div></div>
+
+<p>The same can be achieved using the below JDL as well</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner
+entity Car
+
+relationship OneToMany {
+  Owner{car} to Car{owner}
+}
+</code></pre></div></div>
+
+<p>That’s it, you now have a one-to-many relationship between those two entities! On the generated Angular/React client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Owner</code>.</p>
+
+<h2 id="-a-unidirectional-many-to-one-relationship"><a name="2"></a> A unidirectional many-to-one relationship</h2>
+
+<p>In the previous example we had a bidirectional relationship: from a <code class="highlighter-rouge">Car</code> instance you could find its owner, and from a <code class="highlighter-rouge">Owner</code> instance you could get all of its cars.</p>
+
+<p>A many-to-one unidirectional relationship means that the cars know their owner, but not the opposite.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Owner (1) &lt;----- (*) Car
+</code></pre></div></div>
+
+<p>You would do that relationship for two reasons:</p>
+
+<ul>
+  <li>From a business point of view, you only use your entities in this way. So you don’t want to have an API that allows developers to do something which doesn’t make sense.</li>
+  <li>You have a small performance gain when using the <code class="highlighter-rouge">Owner</code> entity (as it won’t have to manage the collection of cars).</li>
+</ul>
+
+<p>In that case, you would still create the <code class="highlighter-rouge">Owner</code> first, this time with no relationship:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? No
+</code></pre></div></div>
+
+<p>And then the <code class="highlighter-rouge">Car</code> entity, as in the previous example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Owner
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with Angular, which field from 'Owner' do you want to use? id
+</code></pre></div></div>
+
+<p>This will work as in the previous example, but you won’t be able to add or remove cars from the <code class="highlighter-rouge">Owner</code> entity. On the generated Angular/React client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Owner</code>.
+This is the corresponding JDL:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Owner
+entity Car
+
+relationship ManyToOne {
+  Car{owner} to Owner
+}
+</code></pre></div></div>
+
+<h2 id="-a-unidirectional-one-to-many-relationship"><a name="3"></a> A unidirectional one-to-many relationship</h2>
+
+<p>A one-to-many unidirectional relationship means that the <code class="highlighter-rouge">Owner</code> instance can get its collection of cars, but not the opposite. It is the opposite from the previous example.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Owner (1) -----&gt; (*) Car
+</code></pre></div></div>
+
+<p>This type of relationship is not provided by default in JHipster at the moment, see <a href="https://github.com/jhipster/generator-jhipster/issues/1569">#1569</a> for more information.</p>
+
+<p>You have two solutions for this:</p>
+
+<ul>
+  <li>Do a bidirectional mapping, and use it without modification: this is our recommended approach, as it is much simpler</li>
+  <li>Do a bidirectional mapping, and then modify it to transform it into a unidirectional mapping:
+    <ul>
+      <li>Remove the “mappedBy” attribute on your <code class="highlighter-rouge">@OneToMany</code> annotation</li>
+      <li>Generate the required join table: you can do a <code class="highlighter-rouge">mvn liquibase:diff</code> to generate that table, see the <a href="/documentation-archive/v5.8.1/development/">documentation about using Liquibase diff</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>This is not supported with JDL as it isn’t in JHipster.</p>
+
+<h2 id="-two-one-to-many-relationships-on-the-same-two-entities"><a name="4"></a> Two one-to-many relationships on the same two entities</h2>
+
+<p>For this example, a <code class="highlighter-rouge">Person</code> can be the owner of many cars, and he can also be the driver of many cars:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person (1) &lt;---owns-----&gt; (*) Car
+Person (1) &lt;---drives---&gt; (*) Car
+</code></pre></div></div>
+
+<p>For this we need to use the relationship names, which we have left with their default values in the previous examples.</p>
+
+<p>Generate the <code class="highlighter-rouge">Person</code> entity, which has two one-to-many relationships to the <code class="highlighter-rouge">Car</code> entity:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Person
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? ownedCar
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? owner
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? drivedCar
+? What is the type of the relationship? one-to-many
+? What is the name of this relationship in the other entity? driver
+</code></pre></div></div>
+
+<p>Generate the <code class="highlighter-rouge">Car</code> entity, which use the same relationship name has was configured in the <code class="highlighter-rouge">Person</code> entity:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Person
+? What is the name of the relationship? owner
+? What is the type of the relationship? many-to-one
+? When you display this relationship with Angular, which field from 'Person' do you want to use? id
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Person
+? What is the name of the relationship? driver
+? What is the type of the relationship? many-to-one
+? When you display this relationship with Angular, which field from 'Person' do you want to use? id
+</code></pre></div></div>
+
+<p>The same can be achieved using the below JDL as well</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Person
+entity Car
+
+relationship OneToMany {
+  Person{ownedCar} to Car{owner}
+}
+
+relationship OneToMany {
+  Person{drivedCar} to Car{driver}
+}
+</code></pre></div></div>
+
+<p>A <code class="highlighter-rouge">Car</code> can now have a driver and a owner, which are both <code class="highlighter-rouge">Person</code> entities. On the generated Angular/React client UI you will dropdowns in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Person</code> for <code class="highlighter-rouge">owner</code> field and <code class="highlighter-rouge">driver</code> field.</p>
+
+<h2 id="-a-many-to-many-relationship"><a name="5"></a> A many-to-many relationship</h2>
+
+<p>A <code class="highlighter-rouge">Driver</code> can drive many cars, but a <code class="highlighter-rouge">Car</code> can also have many drivers.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Driver (*) &lt;-----&gt; (*) Car
+</code></pre></div></div>
+
+<p>At the database level, this means we will have a join table between the <code class="highlighter-rouge">Driver</code> and the <code class="highlighter-rouge">Car</code> tables.</p>
+
+<p>For JPA, one of those two entities will need to manage the relationship: in our case, that would be the <code class="highlighter-rouge">Car</code> entity, which will be responsible to add or remove drivers.</p>
+
+<p>Let us generate the non-owning side of the relationship, the <code class="highlighter-rouge">Driver</code>, with a many-to-many relationship:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Driver
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? No
+? What is the name of this relationship in the other entity? driver
+</code></pre></div></div>
+
+<p>Then generate the <code class="highlighter-rouge">Car</code>, with the owning side of the many-to-many relationship:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Driver
+? What is the name of the relationship? driver
+? What is the type of the relationship? many-to-many
+? Is this entity the owner of the relationship? Yes
+? When you display this relationship with Angular, which field from 'Driver' do you want to use? id
+</code></pre></div></div>
+
+<p>The same can be achieved using the below JDL as well</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver
+entity Car
+
+relationship ManyToMany {
+  Car{driver} to Driver{car}
+}
+</code></pre></div></div>
+
+<p>That’s it, you now have a many-to-many relationship between those two entities! On the generated Angular/React client UI you will have a multi-select dropdown in <code class="highlighter-rouge">Car</code> to select multiple <code class="highlighter-rouge">Driver</code> since <code class="highlighter-rouge">Car</code> is the owning side.</p>
+
+<h2 id="-a-one-to-one-relationship"><a name="6"></a> A one-to-one relationship</h2>
+
+<p>Following our example, a one-to-one relationship would mean that a <code class="highlighter-rouge">Driver</code> can drive only one <code class="highlighter-rouge">Car</code>, and a <code class="highlighter-rouge">Car</code> can only have one <code class="highlighter-rouge">Driver</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Driver (1) &lt;-----&gt; (1) Car
+</code></pre></div></div>
+
+<p>Let us create the non-owning side of the relationship, in our case the <code class="highlighter-rouge">Driver</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Driver
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Car
+? What is the name of the relationship? car
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? No
+? What is the name of this relationship in the other entity? driver
+</code></pre></div></div>
+
+<p>Then generate the <code class="highlighter-rouge">Car</code>, which owns the relationship:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Car
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Driver
+? What is the name of the relationship? driver
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? Yes
+? Do you want to use JPA Derived Identifier - @MapsId? No
+? What is the name of this relationship in the other entity? car
+? When you display this relationship with Angular, which field from 'Driver' do you want to use? id
+</code></pre></div></div>
+
+<p>The same can be achieved using the below JDL as well</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver
+entity Car
+
+relationship OneToOne {
+  Car{driver} to Driver{car}
+}
+</code></pre></div></div>
+
+<p>That’s it, you now have a one-to-one relationship between those two entities! On the generated Angular/React client UI you will have a dropdown in <code class="highlighter-rouge">Car</code> to select a <code class="highlighter-rouge">Driver</code> since <code class="highlighter-rouge">Car</code> is the owning side.</p>
+
+<p><a href="#8">More information on using one-to-one with JPA Derived Identifiers</a></p>
+
+<h2 id="-a-unidirectional-one-to-one-relationship"><a name="7"></a> A unidirectional one-to-one relationship</h2>
+
+<p>A unidirectional one-to-one relationship means that the <code class="highlighter-rouge">citizen</code> instance can get its passport, but the <code class="highlighter-rouge">passport</code> instance can’t get to its owner.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Citizen (1) -----&gt; (1) Passport
+</code></pre></div></div>
+
+<p>Generate the <code class="highlighter-rouge">Passport</code> entity first, without any relationship to its owner:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Passport
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? No
+</code></pre></div></div>
+
+<p>Then, generate the <code class="highlighter-rouge">Citizen</code> entity:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster entity Citizen
+...
+Generating relationships with other entities
+? Do you want to add a relationship to another entity? Yes
+? What is the name of the other entity? Passport
+? What is the name of the relationship? passport
+? What is the type of the relationship? one-to-one
+? Is this entity the owner of the relationship? Yes
+? Do you want to use JPA Derived Identifier - @MapsId? No
+? What is the name of this relationship in the other entity? citizen
+? When you display this relationship with Angular, which field from 'Passport' do you want to use? id
+</code></pre></div></div>
+
+<p>After doing this, a <code class="highlighter-rouge">Citizen</code> possesses a passport, but no <code class="highlighter-rouge">Citizen</code> instance is defined in <code class="highlighter-rouge">Passport</code>. On the generated Angular/React client UI you will have a dropdown in <code class="highlighter-rouge">Citizen</code> to select a <code class="highlighter-rouge">Passport</code> since <code class="highlighter-rouge">Citizen</code> is the owning side.
+This is the corresponding JDL:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Citizen
+entity Passport
+
+relationship OneToOne {
+  Citizen{passport} to Passport
+}
+</code></pre></div></div>
+
+<h3 id="--using-jpa-derived-identifiersmapsid-for-one-to-one-relationship"><a name="8">  Using JPA Derived Identifiers(@MapsId) for one-to-one relationship</a></h3>
+
+<p><a href="https://javaee.github.io/javaee-spec/javadocs/javax/persistence/MapsId.html">JPA Derived Identifiers</a> can be used to have <a href="https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/">the most efficient mapping</a>.</p>
+
+<p>This is the corresponding JDL for previous uni-directional one-to-one example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Citizen
+entity Passport
+
+relationship OneToOne {
+  Citizen{passport} to Passport with jpaDerivedIdentifier 
+}
+</code></pre></div></div>
+
+<p>This is the corresponding JDL for previous bi-directional one-to-one example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>entity Driver
+entity Car
+
+relationship OneToOne {
+  Car{driver} to Driver{car} with jpaDerivedIdentifier 
+}
+</code></pre></div></div>
+
+<p>However, based on business requirements, there might be cases where this should be avoided because it has following constraint: 
+<strong>Once the id(primary key) is set at owning side, it is not changeable using JPA/Hibernate. You should not change it anyway.</strong>.</p>
+
+<p><strong>Here are a few suggestions regarding usage:</strong></p>
+
+<p>Use <code class="highlighter-rouge">@MapsId</code> when:</p>
+<ul>
+  <li>Dependent - if the owning side (child entity) seems tightly dependent on the non-owning (parent entity).</li>
+  <li>
+    <p>Association value is never meant to be changed - if you are never going to change the id(primary key) of the child entity once it is set.</p>
+
+    <p>For eg,</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  class User{}
+  class Profile{ @OneToOne @MapsId private User user; } // profile is only meant for that user
+  class Preferences{ @OneToOne @MapsId private User user; } // preference is only meant for that user
+</code></pre></div>    </div>
+
+    <p>Once a profile or a preference is created for a user, it will never change to refer to another user.</p>
+  </li>
+</ul>
+
+<p>Do not use  <code class="highlighter-rouge">@MapsId</code> when:</p>
+<ul>
+  <li>Not dependent - If the owning side (child entity) seems not dependent on the non-owning (parent entity)</li>
+  <li>
+    <p>Association value is meant to be changed - if you think that the child entity is going to refer to another parent entity in future.</p>
+
+    <p>For eg,</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  class Car{ @OneToOne @JoinColumn(name="id") Driver currentDriver} // car can be drived by another driver in future
+  class Driver{@OneToOne @JoinColumn(name="id") Car drivingCar} // driver drives another car in future
+</code></pre></div>    </div>
+    <p>Both car and driver association value may change in future.</p>
+  </li>
+</ul>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                    <!-- change to below commented line when adding more logos -->
+                                    <!-- <div class="col-xs-12 col-sm-6 col-md-4"> -->
+                                    <div class="col-md-offset-4 col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.8.1/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.8.1/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/signup?utm_source=JHipster&utm_medium=logo&utm_campaign=Gold-Sponsor" target="_blank"><img src="/documentation-archive/v5.8.1/images/open-collective/okta.png" width="320px" height="108px"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v5.8.1/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v5.8.1/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v5.8.1/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v5.8.1/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v5.8.1/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/java_hipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2019 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank">Freelancer</a> and <a href="https://github.com/tui2tone/flat-admin-bootstrap-templates" target="_blank">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v5.8.1/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
