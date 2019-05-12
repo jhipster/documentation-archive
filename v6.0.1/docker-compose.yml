@@ -8,6 +8,5 @@ services:
       - ./:/srv/jekyll
       # this volume will keep all gems
       - ./vendor/bundle:/usr/local/bundle
-      - ../v6.0.1/:/tmp/v6.0.1/
     ports:
       - 4000:4000
