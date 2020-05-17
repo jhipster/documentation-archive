@@ -1,0 +1,41 @@
+<html>
+	<body>
+
+		<iframe id="reveal" src="../../index.html" style="border: 0;" width="500" height="500"></iframe>
+
+		<div>
+			<input id="back" type="button" value="go back"/>
+			<input id="ahead" type="button" value="go ahead"/>
+			<input id="slideto" type="button" value="slideto 2-2"/>
+		</div>
+
+		<script>
+
+			(function (){
+
+				var back = document.getElementById( 'back' ),
+						ahead = document.getElementById( 'ahead' ),
+						slideto = document.getElementById( 'slideto' ),
+						reveal =  window.frames[0];
+
+					back.addEventListener( 'click', function () {
+						
+					reveal.postMessage( JSON.stringify({method: 'prev', args: []}), '*' );
+				}, false );
+
+				ahead.addEventListener( 'click', function (){
+					reveal.postMessage( JSON.stringify({method: 'next', args: []}), '*' );
+				}, false );
+
+				slideto.addEventListener( 'click', function (){
+					reveal.postMessage( JSON.stringify({method: 'slide', args: [2,2]}), '*' );
+				}, false );
+
+			}());
+
+		</script>
+
+	</body>
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
