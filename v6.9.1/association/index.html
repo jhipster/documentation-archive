@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="JSA7VC5gSwD5KKbXlxK8F9rXJtC91rKJq0aWhfpBC0k" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>JHipster Developers Association</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-64x64.ico" sizes="64x64" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-48x48.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.ico" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://www.jhipster.tech/jhipster-code/" style="color: rgb(255, 78, 78);">JHipster Code</a>
+                        </li>
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v6.9.1/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" role="button"><i class="fa fa-github"></i> Github</a>
+                        </li>
+                        <li class="search-box">
+                            <form id="content-search-form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" name="search" class="doc-search-algolia" placeholder="Search..." />
+                            </form>
+                        </li>
+                        <li>
+                            <a href="/documentation-archive/v6.9.1/cn/association/"><i class="fa fa-fw fa-globe"></i> 中文</a>                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v6.9.1/images/logo/logo-jhipster.svg" height="19px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v6.9.1/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank" rel="noopener"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (17 minutes)</a></li>
+                                            <li><a href="https://github.com/jhipster/jhipster-guides" target="_blank" rel="noopener"><i class="fa fa-fw fa-road"></i> Online guides</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v6.9.1/jdl/"><span class="icon fa fa-fw fa-star"></span><span class="title">JDL</span></a></li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/traefik/"><i class="fa fa-fw fa-exchange"></i> Traefik</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-uaa/"><i class="fa fa-fw fa-lock"></i> JHipster UAA</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-neo4j/"><i class="fa fa-fw fa-database"></i> Using Neo4j</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/common-ports/"><i class="fa fa-fw fa-plug"></i> Common ports</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/using-vue/"><i class="fa fa-fw fa-html5"></i> Using Vue</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/tls/"><i class="fa fa-fw fa-lock"></i> Using TLS and HTTP/2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/dependency-vulnerabities-check/"><i class="fa fa-fw fa-check-circle-o"></i> Dependency Vulnerabilities Check</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/docker-hub/"><i class="fa fa-fw fa-cloud"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/azure/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Azure</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/boxfuse/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with Boxfuse</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/gcp/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Google Cloud Platform</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Modules &amp; Blueprints</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/modules/official-blueprints/"><i class="fa fa-fw fa-star"></i> Official blueprints</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v6.9.1/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v6.9.1/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.9.1/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v6.9.1/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v6.9.1/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <div class="float-right visible-md visible-lg">
+                                <a href="https://github.com/jhipster/jhipster.github.io/edit/master/pages/association.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+                            </div>
+                            <h1 id="-jhipster-developers-association"><i class="fa"></i> JHipster Developers Association</h1>
+
+<p>The “JHipster Developers Association” is a French non-profit association (“Association loi 1901”), and serves as a legal entity for JHipster events and services.</p>
+
+<p><em>The rest of this document is in French, as this is a French legal entity</em></p>
+
+<h2 id="lassociation">L’association</h2>
+
+<p>La “JHipster Developers Association” est une association loi 1901 à but non lucratif. Elle sert d’entité légale pour organiser les événements ou les services autour de JHipster.</p>
+
+<p>N° RNA: W922017270</p>
+
+<p>Publication au journal officiel: <a href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20200002/1411">https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20200002/1411</a></p>
+
+<h2 id="le-bureau">Le bureau</h2>
+
+<p>Président: Julien DUBOIS</p>
+
+<p>Secrétaire: Pierre BESSON</p>
+
+<p>Trésorier: Anthony VIARD</p>
+
+<h2 id="statuts-de-lassociation--jhipster-developers-association">STATUTS DE L’ASSOCIATION « JHipster Developers Association»</h2>
+
+<h3 id="article-premier---nom">ARTICLE PREMIER - NOM</h3>
+
+<p>Il est fondé entre les adhérents aux présents statuts une association régie par la loi du 1er juillet 1901 et le décret du 16 août 1901, ayant pour titre : JHipster Developers Association</p>
+
+<h3 id="article-2---but-objet">ARTICLE 2 - BUT OBJET</h3>
+
+<p>Cette association est un groupe d’utilisateurs de la plate-forme informatique « JHipster » et des outils associés, ayant pour but de réunir les acteurs de la plate-forme afin d’échanger des idées, de discuter des avancées technologiques, d’organiser des événements autour de la technologie, de proposer des services en ligne ou des prestations en relation avec la plate-forme JHipster.</p>
+
+<p>Certaines activités de l’association peuvent être économiques :</p>
+
+<ul>
+  <li>Fourniture de services en ligne</li>
+  <li>Prestations sur la technologie : personnalisation, développement spécifique, audit, formation</li>
+  <li>Démonstrations ou conférences</li>
+  <li>Vente de logiciels</li>
+</ul>
+
+<h3 id="article-3---siège-social">ARTICLE 3 - SIÈGE SOCIAL</h3>
+
+<p>Le siège social est fixé à « Julien Dubois, 4 bis rue du Calvaire, 92150 Suresnes, France ».</p>
+
+<p>Il pourra être transféré par simple décision du conseil d’administration.</p>
+
+<h3 id="article-4---duree">Article 4 - DUREE</h3>
+
+<p>La durée de l’association est illimitée.</p>
+
+<h3 id="article-5---composition">ARTICLE 5 - COMPOSITION</h3>
+
+<p>L’association se compose de membres actifs (ou adhérents). Ces membres sont obligatoirement des personnes physiques.</p>
+
+<h3 id="article-6---admission">ARTICLE 6 - ADMISSION</h3>
+
+<p>Pour faire partie de l’association, il faut être agréé par le conseil d’administration, qui statue, lors de chacune de ses réunions, sur les demandes d’admission présentées.</p>
+
+<h3 id="article-7---membres--cotisations">ARTICLE 7 - MEMBRES – COTISATIONS</h3>
+
+<p>Sont membres actifs ceux qui ont pris l’engagement de verser annuellement une somme de 1 € à titre de cotisation.</p>
+
+<p>Ce montant peut être révisé annuellement lors de l’assemblée générale, qui en fixera le nouveau montant dans le règlement intérieur.</p>
+
+<p>Le paiement de cette cotisation donne le droit de voter à l’assemblée générale.</p>
+
+<h3 id="article-8---radiations">ARTICLE 8. - RADIATIONS</h3>
+
+<p>La qualité de membre se perd par :</p>
+
+<ul>
+  <li>La démission présumée du fait du non-paiement de la cotisation annuelle à la date prévue par le règlement intérieur ;</li>
+  <li>La démission, qui peut être envoyée par simple e-mail, au président de l’association ;</li>
+  <li>Le décès ;</li>
+  <li>La radiation prononcée par le conseil d’administration pour non-paiement de la cotisation ou pour motif grave, l’intéressé ayant été invité à fournir des explications devant le bureau et/ou par écrit.</li>
+</ul>
+
+<h3 id="article-9---ressources">ARTICLE 9. - RESSOURCES</h3>
+
+<p>Les ressources de l’association comprennent :</p>
+
+<ul>
+  <li>Le montant des droits d’entrée et des cotisations ;</li>
+  <li>Les subventions de l’Etat, des départements et des communes ;</li>
+  <li>Les sommes provenant des prestations fournies ou de vente par l’association ;</li>
+  <li>Les dons manuels ;</li>
+  <li>Les apports ;</li>
+  <li>Et toutes ressources autorisées par les lois et règlements en vigueur</li>
+</ul>
+
+<p>L’association pourra exercer des activités économiques telles que décrites dans l’article 2.</p>
+
+<h3 id="article-10---assemblee-generale-ordinaire">ARTICLE 10 - ASSEMBLEE GENERALE ORDINAIRE</h3>
+
+<p>L’assemblée générale ordinaire comprend tous les membres de l’association à jour du paiement de leurs cotisations dans les conditions fixées par le règlement intérieur.</p>
+
+<p>Chaque membre peut se faire représenter dans les conditions fixées par le règlement intérieur.</p>
+
+<p>L’assemblée générale ordinaire se réunit au moins une fois par an.</p>
+
+<p>Quinze jours au moins avant la date fixée, les membres de l’association sont convoqués par les soins du secrétaire. Cette convocation peut être envoyée par un simple message e-mail. L’ordre du jour figure sur les convocations.</p>
+
+<p>Le président, assisté des membres du conseil, préside l’assemblée et expose la situation morale ou l’activité de l’association.</p>
+
+<p>Le trésorier rend compte de sa gestion et soumet les comptes annuels (bilan, compte de résultat et annexe) à l’approbation de l’assemblée.</p>
+
+<p>L’assemblée générale fixe le montant des cotisations annuelles et du droit d’entrée à verser par les différentes catégories de membres.</p>
+
+<p>Ne peuvent être abordés que les points inscrits à l’ordre du jour.</p>
+
+<p>L’assemblée délibère valablement quel que soit le nombre de membres présents ou représentés.</p>
+
+<p>Les décisions sont prises à la majorité des voix des membres présents ou représentés dans les conditions précisées dans le règlement intérieur.</p>
+
+<p>Les délibérations sont consignées dans un procès-verbal qui est transcrit dans le registre des délibérations des assemblées. Les procès-verbaux sont signés du président et du secrétaire.</p>
+
+<p>Il est procédé, après épuisement de l’ordre du jour, au renouvellement des membres sortants du conseil.</p>
+
+<p>Toutes les délibérations sont prises à main levée.</p>
+
+<p>Les décisions des assemblées générales s’imposent à tous les membres, y compris absents ou représentés.</p>
+
+<h3 id="article-11---assemblee-generale-extraordinaire">ARTICLE 11 - ASSEMBLEE GENERALE EXTRAORDINAIRE</h3>
+
+<p>Si besoin est, ou sur la demande de la moitié plus un des membres inscrits, le président peut convoquer une assemblée générale extraordinaire.</p>
+
+<p>Elle est compétente pour les modifications statutaires ou la dissolution.</p>
+
+<p>Les modalités de convocation sont les mêmes que pour l’assemblée générale ordinaire.</p>
+
+<p>L’assemblée délibère valablement quel que soit le nombre de membres présents ou représentés.</p>
+
+<p>Les décisions sont prises à la majorité des voix des membres présents ou représentés dans les conditions précisées dans le règlement intérieur.</p>
+
+<h3 id="article-12---conseil-dadministration">ARTICLE 12 - CONSEIL D’ADMINISTRATION</h3>
+
+<p>L’association est dirigée par un conseil de 5 membres, élus pour 2 années par l’assemblée générale. Les membres sont rééligibles.</p>
+
+<p>En cas de vacances, le conseil pourvoit provisoirement au remplacement de ses membres. Il est procédé à leur remplacement définitif par la plus prochaine assemblée générale. Les pouvoirs des membres ainsi élus prennent fin à l’expiration le mandat des membres remplacés.</p>
+
+<h3 id="article-13--reunions-du-conseil-dadministration">ARTICLE 13 – REUNIONS DU CONSEIL D’ADMINISTRATION</h3>
+
+<p>Le conseil d’administration se réunit au moins une fois par semestre, sur convocation du président, ou à la demande du quart de ses membres.</p>
+
+<p>L’ordre du jour est fixé par le président. Il est indiqué dans les convocations écrites adressées quinze jours avant la réunion.</p>
+
+<p>Les décisions sont prises à la majorité simple des membres présent ou représentés. En cas de partage, la voix du président est prépondérante.</p>
+
+<h3 id="article-14--pouvoir-du-conseil-dadministration">ARTICLE 14 – POUVOIR DU CONSEIL D’ADMINISTRATION</h3>
+
+<p>Le conseil est investi des pouvoirs les plus étendus pour administrer l’association.</p>
+
+<p>Il autorise le président à agir en justice. Il mandate le président pour les acquisitions, aliénations ou locations immobilières, la gestion du patrimoine.</p>
+
+<h3 id="article-15--le-bureau">ARTICLE 15 – LE BUREAU</h3>
+
+<p>Le conseil d’administration élit parmi ses membres, à main levé, un bureau composé de :</p>
+
+<ul>
+  <li>Un président ;</li>
+  <li>Un secrétaire ;</li>
+  <li>Un trésorier</li>
+</ul>
+
+<p>Le bureau assure le bon fonctionnement de l’association.</p>
+
+<p>Le président représente l’association dans tous les actes de la vie civile, sous réserve des autorisations qui doivent être accordées par le conseil d’administration.</p>
+
+<p>Il a notamment qualité pour agir en justice au nom de l’association, tant en demande qu’en défense.</p>
+
+<p>Le secrétaire est chargé de la correspondance, de l’archivage, des convocations et de la rédaction des procès-verbaux. Il tient le registre spécial prévu par l’article 5 de la loi du 1er juillet 1901.</p>
+
+<p>Le trésorier recouvre les cotisations. Il effectue les règlements et encaisse les recettes sous le contrôle du président. Il tient ou fait tenir une comptabilité régulière et probante, en conformité avec les textes en vigueur.</p>
+
+<h3 id="article---16---reglement-interieur">ARTICLE - 16 - REGLEMENT INTERIEUR</h3>
+
+<p>Un règlement intérieur peut être établi par le conseil d’administration, qui le fait alors approuver par l’assemblée générale.</p>
+
+<p>Ce règlement éventuel est destiné à fixer les divers points non prévus par les présents statuts, notamment ceux qui ont trait à l’administration interne de l’association.</p>
+
+<h3 id="article---17---dissolution">ARTICLE - 17 - DISSOLUTION</h3>
+
+<p>En cas de dissolution prononcée selon les modalités prévues à l’article 11, un ou plusieurs liquidateurs sont nommés, et l’actif net, s’il y a lieu, est dévolu à une association ayant des buts similaires, conformément aux décisions de l’assemblée générale extraordinaire qui statue sur la dissolution. L’actif net ne peut être dévolu à un membre de l’association, même partiellement, sauf reprise d’un apport.</p>
+
+<h3 id="article--18-liberalites">Article – 18 LIBERALITES</h3>
+
+<p>Le rapport et les comptes annuels, tels que définis à l’article 10, sont adressés chaque année au Préfet du département.</p>
+
+<p>L’association s’engage à présenter ses registres et pièces de comptabilité sur toute réquisition des autorités administratives en ce qui concerne l’emploi des libéralités qu’elle serait autorisée à recevoir, à laisser visiter ses établissements par les représentants de ces autorités compétents et à leur rendre compte du fonctionnement desdits établissements.</p>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                    <div class="col-md-offset-2 col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/?utm_campaign=display_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener"><img src="/documentation-archive/v6.9.1/images/open-collective/okta.png" width="320px" height="175px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="https://developer.okta.com/blog/2019/05/23/java-microservices-spring-cloud-config?utm_campaign=text_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener">Build Microservice Architectures with JHipster and OAuth 2.0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener"><img src="/documentation-archive/v6.9.1/images/open-collective/octoconsulting.png" width="180px" height="175px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener">Octo Consulting Group</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v6.9.1/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v6.9.1/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v6.9.1/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v6.9.1/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v6.9.1/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2020 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank" rel="noopener">Freelancer</a> and <a href="https://github.com/dulumao/flat-admin-bootstrap-templates" target="_blank" rel="noopener">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <!-- Climate strike JS -->
+    <script type="text/javascript">
+        var DIGITAL_CLIMATE_STRIKE_OPTIONS = {
+          disableGoogleAnalytics: true, // @type {boolean}
+          showCloseButtonOnFullPageWidget: true, // @type {boolean}
+        };
+    </script>
+    <script type="text/javascript" src="/documentation-archive/v6.9.1/js/climate-strike.js" async></script>
+    <!-- end Climate strike JS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '9bd47d3de4af6f3662fd11a7f0e38819',
+            indexName: 'jhipster',
+            inputSelector: '.doc-search-algolia',
+            debug: false // Set debug to true if you want to inspect the dropdown
+        });
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
