@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="JSA7VC5gSwD5KKbXlxK8F9rXJtC91rKJq0aWhfpBC0k" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>Deploying to Microsoft Azure</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-64x64.ico" sizes="64x64" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-48x48.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.ico" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://www.jhipster.tech/jhipster-code/" style="color: rgb(255, 78, 78);">JHipster Code</a>
+                        </li>
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v6.10.1/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" role="button"><i class="fa fa-github"></i> Github</a>
+                        </li>
+                        <li class="search-box">
+                            <form id="content-search-form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" name="search" class="doc-search-algolia" placeholder="Search..." />
+                            </form>
+                        </li>
+                        <li>
+                            <a href="/documentation-archive/v6.10.1/cn/azure/"><i class="fa fa-fw fa-globe"></i> 中文</a>                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v6.10.1/images/logo/logo-jhipster.svg" height="19px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v6.10.1/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank" rel="noopener"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (17 minutes)</a></li>
+                                            <li><a href="https://github.com/jhipster/jhipster-guides" target="_blank" rel="noopener"><i class="fa fa-fw fa-road"></i> Online guides</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v6.10.1/jdl/"><span class="icon fa fa-fw fa-star"></span><span class="title">JDL</span></a></li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/traefik/"><i class="fa fa-fw fa-exchange"></i> Traefik</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-uaa/"><i class="fa fa-fw fa-lock"></i> JHipster UAA</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-neo4j/"><i class="fa fa-fw fa-database"></i> Using Neo4j</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/common-ports/"><i class="fa fa-fw fa-plug"></i> Common ports</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/using-vue/"><i class="fa fa-fw fa-html5"></i> Using Vue</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/tls/"><i class="fa fa-fw fa-lock"></i> Using TLS and HTTP/2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/dependency-vulnerabities-check/"><i class="fa fa-fw fa-check-circle-o"></i> Dependency Vulnerabilities Check</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/docker-hub/"><i class="fa fa-fw fa-cloud"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li class="active" ><a href="/documentation-archive/v6.10.1/azure/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Azure</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/boxfuse/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with Boxfuse</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/gcp/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Google Cloud Platform</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Modules &amp; Blueprints</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/modules/official-blueprints/"><i class="fa fa-fw fa-star"></i> Official blueprints</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v6.10.1/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v6.10.1/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v6.10.1/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v6.10.1/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v6.10.1/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <div class="float-right visible-md visible-lg">
+                                <a href="https://github.com/jhipster/jhipster.github.io/edit/master/pages/azure.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+                            </div>
+                            <h1 id="-deploying-to-microsoft-azure"><i class="fa fa-cloud-upload"></i> Deploying to Microsoft Azure</h1>
+
+<p><a href="https://azure.microsoft.com/overview/?WT.mc_id=online-jhipster-judubois">Microsoft Azure</a> is a great solution to run JHipster applications in the cloud.</p>
+
+<ul>
+  <li>The easiest way is to use <a href="https://azure.microsoft.com/services/app-service/?WT.mc_id=online-jhipster-judubois">Azure App Service</a>: there is a JHipster sub-generator
+to automatically deploy a monolithic application to this service.</li>
+  <li>If you are using Spring Boot microservices, there is a JHipster sub-generator to deploy your applications to
+ <a href="https://azure.microsoft.com/services/spring-cloud/?WT.mc_id=online-jhipster-judubois">Azure Spring Cloud</a>.</li>
+  <li>As with any Docker and Kubernetes cloud provider, you can use the JHipster Docker and Kubernetes support to deploy your Docker images to Microsoft Azure. Follow our <a href="/documentation-archive/v6.10.1/docker-compose/">Docker Compose documentation</a> and our <a href="/documentation-archive/v6.10.1/kubernetes/">Kubernetes documentation</a> for more information on these options.</li>
+</ul>
+
+<p><a href="https://azure.microsoft.com/overview/?WT.mc_id=online-jhipster-judubois"><img src="/documentation-archive/v6.10.1/images/logo/logo-azure.png" alt="Microsoft Azure" /></a></p>
+
+<ol>
+  <li><a href="#1">Installing the “az CLI”</a></li>
+  <li><a href="#2">Current limitations</a></li>
+  <li><a href="#3">Supported databases</a></li>
+  <li><a href="#4">Storing secrets</a></li>
+  <li><a href="#5">Deploying a Spring Boot executable Jar file to Azure App Service</a></li>
+  <li><a href="#6">Deploying Spring Boot microservices to Azure Spring Cloud</a></li>
+</ol>
+
+<h2 id="-installing-the-az-cli"><a name="1"></a> Installing the “az CLI”</h2>
+
+<p>You can manage your Azure resources using the <a href="https://portal.azure.com/?WT.mc_id=online-jhipster-judubois">Web-based Azure portal</a> or using <a href="https://docs.microsoft.com/cli/azure/get-started-with-azure-cli/?WT.mc_id=online-jhipster-judubois">the Azure
+command-line interface</a>, also known as the “az CLI”.</p>
+
+<p>As with JHipster we always automate everything, installing this “az CLI” is mandatory in order to work with any of the below options.</p>
+
+<p>To install the az CLI on your machine, <a href="https://docs.microsoft.com/cli/azure/install-azure-cli/?WT.mc_id=online-jhipster-judubois">follow the “Install the Azure CLI” official documentation</a>.</p>
+
+<h2 id="-current-limitations"><a name="2"></a> Current limitations</h2>
+
+<p>Those limitations can be solved in the future, if you are interested to help do not hesitate to contribute to the project:</p>
+
+<ul>
+  <li>The sub-generators do not automatically configure external services like databases (see next section for supported databases), Elasticsearch, Kafka or Redis. So you will need to create and configure them manually.</li>
+  <li>Azure only provides Maven plugins, and as a result the JHipster sub-generators can only work with Maven.</li>
+</ul>
+
+<h2 id="-supported-databases"><a name="3"></a> Supported databases</h2>
+
+<h3 id="sql-databases">SQL databases</h3>
+
+<p>Azure provides all types of databases like MySQL/PostgreSQL/Oracle/MS SQL Server. In Azure, they will be secured by default, so if you want to access them from your JHipster application, you will need to open up their firewall.</p>
+
+<p>For example, on MySQL, you will need to go to “Connection security”, and select “Allow access to Azure services”. You should also click on the “Add client IP” button to automatically add your current IP to the firewall rule:</p>
+
+<p><img src="/documentation-archive/v6.10.1/images/azure_mysql_firewall.png" alt="MySQL firewall" /></p>
+
+<p><strong>Warning for MySQL users:</strong>
+By default, the MySQL connection string generated by JHipster uses the <code class="highlighter-rouge">useSSL=false</code> flag in the <code class="highlighter-rouge">spring.datasource.url</code> property (typically in your <code class="highlighter-rouge">src/main/resources/config/application-prod.yml</code> file). This is because, by default, JHipster uses a local database. On Azure, your database is secured by default, using an SSL certificate, so you will need to put this flag to <code class="highlighter-rouge">true</code>.</p>
+
+<p>For example:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">datasource</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">com.zaxxer.hikari.HikariDataSource</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">jdbc:mysql://jhipster-database.mysql.database.azure.com:3306/test?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">jhipster@jhipster-database</span>
+    <span class="na">password</span><span class="pi">:</span> <span class="s">XXXXXX</span>
+</code></pre></div></div>
+
+<h3 id="nosql-databases">NoSQL databases</h3>
+
+<p>You can install a NoSQL database like Cassandra or MongoDB using <a href="https://azuremarketplace.microsoft.com/en-us/?WT.mc_id=online-jhipster-judubois">the Azure Marketplace</a>, or you can use <a href="https://azure.microsoft.com/services/cosmos-db/?WT.mc_id=online-jhipster-judubois">CosmosDB</a>.</p>
+
+<p>CosmosDB is a globally distributed, managed database from Microsoft. It is compatible at the API level with Cassandra and MongoDB, so it can be used with a JHipster application that is generated using those technologies.</p>
+
+<h2 id="-storing-secrets"><a name="4"></a> Storing secrets</h2>
+
+<p>There are several “secrets” that you should store securely in JHipster, at least your database password (see previous section), and your security tokens (have a look at our <a href="/documentation-archive/v6.10.1/security/">security documentation</a> for more information).</p>
+
+<p>There are many options in Azure, which you can use to store this data in a better place than your <code class="highlighter-rouge">application-prod.yml</code> file. Here are the most common ones:</p>
+
+<ul>
+  <li>A Spring Cloud Config server, like the <a href="/documentation-archive/v6.10.1/jhipster-registry/">JHipster Registry</a> or the configuration server managed by <a href="https://azure.microsoft.com/services/spring-cloud/?WT.mc_id=online-jhipster-judubois">Azure Spring Cloud</a>. This is the best option, as you can tag and rollback configurations, but it needs a dedicated server.</li>
+  <li>Environment variables. This is the easiest option, but it’s bit annoying to setup and it is the less secure one.</li>
+  <li><a href="https://azure.microsoft.com/services/key-vault/?WT.mc_id=online-jhipster-judubois">Azure Key Vault</a>: this is the most secured option, but it is specific to Azure. There is a dedicated <a href="https://docs.microsoft.com/en-us/azure/java/spring-framework/spring-boot-starters-for-azure/?WT.mc_id=online-jhipster-judubois">Azure Spring Boot Starter for Key Vault</a> which is our recommended way to configure JHipster with Azure Key Vault.</li>
+</ul>
+
+<h2 id="-deploying-a-spring-boot-executable-jar-file-to-azure-app-service"><a name="5"></a> Deploying a Spring Boot executable Jar file to Azure App Service</h2>
+
+<p><a href="https://www.youtube.com/watch?v=kciGvVrfwpw"><img src="https://img.youtube.com/vi/kciGvVrfwpw/0.jpg" alt="Deploying to Azure App Service" /></a></p>
+
+<p><em>5-minutes video on deploying a JHipster application to Azure App Service</em></p>
+
+<h3 id="generating-configuration-for-azure-app-service">Generating configuration for Azure App Service</h3>
+
+<p><a href="https://azure.microsoft.com/fr-fr/services/app-service/?WT.mc_id=online-jhipster-judubois">Azure App Service</a> is a managed plaform-as-a-service: on Azure, if you want to deploy a monolith, this is our recommended option.</p>
+
+<p>There are two ways to deploy a Spring Boot application to Azure App Service:</p>
+
+<ul>
+  <li>Deploy it as a Docker image: this allows you to ship anything inside your Docker image, which can be good for some specific use cases, but for most scenarios this is the most complex and less secured option.</li>
+  <li>Deploy it as an executable Jar file: this is the easiest and more secured option, as the OS and the JVM will be supported and automatically updated by Microsoft.</li>
+</ul>
+
+<p>We recommend using an executable Jar file, but if you’d rather use a Docker image, follow the last section of this page, “Deploying to Docker and Kubernetes”.</p>
+
+<p>To deploy a JHipster application as an executable Jar file to Azure App Service, there is a specific <code class="highlighter-rouge">azure-app-service</code> sub-generator:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster azure-app-service
+</code></pre></div></div>
+
+<p>This sub-generator can be used with the following flags:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">--skip-build</code> Skips building the application</li>
+  <li><code class="highlighter-rouge">--skip-deploy</code> Skips deployment to Azure App Service</li>
+  <li><code class="highlighter-rouge">--skip-insights</code> Skips configuration of Azure Application Insights</li>
+</ul>
+
+<p>The following questions will then need be answered. You will probably need to access the <a href="https://portal.azure.com/?WT.mc_id=online-jhipster-judubois">Azure Portal</a> to answer them and check the configured resources.</p>
+
+<ul>
+  <li><strong>Azure resource group name:</strong> This is the name of your Azure resource group, in which your application will be deployed. We recommend setting up a default Azure resource group using the command <code class="highlighter-rouge">az configure --defaults group=&lt;resource group name&gt;</code>.</li>
+  <li><strong>Azure App Service plan name:</strong> Your Azure App Service will run in an <a href="https://docs.microsoft.com/azure/app-service/overview-hosting-plans/?WT.mc_id=online-jhipster-judubois">Azure Service Plan</a>. If the service plan already exists, JHipster will use it, and otherwise it will create a new one. By default, JHipster creates a Linux-based service plan, in the “B1” tier (the “Basic” plan, free for 30 days). If you want more information on the service plan tiers, <a href="https://azure.microsoft.com/pricing/details/app-service/linux/?WT.mc_id=online-jhipster-judubois">here is the documentation</a>.</li>
+  <li><strong>Azure Application Insights instance name:</strong> JHipster can automatically configure an <a href="https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview/?WT.mc_id=online-jhipster-judubois">Azure Application Insights instance</a>, so the deployed application will be monitored. This uses the <a href="https://docs.microsoft.com/en-us/azure/java/spring-framework/spring-boot-starters-for-azure/?WT.mc_id=online-jhipster-judubois">Azure Spring Boot Starter for Application Insights</a> and configures it in the <code class="highlighter-rouge">application-azure.yml</code> configuration file.</li>
+  <li><strong>Azure App Service application name:</strong> The name of your Azure App Service instance.</li>
+  <li><strong>Which type of deployment do you want ?</strong> You can either build and deploy your application locally using Maven, or use GitHub Actions to build and deploy it automatically for you.</li>
+</ul>
+
+<h3 id="the-azure-spring-boot-profile">The “azure” Spring Boot profile</h3>
+
+<p>This sub-generator creates an <code class="highlighter-rouge">azure</code> Spring Boot profile and configures it.</p>
+
+<ul>
+  <li>In your Azure App Service instance, both the <code class="highlighter-rouge">prod</code> and <code class="highlighter-rouge">azure</code> Spring profiles are automatically enabled, using the <code class="highlighter-rouge">SPRING_PROFILES_ACTIVE</code> environment variable.</li>
+  <li>A new Spring Boot configuration is created for that profile, <code class="highlighter-rouge">src/main/resources/config/application-azure.yml</code>. For more information on profiles in JHipster, <a href="/documentation-archive/v6.10.1/profiles/">here is the documentation</a>.</li>
+</ul>
+
+<h3 id="deploying-using-github-actions">Deploying using GitHub Actions</h3>
+
+<p>Deploying with GitHub Actions is recommended, as it is easier and probably faster than on your local machine.</p>
+
+<ul>
+  <li>The configuration is stored in the <code class="highlighter-rouge">.github/workflows/azure-app-service.yml</code>.</li>
+  <li>By default, the application is deployed each time there is new <code class="highlighter-rouge">push</code> event on the <code class="highlighter-rouge">master</code> branch.</li>
+  <li>This deployment mechanism uses the <code class="highlighter-rouge">azure-webapp</code> Maven plugin, in order to be consistent with the local deployment. There is an alternative way to deploy to Azure App Service, which doesn’t require Maven. If you are interested in it, look for the <code class="highlighter-rouge">azure/webapps-deploy</code> GitHub Action, and follow the example in <a href="https://dev.to/azure/the-easy-way-to-deploy-a-spring-boot-application-to-production-on-azure-2joi">this blog post</a>.</li>
+</ul>
+
+<p>In order to be authorized to deploy an application to your Azure App Service instance, GitHub needs to have access to a secured token called <code class="highlighter-rouge">AZURE_CREDENTIALS</code>.
+At the end of the sub-generator execution, it has displayed a command-line in the form:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az ad sp create-for-rbac <span class="nt">--name</span> http://&lt;your-security-role&gt; <span class="nt">--role</span> contributor <span class="nt">--scopes</span> /subscriptions/&lt;your-subscription-id&gt;/resourceGroups/&lt;your-resource-group-name&gt; <span class="nt">--sdk-auth</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;your-security-role&gt;</code> is the name of the security role you want to create (by default we use the application name).</li>
+  <li><code class="highlighter-rouge">&lt;your-subscription-id&gt;</code> is the ID of the Azure subscription you are using. It can be found at the top of the subscription screen in the <a href="https://portal.azure.com/?WT.mc_id=online-jhipster-judubois">Azure Portal</a>.</li>
+  <li><code class="highlighter-rouge">&lt;your-resource-group-name&gt;</code> is the name of your resource group.</li>
+</ul>
+
+<p>Execute that command to get the secured token. Then, in the GitHub project where your application is located, go to <code class="highlighter-rouge">Settings &gt; Secrets</code>, and create a new secret named <code class="highlighter-rouge">AZURE_CREDENTIALS</code> in which you need to paste the secured token.</p>
+
+<h2 id="-deploying-spring-boot-microservices-to-azure-spring-cloud"><a name="6"></a> Deploying Spring Boot microservices to Azure Spring Cloud</h2>
+
+<p><a href="https://azure.microsoft.com/services/spring-cloud/?WT.mc_id=online-jhipster-judubois">Azure Spring Cloud</a> is a managed service for Spring Boot applications. It can host any kind of JHipster applications, including monoliths, but it is particularly suited for hosting JHipster microservices and JHipster gateways, which follow the standard JHipster <a href="/documentation-archive/v6.10.1/microservices-architecture/">microservice architecture</a>.</p>
+
+<h3 id="limitations-of-the-azure-spring-cloud-sub-generator">Limitations of the Azure Spring Cloud sub-generator</h3>
+
+<p>Azure Spring Cloud provides a managed discovery server based on Netflix Eureka, so this can only works with JHipster applications using the “no” or “JHipster Registry” service discovery:</p>
+
+<ul>
+  <li>If no service discovery is configured in the application, the sub-generator described below will add Netflix Eureka automatically. This is the easiest way to get your microservice running on Azure Spring Cloud.</li>
+  <li>JHipster Registry is in fact a Netflix Eureka server, so this is fully compatible with Azure Spring Cloud. JHipster provides many custom configuration for Eureka: it is required that you remove the <code class="highlighter-rouge">eureka.instance.instanceId</code> Spring Boot property in your <code class="highlighter-rouge">application.yml</code> file, as this should be managed by Azure Spring Cloud. Other <code class="highlighter-rouge">eureka</code> properties work fine with Azure Spring Cloud, but they can be removed to use instead Azure’s default values. When using this configuration, you will benefit from some advanced features from JHipster, like distributed caching configuration, that normally rely on the JHipster Registry.</li>
+</ul>
+
+<p>As a result, only applications using Hashicorp Consul as a service discovery mechanism will not work, as this is not supported by Azure Spring Cloud.</p>
+
+<h3 id="generating-configuration-for-azure-spring-cloud">Generating configuration for Azure Spring Cloud</h3>
+
+<p>A specific Azure Spring Cloud extension must be added to the “az CLI”:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az extension add <span class="nt">--name</span> spring-cloud
+</code></pre></div></div>
+
+<p>Once this extension is installed, you will be able to run <code class="highlighter-rouge">az spring-cloud</code> commands, and automate the Azure Spring Cloud configuration with JHipster.</p>
+
+<p>To deploy a JHipster application on Azure Spring Cloud, there is a specific <code class="highlighter-rouge">azure-spring-cloud</code> sub-generator:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jhipster azure-spring-cloud
+</code></pre></div></div>
+
+<p>This sub-generator can be used with the following flags:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">--skip-build</code> Skips building the application</li>
+  <li><code class="highlighter-rouge">--skip-deploy</code> Skips deployment to Azure Spring Cloud</li>
+</ul>
+
+<p>The following questions will then need be answered. You will probably need to access the <a href="https://portal.azure.com/?WT.mc_id=online-jhipster-judubois">Azure Portal</a> to answer them and check the configured resources.</p>
+
+<ul>
+  <li><strong>Azure resource group name:</strong> This is the name of your Azure resource group, in which your application will be deployed. We recommend setting up a default Azure resource group using the command <code class="highlighter-rouge">az configure --defaults group=&lt;resource group name&gt;</code>.</li>
+  <li><strong>Azure Spring Cloud service name (the name of your cluster):</strong> This is the name of your Azure Spring Cloud cluster instance. We recommend setting up a default Azure Spring Cloud service name using the command <code class="highlighter-rouge">az configure --defaults spring-cloud=&lt;resource group name&gt;</code>.</li>
+  <li><strong>Azure Spring Cloud application name:</strong> The name of the Spring Boot application you are deploying on Azure Spring Cloud.</li>
+  <li><strong>Which type of deployment do you want ?</strong> You can either build and deploy your application locally using Maven, or use GitHub Actions to build and deploy it automatically for you.</li>
+</ul>
+
+<h3 id="the-azure-maven-and-spring-boot-profile">The “azure” Maven and Spring Boot profile</h3>
+
+<p>If you have followed documentation above on the <code class="highlighter-rouge">azure-app-service</code> sub-generator, the <code class="highlighter-rouge">azure-spring-cloud</code> sub-generator works a bit differently, as it configures:</p>
+
+<ul>
+  <li>A new Spring Boot profile called <code class="highlighter-rouge">azure</code>, configured at <code class="highlighter-rouge">src/main/resources/config/application-azure.yml</code>.</li>
+  <li>A new Maven profile, also called <code class="highlighter-rouge">azure</code>. This Maven profile will automatically force the usage of the <code class="highlighter-rouge">prod</code> and <code class="highlighter-rouge">azure</code> Spring Boot profiles at runtime, so there is no need to configure them at the Azure Spring Cloud level (this is the main difference with Azure App Service, where those are configured as environment variables).</li>
+</ul>
+
+<p>For more information on profiles in JHipster, <a href="/documentation-archive/v6.10.1/profiles/">here is the documentation</a>.</p>
+
+<h3 id="azure-spring-cloud-specific-features">Azure Spring Cloud specific features</h3>
+
+<p>As documented in the section above, the <code class="highlighter-rouge">azure-spring-cloud</code> sub-generator adds a specific <code class="highlighter-rouge">azure</code> Maven profile. This profile adds some libraries at build time, so that the running application can benefit from Azure Spring Cloud’s specific features:</p>
+
+<ul>
+  <li>It connects the application to the managed Spring Cloud Service Discovery server (as detailed in the section above, “Limitations of the Azure Spring Cloud sub-generator”).</li>
+  <li>It configures the application using the managed Spring Cloud Config Server.</li>
+  <li>It sends distributed tracing data to Azure Monitor.</li>
+</ul>
+
+<h3 id="deploying-using-github-actions-1">Deploying using GitHub Actions</h3>
+
+<p>Deploying with GitHub Actions is recommended, as it is easier and probably faster than on your local machine.</p>
+
+<ul>
+  <li>The configuration is stored in the <code class="highlighter-rouge">.github/workflows/azure-spring-cloud.yml</code>.</li>
+  <li>By default, the application is deployed each time there is new <code class="highlighter-rouge">push</code> event on the <code class="highlighter-rouge">master</code> branch.</li>
+  <li>This deployment mechanism uses directly the “az CLI” to deploy to the Azure Spring Cloud cluster.</li>
+</ul>
+
+<p>In order to be authorized to deploy an application to your Azure Spring Cloud cluster, GitHub needs to have access to a secured token called <code class="highlighter-rouge">AZURE_CREDENTIALS</code>.
+This token can generated by using the following command line:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az ad sp create-for-rbac <span class="nt">--name</span> http://&lt;your-security-role&gt; <span class="nt">--role</span> contributor <span class="nt">--scopes</span> /subscriptions/&lt;your-subscription-id&gt;/resourceGroups/&lt;your-resource-group-name&gt; <span class="nt">--sdk-auth</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;your-security-role&gt;</code> is the name of the security role you want to create (by default we use the application name).</li>
+  <li><code class="highlighter-rouge">&lt;your-subscription-id&gt;</code> is the ID of the Azure subscription you are using. It can be found at the top of the subscription screen in the <a href="https://portal.azure.com/?WT.mc_id=online-jhipster-judubois">Azure Portal</a>.</li>
+  <li><code class="highlighter-rouge">&lt;your-resource-group-name&gt;</code> is the name of your resource group.</li>
+</ul>
+
+<p>Execute that command to get the secured token. Then, in the GitHub project where your application is located, go to <code class="highlighter-rouge">Settings &gt; Secrets</code>, and create a new secret named <code class="highlighter-rouge">AZURE_CREDENTIALS</code> in which you need to paste the secured token.</p>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                    <div class="col-md-offset-2 col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/?utm_campaign=display_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener"><img src="/documentation-archive/v6.10.1/images/open-collective/okta.png" width="320px" height="175px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="https://developer.okta.com/blog/2019/05/23/java-microservices-spring-cloud-config?utm_campaign=text_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener">Build Microservice Architectures with JHipster and OAuth 2.0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener"><img src="/documentation-archive/v6.10.1/images/open-collective/octoconsulting.png" width="180px" height="175px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener">Octo Consulting Group</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v6.10.1/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v6.10.1/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v6.10.1/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v6.10.1/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v6.10.1/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2020 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank" rel="noopener">Freelancer</a> and <a href="https://github.com/dulumao/flat-admin-bootstrap-templates" target="_blank" rel="noopener">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <!-- Climate strike JS -->
+    <script type="text/javascript">
+        var DIGITAL_CLIMATE_STRIKE_OPTIONS = {
+          disableGoogleAnalytics: true, // @type {boolean}
+          showCloseButtonOnFullPageWidget: true, // @type {boolean}
+        };
+    </script>
+    <script type="text/javascript" src="/documentation-archive/v6.10.1/js/climate-strike.js" async></script>
+    <!-- end Climate strike JS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '9bd47d3de4af6f3662fd11a7f0e38819',
+            indexName: 'jhipster',
+            inputSelector: '.doc-search-algolia',
+            debug: false // Set debug to true if you want to inspect the dropdown
+        });
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
