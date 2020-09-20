@@ -1,0 +1,2381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/09/20/jhipster-release-6.10.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/07/04/jhipster-release-6.10.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/06/28/jhipster-release-6.10.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/06/01/jhipster-release-6.9.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/05/17/jhipster-release-6.9.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/03/08/jhipster-release-6.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/02/12/jhipster-release-6.7.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2020/02/06/jhipster-release-6.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/12/22/jhipster-release-6.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/11/19/jhipster-release-6.5.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/11/10/jhipster-release-6.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/10/11/jhipster-release-6.4.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/10/10/jhipster-release-6.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/09/20/jhipster-release-6.3.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/09/13/jhipster-release-6.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/08/01/jhipster-release-6.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/06/23/jhipster-release-6.1.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/06/21/jhipster-release-6.1.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/06/11/jhipster-release-6.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/05/10/jhipster-release-6.0.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/05/02/jhipster-release-6.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/04/04/jhipster-release-6.0.0-beta.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/02/28/jhipster-release-5.8.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/01/29/jhipster-release-5.8.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2019/01/25/jhipster-release-5.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/12/21/jhipster-release-5.7.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/12/14/jhipster-release-5.7.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/11/12/jhipster-release-5.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/11/05/jhipster-release-5.6.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/11/02/jhipster-release-5.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/10/16/jhipster-release-5.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/10/07/jhipster-release-5.4.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/10/04/jhipster-release-5.4.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/10/03/jhipster-release-5.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/09/17/jhipster-release-5.3.4.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/09/17/jhipster-release-5.3.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/09/17/jhipster-release-5.3.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/09/05/jhipster-release-5.3.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/09/03/jhipster-release-5.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/08/16/jhipster-release-5.2.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/08/14/jhipster-release-5.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/07/12/jhipster-release-5.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/07/05/jhipster-release-5.0.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/06/23/jhipster-release-5.0.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/06/20/jhipster-release-5.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/06/19/jhipster-release-4.14.5.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/06/18/jhipster-release-5.0.0-beta.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/06/13/jhipster-release-5.0.0-beta.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/05/11/jhipster-release-4.14.4.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/05/03/jhipster-release-5.0.0-beta.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/04/10/jhipster-release-4.14.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/04/05/jhipster-release-4.14.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/04/03/jhipster-release-5.0.0-beta.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/02/27/jhipster-release-4.14.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/01/30/jhipster-release-4.14.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/01/09/jhipster-release-4.13.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2018/01/04/jhipster-release-4.13.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/12/27/jhipster-release-4.13.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/12/14/jhipster-release-4.13.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/12/08/jhipster-release-4.12.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/11/26/jhipster-release-4.11.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/11/24/jhipster-release-4.11.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/10/27/jhipster-release-4.10.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/10/25/jhipster-release-4.10.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/10/17/jhipster-release-4.10.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/09/28/jhipster-release-4.9.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/09/15/jhipster-release-4.8.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/09/13/jhipster-release-4.8.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/09/12/jhipster-release-4.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/08/23/jhipster-release-4.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/07/19/jhipster-release-4.6.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/07/10/jhipster-release-4.6.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/07/06/jhipster-release-4.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/06/23/jhipster-release-4.5.6.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/06/19/jhipster-release-4.5.5.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/06/16/jhipster-release-4.5.4.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/06/09/jhipster-release-4.5.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/05/29/jhipster-release-4.5.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/05/20/jhipster-release-4.5.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/05/20/jhipster-release-4.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/05/08/jhipster-release-4.4.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/05/08/jhipster-release-4.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/04/13/jhipster-release-4.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/04/05/jhipster-release-4.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/04/01/jhipster-introduces-bitcoin-mining.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/03/23/jhipster-release-4.1.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/03/20/jhipster-release-4.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/03/09/jhipster-release-4.0.8.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/03/01/jhipster-release-4.0.7.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/21/jhipster-release-4.0.6.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/17/jhipster-release-4.0.5.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/17/jhipster-release-4.0.4.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/13/jhipster-release-4.0.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/06/jhipster-release-4.0.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/04/jhipster-release-4.0.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2017/02/02/jhipster-release-4.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/12/19/jhipster-release-3.12.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/12/08/jhipster-release-3.12.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/11/30/jhipster-release-3.12.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/11/14/jhipster-release-3.11.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/10/27/jhipster-release-3.10.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/10/07/jhipster-release-3.9.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/10/07/jhipster-release-3.9.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/09/22/jhipster-release-3.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/09/16/jhipster-release-3.7.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/09/12/jhipster-release-3.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/08/18/jhipster-release-3.6.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/08/17/jhipster-release-3.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/07/22/jhipster-release-3.5.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/07/20/jhipster-release-3.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/06/19/jhipster-release-3.4.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/06/13/jhipster-release-3.4.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/05/27/jhipster-release-3.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/05/13/jhipster-release-3.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/05/08/jhipster-release-3.2.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/05/06/jhipster-release-3.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/04/20/jhipster-release-3.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/04/01/jhipster-on-strike.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/03/23/jhipster-release-3.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/03/07/jhipster-release-2.27.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/02/23/jhipster-release-2.27.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2016/01/18/jhipster-release-2.27.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/12/30/jhipster-release-2.26.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/12/17/jhipster-release-2.26.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/12/16/jhipster-release-2.26.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/12/04/jhipster-release-2.25.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/11/20/jhipster-release-2.24.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/11/10/jhipster-release-2.23.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/10/23/jhipster-release-2.23.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/10/06/jhipster-release-2.22.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/09/23/jhipster-release-2.21.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/09/16/jhipster-release-2.21.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/08/25/jhipster-release-2.20.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/07/31/jhipster-release-2.19.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/07/07/jhipster-release-2.18.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/06/30/jhipster-release-2.17.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/06/17/jhipster-release-2.16.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/06/09/jhipster-release-2.16.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/06/07/jhipster-release-2.15.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/06/06/jhipster-release-2.15.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/06/05/jhipster-release-2.15.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/31/jhipster-release-2.14.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/29/jhipster-release-2.14.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/29/jhipster-release-2.13.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/28/jhipster-release-2.13.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/22/jhipster-release-2.12.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/19/jhipster-release-2.11.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/15/jhipster-release-2.11.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/07/jhipster-release-2.10.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/05/07/jhipster-release-2.10.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/04/29/jhipster-release-2.9.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/04/29/jhipster-release-2.9.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/04/24/jhipster-release-2.9.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/04/20/jhipster-release-2.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/04/03/jhipster-release-2.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/04/01/jhipster-enterprise-edition.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/03/08/jhipster-release-2.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/03/06/jhipster-release-2.5.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/03/03/jhipster-release-2.5.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/03/01/jhipster-release-2.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/02/24/jhipster-release-2.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/02/18/jhipster-release-2.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/01/31/jhipster-release-2.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/01/31/jhipster-release-2.1.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/01/30/jhipster-release-2.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2015/01/09/jhipster-release-2.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/12/11/jhipster-release-1.10.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/26/jhipster-release-1.10.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/26/jhipster-release-1.10.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/14/jhipster-release-1.9.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/10/jhipster-release-1.8.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/09/jhipster-release-1.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/06/jhipster-release-1.7.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/11/05/jhipster-release-1.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/10/31/jhipster-release-1.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/10/29/jhipster-release-1.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/10/13/jhipster-release-1.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/10/07/jhipster-release-1.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/10/02/jhipster-release-1.2.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/09/29/jhipster-release-1.2.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/09/21/jhipster-release-1.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/09/10/jhipster-release-1.1.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/09/08/jhipster-release-1.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/09/01/jhipster-release-1.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/07/24/jhipster-release-0.18.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/07/23/jhipster-release-0.18.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/07/01/jhipster-release-0.17.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/07/01/jhipster-release-0.17.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/06/23/jhipster-release-0.17.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/06/02/jhipster-release-0.16.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/05/26/jhipster-release-0.15.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/05/18/jhipster-release-0.14.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/04/10/jhipster-release-0.13.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/04/01/jhipster-release-2.0.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/03/27/jhipster-release-0.12.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/19/jhipster-release-0.11.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/19/jhipster-release-0.10.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/18/jhipster-release-0.10.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/16/jhipster-release-0.9.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/14/jhipster-release-0.9.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/13/jhipster-release-0.9.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/02/07/jhipster-release-0.9.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/31/jhipster-release-0.8.4.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/29/jhipster-release-0.8.3.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/23/jhipster-release-0.8.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/23/jhipster-release-0.8.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/23/jhipster-release-0.8.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/14/jhipster-release-0.7.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/13/jhipster-release-0.7.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2014/01/08/jhipster-release-0.6.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/28/jhipster-release-0.6.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/23/jhipster-release-0.6.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/21/jhipster-release-0.5.2.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/21/jhipster-release-0.5.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/17/jhipster-release-0.5.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/15/jhipster-release-0.4.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/07/jhipster-release-0.3.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/06/jhipster-release-0.3.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/05/jhipster-release-0.2.1.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/12/03/jhipster-release-0.2.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/11/30/jhipster-release-0.1.0.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+    <url>
+      <loc>http://jhipster.github.io/2013/11/29/jhipster-release-0.0.28.html</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.5</priority>
+    </url>
+  
+  <url>
+      <loc>http://jhipster.github.io/presentation</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.6</priority>
+  </url>
+  
+  
+      <url>
+        <loc>http://jhipster.github.io/tips/004_tip_using_ms_sql_server.html</loc>
+        <lastmod>2016-11-30T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+       </url>
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <url>
+        <loc>http://jhipster.github.io/api-gateway/</loc>
+        <lastmod>2017-05-02T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/applications</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/artwork/</loc>
+        <lastmod>2015-07-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/association/</loc>
+        <lastmod>2018-08-23T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/aws/</loc>
+        <lastmod>2018-01-16T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/azure/</loc>
+        <lastmod>2018-08-23T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/boxfuse/</loc>
+        <lastmod>2016-08-21T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/bug-bounties/</loc>
+        <lastmod>2018-07-19T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/cloudfoundry/</loc>
+        <lastmod>2014-11-03T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/code-quality/</loc>
+        <lastmod>2018-08-18T07:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/common-application-properties/</loc>
+        <lastmod>2018-03-18T13:20:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/common-ports/</loc>
+        <lastmod>2018-10-15T05:20:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/companies-using-jhipster/</loc>
+        <lastmod>2015-12-09T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-ide-visual-studio-code/</loc>
+        <lastmod>2016-09-15T12:13:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-a-corporate-proxy/</loc>
+        <lastmod>2016-08-18T03:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-ide/</loc>
+        <lastmod>2015-05-22T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-ide-eclipse/</loc>
+        <lastmod>2015-05-22T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-ide-eclipse-gradle/</loc>
+        <lastmod>2015-05-22T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-ide-idea/</loc>
+        <lastmod>2015-11-28T11:13:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/configuring-ide-netbeans/</loc>
+        <lastmod>2016-08-20T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/constraint-violation/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/consul/</loc>
+        <lastmod>2017-05-02T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/contributing-companies/</loc>
+        <lastmod>2017-11-28T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/contributing-individuals/</loc>
+        <lastmod>2017-11-28T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/creating-a-spring-controller/</loc>
+        <lastmod>2019-01-31T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/creating-microservices/</loc>
+        <lastmod>2017-05-02T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/modules/creating-a-blueprint/</loc>
+        <lastmod>2015-12-05T12:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/modules/creating-a-module/</loc>
+        <lastmod>2015-12-05T12:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/creating-a-spring-service/</loc>
+        <lastmod>2019-01-31T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/creating-an-app/</loc>
+        <lastmod>2018-03-18T13:20:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/creating-an-entity/</loc>
+        <lastmod>2018-09-03T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/customizing-bootstrap-3/</loc>
+        <lastmod>2015-01-30T12:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/customizing-bootstrap-4/</loc>
+        <lastmod>2017-12-07T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/dependency-vulnerabities-check/</loc>
+        <lastmod>2018-09-15T14:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/deployments</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/development/</loc>
+        <lastmod>2016-11-30T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/docker-compose/</loc>
+        <lastmod>2016-11-30T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/docker-hub/</loc>
+        <lastmod>2016-09-24T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/doing-api-first-development/</loc>
+        <lastmod>2018-06-10T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/email-already-used/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/email-not-found/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/entities-filtering/</loc>
+        <lastmod>2017-08-21T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/entities-fields</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/entity-not-found/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/enums</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/fisher/</loc>
+        <lastmod>2018-10-20T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/fisherman/</loc>
+        <lastmod>2016-08-14T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/gcp/</loc>
+        <lastmod>2018-10-01T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/getting-started</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/managing-server-errors/</loc>
+        <lastmod>2018-03-06T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/help/</loc>
+        <lastmod>2014-08-26T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/heroku/</loc>
+        <lastmod>2020-06-05T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/</loc>
+        <lastmod>2016-05-24T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/installation/</loc>
+        <lastmod>2018-08-30T03:20:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/installing-new-languages/</loc>
+        <lastmod>2014-12-09T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/invalid-password/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jhipster-app/</loc>
+        <lastmod>2016-08-29T07:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jhipster-ide/</loc>
+        <lastmod>2018-01-08T11:08:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jhipster-registry/</loc>
+        <lastmod>2019-01-31T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jhipster-uml/</loc>
+        <lastmod>2017-11-27T06:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/kubernetes/</loc>
+        <lastmod>2018-06-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/login-already-used/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/managing-relationships/</loc>
+        <lastmod>2019-11-30T12:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/modules/marketplace/</loc>
+        <lastmod>2015-12-09T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/meetups/</loc>
+        <lastmod>2017-05-14T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/microservices-in-production/</loc>
+        <lastmod>2017-05-02T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/microservices-architecture/</loc>
+        <lastmod>2016-03-09T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/monitoring/</loc>
+        <lastmod>2019-01-31T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/modules/official-blueprints/</loc>
+        <lastmod>2019-09-02T06:24:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/oh-my-zsh/</loc>
+        <lastmod>2016-07-25T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/openshift/</loc>
+        <lastmod>2017-04-29T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/options</loc>
+        <lastmod>2019-11-02T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/parameterized/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/policies/</loc>
+        <lastmod>2015-07-31T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/problem/problem-with-message/</loc>
+        <lastmod>2017-09-09T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/production/</loc>
+        <lastmod>2019-02-03T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/profiles/</loc>
+        <lastmod>2014-11-25T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/relationships</loc>
+        <lastmod>2019-11-03T06:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/releases/</loc>
+        <lastmod>2014-02-16T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.4</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/running-tests/</loc>
+        <lastmod>2019-04-18T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/screenshots/</loc>
+        <lastmod>2014-02-16T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/security/</loc>
+        <lastmod>2018-03-18T13:20:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/separating-front-end-and-api/</loc>
+        <lastmod>2019-01-28T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/setting-up-ci/</loc>
+        <lastmod>2018-08-03T09:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/setting-up-ci-jenkins1/</loc>
+        <lastmod>2016-11-03T07:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/setting-up-ci-jenkins2/</loc>
+        <lastmod>2017-01-19T08:15:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/setting-up-ci-linux/</loc>
+        <lastmod>2015-01-09T06:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/setting-up-ci-windows/</loc>
+        <lastmod>2015-01-09T06:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/shell-plugins/</loc>
+        <lastmod>2016-08-14T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/showcase/</loc>
+        <lastmod>2020-06-11T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+       </url>
+    
+  
+  
+  
+      <url>
+        <loc>http://jhipster.github.io/sponsors/</loc>
+        <lastmod>2017-11-28T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.1</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/team/</loc>
+        <lastmod>2015-07-30T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/tech-stack/</loc>
+        <lastmod>2014-05-15T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/tips/</loc>
+        <lastmod>2019-01-29T02:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/tls/</loc>
+        <lastmod>2018-10-03T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/traefik/</loc>
+        <lastmod>2019-01-28T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/jdl/troubleshooting</loc>
+        <lastmod>2019-10-27T07:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/upgrading-an-application/</loc>
+        <lastmod>2014-06-01T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/user-entity/</loc>
+        <lastmod>2020-09-13T19:00:42-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-neo4j/</loc>
+        <lastmod>2020-01-17T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-react/</loc>
+        <lastmod>2018-04-02T18:41:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-uaa/</loc>
+        <lastmod>2016-08-24T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-vue/</loc>
+        <lastmod>2019-03-27T18:41:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-angular/</loc>
+        <lastmod>2015-01-29T17:41:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-angularjs/</loc>
+        <lastmod>2015-01-29T17:41:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-cache/</loc>
+        <lastmod>2017-02-10T12:40:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-cassandra/</loc>
+        <lastmod>2015-02-23T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-couchbase/</loc>
+        <lastmod>2015-02-23T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-dtos/</loc>
+        <lastmod>2015-05-28T18:41:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-elasticsearch/</loc>
+        <lastmod>2017-04-15T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-kafka/</loc>
+        <lastmod>2019-10-29T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-mongodb/</loc>
+        <lastmod>2015-02-23T18:00:00-06:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-oracle/</loc>
+        <lastmod>2015-06-08T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/using-websockets/</loc>
+        <lastmod>2015-08-31T13:40:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+       </url>
+    
+  
+      <url>
+        <loc>http://jhipster.github.io/video-tutorial/</loc>
+        <lastmod>2014-10-17T19:00:00-05:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+       </url>
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <url>
+    <loc>http://www.jhipster.tech/cn/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://www.jhipster.tech/cn/" />
+  </url>
+</urlset>
