@@ -1,0 +1,15 @@
+{
+  "name": "jhipster-public-wesite",
+  "devDependencies": {
+    "browser-sync": "2.27.5",
+    "gulp": "4.0.2",
+    "gulp-imagemin": "7.1.0",
+    "gulp-sass": "5.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "sass": "gulp sass",
+    "images": "gulp images"
+  }
+}
