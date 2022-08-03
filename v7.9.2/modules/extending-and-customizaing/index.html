@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="JSA7VC5gSwD5KKbXlxK8F9rXJtC91rKJq0aWhfpBC0k" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>Blueprint Basics</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-64x64.ico" sizes="64x64" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-48x48.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.ico" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v7.9.2/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://start.jhipster.tech/jdl-studio/" target="_blank" rel="noopener" role="button"><i class="fa fa-terminal"></i> JDL Studio</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" role="button"><i class="fa fa-github"></i> Github</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/JHipsterDevelopersAssociation" target="_blank" rel="noopener" role="button"><i class="fa fa-play-circle"></i> YouTube</a>
+                        </li>
+                        <li class="search-box">
+                            <form id="content-search-form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" name="search" class="doc-search-algolia" placeholder="Search..." />
+                            </form>
+                        </li>
+                        <li>
+                            <a href="/documentation-archive/v7.9.2/cn/modules/extending-and-customizaing/"><i class="fa fa-fw fa-globe"></i> 中文</a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v7.9.2/images/logo/logo-jhipster.svg" height="19px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v7.9.2/tech-board/">
+                                    <span class="icon fa fa-rocket"></span><span class="title">JHipster Tech Board</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v7.9.2/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank" rel="noopener"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (15 minutes)</a></li>
+                                            <li><a href="https://github.com/jhipster/jhipster-guides" target="_blank" rel="noopener"><i class="fa fa-fw fa-road"></i> Online guides</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-star"></span><span class="title">JDL</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/intro"><i class="fa fa-fw fa-star"></i>Overview</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/applications"><i class="fa fa-fw fa-rocket"></i> Applications</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/entities-fields"><i class="fa fa-fw fa-bolt"></i> Entities & fields</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/enums"><i class="fa fa-fw fa-bolt"></i> Enums</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/relationships"><i class="fa fa-fw fa-sitemap"></i> Relationships</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/options"><i class="fa fa-fw fa-puzzle-piece"></i> Options</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/deployments"><i class="fa fa-fw fa-cloud-upload"></i> Deployments</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jdl/troubleshooting"><i class="fa fa-fw fa-cogs"></i> Troubleshooting</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/jhipster-control-center/"><i class="fa fa-fw fa-codepen"></i> JHipster Control Center</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-neo4j/"><i class="fa fa-fw fa-database"></i> Using Neo4j</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/common-ports/"><i class="fa fa-fw fa-plug"></i> Common ports</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/using-vue/"><i class="fa fa-fw fa-html5"></i> Using Vue</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/tls/"><i class="fa fa-fw fa-lock"></i> Using TLS and HTTP/2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/dependency-vulnerabities-check/"><i class="fa fa-fw fa-check-circle-o"></i> Dependency Vulnerabilities Check</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/docker-hub/"><i class="fa fa-fw fa-cloud"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/azure/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Azure</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/cloudcaptain/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with CloudCaptain</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/clever-cloud/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Clever Cloud</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/gcp/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Google Cloud Platform</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Blueprints</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/modules/official-blueprints/"><i class="fa fa-fw fa-star"></i> Official blueprints</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/modules/extending-and-customizing/"><i class="fa fa-fw fa-cube"></i> Blueprint Basics</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/blueprints/quarkus/"><i class="fa fa-fw fa-book"></i> Quarkus documentation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v7.9.2/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v7.9.2/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-13"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-13" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.2/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.2/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v7.9.2/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <div class="float-right visible-md visible-lg">
+                                <a href="https://github.com/jhipster/jhipster.github.io/edit/main/modules/extending_and_customizing.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+                            </div>
+                            
+                            <h1 id="i-classfa-fa-cubei-blueprint-basics">
+        
+        
+          <i class="fa fa-cube"></i> Blueprint Basics <a href="#i-classfa-fa-cubei-blueprint-basics">
+                                <span class="sr-only">Permalink to " Blueprint Basics"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h1>
+    
+
+<p>JHipster has support for <code class="highlighter-rouge">plugins</code>, and we call them <code class="highlighter-rouge">blueprints</code> and <code class="highlighter-rouge">modules</code>.</p>
+
+<p>Prior to JHipster v7.9.0, <code class="highlighter-rouge">modules</code> were Yeoman generators executed using <code class="highlighter-rouge">yo</code>, extended <code class="highlighter-rouge">generators-jhipster</code>’s <code class="highlighter-rouge">generator-base</code> class, and registered hooks to integrate into JHipster’s workflow.</p>
+
+<p>As of JHipster v7.9.0, <code class="highlighter-rouge">modules</code> are <code class="highlighter-rouge">blueprints</code> with stand-alone generators (not blueprinted) and a custom CLI.
+We will refer to them as standalone blueprints (or just blueprints) from now on.</p>
+      <h2 id="basic-rules-for-a-jhipster-blueprint">
+        
+        
+          Basic rules for a JHipster blueprint <a href="#basic-rules-for-a-jhipster-blueprint">
+                                <span class="sr-only">Permalink to "Basic rules for a JHipster blueprint"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>JHipster blueprints:</p>
+
+<ul>
+  <li>are NPM packages and Yeoman generators.</li>
+  <li>follow an extension of the Yeoman rules listed at <a href="https://yeoman.io/authoring/index.html">https://yeoman.io/authoring/index.html</a>. Instead of being prefixed by <code class="highlighter-rouge">generator-</code>, are prefixed with <code class="highlighter-rouge">generator-jhipster-</code>, and instead of having just the <code class="highlighter-rouge">yeoman-generator</code> keyword, and must have 2 keywords, <code class="highlighter-rouge">yeoman-generator</code> and <code class="highlighter-rouge">jhipster-blueprint</code>.</li>
+</ul>
+      <h2 id="usage">
+        
+        
+          Usage <a href="#usage">
+                                <span class="sr-only">Permalink to "Usage"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>To use a blueprint, run the below command</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>jhipster --blueprints &lt;blueprint name&gt;
+</code></pre>
+</div>
+
+<p>Or use the custom provided CLI:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>jhipster-my-blueprint
+</code></pre>
+</div>
+      <h2 id="examples">
+        
+        
+          Examples <a href="#examples">
+                                <span class="sr-only">Permalink to "Examples"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>JHipster has many official blueprints, some examples:</p>
+
+<ul>
+  <li>Backend
+    <ul>
+      <li><a href="https://github.com/jhipster/jhipster-kotlin">JHipster Kotlin</a> blueprint replaces most of the server side Java code with equivalent Kotlin code.</li>
+      <li><a href="https://github.com/jhipster/jhipster-dotnetcore">JHipster.NET</a> blueprint replaces the entire server side with .NET implementation.</li>
+      <li><a href="https://github.com/jhipster/generator-jhipster-nodejs">JHipster NodeJS</a> blueprint replaces the entire server side with NestJS implementation.</li>
+    </ul>
+  </li>
+  <li>Backend Customization
+    <ul>
+      <li><a href="https://github.com/jhipster/generator-jhipster-native">JHipster Native</a> blueprint customizes JHipster applications with Spring Native compatibility.</li>
+    </ul>
+  </li>
+  <li>Frontend
+    <ul>
+      <li><a href="https://github.com/jhipster/generator-jhipster-svelte">Svelte Hipster</a> blueprint replaces the entire client side with Svelte implementation.</li>
+    </ul>
+  </li>
+  <li>Mobile
+    <ul>
+      <li><a href="https://github.com/jhipster/generator-jhipster-ionic">JHipster Ionic</a> blueprint generates an Ionic application.</li>
+    </ul>
+  </li>
+</ul>
+      <h2 id="side-by-side-blueprint">
+        
+        
+          Side-by-side blueprint <a href="#side-by-side-blueprint">
+                                <span class="sr-only">Permalink to "Side-by-side blueprint"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>Each generator can be a side-by-side (SBS) blueprint. An sbs blueprint doesn’t change the original generator’s behavior but can customize the behavior and the result.
+Side-by-side blueprint makes easier to support multiple JHipster versions and port to a new JHipster version.</p>
+
+<p>To make the generator side-by-side, add this to the constructor:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="k">this</span><span class="p">.</span><span class="nx">sbsBlueprint</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>Example: <a href="https://github.com/jhipster/generator-jhipster-native/blob/bb9c042f6bc70a26ba8037e951c93dc1d1820983/generators/server/generator.mjs#L17">server generator at Native Blueprint</a>.
+At this example the generator <a href="https://github.com/jhipster/generator-jhipster-native/blob/bb9c042f6bc70a26ba8037e951c93dc1d1820983/generators/server/generator.mjs#L26-L35">customizes package.json</a>, <a href="https://github.com/jhipster/generator-jhipster-native/blob/bb9c042f6bc70a26ba8037e951c93dc1d1820983/generators/server/generator.mjs#L37-L40">removes files</a>, <a href="https://github.com/jhipster/generator-jhipster-native/blob/bb9c042f6bc70a26ba8037e951c93dc1d1820983/generators/server/generator.mjs#L42-L186">customizes pom.xml</a>, <a href="https://github.com/jhipster/generator-jhipster-native/blob/bb9c042f6bc70a26ba8037e951c93dc1d1820983/generators/server/generator.mjs#L211-L307">customizes java files</a>, <a href="https://github.com/jhipster/generator-jhipster-native/blob/bb9c042f6bc70a26ba8037e951c93dc1d1820983/generators/server/generator.mjs#L321-L329">customizes cypress</a> and so one.</p>
+
+<p>A side-by-side blueprint can be used to create hooks and help migrate an existing module. This is covered in <a href="/modules/creating-a-module">Creating a module</a>.</p>
+      <h2 id="custom-cli">
+        
+        
+          Custom CLI <a href="#custom-cli">
+                                <span class="sr-only">Permalink to "Custom CLI"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>Standalone blueprints can be executed using <code class="highlighter-rouge">yo</code>, but <code class="highlighter-rouge">yo</code> is aggressive in generators discovery (can be slow) and lacks some improvements. The JHipster CLI provides help and JHipster integration.
+Therefore, we recommend using the <code class="highlighter-rouge">jhipster</code> CLI or creating a custom CLI based on <code class="highlighter-rouge">generator-jhipster</code>.</p>
+
+<p>The <code class="highlighter-rouge">jhipster</code> command executes the <code class="highlighter-rouge">generator-jhipster</code> version you have installed globally.
+A custom CLI will execute the dependent <code class="highlighter-rouge">generator-jhipster</code> and will make sure to use the supported <code class="highlighter-rouge">generator-jhipster</code>’s version.</p>
+
+<p>Custom CLI allows you to execute a custom generator and is covered in <a href="/modules/creating-a-module">Creating a module</a>.</p>
+      <h2 id="development-and-public-api">
+        
+        
+          Development and public API <a href="#development-and-public-api">
+                                <span class="sr-only">Permalink to "Development and public API"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>We still lack published JSDoc API documentation, so you will need to refer to the source code.</p>
+      <h2 id="application-configuration">
+        
+        
+          Application configuration: <a href="#application-configuration">
+                                <span class="sr-only">Permalink to "Application configuration:"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>JHipster’s configuration follows <a href="https://yeoman.io/authoring/storage.html">Yeoman configuration</a> pattern and provides additional support for blueprint config.</p>
+
+<p>The <code class="highlighter-rouge">config</code> and <code class="highlighter-rouge">jhipsterConfig</code> properties store the common config and write to the <code class="highlighter-rouge">generator-jhipster</code> key in the <code class="highlighter-rouge">.yo-rc.json</code> file.
+The <code class="highlighter-rouge">blueprintStorage</code> and <code class="highlighter-rouge">blueprintConfig</code> properties store the blueprint-specific config and write to the <code class="highlighter-rouge">generator-jhipster-(my-blueprint)</code> key in the <code class="highlighter-rouge">.yo-rc.json</code> file.</p>
+
+<p>The <code class="highlighter-rouge">config</code> and <code class="highlighter-rouge">blueprintStorage</code> are <a href="https://yeoman.github.io/generator/Storage.html">Storage instances</a>, 
+while <code class="highlighter-rouge">jhipsterConfig</code> and <code class="highlighter-rouge">blueprintConfig</code> are <a href="https://yeoman.github.io/generator/Storage.html#createProxy">proxy objects</a> for <code class="highlighter-rouge">config</code> and <code class="highlighter-rouge">blueprintStorage</code> storages for convenience.</p>
+      <h2 id="constants">
+        
+        
+          Constants: <a href="#constants">
+                                <span class="sr-only">Permalink to "Constants:"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>You can use constants in <a href="https://github.com/jhipster/generator-jhipster/blob/main/generators/generator-constants.js"><code class="highlighter-rouge">generator-constants.js</code></a>:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">javaDir</span> <span class="o">=</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">jhipsterConstants</span><span class="p">.</span><span class="nx">SERVER_MAIN_SRC_DIR</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">packageFolder</span><span class="p">}</span><span class="sr">/`</span><span class="err">;
+</span><span class="kr">const</span> <span class="nx">resourceDir</span> <span class="o">=</span> <span class="nx">jhipsterConstants</span><span class="p">.</span><span class="nx">SERVER_MAIN_RES_DIR</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">webappDir</span> <span class="o">=</span> <span class="nx">jhipsterConstants</span><span class="p">.</span><span class="nx">CLIENT_MAIN_SRC_DIR</span><span class="p">;</span>
+</code></pre>
+</div>
+      <h2 id="functions">
+        
+        
+          Functions: <a href="#functions">
+                                <span class="sr-only">Permalink to "Functions:"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>You can use all functions in <a href="https://github.com/jhipster/generator-jhipster/blob/main/generators/generator-base.js">generator-base.js</a>:</p>
+      <h2 id="running-local-blueprint-version-for-development">
+        
+        
+          Running local Blueprint version for development <a href="#running-local-blueprint-version-for-development">
+                                <span class="sr-only">Permalink to "Running local Blueprint version for development"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>While developing a blueprint, please note the below steps. They are very important.</p>
+
+<ol>
+  <li>Link your blueprint globally</li>
+</ol>
+
+<p>Note: If you do not want to link the blueprint(step 3) to each project being created.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>generator-jhipster-my-blueprint
+npm link
+</code></pre>
+</div>
+
+<ol>
+  <li>Link a development version of JHipster to your blueprint (optional: required only if you want to use a non-released JHipster version, like the main branch or your own custom fork)</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>generator-jhipster
+npm link
+
+<span class="nb">cd </span>generator-jhipster-my-blueprint
+npm link generator-jhipster
+</code></pre>
+</div>
+
+<p>Or install <code class="highlighter-rouge">generator-jhipster</code> from git:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>generator-jhipster-my-blueprint
+npm install jhipster/generator-jhipster
+</code></pre>
+</div>
+
+<ol>
+  <li>Create a new folder for the app to be generated, and run JHipster ignoring JHipster dependencies (otherwise a released version will be installed each time <code class="highlighter-rouge">npm install/ci</code> is called)</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>mkdir my-app <span class="o">&amp;&amp;</span> <span class="nb">cd </span>my-app
+
+jhipster --blueprints my-blueprint --skip-jhipster-dependencies
+</code></pre>
+</div>
+
+<ol>
+  <li>Once the blueprint/generator-jhipster is released, re-add the JHipster dependencies for reproducibility</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>jhipster --no-skip-jhipster-dependencies
+</code></pre>
+</div>
+      <h2 id="registering-a-blueprint-to-the-jhipster-marketplace">
+        
+        
+          Registering a blueprint to the JHipster marketplace <a href="#registering-a-blueprint-to-the-jhipster-marketplace">
+                                <span class="sr-only">Permalink to "Registering a blueprint to the JHipster marketplace"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>To make your blueprint available in <a href="/documentation-archive/v7.9.2/modules/marketplace/">the JHipster marketplace</a>, you need to make sure you have the two keywords <code class="highlighter-rouge">yeoman-generator</code> and <code class="highlighter-rouge">jhipster-blueprint</code> in your published npm <code class="highlighter-rouge">package.json</code>.
+If you find any entry in the marketplace that is not a JHipster module or blueprint, you can help to deny list it by adding it to the <code class="highlighter-rouge">blacklistedModules</code> section of the <a href="https://github.com/jhipster/jhipster.github.io/blob/main/modules/marketplace/data/modules-config.json"><code class="highlighter-rouge">modules-config.json file</code></a> by doing a Pull Request to the <a href="https://github.com/jhipster/jhipster.github.io">jhipster/jhipster.github.io project</a>.</p>
+
+<p>Once you publish your blueprint to NPM, your blueprint will become available in our marketplace.</p>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/?utm_campaign=display_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.2/images/open-collective/okta.png" width="550px" height="186px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="https://developer.okta.com/blog/2021/01/20/reactive-java-microservices?utm_campaign=text_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener">Build Reactive Microservices with JHipster and OAuth 2.0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.2/images/open-collective/octoconsulting.png" width="180px" height="175px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener">Octo Consulting Group</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://dev.entando.org/jhipster" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.2/images/open-collective/entandoe.png" width="180px" height="175px"></a>
+                                            </div>
+                                            <div class="caption">
+                                                <a href="https://dev.entando.org/jhipster" target="_blank" rel="noopener">Application Composition Platform for Kubernetes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://www.datastax.com/" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.2/images/open-collective/datastax.png" width="180px" height="175px"></a>
+                                            </div>
+                                            <div class="caption">
+                                                <a href="https://www.datastax.com/" target="_blank" rel="noopener">DataStax is the open, multi-cloud stack for modern data apps.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.2/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.2/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.2/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.2/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.2/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2021 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank" rel="noopener">Freelancer</a> and <a href="https://github.com/dulumao/flat-admin-bootstrap-templates" target="_blank" rel="noopener">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <!-- Climate strike JS -->
+    <script type="text/javascript">
+        var DIGITAL_CLIMATE_STRIKE_OPTIONS = {
+          disableGoogleAnalytics: true, // @type {boolean}
+          showCloseButtonOnFullPageWidget: true, // @type {boolean}
+        };
+    </script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.2/js/climate-strike.js" async></script>
+    <!-- end Climate strike JS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '9bd47d3de4af6f3662fd11a7f0e38819',
+            indexName: 'jhipster',
+            inputSelector: '.doc-search-algolia',
+            debug: false // Set debug to true if you want to inspect the dropdown
+        });
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
