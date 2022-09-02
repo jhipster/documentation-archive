@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="JSA7VC5gSwD5KKbXlxK8F9rXJtC91rKJq0aWhfpBC0k" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#353d47">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#353d47">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#353d47">
+    <title>Deploying to Kubernetes</title>
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/dataTables.bootstrap.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/themes/flat-blue.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <!--<link href="/css/bootstrap-docs.css" rel="stylesheet">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/logo/favicon-64x64.ico" sizes="64x64" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-48x48.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-32x32.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/logo/favicon-16x16.ico" sizes="16x16" />
+<meta name="robots" content="noindex">
+</head>
+
+<body class="flat-blue">
+    <div class="app-container expanded ">
+        <div class="row content-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top navbar-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-expand-toggle fa-rotate-90">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+                        <ol class="breadcrumb navbar-breadcrumb">
+                            <li class="active"></li>
+                        </ol>
+                        <button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li class="page-scroll">
+                            <a href="/documentation-archive/v7.9.3/sponsors/">Sponsor</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://start.jhipster.tech/jdl-studio/" target="_blank" rel="noopener" role="button"><i class="fa fa-terminal"></i> JDL Studio</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" role="button"><i class="fa fa-github"></i> Github</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/JHipsterDevelopersAssociation" target="_blank" rel="noopener" role="button"><i class="fa fa-play-circle"></i> YouTube</a>
+                        </li>
+                        <li class="search-box">
+                            <form id="content-search-form">
+                                <i class="fa fa-search"></i>
+                                <input type="text" name="search" class="doc-search-algolia" placeholder="Search..." />
+                            </form>
+                        </li>
+                        <li>
+                            <a href="/documentation-archive/v7.9.3/cn/kubernetes/"><i class="fa fa-fw fa-globe"></i> 中文</a>
+                        </li>
+                        <li>
+                            <button type="button" class="navbar-right-expand-toggle visible-xs pull-right light">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+            <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="side-menu-container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <div class="icon"><img src="/documentation-archive/v7.9.3/images/logo/logo-jhipster.svg" height="19px"></div>
+                                <div class="title brand">JHipster </div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="/">
+                                    <span class="icon fa fa-home"></span><span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v7.9.3/tech-board/">
+                                    <span class="icon fa fa-rocket"></span><span class="title">JHipster Tech Board</span>
+                                </a>
+                            </li>
+                            <li >
+                                <a href="/documentation-archive/v7.9.3/releases/">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">Release notes</span>
+                                </a>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-1">
+                                    <span class="icon fa fa-road"></span><span class="title">JHipster in a few minutes</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/tech-stack/"><i class="fa fa-fw fa-stack-overflow"></i> Technology stack</a></li>
+                                            <li ><a href="/presentation" target="_blank" rel="noopener"><i class="fa fa-fw fa-desktop"></i> Official JHipster slides</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/screenshots/"><i class="fa fa-fw fa-picture-o"></i> JHipster in 5 screenshots</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/video-tutorial/"><i class="fa fa-fw fa-film"></i> Video tutorial (15 minutes)</a></li>
+                                            <li><a href="https://github.com/jhipster/jhipster-guides" target="_blank" rel="noopener"><i class="fa fa-fw fa-road"></i> Online guides</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/companies-using-jhipster/"><i class="fa fa-fw fa-thumbs-up"></i> Companies using JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/showcase/"><i class="fa fa-fw fa-file-image-o"></i> Showcase of JHipster apps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-2">
+                                    <span class="icon fa fa-handshake-o"></span><span class="title">Contributing</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/sponsors/"><i class="fa fa-fw fa-usd"></i> Financial sponsors</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/contributing-individuals/"><i class="fa fa-fw fa-keyboard-o"></i> Contributing individuals</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/contributing-companies/"><i class="fa fa-fw fa-building"></i> Contributing companies</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-3">
+                                    <span class="icon fa fa-fw fa-wrench"></span><span class="title">Setting up your environment</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                                <div id="dropdown-3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/installation/"><i class="fa fa-fw fa-cloud-download"></i> Installing JHipster</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/configuring-a-corporate-proxy/"><i class="fa fa-fw fa-exchange"></i> Configuring a proxy</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/configuring-ide/"><i class="fa fa-fw fa-keyboard-o"></i> Configuring your IDE</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/docker-compose/"><i class="fa fa-fw fa-music"></i> Docker Compose</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/shell-plugins/"><i class="fa fa-fw fa-terminal"></i> Shell Plugins</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-4"><span class="icon fa fa-fw fa-list-ol"></span><span class="title">Core JHipster tasks</span></a>
+                                <div id="dropdown-4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/creating-an-app/"><i class="fa fa-fw fa-rocket"></i> Creating an application</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/creating-an-entity/"><i class="fa fa-fw fa-bolt"></i> Creating an entity</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/creating-a-spring-controller/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring controller</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/creating-a-spring-service/"><i class="fa fa-fw fa-bolt"></i> Creating a Spring service</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-dtos/"><i class="fa fa-fw fa-briefcase"></i> Creating DTOs</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/managing-relationships/"><i class="fa fa-fw fa-sitemap"></i> Managing relationships</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/installing-new-languages/"><i class="fa fa-fw fa-flag"></i> Internationalization</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/upgrading-an-application/"><i class="fa fa-fw fa-refresh"></i> Upgrading an application</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-5"><span class="icon fa fa-fw fa-star"></span><span class="title">JDL</span></a>
+                                <div id="dropdown-5" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/intro"><i class="fa fa-fw fa-star"></i>Overview</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/applications"><i class="fa fa-fw fa-rocket"></i> Applications</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/entities-fields"><i class="fa fa-fw fa-bolt"></i> Entities & fields</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/enums"><i class="fa fa-fw fa-bolt"></i> Enums</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/relationships"><i class="fa fa-fw fa-sitemap"></i> Relationships</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/options"><i class="fa fa-fw fa-puzzle-piece"></i> Options</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/deployments"><i class="fa fa-fw fa-cloud-upload"></i> Deployments</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jdl/troubleshooting"><i class="fa fa-fw fa-cogs"></i> Troubleshooting</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-6"><span class="icon fa fa-fw fa-sitemap"></span><span class="title">Microservices</span></a>
+                                <div id="dropdown-6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/microservices-architecture/"><i class="fa fa-fw fa-map-signs"></i> Overview</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/api-gateway/"><i class="fa fa-fw fa-exchange"></i> API Gateway</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jhipster-registry/"><i class="fa fa-fw  fa-dashboard"></i> JHipster Registry</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/consul/"><i class="fa fa-fw fa-bullseye"></i> Consul</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/creating-microservices/"><i class="fa fa-fw fa-bolt"></i> Creating microservices</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/microservices-in-production/"><i class="fa fa-fw fa-cloud"></i> Microservices in production</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/jhipster-control-center/"><i class="fa fa-fw fa-codepen"></i> JHipster Control Center</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-7"><span class="icon fa fa-fw fa-puzzle-piece"></span><span class="title">Options</span></a>
+                                <div id="dropdown-7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/security/"><i class="fa fa-fw fa-lock"></i> Securing your app</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/entities-filtering/"><i class="fa fa-fw fa-filter"></i> Filtering your entities</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-elasticsearch/"><i class="fa fa-fw fa-search"></i> Using Elasticsearch</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-websockets/"><i class="fa fa-fw fa-envelope"></i> Using Websockets</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/doing-api-first-development/"><i class="fa fa-fw fa-file-text"></i> Doing API-First development</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-cache/"><i class="fa fa-fw fa-line-chart"></i> Using a cache</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-oracle/"><i class="fa fa-fw fa-database"></i> Using Oracle</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-mongodb/"><i class="fa fa-fw fa-leaf"></i> Using MongoDB</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-couchbase/"><i class="fa fa-fw fa-database"></i> Using Couchbase</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-neo4j/"><i class="fa fa-fw fa-database"></i> Using Neo4j</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-cassandra/"><i class="fa fa-fw fa-eye"></i> Using Cassandra</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-kafka/"><i class="fa fa-fw fa-envelope"></i> Using Kafka</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-8"><span class="icon fa fa-fw fa-code"></span><span class="title">Development</span></a>
+                                <div id="dropdown-8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/development/"><i class="fa fa-fw fa-code"></i> Using in development</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/profiles/"><i class="fa fa-fw fa-group"></i> Managing profiles</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/common-application-properties/"><i class="fa fa-fw fa-flask"></i> Common application properties</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/common-ports/"><i class="fa fa-fw fa-plug"></i> Common ports</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/separating-front-end-and-api/"><i class="fa fa-fw fa-unlink"></i> Separating front-end and API</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/managing-server-errors/"><i class="fa fa-fw fa-fire-extinguisher"></i> Managing server errors</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-angular/"><i class="fa fa-fw fa-html5"></i> Using Angular</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-react/"><i class="fa fa-fw fa-html5"></i> Using React</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/using-vue/"><i class="fa fa-fw fa-html5"></i> Using Vue</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/customizing-bootstrap-4/"><i class="fa fa-fw fa-css3"></i> Customizing Bootstrap 4</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/tls/"><i class="fa fa-fw fa-lock"></i> Using TLS and HTTP/2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-9"><span class="icon fa fa-fw fa-umbrella"></span><span class="title">Test &amp; QA</span></a>
+                                <div id="dropdown-9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/running-tests/"><i class="fa fa-fw fa-shield"></i> Running tests</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/code-quality/"><i class="fa fa-fw fa-diamond"></i> Code quality</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/dependency-vulnerabities-check/"><i class="fa fa-fw fa-check-circle-o"></i> Dependency Vulnerabilities Check</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/setting-up-ci/"><i class="fa fa-fw fa-stethoscope"></i> Continuous Integration</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-10"><span class="icon fa fa-fw fa-cloud"></span><span class="title">Production</span></a>
+                                <div id="dropdown-10" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/production/"><i class="fa fa-fw fa-play-circle"></i> Using in production</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/monitoring/"><i class="fa fa-fw fa-line-chart"></i> Monitoring</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/docker-hub/"><i class="fa fa-fw fa-cloud"></i> Docker Hub</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/aws/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to AWS</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/azure/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Azure</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/cloudcaptain/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying with CloudCaptain</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/clever-cloud/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Clever Cloud</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/cloudfoundry/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/gcp/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Google Cloud Platform</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/heroku/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                                            <li class="active" ><a href="/documentation-archive/v7.9.3/kubernetes/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to Kubernetes</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/openshift/"><i class="fa fa-fw fa-cloud-upload"></i> Deploying to OpenShift</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-11"><span class="icon fa fa-fw fa-cubes"></span><span class="title">Blueprints</span></a>
+                                <div id="dropdown-11" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/modules/official-blueprints/"><i class="fa fa-fw fa-star"></i> Official blueprints</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/modules/marketplace/"><i class="fa fa-fw fa-shopping-cart"></i> Marketplace</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/modules/extending-and-customizing/"><i class="fa fa-fw fa-cube"></i> Blueprint Basics</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/modules/creating-a-module/"><i class="fa fa-fw fa-cube"></i> Creating a module</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/modules/creating-a-blueprint/"><i class="fa fa-fw fa-cube"></i> Creating a blueprint</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/blueprints/quarkus/"><i class="fa fa-fw fa-book"></i> Quarkus documentation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-12"><span class="icon fa fa-fw fa-wrench"></span><span class="title">Tools</span></a>
+                                <div id="dropdown-12" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="https://start.jhipster.tech/jdl-studio/"><i class="fa fa-fw fa-terminal"></i> JDL Studio</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v7.9.3/jhipster-ide/"><i class="fa fa-fw fa-object-group"></i> JHipster IDE</a></li>
+                                            <li >
+                                                <a href="/documentation-archive/v7.9.3/jhipster-uml/"><i class="fa fa-fw fa-magic"></i> JHipster-UML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="panel panel-default dropdown">
+                                <a data-toggle="collapse" href="#dropdown-13"><span class="icon fa fa-fw fa-question"></span><span class="title">Getting help</span></a>
+                                <div id="dropdown-13" class="panel-collapse collapse" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <ul class="nav navbar-nav">
+                                            <li ><a href="/documentation-archive/v7.9.3/help/"><i class="fa fa-fw fa-users"></i> Community help</a></li>
+                                            <li ><a href="/documentation-archive/v7.9.3/bug-bounties/"><i class="fa fa-fw fa-usd"></i> Bug bounties</a></li>
+                                        </ul>
+                                     </div>
+                                </div>
+                            </li>
+                            <li ><a href="/documentation-archive/v7.9.3/tips/"><span class="icon fa fa-fw fa-cogs"></span><span class="title">Tips'n tricks</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div id="page-wrapper" class="container-fluid">
+                <div class="side-body" id="page-top">
+                    
+                    <div class="row page-content-wrapper">
+                        <div class="col-lg-12">
+                            <div class="float-right visible-md visible-lg">
+                                <a href="https://github.com/jhipster/jhipster.github.io/edit/main/pages/kubernetes.md"><i class="fa fa-pencil"></i> &nbsp;Improve this page</a>
+                            </div>
+                            
+                            <h1 id="deploying-to-kubernetes">
+        
+        
+          Deploying to Kubernetes <a href="#deploying-to-kubernetes">
+                                <span class="sr-only">Permalink to "Deploying to Kubernetes"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h1>
+    
+
+<p>JHipster app(s) and associated services can be deployed in the following ways</p>
+
+<ul>
+  <li>Standard kubectl/kustomize/skaffold sub-generator <code class="language-plaintext highlighter-rouge">jhipster kubernetes|k8s</code></li>
+  <li>Helm sub-generator <code class="language-plaintext highlighter-rouge">jhipster kubernetes-helm|helm-k8s</code></li>
+  <li>Knative sub-genarator <code class="language-plaintext highlighter-rouge">jhipster kubernetes-knative|knative</code></li>
+</ul>
+      <h1 id="jhipster-kubernetes--k8s">
+        
+        
+          <code class="language-plaintext highlighter-rouge">jhipster kubernetes | k8s</code> <a href="#jhipster-kubernetes--k8s">
+                                <span class="sr-only">Permalink to "jhipster kubernetes | k8s"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h1>
+    
+
+<p>This sub-generator generates manifests that is deployed to <a href="http://kubernetes.io/">Kubernetes</a> through <code class="language-plaintext highlighter-rouge">kubectl/kustomize/skaffold cli</code>.</p>
+
+<p><a href="http://kubernetes.io/"><img src="/documentation-archive/v7.9.3/images/logo/logo-kubernetes.png" alt="" /></a></p>
+      <h2 id="limitations">
+        
+        
+          Limitations <a href="#limitations">
+                                <span class="sr-only">Permalink to "Limitations"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<ul>
+  <li>Cassandra is not supported yet</li>
+  <li>Kubernetes v1.9+ is required</li>
+</ul>
+      <h2 id="pre-requisites">
+        
+        
+          Pre-requisites <a href="#pre-requisites">
+                                <span class="sr-only">Permalink to "Pre-requisites"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>You have to install:</p>
+
+<ul>
+  <li><a href="https://docs.docker.com/installation/#installation">Docker</a></li>
+  <li><a href="http://kubernetes.io/docs/user-guide/prereqs/">kubectl</a></li>
+</ul>
+
+<p>You must have a Docker registry. If you don’t have one, you can use the official <a href="https://hub.docker.com/">Docker Hub</a>.</p>
+      <h2 id="minikube">
+        
+        
+          Minikube <a href="#minikube">
+                                <span class="sr-only">Permalink to "Minikube"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p><a href="https://github.com/kubernetes/minikube">Minikube</a> is a tool that helps to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
+
+<p>You can use it to test your application before pushing it to <a href="http://kubernetes.io/">Kubernetes</a>.</p>
+      <h2 id="running-the-sub-generator">
+        
+        
+          Running the sub-generator <a href="#running-the-sub-generator">
+                                <span class="sr-only">Permalink to "Running the sub-generator"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>To generate config files for Kubernetes, run this command in a new folder:</p>
+
+<p><code class="language-plaintext highlighter-rouge">jhipster kubernetes | k8s</code></p>
+
+<p>Then answer all the questions to deploy your application.</p>
+      <h3 id="which-type-of-application-would-you-like-to-deploy">
+        
+        
+          Which <em>type</em> of application would you like to deploy? <a href="#which-type-of-application-would-you-like-to-deploy">
+                                <span class="sr-only">Permalink to "Which type of application would you like to deploy?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Your type of application depends on whether you wish to deploy a microservices architecture or classical applications.</p>
+      <h3 id="enter-the-root-directory-where-your-applications-are-located">
+        
+        
+          Enter the root directory where your applications are located <a href="#enter-the-root-directory-where-your-applications-are-located">
+                                <span class="sr-only">Permalink to "Enter the root directory where your applications are located"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Enter the path.</p>
+      <h3 id="which-applications-do-you-want-to-include-in-your-kubernetes-configuration">
+        
+        
+          Which applications do you want to include in your Kubernetes configuration? <a href="#which-applications-do-you-want-to-include-in-your-kubernetes-configuration">
+                                <span class="sr-only">Permalink to "Which applications do you want to include in your Kubernetes configuration?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Select your applications.</p>
+      <h3 id="do-you-want-to-setup-monitoring-for-your-applications">
+        
+        
+          Do you want to setup monitoring for your applications? <a href="#do-you-want-to-setup-monitoring-for-your-applications">
+                                <span class="sr-only">Permalink to "Do you want to setup monitoring for your applications?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Select the option.</p>
+      <h3 id="enter-the-admin-password-used-to-secure-the-jhipster-registry-admin">
+        
+        
+          Enter the admin password used to secure the JHipster Registry admin <a href="#enter-the-admin-password-used-to-secure-the-jhipster-registry-admin">
+                                <span class="sr-only">Permalink to "Enter the admin password used to secure the JHipster Registry admin"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>This question is only displayed if you choose microservices architecture.</p>
+      <h3 id="what-should-we-use-for-the-kubernetes-namespace">
+        
+        
+          What should we use for the Kubernetes namespace? <a href="#what-should-we-use-for-the-kubernetes-namespace">
+                                <span class="sr-only">Permalink to "What should we use for the Kubernetes namespace?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>See the documentation on namespace <a href="http://kubernetes.io/docs/user-guide/namespaces/">here</a></p>
+      <h3 id="what-should-we-use-for-the-base-docker-repository-name">
+        
+        
+          What should we use for the base Docker repository name? <a href="#what-should-we-use-for-the-base-docker-repository-name">
+                                <span class="sr-only">Permalink to "What should we use for the base Docker repository name?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>If you choose <a href="https://hub.docker.com/">Docker Hub</a> as main registry, it will be your Docker Hub login.</p>
+
+<p>If you choose <a href="https://cloud.google.com/container-registry/">Google Container Registry</a>, then it’ll be <code class="language-plaintext highlighter-rouge">gcr.io/[PROJECT ID]</code>, or a regional registry, such as <code class="language-plaintext highlighter-rouge">eu.gcr.io/[PROJECT ID]</code>, <code class="language-plaintext highlighter-rouge">us.gcr.io/[PROJECT ID]</code>, or <code class="language-plaintext highlighter-rouge">asia.gcr.io/[PROJECT ID]</code>. See <a href="https://cloud.google.com/container-registry/docs/pushing-and-pulling">Pushing and Pulling Images</a> for more detial.</p>
+
+<p>If you choose other registries like <a href="https://goharbor.io/">Harbor</a>, <a href="https://www.openshift.com/products/quay">Quay</a> or something similar, then the login would be like <code class="language-plaintext highlighter-rouge">&lt;registry_server&gt;/&lt;repo&gt;/[PROJECT ID]</code></p>
+      <h3 id="what-command-should-we-use-for-push-docker-image-to-repository">
+        
+        
+          What command should we use for push Docker image to repository? <a href="#what-command-should-we-use-for-push-docker-image-to-repository">
+                                <span class="sr-only">Permalink to "What command should we use for push Docker image to repository?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>The default command to push to Docker Hub is <code class="language-plaintext highlighter-rouge">docker image push</code></p>
+
+<p>If you use Google Container Registry to publish your Docker images, it will be: <code class="language-plaintext highlighter-rouge">gcloud docker push</code></p>
+      <h3 id="choose-the-kubernetes-service-type-for-your-edge-services">
+        
+        
+          Choose the Kubernetes service type for your edge services? <a href="#choose-the-kubernetes-service-type-for-your-edge-services">
+                                <span class="sr-only">Permalink to "Choose the Kubernetes service type for your edge services?"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Select the appropriate K8s routing type.</p>
+
+<p>These are the standard prompts. In addition, other prompts will be shown based on choosing options like Istio, Ingress etc.</p>
+      <h2 id="updating-your-deployed-application">
+        
+        
+          Updating your deployed application <a href="#updating-your-deployed-application">
+                                <span class="sr-only">Permalink to "Updating your deployed application"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+      <h3 id="preparing-a-new-deployment">
+        
+        
+          Preparing a new deployment <a href="#preparing-a-new-deployment">
+                                <span class="sr-only">Permalink to "Preparing a new deployment"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>When your application is already deployed, you can re-deploy it by building a new Docker image:</p>
+
+<p><code class="language-plaintext highlighter-rouge">./mvnw package -Pprod -DskipTests jib:dockerBuild</code></p>
+
+<p>Or when using Gradle:</p>
+
+<p><code class="language-plaintext highlighter-rouge">./gradlew -Pprod bootJar jibDockerBuild -x test</code></p>
+      <h3 id="pushing-to-docker-hub">
+        
+        
+          Pushing to Docker Hub <a href="#pushing-to-docker-hub">
+                                <span class="sr-only">Permalink to "Pushing to Docker Hub"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Tag locally your image:</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker image tag application username/application</code></p>
+
+<p>Push your image to Docker Hub:</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker image push username/application</code></p>
+      <h2 id="deploying-a-monolithmicroservice-application">
+        
+        
+          Deploying a monolith/microservice application <a href="#deploying-a-monolithmicroservice-application">
+                                <span class="sr-only">Permalink to "Deploying a monolith/microservice application"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>You can deploy all your apps by running the below command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./kubectl-apply.sh -f (default option)  [or] ./kubectl-apply.sh -k (kustomize option) [or] ./kubectl-apply.sh -s (skaffold run)
+</code></pre></div></div>
+
+<p>You can deploy apps using kustomize:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -k ./
+</code></pre></div></div>
+
+<p>You can deploy apps using skaffold:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>skaffold run [or] skaffold deploy
+</code></pre></div></div>
+
+<p>It will deploy your apps and its associated dependent services (database, elasticsearch, etc.).</p>
+      <h3 id="custom-namespaces">
+        
+        
+          Custom namespaces <a href="#custom-namespaces">
+                                <span class="sr-only">Permalink to "Custom namespaces"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>It is possible to specify a custom namespace for the entire deployment. To perform custom commands, you have to specify the target namespace, like in this example:</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl get pods -n &lt;custom-namespace&gt;</code></p>
+      <h3 id="scaling-your-deployments">
+        
+        
+          Scaling your deployments <a href="#scaling-your-deployments">
+                                <span class="sr-only">Permalink to "Scaling your deployments"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>You can scale your applications using</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl scale deployment &lt;app-name&gt; --replicas &lt;replica-count&gt; </code></p>
+      <h3 id="zero-downtime-deployments">
+        
+        
+          Zero downtime deployments <a href="#zero-downtime-deployments">
+                                <span class="sr-only">Permalink to "Zero downtime deployments"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>The default way to update a running application in Kubernetes is to deploy a new image tag to your Docker registry and then deploy it using:</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl set image deployment/&lt;app-name&gt;-app &lt;app-name&gt;=&lt;new-image&gt;</code></p>
+
+<p>Using livenessProbes and readinessProbe allows you to tell Kubernetes about the state of your applications, in order to ensure availability of your services. You will need a minimum of 2 replicas for every application if you want to have zero downtime deployment. This is because the rolling upgrade strategy first stops a running replica in order to place a new one. Running only one replica will cause a short downtime during upgrades.</p>
+      <h3 id="deploying-a-service-registry-in-kubernetes">
+        
+        
+          Deploying a Service Registry in Kubernetes <a href="#deploying-a-service-registry-in-kubernetes">
+                                <span class="sr-only">Permalink to "Deploying a Service Registry in Kubernetes"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Although Kubernetes features its own internal service discovery with <strong>Kube-DNS</strong>, JHipster rely on Spring Cloud for service discovery, so it depends on a third party service registry like Eureka or Consul. This has the advantage of being platform independent and to work similarly in production and on a local development machine.</p>
+
+<p>Consequently, for microservices applications, the JHipster Kubernetes sub-generator will generate Kubernetes manifest files to deploy service registries like the <strong>JHipster-Registry</strong> (based on Eureka) or <strong>Consul</strong>. Moreover, the generated microservices and gateway Kubernetes manifests will contains the appropriate configuration to register themselves to their central registry.</p>
+      <h3 id="managing-the-jhipster-registry-or-consul-in-kubernetes">
+        
+        
+          Managing the JHipster Registry or Consul in Kubernetes <a href="#managing-the-jhipster-registry-or-consul-in-kubernetes">
+                                <span class="sr-only">Permalink to "Managing the JHipster Registry or Consul in Kubernetes"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>For the JHipster Registry and Consul, <a href="https://kubernetes.io/docs/concepts/abstractions/controllers/statefulsets/">StatefulSets</a> configurations are provided. Those are a certain kind of Kubernetes resources which can handle stateful applications and will let you scale your service registries for high availability. For more information on high-availability for Eureka and Consul refer to their respective documentation.</p>
+      <h3 id="centralized-configuration-in-kubernetes">
+        
+        
+          Centralized configuration in Kubernetes <a href="#centralized-configuration-in-kubernetes">
+                                <span class="sr-only">Permalink to "Centralized configuration in Kubernetes"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>Centralized configuration is also setup using either <strong>Spring Cloud Config Server</strong> (when using the JHipster Registry) or the <strong>Consul Key/Value store</strong> (when using Consul). By default, both configuration servers load their configuration from a Kubernetes <a href="http://kubernetes.io/docs/user-guide/configmap/">ConfigMap</a> which contains property files in this format:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: application-config
+  namespace: default
+data:
+  application.yml: |- # global properties shared by all applications
+    jhipster:
+      security:
+        authentication:
+          jwt:
+            secret: secret
+  gateway-prod.yml: |- # gateway application properties for the "prod" profile
+    foo:
+      bar: foobar
+</code></pre></div></div>
+
+<p>By default, configuration servers run in development mode, which means that YAML property files are read directly from the filesystem and hot-reloaded on changes. For production it is advised to setup configuration from a Git repository as explained in our microservice documentation for the <a href="/documentation-archive/v7.9.3/jhipster-registry">JHipster-Registry config server</a> and <a href="/documentation-archive/v7.9.3/consul">Consul config server</a>.</p>
+      <h3 id="exposing-headless-services">
+        
+        
+          Exposing headless services <a href="#exposing-headless-services">
+                                <span class="sr-only">Permalink to "Exposing headless services"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>The registry is deployed using a headless service in Kubernetes, so the primary service has no IP address, and cannot get a node port. You can create a secondary service for any type, using:</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl expose service jhipster-registry --type=NodePort --name=exposed-registry </code></p>
+
+<p>and explore the details using</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl get svc exposed-registry </code></p>
+
+<p>For scaling the JHipster Registry, use</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl scale statefulset jhipster-registry --replicas 3 </code></p>
+      <h2 id="monitoring-tools">
+        
+        
+          Monitoring tools <a href="#monitoring-tools">
+                                <span class="sr-only">Permalink to "Monitoring tools"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>The sub-generator provides monitoring tools and configuration for usage with your applications.</p>
+      <h3 id="prometheus-metrics">
+        
+        
+          Prometheus metrics <a href="#prometheus-metrics">
+                                <span class="sr-only">Permalink to "Prometheus metrics"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>If not already done, install the <a href="https://github.com/coreos/prometheus-operator">Prometheus operator by CoreOS</a>. You can quickly deploy the operator using</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl create -f https://raw.githubusercontent.com/coreos/prometheus-operator/master/bundle.yaml</code></p>
+
+<p><strong>hint</strong>: More information on how to enable and protect prometheus metrics in your application you can find in our <a href="/documentation-archive/v7.9.3/monitoring/#configuring-metrics-forwarding">monitoring documentation</a>.</p>
+
+<p>The Prometheus instance for your applications can be explored using</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl get svc prometheus-appname </code></p>
+      <h2 id="taking-advantage-of-kubernetes">
+        
+        
+          Taking Advantage of Kubernetes <a href="#taking-advantage-of-kubernetes">
+                                <span class="sr-only">Permalink to "Taking Advantage of Kubernetes"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>Kubernetes offers a number of facilities out-of-the-box to help with Microservices deployments, such as:</p>
+<ul>
+  <li>Service Registry - Kubernetes <code class="language-plaintext highlighter-rouge">Service</code> is a first-class citizen that provides service registry and lookup via DNS name.</li>
+  <li>Load Balancing - Kubernetes Service acts as a L4 load balancer.</li>
+  <li>Health Check - Liveness probes and readiness probes help determine the health of the service.</li>
+  <li>Configuration - Kubernetes <code class="language-plaintext highlighter-rouge">ConfigMap</code> can be used to store and apply configuration outside of the application.</li>
+</ul>
+
+<p>There are a number of benefits of using Kubernetes facilities:</p>
+<ul>
+  <li>Simplified deployment</li>
+  <li>No need for additional Eureka/Consul deployment</li>
+  <li>No need for Spring Cloud Gateway to proxy/route requests</li>
+  <li>No need for Spring Cloud Load Balancer</li>
+</ul>
+
+<p>At the same time, there are some drawbacks:</p>
+<ul>
+  <li>No Application Management through JHipster Registry - This function relies on Spring Cloud’s <code class="language-plaintext highlighter-rouge">DiscoveryClient</code>. This can be updated in the future to add <code class="language-plaintext highlighter-rouge">spring-cloud-kubernetes</code></li>
+  <li>No local Docker Compose support - You must use <code class="language-plaintext highlighter-rouge">minikube</code> for local development, and use Ingress to route traffic</li>
+  <li>No request-level load balancing - Kubernetes Service is a L4 load balancer that load balances per connection. Use Istio for request level load balancing (see below).</li>
+</ul>
+      <h3 id="using-kubernetes-as-service-registry">
+        
+        
+          Using Kubernetes as Service Registry <a href="#using-kubernetes-as-service-registry">
+                                <span class="sr-only">Permalink to "Using Kubernetes as Service Registry"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h3>
+    
+
+<p>To avoid relying on Eureka or Consul, you’ll need to disable service discovery altogether</p>
+<ul>
+  <li>When asked <code class="language-plaintext highlighter-rouge">Which service discovery server do you want to use?</code>, choose <code class="language-plaintext highlighter-rouge">No service discovery</code></li>
+</ul>
+
+<p>A JHipster Gateway usually fronts the API calls and routing these calls using Spring Cloud Gateway. Without a service registry, routing via Spring Cloud Gateway won’t work. You’ll need to use Kubernetes Ingress to route the traffic to microservices.</p>
+<ul>
+  <li>When asked <code class="language-plaintext highlighter-rouge">Choose the kubernetes service type for your edge services</code>, choose <code class="language-plaintext highlighter-rouge">Ingress</code>.</li>
+</ul>
+      <h2 id="istio">
+        
+        
+          Istio <a href="#istio">
+                                <span class="sr-only">Permalink to "Istio"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>You can deploy microservices into <a href="https://istio.io">Istio</a>-enabled Kubernetes cluster. While Kubernetes manages microservices deployment and configuration, Istio can manage service to service communication, such as request-level load balancing, retries, circuit breakers, traffic routing/splitting, and more.</p>
+
+<p>To enable Istio support:</p>
+<ul>
+  <li>When asked <code class="language-plaintext highlighter-rouge">Do you want to configure Istio?</code>, choose one of the Istio options</li>
+  <li>When asked <code class="language-plaintext highlighter-rouge">Do you want to generate Istio route files</code>, choose <code class="language-plaintext highlighter-rouge">Yes</code> to generate default configuration for circuit breaking, etc.</li>
+</ul>
+      <h2 id="troubleshooting">
+        
+        
+          Troubleshooting <a href="#troubleshooting">
+                                <span class="sr-only">Permalink to "Troubleshooting"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<blockquote>
+  <p>My applications don’t get pulled, because of ‘imagePullBackoff’</p>
+</blockquote>
+
+<p>Check the registry your Kubernetes cluster is accessing. If you are using a private registry, you should add it to your namespace by <code class="language-plaintext highlighter-rouge">kubectl create secret docker-registry</code> (check the <a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/">docs</a> for more information).</p>
+
+<blockquote>
+  <p>My applications get stopped, before they can boot up</p>
+</blockquote>
+
+<p>This can occur, if your cluster has low resources (e.g. Minikube). Increase the <code class="language-plaintext highlighter-rouge">initialDelySeconds</code> value of livenessProbe of your deployments.</p>
+
+<blockquote>
+  <p>My applications are starting very slow, despite I have a cluster with many resources</p>
+</blockquote>
+
+<p>The default setting is optimized for middle-scale clusters. You are free to increase the JAVA_OPTS environment variable, resource requests and limits to improve the performance. Be careful!</p>
+
+<blockquote>
+  <p>I have selected Prometheus but no targets are visible</p>
+</blockquote>
+
+<p>This depends on the setup of Prometheus operator and the access control policies in your cluster. Version 1.6.0+ is needed for the RBAC setup to work.</p>
+
+<blockquote>
+  <p>I have selected Prometheus, but my targets never get scraped</p>
+</blockquote>
+
+<p>This means your applications are probably not built using the <code class="language-plaintext highlighter-rouge">prometheus</code> profile in Maven/Gradle</p>
+
+<blockquote>
+  <p>My SQL-based microservice are stuck during Liquibase initialization when running multiple replicas</p>
+</blockquote>
+
+<p>Sometimes the database changelog lock gets corrupted. You will need to connect to the database using <code class="language-plaintext highlighter-rouge">kubectl exec -it</code> and removes all lines of liquibases <code class="language-plaintext highlighter-rouge">databasechangeloglock</code> table.</p>
+      <h1 id="jhipster-kubernetes-helm--k8s-helm">
+        
+        
+          <code class="language-plaintext highlighter-rouge">jhipster kubernetes-helm | k8s-helm</code> <a href="#jhipster-kubernetes-helm--k8s-helm">
+                                <span class="sr-only">Permalink to "jhipster kubernetes-helm | k8s-helm"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h1>
+    
+
+<p>This sub-generator generates manifests that is deployed to <a href="http://kubernetes.io/">Kubernetes</a> through <code class="language-plaintext highlighter-rouge">helm cli</code>.</p>
+      <h2 id="prerequisites">
+        
+        
+          Prerequisites <a href="#prerequisites">
+                                <span class="sr-only">Permalink to "Prerequisites"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>To use the manifest generated by this sub-generator <code class="language-plaintext highlighter-rouge">helm cli</code> should be installed. Follow <a href="https://github.com/helm/helm">this link</a> for installation instructions. This requires <code class="language-plaintext highlighter-rouge">helm 2.12.x or later</code>.</p>
+
+<p>Once Helm is installed you need to add the below repositories:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com
+</code></pre></div></div>
+<p>These repositories should be added to the local cache, because this sub-generator will pull stable production grade services charts from the above repos.</p>
+
+<p>This sub-generator uses the <code class="language-plaintext highlighter-rouge">kubernetes</code> sub-generator for the app(s) manifests and pulls services like database, elasticsearch, prometheus etc. images being referred in your app(s) from the above repositories.</p>
+      <h2 id="deployment">
+        
+        
+          Deployment <a href="#deployment">
+                                <span class="sr-only">Permalink to "Deployment"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>You can deploy all your app(s) by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash helm-apply.sh (or) ./helm-apply.sh
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">helm-apply.sh</code> will always do a clean install. Any of the existing charts with the same identity gets removed first and then it does a clean install.</p>
+
+<p>You can upgrade all your apps (if you have made any changes to the generated manifests) by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash helm-upgrade.sh (or) ./helm-upgrade.sh
+</code></pre></div></div>
+      <h1 id="jhipster-kubernetes-knative--knative">
+        
+        
+          <code class="language-plaintext highlighter-rouge">jhipster kubernetes-knative | knative</code> <a href="#jhipster-kubernetes-knative--knative">
+                                <span class="sr-only">Permalink to "jhipster kubernetes-knative | knative"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h1>
+    
+
+<p>This sub-generator generates manifests that is deployed to <a href="http://kubernetes.io/">Kubernetes</a> through either <code class="language-plaintext highlighter-rouge">kubectl or helm cli</code>. It generates manifests for one of the cli’s based on the chosen prompt response.</p>
+      <h2 id="prerequisites-1">
+        
+        
+          Prerequisites <a href="#prerequisites-1">
+                                <span class="sr-only">Permalink to "Prerequisites"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>This sub-generator depends on Istio. In order to use the manifests generated by this sub-generator, you should have istio and kntaive installed in the cluster. Follow <a href="https://knative.dev/docs/install/">this link</a> for installation instructions. It requires <code class="language-plaintext highlighter-rouge">knative 0.8.x or later</code>.</p>
+      <h2 id="deployment-1">
+        
+        
+          Deployment <a href="#deployment-1">
+                                <span class="sr-only">Permalink to "Deployment"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<p>If you have chosen to deploy using Kubernetes generator, run the below command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash kubectl-knative-apply.sh (or) ./kubectl-knative-apply.sh
+</code></pre></div></div>
+
+<p>If you have chosen to deploy using Helm generator, run the below command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash helm-knative-apply.sh (or) ./helm-knative-apply.sh
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">helm-knative-apply.sh</code> will always do a clean install. Any of the existing charts with the same identity gets removed first and then it does a clean install.</p>
+
+<p>You can upgrade all your apps (if you have made any changes to the generated manifests) by running the following bash command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash helm-knative-upgrade.sh (or) ./helm-knative-upgrade.sh
+</code></pre></div></div>
+      <h2 id="more-information">
+        
+        
+          More information <a href="#more-information">
+                                <span class="sr-only">Permalink to "More information"</span>
+                                <i class="fa fa-link" aria-hidden="true"></i>
+                            </a>
+        
+        
+      </h2>
+    
+
+<ul>
+  <li><a href="http://kubernetes.io/docs/">Kubernetes documentation</a></li>
+</ul>
+
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    
+
+                    <!-- Footer -->
+                    <footer class="text-center">
+                        
+                        <hr>
+                        <div class="footer-logos">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        JHipster is sponsored by:
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://developer.okta.com/?utm_campaign=display_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.3/images/open-collective/okta.png" width="550px" height="186px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="https://developer.okta.com/blog/2021/01/20/reactive-java-microservices?utm_campaign=text_website_all_multiple_dev_dev_jhipster-q2_&utm_source=jhipster&utm_medium=cpc" target="_blank" rel="noopener">Build Reactive Microservices with JHipster and OAuth 2.0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.3/images/open-collective/octoconsulting.png" width="180px" height="175px"></a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="http://www.octoconsulting.com/" target="_blank" rel="noopener">Octo Consulting Group</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://dev.entando.org/jhipster" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.3/images/open-collective/entandoe.png" width="180px" height="175px"></a>
+                                            </div>
+                                            <div class="caption">
+                                                <a href="https://dev.entando.org/jhipster" target="_blank" rel="noopener">Application Composition Platform for Kubernetes</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4">
+                                        <div class="thumbnail no-margin-bottom">
+                                            <div class="logo-container">
+                                                <a href="https://www.datastax.com/" target="_blank" rel="noopener"><img src="/documentation-archive/v7.9.3/images/open-collective/datastax.png" width="180px" height="175px"></a>
+                                            </div>
+                                            <div class="caption">
+                                                <a href="https://www.datastax.com/" target="_blank" rel="noopener">DataStax is the open, multi-cloud stack for modern data apps.</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-coffee fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.3/team/">Team</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-pencil fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.3/artwork/">Artwork</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-gavel fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.3/policies/">Policies</a></h5>
+                                            <h5 class="text-left"><i class="fa fa-meetup fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.3/meetups/">Meetups</a></h5>
+                                        </div>
+                                        <div class="col-md-4 col-sm-12">
+                                            <h5 class="text-left"><i class="fa fa-database fa-fw"></i> <a class="link" href="/documentation-archive/v7.9.3/documentation-archive/">Archives</a></h5>
+                                        </div>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="https://twitter.com/jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener" class="btn-social btn-outline"><i class="fa fa-fw fa-comments"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-below">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        Copyright &copy; JHipster 2013-2021 | Theme based on <a href="https://github.com/IronSummitMedia/startbootstrap-freelancer" target="_blank" rel="noopener">Freelancer</a> and <a href="https://github.com/dulumao/flat-admin-bootstrap-templates" target="_blank" rel="noopener">Flat admin</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+                <div class="scroll-top page-scroll visible-xs visible-sm">
+                    <a class="btn btn-primary" href="#page-top">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!-- Javascript Libs -->
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/lib/js/ace.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/lib/js/mode-html.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/lib/js/theme-github.js"></script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/lib/js/jquery.easing.min.js"></script>
+
+    
+
+    <!--App Javascript -->
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/js/app.js"></script>
+    
+    
+    
+    <script>
+    if (self !== top) {
+        window.top.location.href = "https://www.jhipster.tech";
+    }
+    </script>
+    <!-- Climate strike JS -->
+    <script type="text/javascript">
+        var DIGITAL_CLIMATE_STRIKE_OPTIONS = {
+          disableGoogleAnalytics: true, // @type {boolean}
+          showCloseButtonOnFullPageWidget: true, // @type {boolean}
+        };
+    </script>
+    <script type="text/javascript" src="/documentation-archive/v7.9.3/js/climate-strike.js" async></script>
+    <!-- end Climate strike JS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46075199-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            apiKey: '9bd47d3de4af6f3662fd11a7f0e38819',
+            indexName: 'jhipster',
+            inputSelector: '.doc-search-algolia',
+            debug: false // Set debug to true if you want to inspect the dropdown
+        });
+    </script>
+</body>
+
+</html>
+<script>
+$(document.body).prepend('<div class="alert alert-danger alert-dismissible fade in" style="z-index: 9999;padding-top: 80px;height: 80;margin:0px;top:0;" role="alert"><h4><i class="fa fa-exclamation-triangle"><\/i> JHipster old documentation<\/h4><p>This documentation is for an older version of JHipster. Click <a href="https://jhipster.github.io/">here</a> for the current version of the documentation.<\/p><\/div>');</script>
