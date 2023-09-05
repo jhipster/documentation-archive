@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Deploying to Openshift</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/documentation-archive/v1.8.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/documentation-archive/v1.8.0/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/documentation-archive/v1.8.0/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/documentation-archive/v1.8.0/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/documentation-archive/v1.8.0/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/documentation-archive/v1.8.0/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/documentation-archive/v1.8.0/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+					<li ><a href="/documentation-archive/v1.8.0/"><i class="fa fa-home"></i> Home</a></li>
+            		<li ><a href="/documentation-archive/v1.8.0/releases.html"><i class="fa fa-file-text-o"></i> Release notes</a></li>
+            		<li>
+                		<a href="#"><i class="fa fa-road fa-fw"></i> Introduction<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+            				<li ><a href="/documentation-archive/v1.8.0/presentation" target="_blank"><i class="fa fa-desktop"></i> Presentation</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/tech_stack.html"><i class="fa fa-stack-overflow"></i> Technology stack</a></li>
+                            <li ><a href="/documentation-archive/v1.8.0/screenshots.html"><i class="fa fa-picture-o"></i> Screenshots</a></li>
+                            <li ><a href="/documentation-archive/v1.8.0/video_tutorial.html"><i class="fa fa-video-camera"></i> Video tutorial</a></li>
+						</ul>
+					</li>
+            		<li>
+                		<a href="#"><i class="fa fa-university fa-fw"></i> Documentation<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+            				<li ><a href="/documentation-archive/v1.8.0/installation.html"><i class="fa fa-cloud-download"></i> Installation</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/creating_an_app.html"><i class="fa fa-rocket"></i> Creating an application</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/creating_an_entity.html"><i class="fa fa-bolt"></i> Creating an entity</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/creating_a_service.html"><i class="fa fa-bolt"></i> Creating a service</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/profiles.html"><i class="fa fa-users"></i> Profiles</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/development.html"><i class="fa fa-code"></i> Usage in development</a></li>
+            				<li ><a href="/documentation-archive/v1.8.0/production.html"><i class="fa fa-play-circle"></i> Usage in production</a></li>
+                            <li ><a href="/documentation-archive/v1.8.0/cloudfoundry.html"><i class="fa fa-cloud-upload"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/documentation-archive/v1.8.0/heroku.html"><i class="fa fa-cloud-upload"></i> Deploying to Heroku</a></li>
+                            <li class="active"><a href="/documentation-archive/v1.8.0/openshift.html"><i class="fa fa-cloud-upload"></i> Deploying to Openshift</a></li>
+						</ul>
+					</li>
+            		<li>
+                		<a href="#"><i class="fa fa-users fa-fw"></i> Help and bugs<span class="fa arrow"></span></a>
+                		<ul class="nav nav-second-level">
+							<li ><a href="/documentation-archive/v1.8.0/help.html"><i class="fa fa-question"></i> Community help</a></li>
+							<li ><a href="/documentation-archive/v1.8.0/consulting.html"><i class="fa fa-user"></i> Professional help</a></li>
+							<li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="fa fa-bug"></i> Bug tracker</a></li>
+							<li ><a href="/documentation-archive/v1.8.0/thanks.html"><i class="fa fa-gift"></i> Thanks</a></li>
+						</ul>
+					</li>
+					<li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+					<li><a href="https://twitter.com/java_hipster" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+				</ul>
+        	</div>
+		</div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1><i class="fa fa-cloud-upload"></i> [BETA] Deploying to Openshift</h1>
+
+<p><b>WARNING!</b> This is a new sub-generator, of <b>BETA</b> quality. Use it at your own risk! Feedback is highly welcome!</p>
+
+<p>This sub-generator allows to deploy automatically your JHipster application to the <a href="https://www.openshift.com/" target="_blank">Openshift cloud</a>.</p>
+
+<h2>Limitations</h2>
+<p>
+This sub-generator has a few limitations:
+<ul>
+    <li>You can only use it with a MySQL database, as this is what Openshift provides by default</li>
+    <li>You can only use it with the Grunt option (which is the recommended default), as it's the only one providing tasks for deploying</li>
+    <li>You can only use it with the Maven option (which is the recommended default), as it's the only one supported by Openshift</li>
+</ul>
+</p>
+
+<h2>Running the sub-generator</h2>
+
+<p>
+    Before running the sub-generator, you need to install the <a href="https://developers.openshift.com/en/getting-started-client-tools.html" target="_blank">OpenShift Client Tools</a>, and have a OpenShift account created.
+</p>
+
+<p>
+    To deploy your application to Openshift, type:
+</p>
+<p>
+<code>
+yo jhipster:openshift
+</code>
+</p>
+<p>
+    This should package your application in "production" mode, create a Openshift application (with a MySQL database), upload your code, and start the application.
+</p>
+
+<p><i>If you use the free version of Openshift, please note that the "small" gear is really slow!</i></p>
+
+<h2>Updating your deployed application</h2>
+<p>
+    When your application is already deployed, you can prepare a new deployment by typing:
+</p>
+<p>
+<code>
+grunt deployOpenshift
+</code>
+</p>
+<p>
+    Then you can check your application, which is ready for deployment, in your "deploy/openshift" folder. If you are ready to deploy, you can push it to production, by typing (in your "deploy/openshift" folder):
+</p>
+<p>
+<code>
+git push
+</code>
+</p>
+
+<h2>More information</h2>
+
+<p>
+    <ul>
+        <li><a href="http://docs.spring.io/spring-boot/docs/current/reference/html/cloud-deployment-openshift.html" target="_blank">Spring Boot Openshift documentation</a></li>
+        <li><a href="https://www.openshift.com/blogs/paas-websockets" target="_blank">Running Websockets on Openshift</a></li>
+    </ul>
+</p>
+
+              </div>
+          </div><!-- /.row -->
+        
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/documentation-archive/v1.8.0/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/documentation-archive/v1.8.0/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/documentation-archive/v1.8.0/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/documentation-archive/v1.8.0/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@java_hipster" />
+    <meta name="twitter:title" content="Generate a full stack Java + JavaScript application in a few steps" />
+    <meta name="twitter:description" content="JHipster is a fully Open Source, widely used application generator. It leverages cool technologies like Spring Boot, AngularJS and Yeoman to give you a high level of productivity and quality." />
+    <meta name="twitter:image:src" content="http://jhipster.github.io/images/screenshot_1.png" />
+    <meta name="twitter:url" content="http://jhipster.github.io/" />
+
+    <title>Setting up Continuous Integration</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/documentation-archive/v2.9.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Docs CSS subset to get icon -->
+    <link href="/documentation-archive/v2.9.2/css/bootstrap-docs.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/documentation-archive/v2.9.2/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/documentation-archive/v2.9.2/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/documentation-archive/v2.9.2/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- JHipster CSS -->
+    <link href="/documentation-archive/v2.9.2/css/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/documentation-archive/v2.9.2/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- JHipster Font -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon with QHD -->
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="/documentation-archive/v2.9.2/">JHipster</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li ><a href="/documentation-archive/v2.9.2/"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                    <li ><a href="/documentation-archive/v2.9.2/releases.html"><i class="fa fa-file-text-o fa-fw"></i> Release notes</a></li>
+                    <li>
+                        <a href="#"><i class="fa fa-road fa-fw"></i> Introduction<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/documentation-archive/v2.9.2/presentation" target="_blank"><i class="fa fa-desktop fa-fw"></i> Presentation</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/tech_stack.html"><i class="fa fa-stack-overflow fa-fw"></i> Technology stack</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/screenshots.html"><i class="fa fa-picture-o fa-fw"></i> Screenshots</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/video_tutorial.html"><i class="fa fa-video-camera fa-fw"></i> Video tutorial</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-university fa-fw"></i> Documentation<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/documentation-archive/v2.9.2/installation.html"><i class="fa fa-cloud-download fa-fw"></i> Installation</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/creating_an_app.html"><i class="fa fa-rocket fa-fw"></i> Creating an application</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/creating_an_entity.html"><i class="fa fa-bolt fa-fw"></i> Creating an entity</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/creating_a_service.html"><i class="fa fa-bolt fa-fw"></i> Creating a service</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/testing.html"><i class="fa fa-shield fa-fw"></i> Testing</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/installing_new_languages.html"><i class="fa fa-flag fa-fw"></i> Installing new languages</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/using_angularjs.html"><i class="fa fa-university fa-fw"></i> Using AngularJS</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/customizing_bootstrap.html"><i class="fa fa-border fa-fw">B</i> Customizing Bootstrap</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/security.html"><i class="fa fa-lock fa-fw"></i> Securing your app</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/using_elasticsearch.html"><i class="fa fa-search fa-fw"></i> Using Elasticsearch</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/using_mongodb.html"><i class="fa fa-leaf fa-fw"></i> Using MongoDB</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/using_cassandra.html"><i class="fa fa-eye-slash fa-fw"></i> Using Cassandra</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/profiles.html"><i class="fa fa-users fa-fw"></i> Managing profiles</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/development.html"><i class="fa fa-code fa-fw"></i> Using in development</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/production.html"><i class="fa fa-play-circle fa-fw"></i> Using in production</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/cloudfoundry.html"><i class="fa fa-cloud-upload fa-fw"></i> Deploying to Cloud Foundry</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/heroku.html"><i class="fa fa-cloud-upload fa-fw"></i> Deploying to Heroku</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/openshift.html"><i class="fa fa-cloud-upload fa-fw"></i> Deploying to Openshift</a></li>
+                    <li class="active"><a href="/documentation-archive/v2.9.2/setting_up_ci.html"><i class="fa fa-check-square-o fa-fw"></i> Continuous Integration</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users fa-fw"></i> Help and bugs<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li ><a href="/documentation-archive/v2.9.2/help.html"><i class="fa fa-question fa-fw"></i> Community help</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/consulting.html"><i class="fa fa-user fa-fw"></i> Professional help</a></li>
+                            <li><a href="https://github.com/jhipster/generator-jhipster/issues" target="_blank"><i class="fa fa-bug fa-fw"></i> Bug tracker</a></li>
+                            <li ><a href="/documentation-archive/v2.9.2/thanks.html"><i class="fa fa-gift fa-fw"></i> Thanks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="fa fa-github fa-fw"></i> GitHub</a></li>
+                    <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <div id="page-wrapper">
+        
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1 id="i-classfa-fa-check-square-oi-setting-up-continuous-integration"><i class="fa fa-check-square-o"></i> Setting up Continuous Integration</h1>
+
+<p>Setting up your own continuous integration server using Jenkins for a JHipster application is harder than for a classic Spring MVC application because of all the tools required to build and test the client code.</p>
+
+<p>It’s harder because you have to manage 3 software stacks in your build process:</p>
+
+<ul>
+  <li>Java/Maven for the server code and the build orchestration</li>
+  <li>Javascript/NodeJS/Grunt/Bower for client code</li>
+  <li>Ruby/Compass to pre-process CSS style sheets</li>
+</ul>
+
+<p>Each stack comes with its own dependency management (artifacts, npm, gem) with potential conflicts to solve.</p>
+
+<p>Some of the instructions below may help you also to setup your development environment.</p>
+
+<ul>
+  <li><a href="/setting_up_ci_linux.html">Linux server</a></li>
+  <li><a href="/setting_up_ci_windows.html">Windows server</a></li>
+</ul>
+
+<h2 id="configuring-javascript-tests">Configuring Javascript tests</h2>
+
+<p>In order to be able to inspect our JavaScript test reports via Jenkins, the easiest way is to configure Karma to use JUnit reporting format and to generate reports in Maven’s surefire output directory.</p>
+
+<p>Gruntfile.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">karma</span><span class="err">:</span> <span class="p">{</span>
+  <span class="nl">unit</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nl">configFile</span><span class="p">:</span> <span class="s1">'src/test/javascript/karma.conf.js'</span><span class="p">,</span>
+    <span class="nx">singleRun</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">reporters</span> <span class="err">:</span> <span class="p">[</span><span class="s1">'dots'</span><span class="p">,</span> <span class="s1">'junit'</span><span class="p">],</span>
+    <span class="nx">junitReporter</span> <span class="err">:</span> <span class="p">{</span>
+      <span class="nl">outputFile</span><span class="p">:</span> <span class="s1">'../target/surefire-reports/TEST-javascript-results.xml'</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">},</span>
+</code></pre>
+</div>
+
+<p>karma.conf.js</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">singleRun</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
+</code></pre>
+</div>
+
+<p>package.json</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="s2">"karma-junit-reporter"</span><span class="err">:</span> <span class="s2">"~0.2"</span><span class="p">,</span>
+</code></pre>
+</div>
+
+              </div>
+          </div><!-- /.row -->
+        
+
+        <div id="footer">
+          <hr/>
+        </div>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/documentation-archive/v2.9.2/js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/documentation-archive/v2.9.2/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="/documentation-archive/v2.9.2/js/plugins/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/documentation-archive/v2.9.2/js/sb-admin-2.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

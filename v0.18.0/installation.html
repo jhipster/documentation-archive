@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Installing JHipster</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/documentation-archive/v0.18.0/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href="/documentation-archive/v0.18.0/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/documentation-archive/v0.18.0/font-awesome/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="font-family: 'Pacifico', cursive;" href="/documentation-archive/v0.18.0/">JHipster</a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+
+            <li ><a href="/documentation-archive/v0.18.0/"><i class="fa fa-home"></i> Home</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/releases.html"><i class="fa fa-file-text-o"></i> Release notes</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/screenshots.html"><i class="fa fa-picture-o"></i> Screenshots</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/presentation" target="_blank"><i class="fa fa-desktop"></i> Presentation</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/tech_stack.html"><i class="fa fa-stack-overflow"></i> Technology stack</a></li>
+            <li class="active"><a href="/documentation-archive/v0.18.0/installation.html"><i class="fa fa-cloud-download"></i> Installation</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/creating_an_app.html"><i class="fa fa-rocket"></i> Creating an application</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/creating_an_entity.html"><i class="fa fa-bolt"></i> Creating an entity</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/creating_a_service.html"><i class="fa fa-bolt"></i> Creating a service</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/profiles.html"><i class="fa fa-users"></i> Profiles</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/development.html"><i class="fa fa-code"></i> Usage in development</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/production.html"><i class="fa fa-play-circle"></i> Usage in production</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/help.html"><i class="fa fa-question"></i> Help and bugs</a></li>
+            <li ><a href="/documentation-archive/v0.18.0/thanks.html"><i class="fa fa-gift"></i> Thanks</a></li>
+            <li><a ></a></li>
+            <li><a ></a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li><a href="https://github.com/jhipster/generator-jhipster" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+            <li><a href="https://twitter.com/java_hipster" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1><i class="fa fa-cloud-download"></i> Installing JHipster</h1>
+
+<h2>Local installation vs. Docker</h2>
+
+<p>
+We provide 2 ways of working with JHipster:
+</p>
+<ul>
+  <li>You can do a "local installation", which is the classical way of working with JHipster. Everything is installed on your machine, which can be a little complex to setp up, but that's how most people usually work. In case of doubt, choose this installation.</li>
+  <li>You can use a "<a href="https://www.docker.io/" target="_blank">Docker</a>" container, which brings you a lightweight, virtualized container with everything already installed. You don't have to worry about installing everything. But Docker is a rather young tool, and you need to know how to use Linux quite well.</li>
+</ul>
+
+<h2>Local installation (recommanded for normal users)</h2>
+
+<p>Install Node.js from <a href="http://nodejs.org/" target="_blank">the Node.js website</a>.</p>
+
+<p>Install Yeoman:</p>
+<p>
+<code>
+npm install -g yo
+</code>
+</p>
+<p>Install JHipster:</p>
+<p>
+<code>
+npm install -g generator-jhipster
+</code>
+</p>
+<p>To find more information, tips and help, please have a look at 
+<a href="http://yeoman.io/learning/index.html" target="_blank">the Yeoman "getting starting" guide</a> before 
+<a href="https://github.com/jdubois/generator-jhipster/issues?state=open" target="_blank">submitting a bug</a>.</p>
+
+<h2>Docker installation (for advanced users)</h2>
+
+<h3>Information</h3>
+
+<p>
+JHipster has a specific <a href="https://github.com/jhipster/jhipster-docker" target="_blank">jhipster-docker project</a>, which provides a <a href="https://www.docker.io/" target="_blank">Docker</a> container.
+</p>
+<p>
+This project makes a Docker "Trusted build" that is available on:
+</p>
+<p>
+<a href="https://registry.hub.docker.com/u/jdubois/jhipster-docker/" target="_blank">https://registry.hub.docker.com/u/jdubois/jhipster-docker/</a>
+</p>
+<p>
+This image will allow you to run JHipster inside Docker.
+</p>
+
+<h3>Usage</h3>
+
+<p>
+Install <a href="https://www.docker.io/" target="_blank">Docker</a> on your machine.
+</p>
+<p>
+Pull the JHipster Docker image: 
+</p>
+<p>
+<code>
+sudo docker pull jdubois/jhipster-docker
+</code>
+</p>
+<p>
+Create a "jhipster" folder in your home directory:
+</p>
+<p>
+<code>
+mkdir ~/jhipster
+</code>
+</p>
+<p>
+Run The docker image, with the following options:
+</p>
+<p>
+  <ul>
+    <li>The Docker "/jhipster" folder is shared to the local "~/jhipster" folder</li>
+    <li>Forward all ports exposed by docker (8080 for Tomcat, 9000 for the Grunt server, 22 for SSHD). In the following example we forward the container 22 port to the host 4022 port, to prevent some port conflicts:</li>
+  </ul>
+</p>
+<p>
+<code>
+sudo docker run -v ~/jhipster:/jhipster -p 8080:8080 -p 9000:9000 -p 4022:22 -t jdubois/jhipster-docker
+</code>
+</p>
+<p>
+You can now connect to your docker container with SSH. You can connect as "root/jhipster" or as "jhipster/jhipster", and we recommand you use the "jhipster" user as some of the tool used are not meant to be run by the root user.
+</p>
+<p>
+Start by adding your SSH public key to the Docker container:
+</p>
+<p>
+<code>
+cat .ssh/id_rsa.pub | ssh -p 4022 jhipster@localhost 'mkdir .ssh &amp;&amp; cat >> .ssh/authorized_keys'
+</code>
+</p>
+<p>
+You can now connect to the Docker container:
+</p>
+<p>
+<code>
+ssh -p 4022 jhipster@localhost
+</code>
+</p>
+<p>
+You can then go to the /jhipster directory in your container, and start building your app inside Docker:
+</p>
+<p>
+<code>
+cd /jhipster
+yo jhipster
+</code>
+</p>
+<p>
+Once your application is created, you can run all the normal grunt/bower/maven commands, for example:
+</p>
+<p>
+<code>
+mvn spring-boot:run
+</code>
+</p>
+<p>
+<b>Congratulations! You've launched your JHipster app inside Docker!</b>
+</p>
+<p>
+On your host machine, you should be able to :
+</p>
+<p>
+  <ul>
+    <li>Access the running application at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></li>
+    <li>Get all the generated files inside your shared folder</li>
+  </ul>
+</p>
+<p>
+As the generated files are in your shared folder, they will not be deleted if you stop your Docker container. However, if you don't want Docker to keep downloading all the Maven and NPM dependencies every time you start the container, you should commit its state.
+</p>
+
+
+            </div>
+        </div><!-- /.row -->
+        <hr/>
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="/documentation-archive/v0.18.0/js/jquery-1.10.2.js"></script>
+    <script src="/documentation-archive/v0.18.0/js/bootstrap.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46075199-1', 'jhipster.github.io');
+  ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
