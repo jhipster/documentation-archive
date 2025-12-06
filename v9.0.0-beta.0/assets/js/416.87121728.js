@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjhipster_website=self.webpackChunkjhipster_website||[]).push([[416],{90416:(e,s,t)=>{t.r(s)}}]);
