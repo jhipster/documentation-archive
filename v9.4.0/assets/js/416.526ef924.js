@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkjhipster_website=globalThis.webpackChunkjhipster_website||[]).push([[416],{90416(e,s,h){h.r(s)}}]);
